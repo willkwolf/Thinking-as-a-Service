@@ -2,16 +2,16 @@ const teamData = [
     {
         "nombre": "Andrés López Astudillo",
         "foto": "Assets/equipo/espada.png",
-        "descripcion": "Ph.D. (c) en Estrategia de Negocios y Organizaciones. Piensa en redes y ve más allá de las ilusiones operativas."
+        "descripcion": "Ph.D. (c) en Estrategia Organizacional. Representa la precisión estructural (La Espada): corta la ilusión operativa para revelar nodos y flujos con rigor topológico."
     },
     {
-        "nombre": "El Ermitaño del Sistema",
+        "nombre": "Andrés Calderón",
         "foto": "Assets/equipo/ermitano.png",
-        "descripcion": "Profesor de videojuegos, historiador de formación, y profesor de pensamiento sistémico y Game Lab de juegos serios estratégicos."
+        "descripcion": "Historiador y experto en simulaciones complejas. Encarna la observación profunda (El Ermitaño): ilumina las dinámicas ocultas y modela la causalidad del sistema."
     },
     {
-        "nombre": "William Camilo Artunduaga Viana",
+        "nombre": "William Camilo Artunduaga",
         "foto": "Assets/equipo/mago.png",
-        "descripcion": "Ingeniero Industrial y Story Teller. Hilador de narrativas que canaliza y materializa la visión sistémica."
+        "descripcion": "Ingeniero Industrial e hilador de narrativas. Ejerce la síntesis activa (El Mago): traduce la densidad de la red en instrumentación clara para la realidad organizacional."
     }
 ];
