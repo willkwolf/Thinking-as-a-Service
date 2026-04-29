@@ -46,4 +46,4 @@ def test_team_section_rendered(page: Page):
     expect(team_members).to_have_count(3)
     
     # Check one specific member
-    expect(team_members.nth(0).locator("h3")).to_have_text("El Mago")
+    expect(team_members.nth(0).locator("h3")).to_have_text("Andrés López Astudillo")

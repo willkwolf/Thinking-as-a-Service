@@ -11,7 +11,11 @@ Visita el sitio en vivo a través de GitHub Pages:
 ## Estructura Técnica
 - **Stack**: HTML5, CSS3 nativo (Vanilla), JavaScript.
 - **Visualización**: Se utiliza `D3.js` para simular la complejidad sistémica en el fondo.
+- **Frontend**: Mobile first, alto contraste, modo día/descanso automático y video de fondo optimizado.
 - **Pruebas**: Contiene un entorno de pruebas automatizadas E2E montado con `Playwright` y `pytest` (en la carpeta `tests/`).
+
+## Documentación Frontend
+La guía mínima de diseño, accesibilidad, paleta, tipografías y pipeline de video está en [`FRONTEND.md`](FRONTEND.md).
 
 ## Desarrollo y Pruebas Locales
 Para ejecutar las pruebas en tu máquina local:

@@ -5,14 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Mapping | Kumu</title>
     <meta name="description" content="No diseñamos estrategias. Describimos sistemas. Instrumentación de realidad organizacional.">
+    <meta name="theme-color" content="#f7f4ec">
+    <meta name="color-scheme" content="light dark">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="Assets/visual-mapping-poster.jpg" as="image">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Background Graph Canvas -->
     <div id="d3-canvas-container"></div>
+
+    <div class="mode-switch" role="group" aria-label="Modo visual">
+        <button type="button" class="mode-switch__button" data-mode-option="day" aria-pressed="false">Día</button>
+        <button type="button" class="mode-switch__button" data-mode-option="rest" aria-pressed="false">Descanso</button>
+    </div>
 
     <!-- Floating CTA -->
     <a href="https://wa.me/1234567890?text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20servicios%20profesionales%20KUMU" target="_blank" class="floating-cta" id="floating-cta">
@@ -82,16 +90,17 @@
         </section>
 
         <!-- CAPA 5 — TESIS CENTRAL (CON VIDEO DE FONDO) -->
-        <section class="layer layer-5 with-video">
+        <section class="layer layer-5 with-video" aria-labelledby="tesis-estructural">
             <div class="video-background">
-                <video autoplay loop muted playsinline>
-                    <source src="Assets/El_Colapso_de_la_Incertidumbre.mp4" type="video/mp4">
+                <video autoplay loop muted playsinline preload="metadata" poster="Assets/visual-mapping-poster.jpg" aria-hidden="true">
+                    <source src="Assets/visual-mapping-loop.webm" type="video/webm">
+                    <source src="Assets/visual-mapping-loop.mp4" type="video/mp4">
                 </video>
                 <div class="video-overlay"></div>
             </div>
             <div class="content-wrapper relative-z">
                 <p class="pre-title reveal-text">Antes de herramientas, dashboards o IA debe existir:</p>
-                <h2 class="massive-text reveal-text delay-1"><span class="accent-cyan">descripción estructural</span> del sistema</h2>
+                <h2 id="tesis-estructural" class="massive-text reveal-text delay-1"><span class="accent-cyan">descripción estructural</span> del sistema</h2>
             </div>
         </section>
 
@@ -135,7 +144,7 @@
         <section id="equipo" class="layer layer-team">
             <div class="content-wrapper">
                 <h2 class="reveal-text">El Sistema Observador</h2>
-                <p class="reveal-text delay-1 sub-team">Nota: Sube las fotos reales a la carpeta <code>Assets/equipo/</code>. Por ahora se usan arquetipos del Tarot.</p>
+                <p class="reveal-text delay-1 sub-team">Un equipo pequeño, interdisciplinario y entrenado para convertir complejidad organizacional en mapas accionables.</p>
                 <div class="team-container" id="team-container">
                     <!-- Dinámicamente llenado por JS -->
                 </div>
