@@ -1,17 +1,20 @@
 const teamData = [
     {
         "nombre": "Andrés López Astudillo",
+        "rol": "Auditor de Realidad",
         "foto": "Assets/equipo/espada.png",
-        "descripcion": "Ph.D. (c) en Estrategia Organizacional. Representa la precisión estructural (La Espada): corta la ilusión operativa para revelar nodos y flujos con rigor topológico."
+        "descripcion": "Contrasta narrativa ejecutiva contra estructura observable. Identifica deuda estructural, nodos críticos y puntos donde la autoridad formal no coincide con el flujo real de valor."
     },
     {
         "nombre": "Andrés Calderón",
+        "rol": "Arquitecto de Escenarios",
         "foto": "Assets/equipo/ermitano.png",
-        "descripcion": "Historiador y experto en simulaciones complejas. Encarna la observación profunda (El Ermitaño): ilumina las dinámicas ocultas y modela la causalidad del sistema."
+        "descripcion": "Modela causalidad, dependencias y escenarios de ruptura. Traduce complejidad histórica y sistémica en simulaciones que permiten decidir antes de que el cuello de botella sea visible en caja."
     },
     {
         "nombre": "William Camilo Artunduaga",
+        "rol": "Ingeniero de Ejecución",
         "foto": "Assets/equipo/mago.png",
-        "descripcion": "Ingeniero Industrial e hilador de narrativas. Ejerce la síntesis activa (El Mago): traduce la densidad de la red en instrumentación clara para la realidad organizacional."
+        "descripcion": "Convierte el mapa estructural en secuencia de intervención: rediseño, automatización, gobernanza de IA y métricas para que la visibilidad llegue a operación."
     }
 ];

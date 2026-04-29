@@ -22,7 +22,7 @@ function setMode(mode, persist = false) {
 
     const themeMeta = document.querySelector('meta[name="theme-color"]');
     if (themeMeta) {
-        themeMeta.setAttribute('content', nextMode === 'rest' ? '#101413' : '#f7f4ec');
+        themeMeta.setAttribute('content', nextMode === 'rest' ? '#080d12' : '#f4f7fb');
     }
 
     document.querySelectorAll('[data-mode-option]').forEach((button) => {
@@ -59,13 +59,24 @@ function renderTeam() {
         image.loading = 'lazy';
         image.decoding = 'async';
 
+        const body = document.createElement('div');
+        body.className = 'team-member__body';
+
+        if (member.rol) {
+            const role = document.createElement('span');
+            role.className = 'team-member__role';
+            role.textContent = member.rol;
+            body.append(role);
+        }
+
         const name = document.createElement('h3');
         name.textContent = member.nombre;
 
         const description = document.createElement('p');
         description.textContent = member.descripcion;
 
-        article.append(image, name, description);
+        body.append(name, description);
+        article.append(image, body);
         fragment.append(article);
     });
 
@@ -109,7 +120,7 @@ function initFloatingCta() {
 
 function initMotionAwareMedia() {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const videos = document.querySelectorAll('video');
+    const videos = document.querySelectorAll('video[data-autoplay="true"]');
 
     const syncVideoState = () => {
         videos.forEach((video) => {

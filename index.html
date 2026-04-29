@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Mapping | Kumu</title>
-    <meta name="description" content="No diseñamos estrategias. Describimos sistemas. Instrumentación de realidad organizacional.">
-    <meta name="theme-color" content="#f7f4ec">
+    <meta name="description" content="Kumu como Mapa de Navegación de Hipótesis: descripción sistémica rigurosa para reducir ambigüedad, visualizar arquitectura de flujo y gobernar decisiones.">
+    <meta name="theme-color" content="#f4f7fb">
     <meta name="color-scheme" content="light dark">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="Assets/visual-mapping-poster.jpg" as="image">
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Background Graph Canvas -->
     <div id="d3-canvas-container"></div>
 
     <div class="mode-switch" role="group" aria-label="Modo visual">
@@ -22,152 +21,255 @@
         <button type="button" class="mode-switch__button" data-mode-option="rest" aria-pressed="false">Descanso</button>
     </div>
 
-    <!-- Floating CTA -->
-    <a href="https://wa.me/1234567890?text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20servicios%20profesionales%20KUMU" target="_blank" class="floating-cta" id="floating-cta">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-        Consultar
+    <a href="https://wa.me/1234567890?text=Quiero%20identificar%20cuellos%20de%20botella%20sist%C3%A9micos%20antes%20de%20automatizar%20con%20IA" target="_blank" rel="noopener" class="floating-cta" id="floating-cta">
+        <span aria-hidden="true">↗</span>
+        Cuellos de botella
     </a>
 
     <main class="scroll-container">
-        
-        <!-- CAPA 1 — ILUSIÓN OPERATIVA (HERO) -->
-        <section class="layer layer-1">
+        <section class="layer hero" aria-labelledby="hero-title">
+            <div class="content-wrapper hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow reveal-text">Mapa de Navegación de Hipótesis</p>
+                    <h1 id="hero-title" class="reveal-text delay-1">No intente predecir un sistema que aún no puede describir.</h1>
+                    <p class="subcopy reveal-text delay-2">Kumu convierte especulación verbal en certidumbre visible: arquitectura de flujo, hubs de poder real, puentes frágiles y puntos de apalancamiento.</p>
+                    <div class="cta-row reveal-text delay-3">
+                        <a href="#evidencia" class="btn-primary">Ver arquitectura de flujo</a>
+                        <a href="#diagnostico" class="btn-secondary">Reducir ambigüedad</a>
+                    </div>
+                </div>
+
+                <aside class="control-panel reveal-text delay-2" aria-label="Panel de riesgo ejecutivo">
+                    <div class="panel-header">
+                        <span>AMBIGUITY INDEX</span>
+                        <strong>Kumu / Navegación</strong>
+                    </div>
+                    <dl class="metric-stack">
+                        <div>
+                            <dt>Predicción a largo plazo</dt>
+                            <dd class="danger">Ilusión</dd>
+                        </div>
+                        <div>
+                            <dt>Arquitectura de flujo</dt>
+                            <dd>Visible</dd>
+                        </div>
+                        <div>
+                            <dt>Agilidad heurística</dt>
+                            <dd>Alta</dd>
+                        </div>
+                    </dl>
+                    <p>El valor no está en adivinar el futuro. Está en ver cómo está cableado el sistema antes de decidir.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="layer thesis-band">
+            <div class="content-wrapper narrow">
+                <p class="eyebrow reveal-text">Descripción sobre predicción</p>
+                <h2 class="reveal-text delay-1">Es mejor estar aproximadamente en lo correcto que precisamente equivocado.</h2>
+                <p class="lead reveal-text delay-2">En sistemas complejos, la precisión predictiva a largo plazo suele ser una ilusión. La ventaja ejecutiva es reducir ambigüedad con una descripción sistémica que todos puedan inspeccionar.</p>
+            </div>
+        </section>
+
+        <section class="layer comparison" aria-labelledby="comparison-title">
             <div class="content-wrapper">
-                <h1 class="reveal-text">No diseñamos estrategias.<br><span class="accent-gold">Describimos sistemas.</span></h1>
-                <p class="subcopy reveal-text delay-1">Si no puede ver la estructura, no puede gobernarla.</p>
-                
-                <div class="ilusio-box reveal-text delay-2">
-                    <p>Si estás usando IA, estrategia o herramientas organizacionales, estás operando sobre la superficie.</p>
-                    <ul class="tag-list">
-                        <li>Herramientas</li>
-                        <li>Procesos</li>
-                        <li>Automatización</li>
-                        <li>Flujos</li>
+                <p class="eyebrow reveal-text">Arquitectura de flujo</p>
+                <h2 id="comparison-title" class="reveal-text delay-1">El tablero real no está en el organigrama.</h2>
+                <div class="comparison-grid reveal-text delay-2">
+                    <article class="map-card static-map">
+                        <span class="card-kicker">Mapa formal</span>
+                        <h3>Quién reporta a quién</h3>
+                        <div class="org-chart" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p>Útil para autoridad. Insuficiente para entender fricción, transferencia de información y puntos de decisión.</p>
+                    </article>
+                    <article class="map-card flow-map">
+                        <span class="card-kicker">Mapa operativo</span>
+                        <h3>Dinero, poder e información</h3>
+                        <div class="flow-diagram" aria-hidden="true">
+                            <span class="node-a"></span>
+                            <span class="node-b"></span>
+                            <span class="node-c"></span>
+                            <span class="node-d"></span>
+                            <span class="flow-line line-1"></span>
+                            <span class="flow-line line-2"></span>
+                            <span class="flow-line line-3"></span>
+                        </div>
+                        <p>Revela qué nodos se fortalecen o debilitan bajo crisis, dónde se detiene el valor y qué hipótesis merecen acción inmediata.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="diagnostico" class="layer diagnosis" aria-labelledby="diagnosis-title">
+            <div class="content-wrapper split">
+                <div>
+                    <p class="eyebrow reveal-text">Unidad de medida</p>
+                    <h2 id="diagnosis-title" class="reveal-text delay-1">El ROI infinito aparece antes del colapso.</h2>
+                    <p class="lead reveal-text delay-2">Descubrir que la innovación depende de una sola persona en un nodo periférico, antes de que esa persona se vaya, puede tener retorno infinito. La predicción no ve eso; la descripción estructural sí.</p>
+                </div>
+                <div class="debt-ledger reveal-text delay-3">
+                    <div>
+                        <span>01</span>
+                        <strong>Hubs de poder real</strong>
+                        <p>Personas o áreas que sostienen la red más allá del organigrama.</p>
+                    </div>
+                    <div>
+                        <span>02</span>
+                        <strong>Puentes frágiles</strong>
+                        <p>Relaciones donde se romperá comunicación o flujo bajo estrés.</p>
+                    </div>
+                    <div>
+                        <span>03</span>
+                        <strong>Puntos de apalancamiento</strong>
+                        <p>Acciones mínimas capaces de transformar el sistema por asimetría de red.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="layer matrix-section" aria-labelledby="matrix-title">
+            <div class="content-wrapper">
+                <p class="eyebrow reveal-text">Matriz de ambigüedad</p>
+                <h2 id="matrix-title" class="reveal-text delay-1">La pregunta no es qué ocurrirá. Es qué hipótesis puede navegar la dirección.</h2>
+                <div class="matrix reveal-text delay-2" role="table" aria-label="Visibilidad estructural versus impacto de IA">
+                    <div class="matrix-row matrix-head" role="row">
+                        <span role="columnheader">Estado del mapa</span>
+                        <span role="columnheader">Acción ejecutiva</span>
+                        <span role="columnheader">Resultado probable</span>
+                    </div>
+                    <div class="matrix-row good" role="row">
+                        <span role="cell">Arquitectura visible</span>
+                        <span role="cell">Navegar hipótesis con evidencia</span>
+                        <span role="cell">Agilidad heurística y control</span>
+                    </div>
+                    <div class="matrix-row bad" role="row">
+                        <span role="cell">Ambigüedad estructural</span>
+                        <span role="cell">Predicción compleja e inescrutable</span>
+                        <span role="cell">Falsa precisión y disputas sin cierre</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="evidencia" class="layer evidence" aria-labelledby="evidence-title">
+            <div class="content-wrapper evidence-grid">
+                <div>
+                    <p class="eyebrow reveal-text">Sala de evidencia</p>
+                    <h2 id="evidence-title" class="reveal-text delay-1">La evidencia debe poder inspeccionarse, no adornar la página.</h2>
+                    <p class="lead reveal-text delay-2">El video vive en un contenedor dedicado porque la marca no promete magia visual: promete reducción de ambigüedad mediante artefactos observables.</p>
+                    <ul class="signal-list reveal-text delay-3">
+                        <li>Reproducción manual para inspección deliberada.</li>
+                        <li>WebM primero, MP4 como fallback.</li>
+                        <li>Respeta modo descanso y reducción de movimiento.</li>
                     </ul>
-                    <p class="accent-cyan">Todo eso importa, pero no determina resultados.</p>
+                </div>
+                <div class="video-module reveal-text delay-2">
+                    <div class="video-toolbar">
+                        <span>VISUAL MAPPING / EVIDENCE LOOP</span>
+                        <strong>00:22</strong>
+                    </div>
+                    <video controls playsinline preload="metadata" poster="Assets/visual-mapping-poster.jpg">
+                        <source src="Assets/visual-mapping-loop.webm" type="video/webm">
+                        <source src="Assets/visual-mapping-loop.mp4" type="video/mp4">
+                        Su navegador no soporta video HTML5.
+                    </video>
                 </div>
             </div>
         </section>
 
-        <!-- CAPA 2 — REVELACIÓN -->
-        <section class="layer layer-2">
-            <div class="content-wrapper">
-                <h2 class="reveal-text">Existe una <span class="accent-cyan">capa oculta.</span></h2>
-                <p class="reveal-text delay-1">No visible en dashboards. No modelada en organigramas.</p>
-                <div class="grid-2 reveal-text delay-2">
-                    <div class="grid-item">Flujo real de poder</div>
-                    <div class="grid-item">Cuellos de botella</div>
-                    <div class="grid-item">Decisiones críticas</div>
-                    <div class="grid-item">Fallas sistémicas</div>
+        <section class="layer twin" aria-labelledby="twin-title">
+            <div class="content-wrapper split">
+                <div>
+                    <p class="eyebrow reveal-text">Kumu como ciencia de redes</p>
+                    <h2 id="twin-title" class="reveal-text delay-1">Del mapa al Digital Twin de Gobernanza.</h2>
+                    <p class="lead reveal-text delay-2">Kumu funciona como base relacional de la realidad organizacional: nodos, relaciones, pesos, centralidad, grado y System Personas para navegar el sistema sin metafísica corporativa vacía.</p>
+                </div>
+                <div class="capability-grid reveal-text delay-3">
+                    <article>
+                        <span>01</span>
+                        <h3>Centralidad y grado</h3>
+                        <p>Medición de influencia real, dependencia y concentración de flujo.</p>
+                    </article>
+                    <article>
+                        <span>02</span>
+                        <h3>Mapa de hipótesis</h3>
+                        <p>No predice de forma determinista; organiza supuestos para decidir mejor.</p>
+                    </article>
+                    <article>
+                        <span>03</span>
+                        <h3>Constitución agéntica</h3>
+                        <p>Cada nodo tiene base técnica, económica y humana para gobernar acción.</p>
+                    </article>
+                    <article>
+                        <span>04</span>
+                        <h3>System Personas</h3>
+                        <p>Seguir a una persona a través del sistema para humanizar complejidad.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- CAPA 3 — PROBLEMA -->
-        <section class="layer layer-3">
+        <section class="layer method" aria-labelledby="method-title">
             <div class="content-wrapper">
-                <h2 class="reveal-text">Sin acceso a esa capa:</h2>
-                <ul class="bullet-list reveal-text delay-1">
-                    <li>Optimización sobre errores estructurales</li>
-                    <li>Automatización de ineficiencia</li>
-                    <li>Decisiones sin contexto sistémico</li>
-                </ul>
-                <h3 class="result reveal-text delay-2">Resultado: <span class="accent-gold">más complejidad, no más control</span></h3>
+                <p class="eyebrow reveal-text">Secuencia de reducción de ambigüedad</p>
+                <h2 id="method-title" class="reveal-text delay-1">Primero descripción. Después decisión.</h2>
+                <ol class="method-steps reveal-text delay-2">
+                    <li>
+                        <span>01</span>
+                        <strong>Captura</strong>
+                        <p>Personas, dinero, poder, información y decisiones reales.</p>
+                    </li>
+                    <li>
+                        <span>02</span>
+                        <strong>Arquitectura</strong>
+                        <p>Topología en Kumu: nodos, relaciones, dependencias, pesos y grados.</p>
+                    </li>
+                    <li>
+                        <span>03</span>
+                        <strong>Hipótesis</strong>
+                        <p>Crisis, ausencias y rutas críticas como navegación, no profecía.</p>
+                    </li>
+                    <li>
+                        <span>04</span>
+                        <strong>Gobernanza</strong>
+                        <p>Decidir dónde intervenir, automatizar, proteger o detener inversión.</p>
+                    </li>
+                </ol>
             </div>
         </section>
 
-        <!-- CAPA 4 — ANALOGÍA FUNDACIONAL -->
-        <section class="layer layer-4">
+        <section id="equipo" class="layer team-section" aria-labelledby="team-title">
             <div class="content-wrapper">
-                <h2 class="reveal-text">No construyes una casa sin cimientos.</h2>
-                <p class="reveal-text delay-1">En estrategia se construye sobre:</p>
-                <div class="nodes-container reveal-text delay-2">
-                    <div class="node">Supuestos no validados</div>
-                    <div class="node">Relaciones invisibles</div>
-                    <div class="node">Narrativas incompletas</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CAPA 5 — TESIS CENTRAL (CON VIDEO DE FONDO) -->
-        <section class="layer layer-5 with-video" aria-labelledby="tesis-estructural">
-            <div class="video-background">
-                <video autoplay loop muted playsinline preload="metadata" poster="Assets/visual-mapping-poster.jpg" aria-hidden="true">
-                    <source src="Assets/visual-mapping-loop.webm" type="video/webm">
-                    <source src="Assets/visual-mapping-loop.mp4" type="video/mp4">
-                </video>
-                <div class="video-overlay"></div>
-            </div>
-            <div class="content-wrapper relative-z">
-                <p class="pre-title reveal-text">Antes de herramientas, dashboards o IA debe existir:</p>
-                <h2 id="tesis-estructural" class="massive-text reveal-text delay-1"><span class="accent-cyan">descripción estructural</span> del sistema</h2>
-            </div>
-        </section>
-
-        <!-- CAPA 6 — SOLUCIÓN -->
-        <section class="layer layer-6">
-            <div class="content-wrapper">
-                <h2 class="reveal-text">Visual Mapping no predice.</h2>
-                <h3 class="reveal-text delay-1"><span class="accent-cyan">Describe la topología real del sistema.</span></h3>
-                <div class="grid-2 reveal-text delay-2">
-                    <div class="grid-item eco-style">Mapa vivo</div>
-                    <div class="grid-item eco-style">Red de relaciones</div>
-                    <div class="grid-item eco-style">Nodos críticos</div>
-                    <div class="grid-item eco-style">Dinámicas ocultas</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CAPA 7 — EFECTO -->
-        <section class="layer layer-7">
-            <div class="content-wrapper">
-                <h2 class="reveal-text">Cuando la estructura es visible:</h2>
-                <ul class="bullet-list reveal-text delay-1">
-                    <li>Decisiones se simplifican</li>
-                    <li>Herramientas se vuelven evidentes</li>
-                    <li>La complejidad se ordena</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- CAPA 8 — POSICIONAMIENTO -->
-        <section class="layer layer-8">
-            <div class="content-wrapper">
-                <p class="reveal-text">No es consultoría.</p>
-                <p class="reveal-text delay-1">No es software.</p>
-                <p class="reveal-text delay-2">Es:</p>
-                <h2 class="massive-text reveal-text delay-3"><span class="accent-gold">instrumentación de realidad organizacional</span></h2>
-            </div>
-        </section>
-
-        <!-- SECCIÓN EQUIPO -->
-        <section id="equipo" class="layer layer-team">
-            <div class="content-wrapper">
-                <h2 class="reveal-text">El Sistema Observador</h2>
-                <p class="reveal-text delay-1 sub-team">Un equipo pequeño, interdisciplinario y entrenado para convertir complejidad organizacional en mapas accionables.</p>
-                <div class="team-container" id="team-container">
+                <p class="eyebrow reveal-text">Factor humano</p>
+                <h2 id="team-title" class="reveal-text delay-1">Tres funciones para convertir complejidad en control ejecutivo.</h2>
+                <p class="lead reveal-text delay-2">La venta no es predicción. Es una capacidad de observación, modelado y ejecución instalada alrededor de decisiones críticas.</p>
+                <div class="team-container reveal-text delay-3" id="team-container">
                     <!-- Dinámicamente llenado por JS -->
                 </div>
             </div>
         </section>
 
-        <!-- FOOTER -->
-        <footer class="layer footer">
-            <div class="content-wrapper">
-                <h2 class="reveal-text">Deje de optimizar decisiones.</h2>
-                <h2 class="accent-cyan reveal-text delay-1">Empiece a ver el sistema.</h2>
-                
-                <div class="footer-cta reveal-text delay-2">
-                    <a href="https://wa.me/1234567890?text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20servicios%20profesionales%20KUMU" target="_blank" class="btn-primary">
-                        Iniciar Diagnóstico Estructural
+        <footer class="layer footer" aria-labelledby="closing-title">
+            <div class="content-wrapper closing-panel">
+                <p class="eyebrow reveal-text">Pregunta de cierre</p>
+                <h2 id="closing-title" class="reveal-text delay-1">¿Prefiere una predicción compleja que nadie comprende o un mapa aproximado que sí puede gobernar?</h2>
+                <p class="lead reveal-text delay-2">La ventaja no es certeza absoluta. Es reducir ambigüedad más rápido que el sistema se degrada.</p>
+                <div class="footer-cta reveal-text delay-3">
+                    <a href="https://wa.me/1234567890?text=Quiero%20identificar%20cuellos%20de%20botella%20sist%C3%A9micos%20antes%20de%20automatizar%20con%20IA" target="_blank" rel="noopener" class="btn-primary">
+                        Identificar Cuellos de Botella Sistémicos
                     </a>
                 </div>
             </div>
         </footer>
-
     </main>
 
-    <!-- Scripts -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>

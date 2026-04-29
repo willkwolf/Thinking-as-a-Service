@@ -1,8 +1,8 @@
 # Visual Mapping - Thinking as a Service
 
-Este proyecto contiene la **Landing Page Estratégica** de KUMU para sus servicios profesionales, centrada en la tesis operativa de **Visual Mapping** y modelado estructural de sistemas organizacionales. 
+Este proyecto contiene la landing page de KUMU para **Ingeniería de Sistemas y Visibilidad Estructural**, orientada a equipos ejecutivos que necesitan reducir ambigüedad antes de invertir en IA, automatización o rediseño operativo.
 
-No se trata de una web comercial tradicional, sino de una **interfaz de revelación progresiva** diseñada para mostrar cómo la topología real de un sistema define sus resultados mucho más que las herramientas operativas.
+La propuesta comercial contrasta **descripción frente a predicción**: Kumu se presenta como un **Mapa de Navegación de Hipótesis** basado en ciencia de redes, arquitectura de flujo, centralidad, grado, hubs de poder real, puentes frágiles, puntos de apalancamiento, System Personas y Digital Twin de Gobernanza.
 
 ## 🔗 Sitio Web en Producción
 Visita el sitio en vivo a través de GitHub Pages:
@@ -10,12 +10,12 @@ Visita el sitio en vivo a través de GitHub Pages:
 
 ## Estructura Técnica
 - **Stack**: HTML5, CSS3 nativo (Vanilla), JavaScript.
-- **Visualización**: Se utiliza `D3.js` para simular la complejidad sistémica en el fondo.
-- **Frontend**: Mobile first, alto contraste, modo día/descanso automático y video de fondo optimizado.
+- **Visualización**: Se utiliza `D3.js` como textura de red no determinista en el fondo.
+- **Frontend**: Mobile first, alto contraste, modo día/descanso automático y video optimizado dentro de un módulo reproducible.
 - **Pruebas**: Contiene un entorno de pruebas automatizadas E2E montado con `Playwright` y `pytest` (en la carpeta `tests/`).
 
 ## Documentación Frontend
-La guía mínima de diseño, accesibilidad, paleta, tipografías y pipeline de video está en [`FRONTEND.md`](FRONTEND.md).
+La guía mínima de narrativa, diseño, accesibilidad, paleta, tipografías y pipeline de video está en [`FRONTEND.md`](FRONTEND.md).
 
 ## Desarrollo y Pruebas Locales
 Para ejecutar las pruebas en tu máquina local:
