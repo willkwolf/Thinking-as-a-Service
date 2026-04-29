@@ -10,8 +10,8 @@ def test_landing_hero(page: Page):
     
     # Check Hero H1
     h1 = page.locator("h1")
-    expect(h1).to_contain_text("No intente predecir")
-    expect(h1).to_contain_text("aún no puede describir")
+    expect(h1).to_contain_text("Antes de tocar IA")
+    expect(h1).to_contain_text("describa el sistema")
 
 def test_whatsapp_cta_visibility(page: Page):
     """Test the floating WhatsApp CTA appears after scrolling"""
@@ -45,7 +45,8 @@ def test_video_module_rendered(page: Page):
     video = video_module.locator("video")
     expect(video).to_have_attribute("controls", "")
     expect(video).to_have_attribute("poster", "Assets/visual-mapping-poster.jpg")
-    expect(video.locator("source").first).to_have_attribute("src", "Assets/visual-mapping-loop.webm")
+    expect(video_module).to_contain_text("07:36 + audio")
+    expect(video.locator("source").first).to_have_attribute("src", "Assets/visual-mapping-full.mp4")
 
 def test_core_brand_language(page: Page):
     """Test that the page represents Kumu as hypothesis navigation, not deterministic prediction"""
@@ -55,6 +56,8 @@ def test_core_brand_language(page: Page):
     expect(page.locator("body")).to_contain_text("Descripción sobre predicción")
     expect(page.locator("body")).to_contain_text("Centralidad y grado")
     expect(page.locator("body")).to_contain_text("System Personas")
+    expect(page.locator("body")).to_contain_text("Agentic Workflows")
+    expect(page.locator("body")).to_contain_text("Puntos de falla únicos")
 
 def test_team_section_rendered(page: Page):
     """Test that the data.js dynamically renders the team section"""

@@ -178,7 +178,7 @@ h3 {
 }
 
 h1 {
-    max-width: 11ch;
+    max-width: 13ch;
     margin: 0.75rem 0 1.25rem;
     font-size: var(--step-5);
 }
@@ -326,6 +326,27 @@ p {
     min-height: 64svh;
     border-block: 1px solid var(--line);
     background: color-mix(in srgb, var(--panel-solid) 78%, transparent);
+}
+
+.context-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.5rem;
+}
+
+.context-strip span {
+    min-height: 2.45rem;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    padding: 0.45rem 0.7rem;
+    color: var(--blueprint);
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .comparison-grid,
@@ -541,6 +562,19 @@ p {
     width: 100%;
     aspect-ratio: 16 / 9;
     background: #02070b;
+}
+
+.video-notes {
+    display: grid;
+    gap: 0.2rem;
+    padding: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.04);
+    color: #dce8f3;
+}
+
+.video-notes strong {
+    color: #ffffff;
 }
 
 .capability-grid article {

@@ -3,7 +3,7 @@ const teamData = [
         "nombre": "Andrés López Astudillo",
         "rol": "Auditor de Realidad",
         "foto": "Assets/equipo/espada.png",
-        "descripcion": "Contrasta narrativa ejecutiva contra estructura observable. Identifica deuda estructural, nodos críticos y puntos donde la autoridad formal no coincide con el flujo real de valor."
+        "descripcion": "Ph.D. (c) en Estrategia de Negocios y Organizaciones. Reduce ambigüedad donde otros solo ven caos, contrastando narrativa ejecutiva contra estructura observable."
     },
     {
         "nombre": "Andrés Calderón",

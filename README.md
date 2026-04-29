@@ -1,8 +1,8 @@
 # Visual Mapping - Thinking as a Service
 
-Este proyecto contiene la landing page de KUMU para **Ingeniería de Sistemas y Visibilidad Estructural**, orientada a equipos ejecutivos que necesitan reducir ambigüedad antes de invertir en IA, automatización o rediseño operativo.
+Este proyecto contiene la landing page de KUMU para **Ingeniería de Sistemas y Visibilidad Estructural**, orientada a equipos ejecutivos que necesitan reducir ambigüedad antes de invertir en Agentic Workflows, RAG, automatización o rediseño operativo.
 
-La propuesta comercial contrasta **descripción frente a predicción**: Kumu se presenta como un **Mapa de Navegación de Hipótesis** basado en ciencia de redes, arquitectura de flujo, centralidad, grado, hubs de poder real, puentes frágiles, puntos de apalancamiento, System Personas y Digital Twin de Gobernanza.
+La propuesta comercial contrasta **descripción frente a predicción**: Kumu se presenta como un **Mapa de Navegación de Hipótesis** basado en ciencia de redes, arquitectura de flujo, centralidad, grado, nodos de poder real, puntos de falla únicos, deuda estructural, System Personas y Gemelo Digital de Gobernanza.
 
 ## 🔗 Sitio Web en Producción
 Visita el sitio en vivo a través de GitHub Pages:
@@ -11,7 +11,7 @@ Visita el sitio en vivo a través de GitHub Pages:
 ## Estructura Técnica
 - **Stack**: HTML5, CSS3 nativo (Vanilla), JavaScript.
 - **Visualización**: Se utiliza `D3.js` como textura de red no determinista en el fondo.
-- **Frontend**: Mobile first, alto contraste, modo día/descanso automático y video optimizado dentro de un módulo reproducible.
+- **Frontend**: Mobile first, alto contraste, modo día/descanso automático y video completo con audio dentro de un módulo reproducible.
 - **Pruebas**: Contiene un entorno de pruebas automatizadas E2E montado con `Playwright` y `pytest` (en la carpeta `tests/`).
 
 ## Documentación Frontend
