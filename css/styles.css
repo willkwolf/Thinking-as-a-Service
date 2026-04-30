@@ -847,6 +847,13 @@ p {
     }
 }
 
+/* Ocultar secciones comerciales */
+.layer.method-guide,
+.layer.packages,
+.layer.team-section {
+    display: none !important;
+}
+
 /* Alternative content visibility for day/rest modes */
 .alternative-content {
     display: none;
