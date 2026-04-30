@@ -451,13 +451,19 @@ p {
 .matrix {
     overflow: hidden;
     margin-top: 2rem;
+    border: 1px solid var(--line);
+    border-radius: 0.5rem;
+    background: var(--panel);
+    box-shadow: 0 1.2rem 2.8rem var(--shadow);
+    backdrop-filter: blur(14px);
 }
 
 .matrix-row {
     display: grid;
-    gap: 0.5rem;
-    padding: 1rem;
+    gap: 0.65rem;
+    padding: 1.15rem 1rem;
     border-bottom: 1px solid var(--line);
+    transition: background 0.2s ease;
 }
 
 .matrix-row:last-child {
@@ -466,23 +472,30 @@ p {
 
 .matrix-row span {
     display: block;
+    line-height: 1.55;
 }
 
 .matrix-row span::before {
     display: block;
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.2rem;
     color: var(--blueprint);
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: 0.69rem;
     font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.85;
+}
+
+.matrix-row:hover {
+    background: color-mix(in srgb, var(--blueprint) 4%, var(--panel));
 }
 
 .matrix-head {
     display: none;
 }
 
-.matrix-row span:nth-child(1)::before { content: "Sistema"; }
+.matrix-row span:nth-child(1)::before { content: "Estado"; }
 .matrix-row span:nth-child(2)::before { content: "Acción"; }
 .matrix-row span:nth-child(3)::before { content: "Resultado"; }
 
@@ -494,6 +507,27 @@ p {
 .matrix-row.bad span:last-child {
     color: var(--danger);
     font-weight: 700;
+}
+
+/* Distinct visual treatment for each state */
+.matrix-row.state-1 {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--good) 8%, transparent), transparent);
+}
+
+.matrix-row.state-2.bad {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--danger) 10%, transparent), transparent);
+}
+
+.matrix-row.state-3 {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--amber) 8%, transparent), transparent);
+}
+
+.matrix-row.state-4 {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--signal) 8%, transparent), transparent);
+}
+
+.matrix-row.state-5.good {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--good) 10%, transparent), transparent);
 }
 
 .evidence {
@@ -680,21 +714,51 @@ p {
     .matrix-head,
     .matrix-row {
         display: grid;
-        grid-template-columns: 1fr 1fr 1.2fr;
+        grid-template-columns: 1.1fr 1.3fr 1.6fr;
         gap: 1rem;
+        align-items: center;
     }
 
     .matrix-head {
-        background: var(--blueprint);
+        background: linear-gradient(90deg, var(--blueprint), color-mix(in srgb, var(--blueprint) 70%, var(--ink)));
         color: #ffffff;
         font-family: var(--font-mono);
-        font-size: 0.82rem;
+        font-size: 0.8rem;
         font-weight: 600;
         text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 0.9rem 1rem;
     }
 
     .matrix-row span::before {
         content: none !important;
+    }
+
+    .matrix-row {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .matrix-row:hover {
+        transform: translateX(0.3rem);
+        box-shadow: 0 0.5rem 1.5rem var(--shadow);
+        z-index: 1;
+        position: relative;
+    }
+
+    .matrix-row span:first-child {
+        font-weight: 700;
+        color: var(--ink);
+        font-size: 0.95rem;
+    }
+
+    .matrix-row span:nth-child(2) {
+        color: var(--muted);
+        font-size: 0.93rem;
+    }
+
+    .matrix-row span:last-child {
+        font-size: 0.93rem;
+        line-height: 1.4;
     }
 }
 
@@ -771,5 +835,14 @@ p {
     .reveal-text {
         opacity: 1;
         transform: none;
+    }
+
+    /* Hide commercial sections as per plan */
+    .layer.packages {
+        display: none !important;
+    }
+
+    .team-section {
+        display: none !important;
     }
 }
