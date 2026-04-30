@@ -221,15 +221,6 @@ p {
 
 .btn-primary,
 .btn-secondary,
-.floating-cta {
-    min-height: 3.25rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-weight: 700;
-}
-
 .btn-primary {
     padding: 0.9rem 1.1rem;
     background: var(--blueprint);
@@ -244,21 +235,15 @@ p {
     color: var(--ink);
 }
 
-.floating-cta {
-    position: fixed;
-    right: 1rem;
-    bottom: -6rem;
-    z-index: 50;
-    gap: 0.5rem;
-    padding: 0.82rem 1rem;
+.btn-primary:hover {
     background: var(--signal);
-    color: #ffffff;
-    box-shadow: 0 1rem 2rem var(--shadow);
-    transition: bottom 0.35s ease;
+    transform: translateY(-0.18rem);
 }
 
-.floating-cta.visible {
-    bottom: 1rem;
+.btn-secondary:hover {
+    background: var(--panel);
+    border-color: var(--ink);
+    transform: translateY(-0.18rem);
 }
 
 .control-panel,
@@ -650,7 +635,6 @@ p {
 @media (hover: hover) {
     .btn-primary,
     .btn-secondary,
-    .floating-cta,
     .map-card,
     .team-member,
     .capability-grid article,

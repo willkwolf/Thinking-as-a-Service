@@ -3,6 +3,7 @@
 venv/
 ENV/
 env/
+.kilo
 
 # Caché de Python y Pruebas
 __pycache__/
@@ -16,3 +17,5 @@ htmlcov/
 *.log
 .DS_Store
 Thumbs.db
+kumu.md
+oferta_comercial.md

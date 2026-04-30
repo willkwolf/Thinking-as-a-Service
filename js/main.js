@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initAdaptiveMode();
     renderTeam();
     initRevealObserver();
-    initFloatingCta();
     initMotionAwareMedia();
     initD3Network();
 });
@@ -104,18 +103,6 @@ function initRevealObserver() {
     });
 
     revealElements.forEach((element) => scrollObserver.observe(element));
-}
-
-function initFloatingCta() {
-    const ctaButton = document.getElementById('floating-cta');
-    if (!ctaButton) return;
-
-    const updateCta = () => {
-        ctaButton.classList.toggle('visible', window.scrollY > window.innerHeight * 0.5);
-    };
-
-    updateCta();
-    window.addEventListener('scroll', updateCta, { passive: true });
 }
 
 function initMotionAwareMedia() {
