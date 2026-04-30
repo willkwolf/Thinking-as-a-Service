@@ -846,3 +846,18 @@ p {
         display: none !important;
     }
 }
+
+/* Alternative content visibility for day/rest modes */
+.alternative-content {
+    display: none;
+}
+
+[data-time-mode="rest"] .alternative-rest,
+[data-mode="rest"] .alternative-rest {
+    display: block !important;
+}
+
+[data-time-mode="day"] .alternative-day,
+[data-mode="day"] .alternative-day {
+    display: block !important;
+}
