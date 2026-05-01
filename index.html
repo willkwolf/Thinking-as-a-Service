@@ -76,37 +76,28 @@
 
         <section class="layer comparison" aria-labelledby="comparison-title">
             <div class="content-wrapper">
-                <p class="eyebrow reveal-text">Arquitectura de flujo</p>
-                <h2 id="comparison-title" class="reveal-text delay-1">El tablero real no está en el organigrama.</h2>
-                <div class="comparison-grid reveal-text delay-2">
-                    <article class="map-card static-map">
-                        <span class="card-kicker">Mapa formal</span>
-                        <h3>Quién reporta a quién</h3>
-                        <div class="org-chart" aria-hidden="true">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <p>Útil para autoridad. Insuficiente para entender fricción, transferencia de información y puntos de decisión.</p>
-                    </article>
-                    <article class="map-card flow-map">
-                        <span class="card-kicker">Mapa operativo</span>
-                        <h3>Dinero, poder e información</h3>
-                        <div class="flow-diagram" aria-hidden="true">
-                            <span class="node-a"></span>
-                            <span class="node-b"></span>
-                            <span class="node-c"></span>
-                            <span class="node-d"></span>
-                            <span class="flow-line line-1"></span>
-                            <span class="flow-line line-2"></span>
-                            <span class="flow-line line-3"></span>
-                        </div>
-                        <p>Revela qué nodos se fortalecen o debilitan bajo crisis, dónde se detiene el valor y qué hipótesis merecen acción inmediata.</p>
-                    </article>
+                <p class="eyebrow reveal-text">Ciencia de Redes</p>
+                <h2 id="comparison-title" class="reveal-text delay-1">Del organigrama al grafo CEMSTWO: arquitectura de influencia operativa</h2>
+                <p class="lead reveal-text delay-2">La vista tradicional se apoya en organigramas jerárquicos, scoreboards de Porter y planificación estratégica lineal. Eso describe autoridad, no flujo. El grafo CEMSTWO mapea la arquitectura real donde opera su organización: <strong>Composición (C)</strong>, <strong>Entorno (E)</strong>, <strong>Mecanismo (M)</strong>, <strong>Estructura (S)</strong>, <strong>Transformación (T)</strong>, <strong>Weltanschauung (W)</strong> y <strong>Ownership (O)</strong>. Cada letra es un nodo; cada relación, una influencia. Esto es ciencia de redes aplicada a la gobernanza.</p>
+                <div id="cemstwo-graph" class="reveal-text delay-3" aria-label="Grafo CEMSTWO mostrando influencias entre C-E-M-S-T-W-O">
+                    <div class="node" style="left: 50%; top: 40px;"><span>C</span></div>
+                    <div class="node" style="left: 20%; top: 180px;"><span>E</span></div>
+                    <div class="node" style="left: 35%; top: 140px;"><span>M</span></div>
+                    <div class="node" style="left: 65%; top: 140px;"><span>S</span></div>
+                    <div class="node" style="left: 80%; top: 180px;"><span>T</span></div>
+                    <div class="node" style="left: 65%; top: 260px;"><span>W</span></div>
+                    <div class="node" style="left: 35%; top: 260px;"><span>O</span></div>
+                    <!-- Edges -->
+                    <div class="edge" style="left: 50%; top: 78px; width: 60px; transform: rotate(0deg);" title="C → M"></div>
+                    <div class="edge" style="left: 28%; top: 200px; width: 90px; transform: rotate(-30deg);" title="E → M"></div>
+                    <div class="edge" style="left: 42%; top: 168px; width: 60px; transform: rotate(45deg);" title="M → S"></div>
+                    <div class="edge" style="left: 65%; top: 168px; width: 60px; transform: rotate(135deg);" title="S → T"></div>
+                    <div class="edge" style="left: 78%; top: 220px; width: 60px; transform: rotate(-45deg);" title="T → W"></div>
+                    <div class="edge" style="left: 65%; top: 292px; width: 60px; transform: rotate(-135deg);" title="W → O"></div>
+                    <div class="edge" style="left: 42%; top: 292px; width: 60px; transform: rotate(135deg);" title="M → O"></div>
+                    <div class="edge" style="left: 28%; top: 260px; width: 90px; transform: rotate(30deg);" title="E ↔ M (bidir.)"></div>
                 </div>
+                <p class="reveal-text delay-4" style="margin-top: 1rem;">Este grafo no es una simulación; es un mapa de hipótesis estructural. Cada arista pregunta: ¿cómo influye X en Y? Así convertimos la ambigüedad en preguntas accionables.</p>
             </div>
         </section>
 
@@ -278,7 +269,7 @@
                     <div class="description">
                         <p>Se estiman métricas de red como centralidad, intermediación, grado y cercanía. Incluye mapas de género (identificando liderazgo femenino en altos mandos y balance en equipos grandes), edad (concentración de experiencia joven y adulta), y salario (escala de 1-40 SMLV). Un mapa demostrativo explora social listening con conexiones "mensajes‑día". El mapa de liderazgo clasifica tipos: Influenciadores (alta centralidad/intermediación), Extrovertidos (alto grado/cercanía), Puentes (alta intermediación/baja cercanía), Seguidores (bajo grado/cercanía).</p>
                     </div>
-                    <div class="map-container" style="margin: 1.5rem 0; padding: 1rem; background: #fff;">
+                    <div class="map-container" style="margin: 1.5rem 0; padding: 1rem; background: var(--panel);">
                         <div class="iframe-wrapper" style="position: relative; width: 100%; aspect-ratio: 16 / 9; max-height: 80vh;">
                             <iframe src="https://embed.kumu.io/5947f71e13542aa11dca864b1453d778" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 1px solid #e2e8f0;" frameborder="0" title="Mapa de organización BPO en Kumu"></iframe>
                         </div>

@@ -854,17 +854,88 @@ p {
     display: none !important;
 }
 
-/* Alternative content visibility for day/rest modes */
-.alternative-content {
-    display: none;
+/* Matriz de Ambigüedad — refinamiento duotono */
+.matrix-row span:last-child {
+    color: var(--ink) !important;
+    font-weight: 600;
 }
 
-[data-time-mode="rest"] .alternative-rest,
-[data-mode="rest"] .alternative-rest {
-    display: block !important;
+.matrix-row.state-1,
+.matrix-row.state-2,
+.matrix-row.state-3,
+.matrix-row.state-4,
+.matrix-row.state-5 {
+    background: transparent;
 }
 
-[data-time-mode="day"] .alternative-day,
-[data-mode="day"] .alternative-day {
-    display: block !important;
+.matrix-row:hover {
+    background: color-mix(in srgb, var(--blueprint) 1.5%, var(--panel));
+    transform: none;
+    box-shadow: none;
+}
+
+.matrix-head {
+    background: var(--blueprint);
+}
+
+.matrix-row {
+    padding: 0.9rem 1rem;
+}
+
+/* Grafo CEMSTWO — estética duotono arquitectónico */
+#cemstwo-graph {
+    width: 100%;
+    height: 420px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 0.25rem;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+#cemstwo-graph .node {
+    position: absolute;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    background: var(--panel-solid);
+    color: var(--blueprint);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.1;
+    box-shadow: 0 0.15rem 0.4rem var(--shadow);
+    transition: transform 0.2s ease;
+}
+
+#cemstwo-graph .node:hover {
+    transform: scale(1.05);
+    border-color: var(--blueprint);
+    z-index: 2;
+}
+
+#cemstwo-graph .edge {
+    position: absolute;
+    height: 1px;
+    background: var(--line-strong);
+    transform-origin: left center;
+    pointer-events: none;
+}
+
+#cemstwo-graph .edge-label {
+    position: absolute;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    background: var(--panel);
+    padding: 0.1rem 0.3rem;
+    border: 1px solid var(--line);
+    border-radius: 0.2rem;
+    white-space: nowrap;
 }
