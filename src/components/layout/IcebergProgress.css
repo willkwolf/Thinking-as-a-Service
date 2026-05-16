@@ -1,0 +1,125 @@
+.iceberg-progress {
+  position: fixed;
+  left: 0.65rem;
+  top: 50%;
+  z-index: 35;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.iceberg-progress__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.iceberg-progress__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.5rem 0.35rem 0;
+  text-decoration: none;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.iceberg-progress__dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: var(--panel);
+  flex-shrink: 0;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.iceberg-progress__link--active {
+  color: var(--ink);
+}
+
+.iceberg-progress__link--active .iceberg-progress__dot,
+.iceberg-progress__link--past .iceberg-progress__dot {
+  background: var(--signal);
+  border-color: var(--signal);
+  transform: scale(1.15);
+}
+
+.iceberg-progress__depth {
+  position: absolute;
+  left: 0.2rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--line);
+  border-radius: 2px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.iceberg-progress__depth span {
+  display: block;
+  width: 100%;
+  background: linear-gradient(180deg, var(--signal), var(--blueprint));
+  border-radius: 2px;
+  transition: height 0.35s ease;
+}
+
+@media (min-width: 900px) {
+  .iceberg-progress {
+    display: block;
+  }
+}
+
+.iceberg-progress-mobile {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  gap: 0.35rem;
+  overflow-x: auto;
+  padding: 0.65rem 1rem;
+  margin: 0 -1.05rem;
+  background: color-mix(in srgb, var(--panel) 92%, transparent);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.iceberg-progress-mobile::-webkit-scrollbar {
+  display: none;
+}
+
+.iceberg-progress-mobile a {
+  flex-shrink: 0;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.iceberg-progress-mobile a[aria-current='step'] {
+  background: var(--blueprint);
+  border-color: var(--blueprint);
+  color: #fff;
+}
+
+@media (min-width: 900px) {
+  .iceberg-progress-mobile {
+    display: none;
+  }
+}

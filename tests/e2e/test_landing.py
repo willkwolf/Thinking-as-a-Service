@@ -1,75 +1,55 @@
+import os
 import re
 from playwright.sync_api import Page, expect
 
+BASE_URL = os.environ.get("BASE_URL", "http://localhost:4173/Thinking-as-a-Service/")
+
+
 def test_landing_hero(page: Page):
-    """Test that the hero section loads properly"""
-    page.goto("http://localhost:8000")
-    
-    # Check Title
-    expect(page).to_have_title(re.compile("Visual Mapping | Kumu"))
-    
-    # Check Hero H1
+    page.goto(BASE_URL)
+    expect(page).to_have_title(re.compile("Thinking as a Service"))
     h1 = page.locator("h1")
-    expect(h1).to_contain_text("Antes de tocar IA")
-    expect(h1).to_contain_text("describa el sistema")
+    expect(h1).to_contain_text("ruido")
+    expect(h1).to_contain_text("complejidad")
+
 
 def test_whatsapp_cta_visibility(page: Page):
-    """Test the floating WhatsApp CTA appears after scrolling"""
-    page.goto("http://localhost:8000")
-    
+    page.goto(BASE_URL)
     cta = page.locator("#floating-cta")
-    
-    # Wait for the page to be ready
     page.wait_for_load_state("networkidle")
-    
-    # Should be hidden initially (or visually hidden via CSS 'bottom: -100px')
     expect(cta).not_to_have_class(re.compile(r"\bvisible\b"))
-    
-    # Scroll down past 50vh
     page.evaluate("window.scrollBy(0, window.innerHeight)")
-    
-    # Should become visible
     expect(cta).to_have_class(re.compile(r"\bvisible\b"))
-    
-    # Verify the href
     expect(cta).to_have_attribute("href", re.compile("wa.me"))
-    expect(cta).to_contain_text("Cuellos de botella")
+
 
 def test_video_module_rendered(page: Page):
-    """Test that the evidence video module uses optimized playable assets"""
-    page.goto("http://localhost:8000")
-
+    page.goto(BASE_URL)
     video_module = page.locator(".video-module")
     expect(video_module).to_be_visible()
-
     video = video_module.locator("video")
     expect(video).to_have_attribute("controls", "")
-    expect(video).to_have_attribute("poster", "Assets/visual-mapping-poster.jpg")
-    expect(video_module).to_contain_text("07:36 + audio")
-    expect(video.locator("source").first).to_have_attribute("src", "Assets/visual-mapping-full.mp4")
+    expect(video_module).to_contain_text("07:36")
 
-def test_core_brand_language(page: Page):
-    """Test that the page represents Kumu as hypothesis navigation, not deterministic prediction"""
-    page.goto("http://localhost:8000")
 
-    expect(page.locator("body")).to_contain_text("Mapa de Navegación de Hipótesis")
-    expect(page.locator("body")).to_contain_text("Descripción sobre predicción")
-    expect(page.locator("body")).to_contain_text("Centralidad y grado")
-    expect(page.locator("body")).to_contain_text("System Personas")
-    expect(page.locator("body")).to_contain_text("Agentic Workflows")
-    expect(page.locator("body")).to_contain_text("Puntos de falla únicos")
+def test_complexity_and_playbook_language(page: Page):
+    page.goto(BASE_URL)
+    body = page.locator("body")
+    expect(body).to_contain_text("10,2%")
+    expect(body).to_contain_text("Complexity Diagnosis")
+    expect(body).to_contain_text("Matriz de Simplicidad")
+    expect(body).to_contain_text("Andrés López Astudillo")
+
 
 def test_team_section_rendered(page: Page):
-    """Test that the data.js dynamically renders the team section"""
-    page.goto("http://localhost:8000")
-    
-    # Scroll to team section to ensure lazy loads or visibility
+    page.goto(BASE_URL)
     page.locator("#equipo").scroll_into_view_if_needed()
-    
-    # Check for team members
     team_members = page.locator(".team-member")
     expect(team_members).to_have_count(3)
-    
-    # Check one specific member
-    expect(team_members.nth(0).locator("h3")).to_have_text("Andrés López Astudillo")
-    expect(team_members.nth(0).locator(".team-member__role")).to_have_text("Auditor de Realidad")
+    expect(team_members.first.locator("h3")).to_contain_text("Andrés")
+
+
+def test_kumu_embeds(page: Page):
+    page.goto(BASE_URL)
+    iframes = page.locator(".kumu-embed iframe")
+    expect(iframes).to_have_count(2)

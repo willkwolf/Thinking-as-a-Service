@@ -1,0 +1,43 @@
+.floating-cta {
+  position: fixed;
+  bottom: -5rem;
+  left: 50%;
+  z-index: 45;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.85rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  background: var(--blueprint);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  box-shadow: 0 1rem 2.5rem var(--shadow);
+  transition: bottom 0.35s ease, transform 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+  max-width: calc(100vw - 2rem);
+}
+
+.floating-cta.visible {
+  bottom: 1.25rem;
+}
+
+.floating-cta:hover {
+  background: var(--signal);
+  transform: translateX(-50%) translateY(-2px);
+}
+
+@media (min-width: 700px) {
+  .floating-cta {
+    left: auto;
+    right: 1.25rem;
+    transform: none;
+  }
+
+  .floating-cta:hover {
+    transform: translateY(-2px);
+  }
+}

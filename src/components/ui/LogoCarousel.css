@@ -1,0 +1,64 @@
+.logo-carousel-section {
+  padding: 4rem 1.05rem;
+}
+
+.logo-carousel {
+  padding: 1.25rem;
+  overflow: hidden;
+}
+
+.logo-carousel--mock {
+  opacity: 0.72;
+  filter: grayscale(0.35);
+}
+
+.logo-carousel__track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.logo-carousel__item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 7rem;
+  scroll-snap-align: start;
+}
+
+.logo-carousel__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--panel-solid);
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+.logo-carousel__name {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.logo-carousel__notice {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.logo-carousel__notice code {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}

@@ -1,0 +1,36 @@
+.mode-switch {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 40;
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: 0 1rem 2rem var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.mode-switch__button {
+  min-height: 2.75rem;
+  min-width: 4.9rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink);
+  font: 700 0.92rem/1 var(--font-body);
+  cursor: pointer;
+}
+
+.mode-switch__button[aria-pressed='true'] {
+  background: var(--blueprint);
+  color: #fff;
+}
+
+@media (min-width: 980px) {
+  .mode-switch {
+    top: 1rem;
+    right: 1rem;
+  }
+}

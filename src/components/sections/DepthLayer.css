@@ -1,0 +1,11 @@
+.footer-layer {
+  min-height: 70svh;
+}
+
+.closing-panel {
+  padding: 1.5rem;
+}
+
+.closing-panel h2 {
+  max-width: 20ch;
+}
