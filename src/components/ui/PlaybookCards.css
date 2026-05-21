@@ -22,6 +22,18 @@
   cursor: pointer;
 }
 
+.playbook-card__static {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+  width: 100%;
+  padding: 1.1rem;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+
 .playbook-card__index {
   color: var(--blueprint);
   font-family: var(--font-mono);

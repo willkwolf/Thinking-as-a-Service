@@ -1,15 +1,12 @@
-import {
-  cemstwo,
-  diagnosis,
-  formula,
-  simplicityStrategy,
-  tippingPoint,
-} from '../../content/complexity';
+import { useI18n } from '../../hooks/useI18n';
 import { CemstwoGraph } from '../ui/CemstwoGraph';
 import { Reveal } from '../ui/Reveal';
 import { SimplicityMatrix } from '../ui/SimplicityMatrix';
 
 export function ComplexityLayer() {
+  const { content } = useI18n();
+  const { cemstwo, diagnosis, formula, simplicityStrategy, tippingPoint } = content.complexity;
+
   return (
     <section id="iceberg-complexity" className="layer layer--complexity" aria-labelledby="complexity-title">
       <div className="content-wrapper">

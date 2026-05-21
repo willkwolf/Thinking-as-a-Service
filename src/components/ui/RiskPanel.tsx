@@ -1,8 +1,11 @@
-import { riskPanel } from '../../content/complexity';
+import { useI18n } from '../../hooks/useI18n';
 import { Reveal } from './Reveal';
 import './RiskPanel.css';
 
 export function RiskPanel() {
+  const { content } = useI18n();
+  const { riskPanel } = content.complexity;
+
   return (
     <Reveal className="risk-panel panel" delay={0.15}>
       <div className="risk-panel__header">

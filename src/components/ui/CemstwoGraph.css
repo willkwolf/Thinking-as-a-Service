@@ -1,20 +1,71 @@
-.cemstwo-graph {
-  margin-top: 1.5rem;
-  padding: 1rem;
+.cemstwo-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
   overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.cemstwo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .cemstwo-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Visualization column */
+.cemstwo-graph__visualization {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .cemstwo-graph__svg {
   display: block;
   width: 100%;
   height: auto;
-  min-height: 220px;
-  max-height: 420px;
+  max-width: 460px;
+  min-height: 250px;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.15));
 }
 
+.cemstwo-graph__instruction {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+/* Edges & Lines */
 .cemstwo-graph__edge {
   stroke: var(--line-strong);
+  stroke-dasharray: 2 2;
   stroke-width: 0.35;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.45;
+}
+
+.cemstwo-graph__edge--active {
+  stroke: var(--blueprint);
+  stroke-dasharray: none;
+  stroke-width: 0.8;
+  opacity: 1;
+}
+
+/* Nodes & Circles */
+.cemstwo-graph__node-group {
+  cursor: pointer;
+  outline: none;
 }
 
 .cemstwo-graph__node {
@@ -23,9 +74,108 @@
   stroke-width: 0.4;
 }
 
+.cemstwo-graph__node--active {
+  fill: var(--blueprint);
+  stroke: var(--ink);
+  stroke-width: 0.8;
+}
+
+/* Node Labels */
 .cemstwo-graph__label {
   fill: var(--blueprint);
   font-family: var(--font-mono);
+  font-size: 3px;
+  font-weight: 700;
+  pointer-events: none;
+  user-select: none;
+}
+
+.cemstwo-graph__label--active {
+  fill: var(--panel-solid);
   font-size: 3.5px;
-  font-weight: 600;
+}
+
+/* Detail Card */
+.cemstwo-graph__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: rgba(var(--panel-rgb, 15, 23, 42), 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md, 8px);
+  min-height: 240px;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.3);
+}
+
+.cemstwo-detail__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1rem;
+}
+
+.cemstwo-detail__letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  background: var(--blueprint-dim, rgba(14, 165, 233, 0.1));
+  border: 1.5px solid var(--blueprint);
+  border-radius: 50%;
+  color: var(--blueprint);
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(14, 165, 233, 0.4);
+}
+
+.cemstwo-detail__title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.cemstwo-detail__eyebrow {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-mono);
+}
+
+.cemstwo-detail__title-group h3 {
+  margin: 0.15rem 0 0;
+  font-size: var(--step-1);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.cemstwo-detail__question-box {
+  background: rgba(14, 165, 233, 0.05);
+  border-left: 3px solid var(--blueprint);
+  padding: 0.75rem 1rem;
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 0.75rem;
+}
+
+.cemstwo-detail__question {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--ink);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.cemstwo-detail__summary {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
 }

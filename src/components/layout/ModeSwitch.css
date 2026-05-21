@@ -1,36 +1,94 @@
-.mode-switch {
+.controls-panel {
   position: fixed;
   top: 0.75rem;
   right: 0.75rem;
   z-index: 40;
   display: flex;
-  gap: 0.25rem;
-  padding: 0.25rem;
-  border: 1px solid var(--line);
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
   background: var(--panel);
+  border: 1px solid var(--line);
   box-shadow: 0 1rem 2rem var(--shadow);
   backdrop-filter: blur(14px);
+  min-height: 2.75rem;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
 }
 
-.mode-switch__button {
-  min-height: 2.75rem;
-  min-width: 4.9rem;
+.controls-panel:hover {
+  border-color: var(--line-strong);
+}
+
+.mode-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
   border: 0;
-  border-radius: var(--radius);
+  border-radius: 50%;
   background: transparent;
   color: var(--ink);
-  font: 700 0.92rem/1 var(--font-body);
   cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease, background 0.2s ease;
 }
 
-.mode-switch__button[aria-pressed='true'] {
-  background: var(--blueprint);
-  color: #fff;
+.mode-toggle-btn:hover {
+  background: var(--bg-strong);
+  color: var(--signal);
+  transform: scale(1.08) rotate(15deg);
+}
+
+.mode-icon {
+  display: block;
+}
+
+.controls-panel__divider {
+  width: 1px;
+  height: 1.25rem;
+  background: var(--line);
+  margin-inline: 0.25rem;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.lang-switch__btn {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+  border-radius: var(--radius);
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.lang-switch__btn:hover {
+  color: var(--ink);
+}
+
+.lang-switch__btn--active {
+  color: var(--blueprint);
+  background: var(--bg-strong);
+}
+
+.lang-switch__separator {
+  color: var(--line);
+  font-size: 0.7rem;
+  user-select: none;
 }
 
 @media (min-width: 980px) {
-  .mode-switch {
-    top: 1rem;
-    right: 1rem;
+  .controls-panel {
+    top: 1.25rem;
+    right: 1.25rem;
   }
 }
+

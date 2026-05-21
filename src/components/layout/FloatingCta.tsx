@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
-import { footer, playbook } from '../../content/playbook';
+import { useI18n } from '../../hooks/useI18n';
 import './FloatingCta.css';
 
 export function FloatingCta() {
   const [visible, setVisible] = useState(false);
+  const { content } = useI18n();
+  const { ui, playbook, footer } = content;
   const href = `${playbook.whatsappBase}?text=${encodeURIComponent(footer.ctaMessage)}`;
 
   useEffect(() => {
@@ -21,7 +23,8 @@ export function FloatingCta() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Cuellos de botella sistémicos
+      {ui.floatingCta}
     </a>
   );
 }
+

@@ -1,5 +1,5 @@
-import { simplicityMatrix } from '../../content/complexity';
-import type { ArchetypeTone } from '../../content/complexity';
+import { useI18n } from '../../hooks/useI18n';
+import type { ArchetypeTone } from '../../content/site';
 import { Reveal } from './Reveal';
 import './SimplicityMatrix.css';
 
@@ -11,6 +11,9 @@ const toneClass: Record<ArchetypeTone, string> = {
 };
 
 export function SimplicityMatrix() {
+  const { content, locale } = useI18n();
+  const { simplicityMatrix } = content.complexity;
+
   return (
     <div className="simplicity-matrix">
       {simplicityMatrix.map((item, i) => (
@@ -18,11 +21,11 @@ export function SimplicityMatrix() {
           <article className={`archetype-card panel ${toneClass[item.tone]}`}>
             <header className="archetype-card__header">
               <span className="archetype-card__id">{item.name}</span>
-              <h3>{item.nameEs}</h3>
+              <h3>{locale === 'es' ? item.nameEs : item.name}</h3>
             </header>
             <p className="archetype-card__profile">{item.profile}</p>
             <p className="archetype-card__action">
-              <strong>Acción:</strong> {item.action}
+              <strong>{content.ui.action}</strong> {item.action}
             </p>
           </article>
         </Reveal>

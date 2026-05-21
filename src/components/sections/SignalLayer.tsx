@@ -1,9 +1,12 @@
-import { playbook, signalLead, teamMembers } from '../../content/playbook';
+import { useI18n } from '../../hooks/useI18n';
 import { PlaybookCards } from '../ui/PlaybookCards';
 import { Reveal } from '../ui/Reveal';
 import './SignalLayer.css';
 
 export function SignalLayer() {
+  const { content } = useI18n();
+  const { signalLead, playbook } = content;
+
   return (
     <section id="iceberg-signal" className="layer layer--signal" aria-labelledby="signal-title">
       <div className="content-wrapper">
@@ -31,28 +34,8 @@ export function SignalLayer() {
           <p className="lead">{playbook.lead}</p>
         </Reveal>
         <PlaybookCards />
-
-        <Reveal delay={0.15}>
-          <p className="eyebrow eyebrow--muted" style={{ marginTop: '3rem' }}>
-            Equipo
-          </p>
-          <h2>Tres funciones para convertir complejidad en control ejecutivo</h2>
-        </Reveal>
-        <div className="team-grid">
-          {teamMembers.map((member, i) => (
-            <Reveal key={member.nombre} delay={i * 0.08}>
-              <article className={`team-member panel${member.featured ? ' team-member--featured' : ''}`}>
-                <img src={member.foto} alt={member.nombre} loading="lazy" decoding="async" />
-                <div className="team-member__body">
-                  <span className="team-member__role">{member.rol}</span>
-                  <h3>{member.nombre}</h3>
-                  <p>{member.descripcion}</p>
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   );
 }
+

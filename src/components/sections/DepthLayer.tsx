@@ -1,9 +1,11 @@
-import { caseStudy, footer, megatrends, playbook } from '../../content/playbook';
+import { useI18n } from '../../hooks/useI18n';
 import { KumuEmbed } from '../ui/KumuEmbed';
 import { LogoCarousel } from '../ui/LogoCarousel';
 import { Reveal } from '../ui/Reveal';
 
 export function DepthLayer() {
+  const { content } = useI18n();
+  const { megatrends, caseStudy, footer, playbook } = content;
   const ctaHref = `${playbook.whatsappBase}?text=${encodeURIComponent(footer.ctaMessage)}`;
 
   return (
@@ -15,7 +17,7 @@ export function DepthLayer() {
             <h2 id="megatrends-title">{megatrends.title}</h2>
             <p className="lead">{megatrends.lead}</p>
           </Reveal>
-          <KumuEmbed title="Mapa de megatendencias y tecnologías" src={megatrends.embedUrl} />
+          <KumuEmbed title={megatrends.embedTitle} src={megatrends.embedUrl} />
 
           <Reveal delay={0.12}>
             <p className="eyebrow eyebrow--muted" style={{ marginTop: '3.5rem' }}>
@@ -25,7 +27,7 @@ export function DepthLayer() {
             <p className="lead">{caseStudy.lead}</p>
             <p>{caseStudy.description}</p>
           </Reveal>
-          <KumuEmbed title="Mapa de organización BPO" src={caseStudy.embedUrl} />
+          <KumuEmbed title={caseStudy.embedTitle} src={caseStudy.embedUrl} />
         </div>
       </section>
 
@@ -50,3 +52,4 @@ export function DepthLayer() {
     </>
   );
 }
+

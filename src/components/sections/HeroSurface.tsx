@@ -1,9 +1,11 @@
-import { noiseFrameworks, noiseTech } from '../../content/complexity';
-import { hero } from '../../content/iceberg';
+import { useI18n } from '../../hooks/useI18n';
 import { RiskPanel } from '../ui/RiskPanel';
 import { Reveal } from '../ui/Reveal';
 
 export function HeroSurface() {
+  const { content } = useI18n();
+  const { hero, complexity } = content;
+
   return (
     <section id="iceberg-surface" className="layer layer--surface" aria-labelledby="hero-title">
       <div className="content-wrapper hero-grid">
@@ -19,12 +21,12 @@ export function HeroSurface() {
           </Reveal>
           <Reveal delay={0.16}>
             <div className="chip-row" aria-label="Ruido estratégico">
-              {noiseFrameworks.map((chip) => (
+              {complexity.noiseFrameworks.map((chip) => (
                 <span key={chip} className="chip chip--noise">
                   {chip}
                 </span>
               ))}
-              {noiseTech.slice(0, 2).map((chip) => (
+              {complexity.noiseTech.slice(0, 2).map((chip) => (
                 <span key={chip} className="chip chip--noise">
                   {chip}
                 </span>

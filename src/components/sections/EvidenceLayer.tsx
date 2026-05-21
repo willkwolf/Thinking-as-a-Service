@@ -1,8 +1,11 @@
-import { evidence } from '../../content/complexity';
+import { useI18n } from '../../hooks/useI18n';
 import { Reveal } from '../ui/Reveal';
 import './EvidenceLayer.css';
 
 export function EvidenceLayer() {
+  const { content } = useI18n();
+  const { evidence } = content.complexity;
+
   return (
     <section id="iceberg-evidence" className="layer layer--evidence" aria-labelledby="evidence-title">
       <div className="content-wrapper evidence-grid">
@@ -27,10 +30,10 @@ export function EvidenceLayer() {
           </div>
           <video controls playsInline preload="metadata" poster={evidence.video.poster}>
             <source src={evidence.video.src} type="video/mp4" />
-            Su navegador no soporta video HTML5.
+            {content.ui.noVideo}
           </video>
           <div className="video-module__notes">
-            <strong>Uso recomendado:</strong>
+            <strong>{content.ui.recommendedUse}</strong>
             <span>{evidence.video.note}</span>
           </div>
         </Reveal>

@@ -1,6 +1,7 @@
 import { useD3Background } from './hooks/useD3Background';
 import { useIcebergDepth } from './hooks/useIcebergDepth';
 import { useThemeMode } from './hooks/useThemeMode';
+import { useI18n } from './hooks/useI18n';
 import { FloatingCta } from './components/layout/FloatingCta';
 import { IcebergProgress } from './components/layout/IcebergProgress';
 import { IcebergProgressMobile } from './components/layout/IcebergProgressMobile';
@@ -16,12 +17,18 @@ import './components/sections/DepthLayer.css';
 export default function App() {
   const { mode, setMode } = useThemeMode();
   const { activeLayer } = useIcebergDepth();
+  const { locale, setLocale } = useI18n();
   const d3Ref = useD3Background(mode);
 
   return (
     <>
       <div id="d3-canvas-container" ref={d3Ref} />
-      <ModeSwitch mode={mode} onModeChange={setMode} />
+      <ModeSwitch
+        mode={mode}
+        onModeChange={setMode}
+        locale={locale}
+        onLocaleChange={setLocale}
+      />
       <IcebergProgress activeLayer={activeLayer} />
       <IcebergProgressMobile activeLayer={activeLayer} />
       <main className="scroll-container">

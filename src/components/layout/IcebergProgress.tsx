@@ -1,5 +1,5 @@
-import type { IcebergLayerId } from '../../content/iceberg';
-import { icebergLayers } from '../../content/iceberg';
+import type { IcebergLayerId } from '../../content/site';
+import { useI18n } from '../../hooks/useI18n';
 import './IcebergProgress.css';
 
 interface IcebergProgressProps {
@@ -7,6 +7,8 @@ interface IcebergProgressProps {
 }
 
 export function IcebergProgress({ activeLayer }: IcebergProgressProps) {
+  const { content } = useI18n();
+  const { icebergLayers } = content;
   const activeIndex = icebergLayers.findIndex((l) => l.id === activeLayer);
 
   return (
@@ -41,3 +43,4 @@ export function IcebergProgress({ activeLayer }: IcebergProgressProps) {
     </nav>
   );
 }
+
