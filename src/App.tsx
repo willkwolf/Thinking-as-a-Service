@@ -6,7 +6,9 @@ import { FloatingCta } from './components/layout/FloatingCta';
 import { IcebergProgress } from './components/layout/IcebergProgress';
 import { IcebergProgressMobile } from './components/layout/IcebergProgressMobile';
 import { ModeSwitch } from './components/layout/ModeSwitch';
-import { ComplexityLayer } from './components/sections/ComplexityLayer';
+import { DiagnosisLayer } from './components/sections/DiagnosisLayer';
+import { FormulaLayer } from './components/sections/FormulaLayer';
+import { CemstwoLayer } from './components/sections/CemstwoLayer';
 import { DepthLayer } from './components/sections/DepthLayer';
 import { EvidenceLayer } from './components/sections/EvidenceLayer';
 import { HeroSurface } from './components/sections/HeroSurface';
@@ -33,8 +35,10 @@ export default function App() {
       <IcebergProgressMobile activeLayer={activeLayer} />
       <main className="scroll-container">
         <HeroSurface />
-        <ComplexityLayer />
+        <DiagnosisLayer />
         <EvidenceLayer />
+        <FormulaLayer />
+        <CemstwoLayer />
         <SignalLayer />
         <DepthLayer />
       </main>

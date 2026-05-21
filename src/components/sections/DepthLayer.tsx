@@ -1,6 +1,5 @@
 import { useI18n } from '../../hooks/useI18n';
 import { KumuEmbed } from '../ui/KumuEmbed';
-import { LogoCarousel } from '../ui/LogoCarousel';
 import { Reveal } from '../ui/Reveal';
 
 export function DepthLayer() {
@@ -30,8 +29,6 @@ export function DepthLayer() {
           <KumuEmbed title={caseStudy.embedTitle} src={caseStudy.embedUrl} />
         </div>
       </section>
-
-      <LogoCarousel />
 
       <footer className="layer footer-layer" aria-labelledby="closing-title">
         <div className="content-wrapper closing-panel panel">

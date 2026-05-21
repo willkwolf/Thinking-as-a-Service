@@ -2,13 +2,23 @@
   background: linear-gradient(180deg, color-mix(in srgb, var(--sand) 6%, transparent), transparent 40%);
 }
 
-.layer--complexity {
-  border-block: 1px solid var(--line);
-  background: color-mix(in srgb, var(--panel-solid) 55%, transparent);
+.layer--diagnosis {
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel-solid) 35%, transparent);
 }
 
 .layer--evidence {
   background: linear-gradient(135deg, color-mix(in srgb, var(--blueprint) 8%, transparent), transparent 55%);
+}
+
+.layer--formula {
+  border-block: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel-solid) 55%, transparent);
+}
+
+.layer--cemstwo {
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--blueprint) 4%, transparent), transparent 40%);
 }
 
 .layer--signal {

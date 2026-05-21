@@ -1,0 +1,38 @@
+Build a complete, production-ready Single page (one-page scrolling) Business / Corporate from scratch.
+
+TECHNOLOGY:
+Use React (JSX) with CSS modules or styled-components. Write clean, well-structured, production-quality code.
+
+DESIGN DIRECTION:
+Style: Organic and Natural
+Colors: Greenery palette with soft green (#EBF4DD) background, muted sage (#90AB8B), forest (#5A7863), and dark teal (#3B4953)
+Tone & Voice: Professional and trustworthy
+
+LAYOUT STRUCTURE:
+Navigation: Hamburger menu only (hidden nav)
+Hero Section: Minimal text-only hero with bold typography, no background image
+Content Layout: Masonry / Pinterest-style grid layout
+Footer: Minimal footer with copyright and social links in one line
+Section Spacing: Normal section spacing with balanced padding
+Scroll Animation: No scroll animations, keep it static and clean
+
+INTERACTIVE FEATURES:
+Include the following:
+- Responsive hamburger mobile menu
+- Smooth scroll navigation
+- Contact form with validation
+- FAQ accordion section
+- Back to top button
+
+TECHNICAL REQUIREMENTS:
+- Use CSS custom properties (variables)
+- Include Google Fonts
+- Ensure WCAG accessibility standards
+
+IMPORTANT GUIDELINES:
+- Make the website fully responsive across desktop, tablet, and mobile
+- Use smooth transitions and micro-interactions for a polished feel
+- Use placeholder images (via picsum.photos or placehold.co) where needed
+- Write realistic placeholder text instead of generic lorem ipsum
+- Ensure consistent spacing, alignment, and visual hierarchy throughout
+- Provide the complete, ready-to-use code

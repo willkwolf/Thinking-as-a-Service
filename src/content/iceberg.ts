@@ -1,4 +1,11 @@
-export type IcebergLayerId = 'surface' | 'complexity' | 'evidence' | 'signal' | 'depth';
+export type IcebergLayerId =
+  | 'surface'
+  | 'diagnosis'
+  | 'evidence'
+  | 'formula'
+  | 'cemstwo'
+  | 'signal'
+  | 'depth';
 
 export interface IcebergLayer {
   id: IcebergLayerId;
@@ -9,10 +16,12 @@ export interface IcebergLayer {
 
 export const icebergLayers: IcebergLayer[] = [
   { id: 'surface', label: 'Superficie — Ruido', shortLabel: 'Ruido', depth: 0 },
-  { id: 'complexity', label: 'Complejidad organizacional', shortLabel: 'Complejidad', depth: 1 },
-  { id: 'evidence', label: 'Evidencia visual', shortLabel: 'Evidencia', depth: 2 },
-  { id: 'signal', label: 'Señal — Playbook', shortLabel: 'Playbook', depth: 3 },
-  { id: 'depth', label: 'Profundidad — Casos', shortLabel: 'Casos', depth: 4 },
+  { id: 'diagnosis', label: 'El Diagnóstico', shortLabel: 'Diagnóstico', depth: 1 },
+  { id: 'evidence', label: 'Evidencia Visual', shortLabel: 'Evidencia', depth: 2 },
+  { id: 'formula', label: 'Modelo de Complejidad', shortLabel: 'Complejidad', depth: 3 },
+  { id: 'cemstwo', label: 'Resolución Sistémica', shortLabel: 'CEMSTWO', depth: 4 },
+  { id: 'signal', label: 'Señal y Playbook', shortLabel: 'Playbook', depth: 5 },
+  { id: 'depth', label: 'Profundidad y Casos', shortLabel: 'Casos', depth: 6 },
 ];
 
 export const hero = {
@@ -23,5 +32,5 @@ export const hero = {
   subcopy:
     'Sobran frameworks de entorno, agentes y promesas de automatización. Antes de tocar IA, describa el sistema que va a acelerar — y filtre el ruido que destruye margen.',
   ctaPrimary: { label: 'Ver el Playbook', href: '#iceberg-signal' },
-  ctaSecondary: { label: 'Bajar a la complejidad', href: '#iceberg-complexity' },
+  ctaSecondary: { label: 'Bajar a la complejidad', href: '#iceberg-diagnosis' },
 };

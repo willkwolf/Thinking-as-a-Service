@@ -1,5 +1,12 @@
 export type Locale = 'es' | 'en';
-export type IcebergLayerId = 'surface' | 'complexity' | 'evidence' | 'signal' | 'depth';
+export type IcebergLayerId =
+  | 'surface'
+  | 'diagnosis'
+  | 'evidence'
+  | 'formula'
+  | 'cemstwo'
+  | 'signal'
+  | 'depth';
 export type ArchetypeTone = 'neutral' | 'warning' | 'critical' | 'opportunity';
 
 export interface IcebergLayer {
@@ -56,10 +63,12 @@ export const siteContent = {
     },
     icebergLayers: [
       { id: 'surface', label: 'Superficie - Ruido', shortLabel: 'Ruido', depth: 0 },
-      { id: 'complexity', label: 'Complejidad organizacional', shortLabel: 'Complejidad', depth: 1 },
-      { id: 'evidence', label: 'Evidencia visual', shortLabel: 'Evidencia', depth: 2 },
-      { id: 'signal', label: 'Señal - Playbook', shortLabel: 'Playbook', depth: 3 },
-      { id: 'depth', label: 'Profundidad - Casos', shortLabel: 'Casos', depth: 4 },
+      { id: 'diagnosis', label: 'El Diagnóstico', shortLabel: 'Diagnóstico', depth: 1 },
+      { id: 'evidence', label: 'Evidencia Visual', shortLabel: 'Evidencia', depth: 2 },
+      { id: 'formula', label: 'Modelo de Complejidad', shortLabel: 'Complejidad', depth: 3 },
+      { id: 'cemstwo', label: 'Resolución Sistémica', shortLabel: 'CEMSTWO', depth: 4 },
+      { id: 'signal', label: 'Señal y Playbook', shortLabel: 'Playbook', depth: 5 },
+      { id: 'depth', label: 'Profundidad y Casos', shortLabel: 'Casos', depth: 6 },
     ] satisfies IcebergLayer[],
     hero: {
       macro: 'Economía Circular',
@@ -69,7 +78,7 @@ export const siteContent = {
       subcopy:
         'Sobran marcos de entorno, agentes y promesas de automatización. Antes de tocar IA, describa el sistema que va a acelerar y filtre el ruido que destruye margen.',
       ctaPrimary: { label: 'Ver el Playbook', href: '#iceberg-signal' },
-      ctaSecondary: { label: 'Bajar a la complejidad', href: '#iceberg-complexity' },
+      ctaSecondary: { label: 'Bajar a la complejidad', href: '#iceberg-diagnosis' },
     },
     complexity: {
       macroNarrative: 'Economía Circular',
@@ -346,10 +355,12 @@ export const siteContent = {
     },
     icebergLayers: [
       { id: 'surface', label: 'Surface - Noise', shortLabel: 'Noise', depth: 0 },
-      { id: 'complexity', label: 'Organizational complexity', shortLabel: 'Complexity', depth: 1 },
-      { id: 'evidence', label: 'Visual evidence', shortLabel: 'Evidence', depth: 2 },
-      { id: 'signal', label: 'Signal - Playbook', shortLabel: 'Playbook', depth: 3 },
-      { id: 'depth', label: 'Depth - Cases', shortLabel: 'Cases', depth: 4 },
+      { id: 'diagnosis', label: 'The Diagnosis', shortLabel: 'Diagnosis', depth: 1 },
+      { id: 'evidence', label: 'Visual Evidence', shortLabel: 'Evidence', depth: 2 },
+      { id: 'formula', label: 'Complexity Model', shortLabel: 'Complexity', depth: 3 },
+      { id: 'cemstwo', label: 'Systemic Resolution', shortLabel: 'CEMSTWO', depth: 4 },
+      { id: 'signal', label: 'Signal & Playbook', shortLabel: 'Playbook', depth: 5 },
+      { id: 'depth', label: 'Depth & Cases', shortLabel: 'Cases', depth: 6 },
     ] satisfies IcebergLayer[],
     hero: {
       macro: 'Circular Economy',
@@ -359,7 +370,7 @@ export const siteContent = {
       subcopy:
         'There are too many environment frameworks, agents and automation promises. Before touching AI, describe the system you will accelerate and filter the noise that destroys margin.',
       ctaPrimary: { label: 'See the Playbook', href: '#iceberg-signal' },
-      ctaSecondary: { label: 'Go to complexity', href: '#iceberg-complexity' },
+      ctaSecondary: { label: 'Go to complexity', href: '#iceberg-diagnosis' },
     },
     complexity: {
       macroNarrative: 'Circular Economy',
