@@ -20,6 +20,12 @@
   color: inherit;
   text-align: left;
   cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.playbook-card__toggle:hover,
+.playbook-card--open .playbook-card__toggle {
+  background: color-mix(in srgb, var(--blueprint) 5%, transparent);
 }
 
 .playbook-card__static {

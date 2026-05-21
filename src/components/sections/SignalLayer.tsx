@@ -17,7 +17,15 @@ export function SignalLayer() {
 
         <Reveal delay={0.1}>
           <article className="signal-lead panel" id="equipo">
-            <img src={signalLead.photo} alt={signalLead.name} loading="lazy" decoding="async" />
+            <div className="signal-lead__metrics">
+              {signalLead.metrics?.map((metric, idx) => (
+                <div key={idx} className="metric-card">
+                  <span className="metric-value">{metric.value}</span>
+                  <span className="metric-label">{metric.label}</span>
+                  <p className="metric-desc">{metric.desc}</p>
+                </div>
+              ))}
+            </div>
             <div className="signal-lead__body">
               <span className="signal-lead__role">{signalLead.role}</span>
               <h3>{signalLead.name}</h3>

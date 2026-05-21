@@ -101,15 +101,15 @@
   flex-direction: column;
   gap: 1.25rem;
   padding: 1.5rem;
-  background: rgba(var(--panel-rgb, 15, 23, 42), 0.55);
+  background: color-mix(in srgb, var(--bg-strong) 85%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--line-strong);
-  border-radius: var(--radius-md, 8px);
+  border-radius: var(--radius);
   min-height: 240px;
   justify-content: center;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px -8px var(--shadow);
 }
 
 .cemstwo-detail__header {

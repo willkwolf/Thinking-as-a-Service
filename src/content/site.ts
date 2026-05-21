@@ -296,6 +296,11 @@ export const siteContent = {
       photo: `${import.meta.env.BASE_URL}Assets/equipo/espada.png`,
       quote:
         'Reduce ambigüedad donde otros solo ven caos. Contrasta narrativa ejecutiva contra estructura observable antes de acelerar con IA.',
+      metrics: [
+        { value: '20+', label: 'Años de Experiencia', desc: 'En consultoría de alta dirección, diseño organizacional y modelado de complejidad.' },
+        { value: '10+', label: 'Países Impactados', desc: 'Auditorías operativas e intervenciones estratégicas en América Latina y Europa.' },
+        { value: '50+', label: 'Organizaciones', desc: 'Corporaciones complejas, entidades industriales y Pymes guiadas hacia la simplicidad.' }
+      ],
     },
     caseStudy: {
       eyebrow: 'Caso de uso',
@@ -573,6 +578,11 @@ export const siteContent = {
       photo: `${import.meta.env.BASE_URL}Assets/equipo/espada.png`,
       quote:
         'Reduces ambiguity where others only see chaos. Tests executive narrative against observable structure before accelerating with AI.',
+      metrics: [
+        { value: '20+', label: 'Years of Experience', desc: 'In senior management consulting, organizational design, and complexity modeling.' },
+        { value: '10+', label: 'Countries Served', desc: 'Operational audits and strategic interventions across Latin America and Europe.' },
+        { value: '50+', label: 'Organizations', desc: 'Complex corporations, industrial entities, and SMEs guided towards simplicity.' }
+      ],
     },
     caseStudy: {
       eyebrow: 'Use case',

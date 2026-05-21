@@ -5,11 +5,53 @@
   overflow: hidden;
 }
 
-.signal-lead img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  filter: grayscale(0.15) contrast(1.05);
+.signal-lead__metrics {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-strong);
+}
+
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.3s ease;
+}
+
+.metric-card:last-child {
+  border-bottom: none;
+}
+
+.metric-card:hover {
+  background: color-mix(in srgb, var(--blueprint) 5%, var(--bg-strong));
+}
+
+.metric-value {
+  font-family: var(--font-display);
+  font-size: var(--step-4);
+  font-weight: 700;
+  color: var(--amber);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.metric-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.4;
 }
 
 .signal-lead__body {
@@ -38,72 +80,13 @@
   font-size: var(--step-1);
 }
 
-.team-grid {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.team-member {
-  overflow: hidden;
-}
-
-.team-member img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  filter: grayscale(0.2);
-}
-
-.team-member__body {
-  padding: 1rem;
-}
-
-.team-member__role {
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  color: var(--blueprint);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-}
-
-.team-member h3 {
-  margin: 0 0 0.5rem;
-  font-size: var(--step-1);
-  font-family: var(--font-body);
-}
-
-.team-member p {
-  margin: 0;
-  font-size: 0.93rem;
-}
-
-.team-member--featured {
-  border-color: var(--circular);
-}
-
 @media (min-width: 700px) {
   .signal-lead {
     grid-template-columns: 1fr 1.2fr;
     align-items: stretch;
   }
 
-  .signal-lead img {
-    aspect-ratio: auto;
-    min-height: 100%;
-  }
-
-  .team-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 980px) {
-  .team-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .signal-lead__metrics {
+    border-right: 1px solid var(--line);
   }
 }

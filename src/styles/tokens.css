@@ -1,24 +1,24 @@
 :root {
   color-scheme: light;
-  --bg: #f4f7fb;
-  --bg-strong: #e7edf5;
-  --panel: rgba(255, 255, 255, 0.92);
+  --bg: #f5f7f4;
+  --bg-strong: #e8ebd8;
+  --panel: rgba(255, 255, 255, 0.88);
   --panel-solid: #ffffff;
-  --ink: #071421;
-  --muted: #425466;
-  --line: #b8c3cf;
-  --line-strong: #6d7d8f;
-  --blueprint: #153a5b;
-  --signal: #0f766e;
-  --circular: #1a5c4a;
-  --sand: #c4a574;
-  --amber: #b86100;
+  --ink: #1a261d;
+  --muted: #4a574d;
+  --line: #c2ccb9;
+  --line-strong: #75846c;
+  --blueprint: #1f6b4d;
+  --signal: #2b4737;
+  --circular: #2b4737;
+  --sand: #d1b894;
+  --amber: #b37e22;
   --danger: #a33131;
   --good: #1f7a4d;
-  --shadow: rgba(9, 30, 48, 0.14);
-  --grid-line: rgba(21, 58, 91, 0.1);
-  --font-body: 'Source Sans 3', system-ui, sans-serif;
-  --font-display: 'Fraunces', Georgia, serif;
+  --shadow: rgba(26, 38, 29, 0.08);
+  --grid-line: rgba(31, 107, 77, 0.08);
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', 'Inter', sans-serif;
   --font-mono: 'IBM Plex Mono', Consolas, monospace;
   --step-0: 1.0625rem;
   --step-1: 1.22rem;
@@ -26,29 +26,29 @@
   --step-3: 2.05rem;
   --step-4: 2.85rem;
   --step-5: 3.4rem;
-  --radius: 0.35rem;
+  --radius: 0.25rem;
   --layer-pad: 5.8rem 1.05rem 4.4rem;
 }
 
 :root[data-time-mode='rest'] {
   color-scheme: dark;
-  --bg: #080d12;
-  --bg-strong: #101821;
-  --panel: rgba(15, 24, 33, 0.94);
+  --bg: #0c1410;
+  --bg-strong: #13221b;
+  --panel: rgba(18, 30, 24, 0.9);
   --panel-solid: #121d27;
-  --ink: #f4f8fb;
-  --muted: #c4cfda;
-  --line: #526273;
-  --line-strong: #8a9aac;
-  --blueprint: #8bbce6;
-  --signal: #6ed6c4;
-  --circular: #6ed6a8;
-  --sand: #e8c992;
-  --amber: #f0b45f;
+  --ink: #f0f5f2;
+  --muted: #98a89f;
+  --line: #2e4236;
+  --line-strong: #506859;
+  --blueprint: #5ac494;
+  --signal: #a3cfbb;
+  --circular: #a3cfbb;
+  --sand: #c09d57;
+  --amber: #e0a943;
   --danger: #ff9a9a;
   --good: #9be3b7;
-  --shadow: rgba(0, 0, 0, 0.42);
-  --grid-line: rgba(139, 188, 230, 0.11);
+  --shadow: rgba(0, 0, 0, 0.45);
+  --grid-line: rgba(90, 196, 148, 0.08);
 }
 
 @media (min-width: 700px) {
