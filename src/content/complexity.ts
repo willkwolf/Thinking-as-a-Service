@@ -1,6 +1,6 @@
-export const macroNarrative = 'Economía Circular';
+export const macroNarrative = 'Diseño Organizacional';
 
-export const coreNarrative = 'Complejidad + Industria + IA';
+export const coreNarrative = 'Ciencia de Redes & Simplificación';
 
 export const noiseFrameworks = ['VUCA', 'BANI', 'TUNA'] as const;
 

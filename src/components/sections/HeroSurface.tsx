@@ -11,11 +11,11 @@ export function HeroSurface() {
       <div className="content-wrapper hero-grid">
         <div className="hero-copy">
           <Reveal>
-            <p className="eyebrow">{hero.macro}</p>
-            <p className="eyebrow eyebrow--muted">{hero.narrative}</p>
+            <p className="eyebrow">
+              {hero.macro} &mdash; {hero.narrative}
+            </p>
           </Reveal>
           <Reveal delay={0.08}>
-            <p className="eyebrow eyebrow--muted">{hero.eyebrow}</p>
             <h1 id="hero-title">{hero.title}</h1>
             <p className="subcopy">{hero.subcopy}</p>
           </Reveal>
