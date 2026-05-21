@@ -4,12 +4,6 @@ import { useI18n } from '../../hooks/useI18n';
 import { Reveal } from './Reveal';
 import './CemstwoGraph.css';
 
-interface NodeData {
-  id: 'C' | 'E' | 'M' | 'S' | 'T' | 'W' | 'O';
-  x: number;
-  y: number;
-}
-
 const NODE_POSITIONS: Record<string, { x: number; y: number }> = {
   C: { x: 50, y: 12 },
   E: { x: 74.25, y: 26 },
@@ -39,7 +33,8 @@ const EDGES: [string, string][] = [
 
 export function CemstwoGraph() {
   const { content } = useI18n();
-  const { cemstwo, ui } = content.complexity;
+  const { cemstwo } = content.complexity;
+  const { ui } = content;
   const [selectedId, setSelectedId] = useState<'C' | 'E' | 'M' | 'S' | 'T' | 'W' | 'O'>('T');
   const svgRef = useRef<SVGSVGElement>(null);
 
@@ -51,9 +46,6 @@ export function CemstwoGraph() {
 
     const svg = d3.select(svgRef.current);
     svg.selectAll('*').remove();
-
-    const width = 100;
-    const height = 80;
 
     // 1. Add Glow Filter in Defs
     const defs = svg.append('defs');
@@ -80,7 +72,7 @@ export function CemstwoGraph() {
     // 2. Draw Edges (Links)
     const edgeGroup = svg.append('g').attr('class', 'cemstwo-graph__edges');
 
-    const edges = edgeGroup
+    edgeGroup
       .selectAll('line')
       .data(EDGES)
       .enter()
@@ -115,7 +107,7 @@ export function CemstwoGraph() {
         return `${d.id}: ${details?.label || ''}`;
       })
       .style('outline', 'none')
-      .on('mouseover focusin', function (event, d) {
+      .on('mouseover focusin', function (_event, d) {
         setSelectedId(d.id);
       })
       .on('click touchstart', function (event, d) {
@@ -165,7 +157,7 @@ export function CemstwoGraph() {
               preserveAspectRatio="xMidYMid meet"
             />
             <p className="cemstwo-graph__instruction">
-              {content.ui.graphInstruction}
+              {ui.graphInstruction}
             </p>
           </div>
 
@@ -174,7 +166,7 @@ export function CemstwoGraph() {
             <header className="cemstwo-detail__header">
               <span className="cemstwo-detail__letter">{activeNode.id}</span>
               <div className="cemstwo-detail__title-group">
-                <span className="cemstwo-detail__eyebrow">{content.ui.currentNode}</span>
+                <span className="cemstwo-detail__eyebrow">{ui.currentNode}</span>
                 <h3>{activeNode.label}</h3>
               </div>
             </header>
