@@ -6,7 +6,7 @@ export const noiseFrameworks = ['VUCA', 'BANI', 'TUNA'] as const;
 
 export const noiseTech = [
   'Agentic Workflows',
-  'RAG sin mapa',
+  'Bases de conocimiento sin mapa',
   'Reingeniería acelerada',
   'Copilotos sin gobernanza',
 ] as const;
@@ -140,7 +140,7 @@ export const cemstwo = {
 export const evidence = {
   eyebrow: 'Evidencia',
   title: '¿Su organización opera sobre estructura visible o sobre dinámicas no modeladas?',
-  lead: 'Visual Mapping funciona como Mapa de Navegación de Hipótesis: reduce ambigüedad antes de Agentic Workflows, RAG o automatización.',
+  lead: 'Visual Mapping funciona como Mapa de Navegación de Hipótesis: reduce ambigüedad antes de Agentic Workflows, bases de conocimiento o automatización.',
   bullets: [
     'Pasar de la especulación de sillón a evidencia visual que destruye disputas departamentales.',
     'Identificar hubs de poder real y SPOF antes de que la crisis aparezca en caja.',
@@ -151,7 +151,7 @@ export const evidence = {
     duration: '07:36 + audio',
     poster: `${import.meta.env.BASE_URL}Assets/visual-mapping-poster.jpg`,
     src: `${import.meta.env.BASE_URL}Assets/visual-mapping-full.mp4`,
-    note: 'Ver antes de decidir una implementación de IA, RAG o automatización de workflows.',
+    note: 'Ver antes de decidir una implementación de IA, bases de conocimiento o automatización de workflows.',
   },
 };
 
@@ -160,7 +160,7 @@ export const riskPanel = {
   title: 'Ruido · IA · Reingeniería',
   metrics: [
     { label: 'Ruido automatizable', value: 'Alto', danger: true },
-    { label: 'Frameworks sin mapa', value: 'VUCA / BANI / TUNA', danger: false },
+    { label: 'Estructura real', value: 'No mapeada', danger: true },
     { label: 'Valor en riesgo', value: '~10,2%', danger: true },
   ],
   footnote: 'El riesgo no es adoptar IA tarde. Es inyectarla en un sistema que nadie puede gobernar.',

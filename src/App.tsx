@@ -2,7 +2,6 @@ import { useD3Background } from './hooks/useD3Background';
 import { useIcebergDepth } from './hooks/useIcebergDepth';
 import { useThemeMode } from './hooks/useThemeMode';
 import { useI18n } from './hooks/useI18n';
-import { FloatingCta } from './components/layout/FloatingCta';
 import { IcebergProgress } from './components/layout/IcebergProgress';
 import { IcebergProgressMobile } from './components/layout/IcebergProgressMobile';
 import { ModeSwitch } from './components/layout/ModeSwitch';
@@ -42,7 +41,6 @@ export default function App() {
         <SignalLayer />
         <DepthLayer />
       </main>
-      <FloatingCta />
     </>
   );
 }

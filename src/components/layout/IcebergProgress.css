@@ -78,48 +78,224 @@
   }
 }
 
-.iceberg-progress-mobile {
+/* Premium Sticky Mobile Navigation */
+.iceberg-progress-mobile-container {
   position: sticky;
   top: 0;
-  z-index: 30;
-  display: flex;
-  gap: 0.35rem;
-  overflow-x: auto;
-  padding: 0.65rem 1rem;
-  margin: 0 -1.05rem;
-  background: color-mix(in srgb, var(--panel) 92%, transparent);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(12px);
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-
-.iceberg-progress-mobile::-webkit-scrollbar {
-  display: none;
-}
-
-.iceberg-progress-mobile a {
-  flex-shrink: 0;
-  padding: 0.4rem 0.7rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  color: var(--muted);
-}
-
-.iceberg-progress-mobile a[aria-current='step'] {
-  background: var(--blueprint);
-  border-color: var(--blueprint);
-  color: #fff;
+  z-index: 99;
+  width: 100%;
 }
 
 @media (min-width: 900px) {
-  .iceberg-progress-mobile {
+  .iceberg-progress-mobile-container {
     display: none;
   }
 }
+
+.iceberg-progress-mobile-header {
+  position: relative;
+  background: color-mix(in srgb, var(--panel) 85%, transparent);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease;
+}
+
+.iceberg-progress-mobile-header__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 2.2rem;
+}
+
+.iceberg-progress-mobile-header__current {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  text-transform: uppercase;
+}
+
+.iceberg-progress-mobile-header__number {
+  color: var(--signal);
+  font-size: 0.75rem;
+  opacity: 0.95;
+}
+
+.iceberg-progress-mobile-header__dot-separator {
+  color: var(--line-strong);
+  font-weight: bold;
+  opacity: 0.6;
+}
+
+.iceberg-progress-mobile-header__label {
+  letter-spacing: 0.08em;
+}
+
+/* Burger Toggle Button */
+.iceberg-progress-mobile-header__toggle {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 2.2rem;
+  height: 1.8rem;
+  cursor: pointer;
+  z-index: 100;
+  outline: none;
+}
+
+.burger-line {
+  display: block;
+  height: 2px;
+  background-color: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.3s ease;
+}
+
+.burger-line.line-1 {
+  width: 1.2rem;
+}
+.burger-line.line-2 {
+  width: 0.85rem;
+}
+.burger-line.line-3 {
+  width: 1.2rem;
+}
+
+.iceberg-progress-mobile-header__toggle:hover .burger-line {
+  background-color: var(--signal);
+}
+
+.iceberg-progress-mobile-header__toggle.is-open .burger-line.line-1 {
+  transform: translateY(5px) rotate(45deg);
+  width: 1.2rem;
+}
+
+.iceberg-progress-mobile-header__toggle.is-open .burger-line.line-2 {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.iceberg-progress-mobile-header__toggle.is-open .burger-line.line-3 {
+  transform: translateY(-5px) rotate(-45deg);
+  width: 1.2rem;
+}
+
+/* Drawer Menu (Vertical dropdown) */
+.iceberg-progress-mobile-drawer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: color-mix(in srgb, var(--panel) 96%, transparent);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+.iceberg-progress-mobile-drawer.is-open {
+  max-height: 450px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.iceberg-progress-mobile-drawer__list {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  margin: 0;
+  list-style: none;
+}
+
+.iceberg-progress-mobile-drawer__item {
+  width: 100%;
+}
+
+.iceberg-progress-mobile-drawer__link {
+  display: flex;
+  align-items: center;
+  padding: 0.85rem 1.5rem;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: background 0.25s ease, color 0.25s ease, padding-left 0.25s ease;
+  border-left: 3px solid transparent;
+}
+
+.iceberg-progress-mobile-drawer__link:hover {
+  background: color-mix(in srgb, var(--signal) 8%, transparent);
+  color: var(--ink);
+  padding-left: 1.75rem;
+}
+
+.iceberg-progress-mobile-drawer__link.is-active {
+  color: var(--signal);
+  background: color-mix(in srgb, var(--signal) 5%, transparent);
+  border-left-color: var(--signal);
+  font-weight: 700;
+}
+
+.iceberg-progress-mobile-drawer__num {
+  font-size: 0.72rem;
+  color: var(--line-strong);
+  margin-right: 0.75rem;
+  opacity: 0.8;
+}
+
+.iceberg-progress-mobile-drawer__link.is-active .iceberg-progress-mobile-drawer__num {
+  color: var(--signal);
+}
+
+.iceberg-progress-mobile-drawer__text {
+  flex-grow: 1;
+}
+
+.iceberg-progress-mobile-drawer__indicator {
+  width: 0.35rem;
+  height: 0.35rem;
+  background-color: var(--signal);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--signal);
+}
+
+/* Progress Bar at the bottom */
+.iceberg-progress-mobile-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--line);
+}
+
+.iceberg-progress-mobile-progress-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--signal), var(--blueprint));
+  box-shadow: 0 0 8px var(--signal);
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+

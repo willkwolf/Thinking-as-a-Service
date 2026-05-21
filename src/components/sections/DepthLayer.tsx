@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { useI18n } from '../../hooks/useI18n';
 import { KumuEmbed } from '../ui/KumuEmbed';
 import { Reveal } from '../ui/Reveal';
@@ -6,6 +7,17 @@ export function DepthLayer() {
   const { content } = useI18n();
   const { megatrends, caseStudy, footer, playbook } = content;
   const ctaHref = `${playbook.whatsappBase}?text=${encodeURIComponent(footer.ctaMessage)}`;
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <>
@@ -16,7 +28,9 @@ export function DepthLayer() {
             <h2 id="megatrends-title">{megatrends.title}</h2>
             <p className="lead">{megatrends.lead}</p>
           </Reveal>
-          <KumuEmbed title={megatrends.embedTitle} src={megatrends.embedUrl} />
+          {!isMobile && (
+            <KumuEmbed title={megatrends.embedTitle} src={megatrends.embedUrl} />
+          )}
 
           <Reveal delay={0.12}>
             <p className="eyebrow eyebrow--muted" style={{ marginTop: '3.5rem' }}>
@@ -26,7 +40,9 @@ export function DepthLayer() {
             <p className="lead">{caseStudy.lead}</p>
             <p>{caseStudy.description}</p>
           </Reveal>
-          <KumuEmbed title={caseStudy.embedTitle} src={caseStudy.embedUrl} />
+          {!isMobile && (
+            <KumuEmbed title={caseStudy.embedTitle} src={caseStudy.embedUrl} />
+          )}
         </div>
       </section>
 

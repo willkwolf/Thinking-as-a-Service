@@ -47,7 +47,7 @@ export const siteContent = {
     metadata: {
       title: 'Thinking as a Service | Complejidad, Industria e IA',
       description:
-        'Consultoría de alto impacto: diagnostique la complejidad que destruye valor, reduzca el ruido VUCA/BANI/TUNA y active simplicidad operativa antes de automatizar con IA.',
+        'Consultoría ejecutiva de alto impacto: diagnostique la complejidad que destruye valor y active simplicidad operativa antes de automatizar con IA.',
     },
     ui: {
       visualMode: 'Modo visual',
@@ -84,7 +84,7 @@ export const siteContent = {
       macroNarrative: 'Diseño Organizacional',
       coreNarrative: 'Ciencia de Redes & Simplificación',
       noiseFrameworks: ['VUCA', 'BANI', 'TUNA'],
-      noiseTech: ['Flujos agénticos', 'RAG sin mapa', 'Reingeniería acelerada', 'Copilotos sin gobernanza'],
+      noiseTech: ['Flujos agénticos', 'Bases de conocimiento sin mapa', 'Reingeniería acelerada', 'Copilotos sin gobernanza'],
       diagnosis: {
         eyebrow: 'El diagnóstico',
         title: 'La complejidad es una barrera invisible',
@@ -233,7 +233,7 @@ export const siteContent = {
       evidence: {
         eyebrow: 'Evidencia',
         title: '¿Su organización opera sobre estructura visible o sobre dinámicas no modeladas?',
-        lead: 'Visual Mapping funciona como mapa de navegación de hipótesis: reduce ambigüedad antes de flujos agénticos, RAG o automatización.',
+        lead: 'Visual Mapping funciona como mapa de navegación de hipótesis: reduce ambigüedad antes de flujos agénticos, bases de conocimiento o automatización.',
         bullets: [
           'Pasar de la especulación de sillón a evidencia visual que desactiva disputas departamentales.',
           'Identificar centros de poder real y puntos únicos de falla antes de que la crisis aparezca en caja.',
@@ -244,7 +244,7 @@ export const siteContent = {
           duration: '07:36 + audio',
           poster: `${import.meta.env.BASE_URL}Assets/visual-mapping-poster.jpg`,
           src: `${import.meta.env.BASE_URL}Assets/visual-mapping-full.mp4`,
-          note: 'Ver antes de decidir una implementación de IA, RAG o automatización de flujos.',
+          note: 'Ver antes de decidir una implementación de IA, bases de conocimiento o automatización de flujos.',
         },
       },
       riskPanel: {
@@ -252,7 +252,7 @@ export const siteContent = {
         title: 'Ruido · IA · Reingeniería',
         metrics: [
           { label: 'Ruido automatizable', value: 'Alto', danger: true },
-          { label: 'Marcos sin mapa', value: 'VUCA / BANI / TUNA', danger: false },
+          { label: 'Estructura real', value: 'No mapeada', danger: true },
           { label: 'Valor en riesgo', value: '~10,2%', danger: true },
         ],
         footnote: 'El riesgo no es adoptar IA tarde. Es inyectarla en un sistema que nadie puede gobernar.',
@@ -340,7 +340,7 @@ export const siteContent = {
     metadata: {
       title: 'Thinking as a Service | Complexity, Industry and AI',
       description:
-        'Executive consulting: diagnose value-destroying complexity, reduce VUCA/BANI/TUNA noise and activate operational simplicity before automating with AI.',
+        'Executive consulting: diagnose value-destroying complexity and activate operational simplicity before automating with AI.',
     },
     ui: {
       visualMode: 'Visual mode',
@@ -376,7 +376,7 @@ export const siteContent = {
       macroNarrative: 'Organizational Design',
       coreNarrative: 'Network Science & Simplification',
       noiseFrameworks: ['VUCA', 'BANI', 'TUNA'],
-      noiseTech: ['Agentic flows', 'RAG without a map', 'Accelerated redesign', 'Ungoverned copilots'],
+      noiseTech: ['Agentic flows', 'Knowledge bases without a map', 'Accelerated redesign', 'Ungoverned copilots'],
       diagnosis: {
         eyebrow: 'Diagnosis',
         title: 'Complexity is an invisible barrier',
@@ -521,7 +521,7 @@ export const siteContent = {
       evidence: {
         eyebrow: 'Evidence',
         title: 'Does your organization operate on visible structure or unmapped dynamics?',
-        lead: 'Visual Mapping works as a hypothesis navigation map: it reduces ambiguity before agentic flows, RAG or automation.',
+        lead: 'Visual Mapping works as a hypothesis navigation map: it reduces ambiguity before agentic flows, knowledge bases or automation.',
         bullets: [
           'Move from armchair speculation to visual evidence that defuses departmental disputes.',
           'Identify real power hubs and single points of failure before the crisis hits cash flow.',
@@ -532,7 +532,7 @@ export const siteContent = {
           duration: '07:36 + audio',
           poster: `${import.meta.env.BASE_URL}Assets/visual-mapping-poster.jpg`,
           src: `${import.meta.env.BASE_URL}Assets/visual-mapping-full.mp4`,
-          note: 'Watch before deciding an AI, RAG or workflow automation implementation.',
+          note: 'Watch before deciding an AI, knowledge bases or workflow automation implementation.',
         },
       },
       riskPanel: {
@@ -540,7 +540,7 @@ export const siteContent = {
         title: 'Noise · AI · Redesign',
         metrics: [
           { label: 'Automatable noise', value: 'High', danger: true },
-          { label: 'Frameworks without map', value: 'VUCA / BANI / TUNA', danger: false },
+          { label: 'Real structure', value: 'Unmapped', danger: true },
           { label: 'Value at risk', value: '~10.2%', danger: true },
         ],
         footnote: 'The risk is not adopting AI late. It is injecting it into a system nobody can govern.',

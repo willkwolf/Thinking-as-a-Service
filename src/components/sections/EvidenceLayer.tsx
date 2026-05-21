@@ -24,18 +24,10 @@ export function EvidenceLayer() {
           </Reveal>
         </div>
         <Reveal delay={0.15} className="video-module panel">
-          <div className="video-module__toolbar">
-            <span>{evidence.video.label}</span>
-            <strong>{evidence.video.duration}</strong>
-          </div>
           <video controls playsInline preload="metadata" poster={evidence.video.poster}>
             <source src={evidence.video.src} type="video/mp4" />
             {content.ui.noVideo}
           </video>
-          <div className="video-module__notes">
-            <strong>{content.ui.recommendedUse}</strong>
-            <span>{evidence.video.note}</span>
-          </div>
         </Reveal>
       </div>
     </section>
