@@ -1,11 +1,130 @@
 .footer-layer {
-  min-height: 70svh;
+  min-height: auto;
+  padding-block: 5rem 3rem;
+  border-top: 1px solid var(--line);
 }
 
 .closing-panel {
-  padding: 1.5rem;
+  padding: 2.5rem;
+  margin-bottom: 4rem;
 }
 
 .closing-panel h2 {
-  max-width: 20ch;
+  max-width: 28ch;
+}
+
+/* Three-Column Footer Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+  padding-top: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.footer-col h4 {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--blueprint);
+}
+
+.footer-col p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 24rem;
+  margin: 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  font-size: 0.88rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.footer-links a:hover {
+  color: var(--blueprint);
+  transform: translateX(4px);
+}
+
+/* Privacy Seal (Gold Bordered & Translucent Glow) */
+.privacy-seal {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.85rem 1.15rem;
+  border: 1px solid rgba(176, 141, 62, 0.25);
+  background: rgba(176, 141, 62, 0.03);
+  border-radius: var(--radius);
+  max-width: fit-content;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(176, 141, 62, 0.02);
+}
+
+.privacy-seal:hover {
+  border-color: var(--blueprint);
+  background: rgba(176, 141, 62, 0.06);
+  box-shadow: 0 8px 24px rgba(176, 141, 62, 0.08);
+}
+
+.privacy-seal__badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--amber);
+  letter-spacing: 0.08em;
+}
+
+.privacy-seal__text {
+  font-size: 0.74rem !important;
+  color: var(--muted);
+  opacity: 0.85;
+  font-family: var(--font-mono);
+  margin: 0;
+}
+
+/* Sub-Footer bottom row */
+.sub-footer {
+  margin-top: 4.5rem;
+  border-top: 1px solid var(--line);
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  opacity: 0.6;
 }

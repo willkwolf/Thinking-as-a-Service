@@ -157,6 +157,83 @@ export function DepthLayer() {
             </div>
           </Reveal>
         </div>
+
+        {/* Structured High-Ticket Footer */}
+        <div className="content-wrapper">
+          <div className="footer-grid">
+            <Reveal delay={0.1}>
+              <div className="footer-col">
+                <h4>Thinking as a Service</h4>
+                <p style={{ margin: 0 }}>
+                  {locale === 'es'
+                    ? 'Auditorías de realidad operativa y modelado de complejidad sistémica para corporaciones industriales y organizaciones complejas.'
+                    : 'Audits of operational reality and systems complexity modeling for industrial corporations and complex organizations.'}
+                </p>
+                <div className="privacy-seal" style={{ marginTop: '0.5rem' }}>
+                  <span className="privacy-seal__badge">
+                    {locale === 'es' ? 'Cero Cookies · Sin Rastreo' : 'Zero Cookies · Zero Tracking'}
+                  </span>
+                  <p className="privacy-seal__text">
+                    {locale === 'es'
+                      ? 'Exploración 100% segura y confidencial.'
+                      : '100% secure and confidential exploration.'}
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.15}>
+              <div className="footer-col">
+                <h4>{locale === 'es' ? 'Profundidad' : 'Depth Layers'}</h4>
+                <ul className="footer-links">
+                  {content.icebergLayers.map((layer) => (
+                    <li key={layer.id}>
+                      <a href={`#iceberg-${layer.id}`}>{layer.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.2}>
+              <div className="footer-col">
+                <h4>{locale === 'es' ? 'Marco Legal (GitHub)' : 'Legal Framework'}</h4>
+                <ul className="footer-links">
+                  <li>
+                    <a href="https://github.com/willkwolf/Thinking-as-a-Service/blob/main/legal/README.md" target="_blank" rel="noopener noreferrer">
+                      ⚖️ {locale === 'es' ? 'Índice Legal' : 'Legal Index'}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/willkwolf/Thinking-as-a-Service/blob/main/legal/derechos-de-autor.md" target="_blank" rel="noopener noreferrer">
+                      © {locale === 'es' ? 'Derechos de Autor' : 'Copyright Notice'}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/willkwolf/Thinking-as-a-Service/blob/main/legal/exoneracion-responsabilidad.md" target="_blank" rel="noopener noreferrer">
+                      ⚠️ {locale === 'es' ? 'Exoneración Legal' : 'Liability Exoneration'}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/willkwolf/Thinking-as-a-Service/blob/main/legal/privacidad.md" target="_blank" rel="noopener noreferrer">
+                      🔒 {locale === 'es' ? 'Privacidad Absoluta' : 'Absolute Privacy'}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/willkwolf/Thinking-as-a-Service/blob/main/legal/terminos.md" target="_blank" rel="noopener noreferrer">
+                      💼 {locale === 'es' ? 'Términos de Servicio' : 'Terms of Service'}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </Reveal>
+          </div>
+
+          <div className="sub-footer">
+            <span>© 2026 Nosotros. {locale === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}</span>
+            <span>Thinking as a Service &middot; {locale === 'es' ? 'Simplicidad de Alta Dirección' : 'Executive Simplicity'}</span>
+          </div>
+        </div>
       </footer>
     </>
   );

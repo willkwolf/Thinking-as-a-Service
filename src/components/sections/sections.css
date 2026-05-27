@@ -30,6 +30,10 @@
   background: linear-gradient(180deg, #070b24 0%, #02040c 100%);
 }
 
+.footer-layer {
+  background: #02040c;
+}
+
 /* Local CSS Scoping for Dark Background Layers & Footer (Light Mode) */
 .layer--formula,
 .layer--cemstwo,
@@ -102,6 +106,10 @@
 
 :root[data-time-mode="rest"] .layer--depth {
   background: linear-gradient(180deg, #03050a 0%, #010204 100%);
+}
+
+:root[data-time-mode="rest"] .footer-layer {
+  background: #010204;
 }
 
 .complexity-block {
