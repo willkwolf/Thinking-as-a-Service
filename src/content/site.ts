@@ -264,7 +264,7 @@ export const siteContent = {
       lead: 'Modelo de consultoría ejecutiva: diagnóstico riguroso y reducción estructurada del ruido que destruye margen.',
       whatsappBase: 'https://wa.me/573108437004',
       ctaMessage:
-        'Quiero explorar el Playbook de Complejidad: diagnóstico y estrategia de reducción para mi organización.',
+        'Hola Dr. Andrés López Astudillo. Vengo de su plataforma https://willkwolf.github.io/Thinking-as-a-Service/ y quiero explorar el Playbook de entrega: De la complejidad medida a la simplicidad operativa. Me interesa conocer más sobre el modelo de consultoría y cómo reducir el ruido organizativo. ¿Podemos agendar una llamada?',
       items: [
         {
           id: 'diagnosis',
@@ -333,7 +333,7 @@ export const siteContent = {
       lead: 'Si no puede ver el sistema, no puede gobernarlo; y la IA solo amplificará lo que ya está roto.',
       ctaLabel: 'Solicitar diagnóstico de complejidad',
       ctaMessage:
-        'Quiero identificar cuellos de botella sistémicos y complejidad mala antes de automatizar con IA.',
+        'Hola Dr. Andrés López Astudillo. He analizado la matriz de simplicidad en https://willkwolf.github.io/Thinking-as-a-Service/ y solicito un diagnóstico de complejidad para mi organización. Busco identificar cuellos de botella sistémicos y eliminar la complejidad dañina antes de automatizar con IA. ¿Cuáles son los siguientes pasos?',
     },
   },
   en: {
@@ -551,7 +551,8 @@ export const siteContent = {
       title: 'From measured complexity to operational simplicity',
       lead: 'Executive consulting model: rigorous diagnosis and structured reduction of the noise that destroys margin.',
       whatsappBase: 'https://wa.me/573108437004',
-      ctaMessage: 'I want to explore the Complexity Playbook: diagnosis and reduction strategy for my organization.',
+      ctaMessage:
+        'Hello Dr. Andrés López Astudillo. I am visiting your platform https://willkwolf.github.io/Thinking-as-a-Service/ and want to explore the delivery Playbook: From measured complexity to operational simplicity. I am interested in learning more about your consulting model and how to reduce organizational noise. Can we schedule a brief call?',
       items: [
         {
           id: 'diagnosis',
@@ -616,7 +617,8 @@ export const siteContent = {
       title: 'Where is your organization in the simplicity matrix?',
       lead: 'If you cannot see the system, you cannot govern it; and AI will only amplify what is already broken.',
       ctaLabel: 'Request complexity diagnosis',
-      ctaMessage: 'I want to identify system bottlenecks and bad complexity before automating with AI.',
+      ctaMessage:
+        'Hello Dr. Andrés López Astudillo. I have analyzed the simplicity matrix on https://willkwolf.github.io/Thinking-as-a-Service/ and would like to request a complexity diagnosis for my organization. I want to identify systemic bottlenecks and eliminate bad complexity before automating with AI. What are the next steps?',
     },
   },
 } as const;

@@ -4,7 +4,7 @@ export const playbook = {
   lead: 'Modelo de consultoría de alto ticket: diagnóstico riguroso y reducción estructurada del ruido que destruye margen.',
   whatsappBase: 'https://wa.me/573108437004',
   ctaMessage:
-    'Quiero explorar el Playbook de Complejidad — diagnóstico y estrategia de reducción para mi organización.',
+    'Hola Dr. Andrés López Astudillo. Vengo de su plataforma https://willkwolf.github.io/Thinking-as-a-Service/ y quiero explorar el Playbook de entrega: De la complejidad medida a la simplicidad operativa. Me interesa conocer más sobre el modelo de consultoría y cómo reducir el ruido organizativo. ¿Podemos agendar una llamada?',
 };
 
 export interface PlaybookItem {
@@ -104,5 +104,5 @@ export const footer = {
   lead: 'Si no puede ver el sistema, no puede gobernarlo — y la IA solo amplificará lo que ya está roto.',
   ctaLabel: 'Solicitar diagnóstico de complejidad',
   ctaMessage:
-    'Quiero identificar cuellos de botella sistémicos y complejidad mala antes de automatizar con IA.',
+    'Hola Dr. Andrés López Astudillo. He analizado la matriz de simplicidad en https://willkwolf.github.io/Thinking-as-a-Service/ y solicito un diagnóstico de complejidad para mi organización. Busco identificar cuellos de botella sistémicos y eliminar la complejidad dañina antes de automatizar con IA. ¿Cuáles son los siguientes pasos?',
 };
