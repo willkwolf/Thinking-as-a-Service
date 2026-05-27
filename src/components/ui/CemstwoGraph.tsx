@@ -41,6 +41,7 @@ export function CemstwoGraph() {
   // Find currently active node details
   const activeNode = cemstwo.nodes.find((n) => n.id === selectedId) || cemstwo.nodes[4]; // Default to T (index 4)
 
+  // EFFECT 1: Initialize static graph structure ONCE on language/content mount
   useEffect(() => {
     if (!svgRef.current) return;
 
@@ -65,7 +66,7 @@ export function CemstwoGraph() {
       .attr('flood-color', '#b08d3e')
       .attr('flood-opacity', '0.22');
 
-    // 2. Draw Edges (Links)
+    // 2. Draw Edges (Lines) with initial default classes
     const edgeGroup = svg.append('g').attr('class', 'cemstwo-graph__edges');
 
     edgeGroup
@@ -77,10 +78,7 @@ export function CemstwoGraph() {
       .attr('y1', (d) => NODE_POSITIONS[d[0]].y)
       .attr('x2', (d) => NODE_POSITIONS[d[1]].x)
       .attr('y2', (d) => NODE_POSITIONS[d[1]].y)
-      .attr('class', (d) => {
-        const isConnected = d[0] === selectedId || d[1] === selectedId;
-        return `cemstwo-graph__edge${isConnected ? ' cemstwo-graph__edge--active' : ''}`;
-      });
+      .attr('class', 'cemstwo-graph__edge');
 
     // 3. Draw Nodes Group
     const nodeGroup = svg.append('g').attr('class', 'cemstwo-graph__nodes');
@@ -95,7 +93,7 @@ export function CemstwoGraph() {
       .data(nodesData)
       .enter()
       .append('g')
-      .attr('class', (d) => `cemstwo-graph__node-group${d.id === selectedId ? ' cemstwo-graph__node-group--active' : ''}`)
+      .attr('class', 'cemstwo-graph__node-group')
       .attr('tabindex', '0')
       .attr('role', 'button')
       .attr('aria-label', (d) => {
@@ -122,9 +120,8 @@ export function CemstwoGraph() {
       .append('circle')
       .attr('cx', (d) => d.x)
       .attr('cy', (d) => d.y)
-      .attr('r', (d) => (d.id === selectedId ? 6.5 : 5))
-      .attr('class', (d) => `cemstwo-graph__node${d.id === selectedId ? ' cemstwo-graph__node--active' : ''}`)
-      .style('filter', (d) => (d.id === selectedId ? 'url(#node-shadow)' : 'none'))
+      .attr('r', 5)
+      .attr('class', 'cemstwo-graph__node')
       .style('transition', 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)');
 
     // Append text letter label
@@ -134,11 +131,36 @@ export function CemstwoGraph() {
       .attr('y', (d) => d.y + 0.3)
       .attr('text-anchor', 'middle')
       .attr('dominant-baseline', 'central')
-      .attr('class', (d) => `cemstwo-graph__label${d.id === selectedId ? ' cemstwo-graph__label--active' : ''}`)
+      .attr('class', 'cemstwo-graph__label')
       .text((d) => d.id)
       .style('transition', 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)');
 
-  }, [selectedId, cemstwo]);
+  }, [cemstwo]);
+
+  // EFFECT 2: Defensive & fluid state updates on selectedId change WITHOUT destroying DOM elements under cursor
+  useEffect(() => {
+    if (!svgRef.current) return;
+    const svg = d3.select(svgRef.current);
+
+    // Update active class on node groups
+    svg.selectAll<SVGGElement, { id: string }>('.cemstwo-graph__node-group')
+      .classed('cemstwo-graph__node-group--active', (d) => d.id === selectedId);
+
+    // Update active attributes and filter on circles
+    svg.selectAll<SVGCircleElement, { id: string }>('.cemstwo-graph__node')
+      .classed('cemstwo-graph__node--active', (d) => d.id === selectedId)
+      .attr('r', (d) => (d.id === selectedId ? 6.5 : 5))
+      .style('filter', (d) => (d.id === selectedId ? 'url(#node-shadow)' : 'none'));
+
+    // Update active classes on text labels
+    svg.selectAll<SVGTextElement, { id: string }>('.cemstwo-graph__label')
+      .classed('cemstwo-graph__label--active', (d) => d.id === selectedId);
+
+    // Update active class on edges (lines) connecting to selected node
+    svg.selectAll<SVGLineElement, [string, string]>('.cemstwo-graph__edge')
+      .classed('cemstwo-graph__edge--active', (d) => d[0] === selectedId || d[1] === selectedId);
+
+  }, [selectedId]);
 
   return (
     <Reveal delay={0.15}>

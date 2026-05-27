@@ -87,20 +87,20 @@ export const siteContent = {
       noiseTech: ['Flujos agénticos', 'Bases de conocimiento sin mapa', 'Reingeniería acelerada', 'Copilotos sin gobernanza'],
       diagnosis: {
         eyebrow: 'El diagnóstico',
-        title: 'La complejidad es una barrera invisible',
-        lead: 'No es solo un reto operativo: es uno de los mayores obstáculos al éxito en organizaciones globales.',
+        title: 'Falla Estructural: El Costo Invisible',
+        lead: 'La complejidad no es un estado; es una dinámica destructiva de valor en organizaciones globales.',
         external: {
-          label: 'Complejidad externa',
-          text: 'Globalización, cambios regulatorios, turbulencia económica y necesidades diversificadas de clientes.',
+          label: 'Complejidad Externa (Entorno E)',
+          text: 'Dinámicas regulatorias cambiantes, fluctuaciones del mercado global y flujos de información asimétricos.',
         },
         internal: {
-          label: 'Complejidad interna: el verdadero enemigo',
-          text: 'Proliferación de productos, capas de gestión, procesos, informes y correos que abruman a las personas y distraen del valor real.',
+          label: 'Complejidad Interna: La Falla Estructural (S)',
+          text: 'Acoplamiento estrecho de procesos lineales, sobre-especificación de interfaces de decisión y proliferación de capas de gestión que canibalizan el margen operativo.',
         },
         bullets: [
-          'La complejidad interna no se ve en el organigrama; se cobra en el margen.',
-          'Inyectar IA en un sistema que nadie puede gobernar acelera el caos, no el retorno.',
-          'Antes de automatizar, describa el sistema: qué acelerar y qué eliminar.',
+          '**1. El Costo en el Margen:** La complejidad interna opera silenciosamente, cobrándose en el margen de rentabilidad lo que el organigrama tradicional oculta.',
+          '**2. El Caos de la Automatización:** Inyectar agentes de IA o bases de conocimiento en una estructura no mapeada acelera la entropía organizativa en lugar del retorno.',
+          '**3. Descripción Causal Previa:** Antes de automatizar, describa el sistema: identifique las variables de entrada y los puntos de apalancamiento.',
         ],
       },
       formula: {
@@ -379,20 +379,20 @@ export const siteContent = {
       noiseTech: ['Agentic flows', 'Knowledge bases without a map', 'Accelerated redesign', 'Ungoverned copilots'],
       diagnosis: {
         eyebrow: 'Diagnosis',
-        title: 'Complexity is an invisible barrier',
-        lead: 'It is not just an operational challenge: it is one of the largest obstacles to success in global organizations.',
+        title: 'Structural Failure: The Invisible Cost',
+        lead: 'Complexity is not a state; it is a value-destroying dynamic in global organizations.',
         external: {
-          label: 'External complexity',
-          text: 'Globalization, regulatory changes, economic turbulence and diversified customer needs.',
+          label: 'External Complexity (Environment E)',
+          text: 'Shifting regulatory requirements, global market fluctuations, and asymmetric information flows.',
         },
         internal: {
-          label: 'Internal complexity: the real enemy',
-          text: 'Product proliferation, management layers, processes, reports and emails that overwhelm people and distract from real value.',
+          label: 'Internal Complexity: Structural Failure (S)',
+          text: 'Tight coupling of linear processes, over-specification of decision interfaces, and management layers that cannibalize operating margin.',
         },
         bullets: [
-          'Internal complexity does not appear in the org chart; it is paid for in margin.',
-          'Injecting AI into an ungoverned system accelerates chaos, not return.',
-          'Before automating, describe the system: what to accelerate and what to remove.',
+          '**1. The Cost in Margin:** Internal complexity operates silently, eroding profit margin where the traditional org chart remains blind.',
+          '**2. Automation Entropy:** Injecting AI agents or knowledge bases into an unmapped system accelerates organizational entropy rather than ROI.',
+          '**3. Causal Mapping First:** Before automating, map the causal mechanism: identify entry variables and key leverage points.',
         ],
       },
       formula: {
