@@ -1,32 +1,80 @@
+/* Premium Solid Iceberg Graded Palette (Accessibility-First) */
 .layer--surface {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--sand) 6%, transparent), transparent 40%);
+  background: #f4f7fb;
 }
 
 .layer--diagnosis {
+  background: #EAE0CF; /* User's warm glacier sand */
   border-top: 1px solid var(--line);
-  background: color-mix(in srgb, var(--panel-solid) 35%, transparent);
 }
 
 .layer--evidence {
-  background: linear-gradient(135deg, color-mix(in srgb, var(--blueprint) 8%, transparent), transparent 55%);
+  background: #7288AE; /* User's slate ice blue */
+  border-top: 1px solid var(--line);
 }
 
 .layer--formula {
+  background: #4B5694; /* User's medium slate blue */
   border-block: 1px solid var(--line);
-  background: color-mix(in srgb, var(--panel-solid) 55%, transparent);
 }
 
 .layer--cemstwo {
+  background: #283163; /* Deep slate-navy transition */
   border-bottom: 1px solid var(--line);
-  background: linear-gradient(180deg, color-mix(in srgb, var(--blueprint) 4%, transparent), transparent 40%);
 }
 
 .layer--signal {
-  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--circular) 6%, transparent));
+  background: #111844; /* User's deep navy blue */
 }
 
 .layer--depth {
+  background: #070b24; /* Abyssal dark navy */
   border-top: 1px solid var(--line);
+}
+
+/* Local CSS Scoping for Dark Background Layers (Light Mode) */
+.layer--formula,
+.layer--cemstwo,
+.layer--signal,
+.layer--depth {
+  --ink: #ffffff;
+  --muted: #d0def0;
+  --line: rgba(255, 255, 255, 0.18);
+  --line-strong: rgba(255, 255, 255, 0.35);
+  --panel: rgba(255, 255, 255, 0.05);
+  --panel-solid: rgba(16, 26, 44, 0.95);
+  --blueprint: #8bbce6;
+  --danger: #ff8a8a;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+/* Premium Dark Mode (Rest) Override Solid Backgrounds */
+:root[data-time-mode="rest"] .layer--surface {
+  background: #080d12;
+}
+
+:root[data-time-mode="rest"] .layer--diagnosis {
+  background: #111622;
+}
+
+:root[data-time-mode="rest"] .layer--evidence {
+  background: #182235;
+}
+
+:root[data-time-mode="rest"] .layer--formula {
+  background: #121927;
+}
+
+:root[data-time-mode="rest"] .layer--cemstwo {
+  background: #0d121f;
+}
+
+:root[data-time-mode="rest"] .layer--signal {
+  background: #080c18;
+}
+
+:root[data-time-mode="rest"] .layer--depth {
+  background: #03050a;
 }
 
 .complexity-block {

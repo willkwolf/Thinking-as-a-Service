@@ -1,7 +1,6 @@
 import { useD3Background } from './hooks/useD3Background';
 import { useIcebergDepth } from './hooks/useIcebergDepth';
 import { useThemeMode } from './hooks/useThemeMode';
-import { useScrollTransition } from './hooks/useScrollTransition';
 import { useI18n } from './hooks/useI18n';
 import { IcebergProgress } from './components/layout/IcebergProgress';
 import { IcebergProgressMobile } from './components/layout/IcebergProgressMobile';
@@ -21,9 +20,6 @@ export default function App() {
   const { activeLayer } = useIcebergDepth();
   const { locale, setLocale } = useI18n();
   const d3Ref = useD3Background(mode);
-  
-  // Activate dynamic dark-marine scroll depth transition
-  useScrollTransition(mode);
 
   return (
     <>
