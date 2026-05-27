@@ -159,6 +159,20 @@
   box-shadow: 0 0 10px rgba(176, 141, 62, 0.5);
 }
 
+.iceberg-progress__link--past {
+  color: var(--muted);
+  opacity: 0.65;
+  transition: opacity 0.3s ease;
+}
+
+.iceberg-progress__link--past:hover {
+  opacity: 1;
+}
+
+.iceberg-progress__link--past .iceberg-progress__meters {
+  opacity: 0.5;
+}
+
 .iceberg-progress__link--past .iceberg-progress__dot {
   background: var(--line-strong);
   border-color: var(--line-strong);

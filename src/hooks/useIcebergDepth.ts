@@ -16,17 +16,26 @@ export function useIcebergDepth() {
     if (!sections.length) return;
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        const top = visible[0];
-        if (top?.target.id) {
-          const layerId = top.target.id.replace('iceberg-', '') as IcebergLayerId;
-          setActiveLayer(layerId);
+      () => {
+        const focalPoint = window.innerHeight * 0.35;
+        let activeId: IcebergLayerId | null = null;
+
+        for (const { id, el } of sections) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= focalPoint && rect.bottom >= focalPoint) {
+            activeId = id;
+            break;
+          }
+        }
+
+        if (activeId) {
+          setActiveLayer(activeId);
         }
       },
-      { rootMargin: '-20% 0px -55% 0px', threshold: [0, 0.15, 0.35, 0.55] }
+      {
+        rootMargin: '-10% 0px -40% 0px',
+        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+      }
     );
 
     sections.forEach(({ el }) => observer.observe(el));
