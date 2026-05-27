@@ -54,35 +54,77 @@
   line-height: 1.4;
 }
 
+.signal-lead__body-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem 2.25rem;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .signal-lead__body-wrapper {
+    grid-template-columns: 1.25fr 0.75fr;
+  }
+}
+
 .signal-lead__body {
-  padding: 1.25rem;
+  padding: 0;
 }
 
 .signal-lead__role {
   display: inline-block;
   margin-bottom: 0.6rem;
-  color: var(--circular);
+  color: var(--blueprint);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .signal-lead h3 {
-  margin: 0 0 0.75rem;
-  font-size: var(--step-2);
+  margin: 0 0 0.85rem;
+  font-size: var(--step-3);
+  font-family: var(--font-display);
+  font-weight: 300;
 }
 
-.signal-lead p {
+.signal-lead__quote {
   margin: 0;
-  color: var(--ink);
+  color: var(--ink) !important;
   font-size: var(--step-1);
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  border-left: 2px solid var(--blueprint);
+  padding-left: 1.25rem;
+}
+
+.signal-lead__tarot-sword {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 200px;
+}
+
+.tarot-sword-svg {
+  width: 100%;
+  max-width: 90px;
+  height: auto;
+  filter: drop-shadow(0 6px 15px rgba(176, 141, 62, 0.08));
+  transition: transform 0.5s var(--ease, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+.signal-lead:hover .tarot-sword-svg {
+  transform: translateY(-8px) scale(1.02);
 }
 
 @media (min-width: 700px) {
   .signal-lead {
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 0.9fr 1.1fr;
     align-items: stretch;
   }
 

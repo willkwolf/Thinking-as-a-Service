@@ -1,9 +1,10 @@
 .cemstwo-section {
-  margin-top: 2rem;
-  padding: 1.5rem;
+  margin-top: 2.5rem;
+  padding: 2rem;
   overflow: hidden;
   border: 1px solid var(--line);
   background: var(--panel);
+  border-radius: var(--radius);
 }
 
 .cemstwo-grid {
@@ -15,8 +16,8 @@
 
 @media (min-width: 768px) {
   .cemstwo-grid {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 2.5rem;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3rem;
   }
 }
 
@@ -33,32 +34,34 @@
   display: block;
   width: 100%;
   height: auto;
-  max-width: 460px;
-  min-height: 250px;
-  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.15));
+  max-width: 440px;
+  min-height: 280px;
+  filter: drop-shadow(0 8px 30px rgba(22, 60, 38, 0.05));
 }
 
 .cemstwo-graph__instruction {
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  color: var(--ink-muted);
+  margin-top: 1.25rem;
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 400;
+  color: var(--muted);
   text-align: center;
-  font-style: italic;
+  opacity: 0.85;
 }
 
 /* Edges & Lines */
 .cemstwo-graph__edge {
   stroke: var(--line-strong);
-  stroke-dasharray: 2 2;
-  stroke-width: 0.35;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0.45;
+  stroke-dasharray: 2 3;
+  stroke-width: 0.4;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.3;
 }
 
 .cemstwo-graph__edge--active {
   stroke: var(--blueprint);
   stroke-dasharray: none;
-  stroke-width: 0.8;
+  stroke-width: 1.2;
   opacity: 1;
 }
 
@@ -71,18 +74,24 @@
 .cemstwo-graph__node {
   fill: var(--panel-solid);
   stroke: var(--line-strong);
-  stroke-width: 0.4;
+  stroke-width: 0.5;
+  transition: all 0.25s ease;
+}
+
+.cemstwo-graph__node-group:hover .cemstwo-graph__node {
+  stroke: var(--blueprint);
+  transform: scale(1.1);
 }
 
 .cemstwo-graph__node--active {
   fill: var(--blueprint);
-  stroke: var(--ink);
-  stroke-width: 0.8;
+  stroke: var(--line-strong);
+  stroke-width: 0.9;
 }
 
 /* Node Labels */
 .cemstwo-graph__label {
-  fill: var(--blueprint);
+  fill: var(--line-strong);
   font-family: var(--font-mono);
   font-size: 3px;
   font-weight: 700;
@@ -100,16 +109,14 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 1.5rem;
-  background: color-mix(in srgb, var(--bg-strong) 85%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--line-strong);
+  padding: 1.75rem;
+  background: var(--panel-solid);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  min-height: 240px;
+  min-height: 250px;
   justify-content: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 32px -8px var(--shadow);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1.2rem 3rem var(--shadow);
 }
 
 .cemstwo-detail__header {
@@ -126,14 +133,14 @@
   justify-content: center;
   width: 2.8rem;
   height: 2.8rem;
-  background: var(--blueprint-dim, rgba(14, 165, 233, 0.1));
+  background: rgba(176, 141, 62, 0.08);
   border: 1.5px solid var(--blueprint);
   border-radius: 50%;
-  color: var(--blueprint);
+  color: var(--line-strong);
   font-family: var(--font-mono);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  text-shadow: 0 0 8px rgba(14, 165, 233, 0.4);
+  box-shadow: 0 0 10px rgba(176, 141, 62, 0.1);
 }
 
 .cemstwo-detail__title-group {
@@ -142,25 +149,27 @@
 }
 
 .cemstwo-detail__eyebrow {
-  font-size: 0.72rem;
-  color: var(--ink-muted);
+  font-size: 0.68rem;
+  color: var(--blueprint);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   font-family: var(--font-mono);
+  font-weight: 600;
 }
 
 .cemstwo-detail__title-group h3 {
   margin: 0.15rem 0 0;
   font-size: var(--step-1);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--ink);
+  font-family: var(--font-body);
 }
 
 .cemstwo-detail__question-box {
-  background: rgba(14, 165, 233, 0.05);
+  background: rgba(22, 60, 38, 0.03);
   border-left: 3px solid var(--blueprint);
   padding: 0.75rem 1rem;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 2px 2px 0;
   margin-bottom: 0.75rem;
 }
 
@@ -171,11 +180,13 @@
   color: var(--ink);
   font-style: italic;
   font-weight: 500;
+  font-family: var(--font-display);
 }
 
 .cemstwo-detail__summary {
   margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: var(--ink-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--muted);
+  font-weight: 300;
 }

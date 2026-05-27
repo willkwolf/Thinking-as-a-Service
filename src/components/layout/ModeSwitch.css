@@ -6,49 +6,18 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.25rem 0.6rem;
+  padding: 0.35rem 0.8rem;
   border-radius: 9999px;
   background: var(--panel);
   border: 1px solid var(--line);
   box-shadow: 0 1rem 2rem var(--shadow);
   backdrop-filter: blur(14px);
-  min-height: 2.75rem;
+  min-height: 2.35rem;
   transition: border-color 0.22s ease, box-shadow 0.22s ease;
 }
 
 .controls-panel:hover {
   border-color: var(--line-strong);
-}
-
-.mode-toggle-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: var(--ink);
-  cursor: pointer;
-  transition: transform 0.2s ease, color 0.2s ease, background 0.2s ease;
-}
-
-.mode-toggle-btn:hover {
-  background: var(--bg-strong);
-  color: var(--signal);
-  transform: scale(1.08) rotate(15deg);
-}
-
-.mode-icon {
-  display: block;
-}
-
-.controls-panel__divider {
-  width: 1px;
-  height: 1.25rem;
-  background: var(--line);
-  margin-inline: 0.25rem;
 }
 
 .lang-switch {

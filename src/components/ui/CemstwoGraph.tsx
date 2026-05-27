@@ -47,27 +47,23 @@ export function CemstwoGraph() {
     const svg = d3.select(svgRef.current);
     svg.selectAll('*').remove();
 
-    // 1. Add Glow Filter in Defs
+    // 1. Add Soft Gold Shadow Filter in Defs
     const defs = svg.append('defs');
     const glowFilter = defs
       .append('filter')
-      .attr('id', 'neon-glow')
-      .attr('x', '-50%')
-      .attr('y', '-50%')
-      .attr('width', '200%')
-      .attr('height', '200%');
+      .attr('id', 'node-shadow')
+      .attr('x', '-30%')
+      .attr('y', '-30%')
+      .attr('width', '160%')
+      .attr('height', '160%');
 
     glowFilter
-      .append('feGaussianBlur')
-      .attr('stdDeviation', '1.5')
-      .attr('result', 'blur');
-    glowFilter
-      .append('feMerge')
-      .selectAll('feMergeNode')
-      .data(['blur', 'SourceGraphic'])
-      .enter()
-      .append('feMergeNode')
-      .attr('in', (d) => d);
+      .append('feDropShadow')
+      .attr('dx', '0')
+      .attr('dy', '1')
+      .attr('stdDeviation', '1')
+      .attr('flood-color', '#b08d3e')
+      .attr('flood-opacity', '0.22');
 
     // 2. Draw Edges (Links)
     const edgeGroup = svg.append('g').attr('class', 'cemstwo-graph__edges');
@@ -128,7 +124,7 @@ export function CemstwoGraph() {
       .attr('cy', (d) => d.y)
       .attr('r', (d) => (d.id === selectedId ? 6.5 : 5))
       .attr('class', (d) => `cemstwo-graph__node${d.id === selectedId ? ' cemstwo-graph__node--active' : ''}`)
-      .style('filter', (d) => (d.id === selectedId ? 'url(#neon-glow)' : 'none'))
+      .style('filter', (d) => (d.id === selectedId ? 'url(#node-shadow)' : 'none'))
       .style('transition', 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)');
 
     // Append text letter label

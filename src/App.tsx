@@ -16,7 +16,7 @@ import './components/sections/sections.css';
 import './components/sections/DepthLayer.css';
 
 export default function App() {
-  const { mode, setMode } = useThemeMode();
+  const { mode } = useThemeMode();
   const { activeLayer } = useIcebergDepth();
   const { locale, setLocale } = useI18n();
   const d3Ref = useD3Background(mode);
@@ -25,8 +25,6 @@ export default function App() {
     <>
       <div id="d3-canvas-container" ref={d3Ref} />
       <ModeSwitch
-        mode={mode}
-        onModeChange={setMode}
         locale={locale}
         onLocaleChange={setLocale}
       />

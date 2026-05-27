@@ -3,7 +3,7 @@ import { Reveal } from '../ui/Reveal';
 import './EvidenceLayer.css';
 
 export function EvidenceLayer() {
-  const { content } = useI18n();
+  const { content, locale } = useI18n();
   const { evidence } = content.complexity;
 
   return (
@@ -24,10 +24,18 @@ export function EvidenceLayer() {
           </Reveal>
         </div>
         <Reveal delay={0.15} className="video-module panel">
+          <header className="video-module__toolbar">
+            <span>{evidence.video.label}</span>
+            <strong className="video-module__duration">{evidence.video.duration}</strong>
+          </header>
           <video controls playsInline preload="metadata" poster={evidence.video.poster}>
             <source src={evidence.video.src} type="video/mp4" />
             {content.ui.noVideo}
           </video>
+          <footer className="video-module__notes">
+            <strong>{locale === 'es' ? 'NOTA METODOLÓGICA:' : 'METHODOLOGY NOTE:'}</strong>
+            <p>{evidence.video.note}</p>
+          </footer>
         </Reveal>
       </div>
     </section>

@@ -88,55 +88,88 @@ video:focus-visible {
   color: var(--blueprint);
 }
 
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blueprint);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--line-strong);
+}
+
 h1,
 h2,
 h3 {
   color: var(--ink);
   font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 
 h1 {
-  max-width: 14ch;
+  max-width: 16ch;
   margin: 0.75rem 0 1.25rem;
   font-size: var(--step-5);
+  font-weight: 300;
 }
 
 h2 {
-  max-width: 18ch;
+  max-width: 22ch;
   margin: 0.7rem 0 1.15rem;
   font-size: var(--step-4);
+  font-weight: 300;
+  font-style: italic;
 }
 
 h3 {
   margin: 0.5rem 0 0.75rem;
   font-size: var(--step-2);
+  font-weight: 500;
+  font-family: var(--font-body);
 }
 
 p {
-  max-width: 46rem;
+  max-width: 44rem;
   margin-bottom: 1.2rem;
   color: var(--muted);
+  font-weight: 300;
+  letter-spacing: -0.01em;
 }
 
 .lead,
 .subcopy {
   color: var(--ink);
   font-size: var(--step-1);
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .text-danger {
   color: var(--danger);
   font-weight: 600;
+  font-family: var(--font-mono);
 }
 
 .panel {
   border: 1px solid var(--line);
   background: var(--panel);
-  box-shadow: 0 1.2rem 2.8rem var(--shadow);
-  backdrop-filter: blur(14px);
+  box-shadow: 0 1.5rem 4rem var(--shadow);
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.panel:hover {
+  border-color: rgba(176, 141, 62, 0.25);
+  box-shadow: 0 2rem 5rem rgba(18, 22, 20, 0.08);
 }
 
 .btn-primary,
@@ -144,39 +177,43 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.85rem;
-  padding: 0.9rem 1.4rem;
+  min-height: 3.2rem;
+  padding: 0.8rem 2.2rem;
   border-radius: var(--radius);
+  font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   text-decoration: none;
-  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--line-strong);
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--signal), var(--blueprint));
-  color: #fff;
-  border: 1px solid color-mix(in srgb, #fff 15%, transparent);
-  box-shadow: 0 0.8rem 1.6rem rgba(26, 38, 29, 0.15);
+  background: var(--line-strong);
+  color: var(--panel-solid);
+  box-shadow: 0 6px 20px rgba(22, 60, 38, 0.12);
 }
 
 .btn-secondary {
-  border: 1px solid var(--line-strong);
   background: transparent;
   color: var(--ink);
+  border-color: var(--line-strong);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--blueprint), var(--signal));
-  box-shadow: 0 1.2rem 2.4rem rgba(26, 38, 29, 0.25);
+  background: var(--blueprint);
+  border-color: var(--blueprint);
+  color: var(--panel-solid);
+  box-shadow: 0 12px 30px rgba(176, 141, 62, 0.2);
   transform: translateY(-2px);
-  border-color: var(--amber);
 }
 
 .btn-secondary:hover {
-  border-color: var(--amber);
-  background: color-mix(in srgb, var(--amber) 8%, transparent);
+  border-color: var(--blueprint);
+  background: rgba(176, 141, 62, 0.04);
+  color: var(--blueprint);
   transform: translateY(-2px);
 }
 

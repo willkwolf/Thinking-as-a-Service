@@ -1,40 +1,49 @@
 .playbook-cards {
   display: grid;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 1.5rem;
+  margin-top: 3rem;
 }
 
 .playbook-card {
   overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--panel-solid);
+  border-radius: var(--radius);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.playbook-card:hover {
+  border-color: var(--blueprint);
+  box-shadow: 0 1rem 3rem var(--shadow);
 }
 
 .playbook-card__toggle {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: start;
   width: 100%;
-  padding: 1.1rem;
+  padding: 1.75rem;
   border: 0;
   background: transparent;
   color: inherit;
   text-align: left;
   cursor: pointer;
-  transition: background 0.25s ease;
+  transition: background 0.3s ease;
 }
 
 .playbook-card__toggle:hover,
 .playbook-card--open .playbook-card__toggle {
-  background: color-mix(in srgb, var(--blueprint) 5%, transparent);
+  background: rgba(176, 141, 62, 0.03);
 }
 
 .playbook-card__static {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: start;
   width: 100%;
-  padding: 1.1rem;
+  padding: 1.75rem;
   background: transparent;
   color: inherit;
   text-align: left;
@@ -42,48 +51,55 @@
 
 .playbook-card__index {
   color: var(--blueprint);
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 0.95;
 }
 
 .playbook-card__head h3 {
   margin: 0 0 0.5rem;
-  font-size: var(--step-1);
+  font-size: var(--step-2);
   font-family: var(--font-body);
-  font-weight: 700;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
 }
 
 .playbook-card__head p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--muted);
+  font-weight: 300;
 }
 
 .playbook-card__chevron {
-  width: 0.55rem;
-  height: 0.55rem;
-  margin-top: 0.5rem;
-  border-right: 2px solid var(--blueprint);
-  border-bottom: 2px solid var(--blueprint);
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: 0.65rem;
+  border-right: 1.5px solid var(--blueprint);
+  border-bottom: 1.5px solid var(--blueprint);
   transform: rotate(45deg);
-  transition: transform 0.2s ease;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), margin-top 0.35s ease;
 }
 
 .playbook-card--open .playbook-card__chevron {
   transform: rotate(-135deg);
-  margin-top: 0.75rem;
+  margin-top: 0.9rem;
 }
 
 .playbook-card__children {
   list-style: none;
   margin: 0;
-  padding: 0 1.1rem 1.1rem;
-  border-top: 1px solid var(--line);
+  padding: 0 1.75rem 1.75rem;
+  border-top: 1px dashed var(--line);
+  background: rgba(22, 60, 38, 0.01);
 }
 
 .playbook-card__children li {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--line);
+  padding: 1.25rem 0;
+  border-bottom: 1px dashed var(--line);
 }
 
 .playbook-card__children li:last-child {
@@ -92,24 +108,31 @@
 
 .playbook-card__children strong {
   display: block;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.45rem;
   color: var(--ink);
-  font-size: var(--step-0);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-family: var(--font-body);
 }
 
 .playbook-card__children p {
   margin: 0;
-  font-size: 0.93rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--muted);
+  font-weight: 300;
 }
 
 .playbook-cards__cta {
   justify-self: start;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 @media (min-width: 980px) {
   .playbook-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
   }
 
   .playbook-cards__cta {
