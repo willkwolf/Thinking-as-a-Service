@@ -53,3 +53,41 @@ def test_kumu_embeds(page: Page):
     page.goto(BASE_URL)
     iframes = page.locator(".kumu-embed iframe")
     expect(iframes).to_have_count(2)
+
+
+def test_cemstwo_graph_hover(page: Page):
+    page.goto(BASE_URL)
+    # Ensure graph is rendered
+    graph_svg = page.locator(".cemstwo-graph__svg")
+    expect(graph_svg).to_be_visible()
+
+    # Find the node group for E, C, and T
+    node_t = page.locator(".cemstwo-graph__node-group", has_text="T")
+    node_e = page.locator(".cemstwo-graph__node-group", has_text="E")
+    node_c = page.locator(".cemstwo-graph__node-group", has_text="C")
+
+    # The default selected node should be T (active class applied)
+    expect(node_t).to_have_class(re.compile(r"\bcemstwo-graph__node-group--active\b"))
+
+    # Hover over 'E' node group
+    node_e.hover()
+    page.wait_for_timeout(300)  # Wait for transition duration (0.25s) to complete
+
+    # 'E' should now be active, and 'T' should lose active class
+    expect(node_e).to_have_class(re.compile(r"\bcemstwo-graph__node-group--active\b"))
+    expect(node_t).not_to_have_class(re.compile(r"\bcemstwo-graph__node-group--active\b"))
+
+    # Verify detail panel displays E details
+    expect(page.locator(".cemstwo-detail__letter")).to_have_text("E")
+
+    # Hover over 'C' node group
+    node_c.hover()
+    page.wait_for_timeout(300)
+
+    # 'C' should now be active, 'E' inactive
+    expect(node_c).to_have_class(re.compile(r"\bcemstwo-graph__node-group--active\b"))
+    expect(node_e).not_to_have_class(re.compile(r"\bcemstwo-graph__node-group--active\b"))
+
+    # Verify detail panel displays C details
+    expect(page.locator(".cemstwo-detail__letter")).to_have_text("C")
+

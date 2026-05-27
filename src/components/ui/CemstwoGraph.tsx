@@ -122,7 +122,7 @@ export function CemstwoGraph() {
       .attr('cy', (d) => d.y)
       .attr('r', 5)
       .attr('class', 'cemstwo-graph__node')
-      .style('transition', 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)');
+      .style('transition', 'r 0.25s cubic-bezier(0.4, 0, 0.2, 1), fill 0.25s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.25s cubic-bezier(0.4, 0, 0.2, 1), stroke-width 0.25s cubic-bezier(0.4, 0, 0.2, 1)');
 
     // Append text letter label
     nodes
@@ -133,7 +133,7 @@ export function CemstwoGraph() {
       .attr('dominant-baseline', 'central')
       .attr('class', 'cemstwo-graph__label')
       .text((d) => d.id)
-      .style('transition', 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)');
+      .style('transition', 'fill 0.25s cubic-bezier(0.4, 0, 0.2, 1), font-size 0.25s cubic-bezier(0.4, 0, 0.2, 1)');
 
   }, [cemstwo]);
 

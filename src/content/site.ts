@@ -98,9 +98,9 @@ export const siteContent = {
           text: 'Acoplamiento estrecho de procesos lineales, sobre-especificación de interfaces de decisión y proliferación de capas de gestión que canibalizan el margen operativo.',
         },
         bullets: [
-          '**1. El Costo en el Margen:** La complejidad interna opera silenciosamente, cobrándose en el margen de rentabilidad lo que el organigrama tradicional oculta.',
-          '**2. El Caos de la Automatización:** Inyectar agentes de IA o bases de conocimiento en una estructura no mapeada acelera la entropía organizativa en lugar del retorno.',
-          '**3. Descripción Causal Previa:** Antes de automatizar, describa el sistema: identifique las variables de entrada y los puntos de apalancamiento.',
+          { highlight: '1. El Costo en el Margen:', text: 'La complejidad interna opera silenciosamente, cobrándose en el margen de rentabilidad lo que el organigrama tradicional oculta.' },
+          { highlight: '2. El Caos de la Automatización:', text: 'Inyectar agentes de IA o bases de conocimiento en una estructura no mapeada acelera la entropía organizativa en lugar del retorno.' },
+          { highlight: '3. Descripción Causal Previa:', text: 'Antes de automatizar, describa el sistema: identifique las variables de entrada y los puntos de apalancamiento.' },
         ],
       },
       formula: {
@@ -390,9 +390,9 @@ export const siteContent = {
           text: 'Tight coupling of linear processes, over-specification of decision interfaces, and management layers that cannibalize operating margin.',
         },
         bullets: [
-          '**1. The Cost in Margin:** Internal complexity operates silently, eroding profit margin where the traditional org chart remains blind.',
-          '**2. Automation Entropy:** Injecting AI agents or knowledge bases into an unmapped system accelerates organizational entropy rather than ROI.',
-          '**3. Causal Mapping First:** Before automating, map the causal mechanism: identify entry variables and key leverage points.',
+          { highlight: '1. The Cost in Margin:', text: 'Internal complexity operates silently, eroding profit margin where the traditional org chart remains blind.' },
+          { highlight: '2. Automation Entropy:', text: 'Injecting AI agents or knowledge bases into an unmapped system accelerates organizational entropy rather than ROI.' },
+          { highlight: '3. Causal Mapping First:', text: 'Before automating, map the causal mechanism: identify entry variables and key leverage points.' },
         ],
       },
       formula: {

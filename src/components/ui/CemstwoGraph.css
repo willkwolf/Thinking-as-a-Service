@@ -75,12 +75,11 @@
   fill: var(--panel-solid);
   stroke: var(--line-strong);
   stroke-width: 0.5;
-  transition: all 0.25s ease;
+  transition: r 0.25s cubic-bezier(0.4, 0, 0.2, 1), fill 0.25s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.25s cubic-bezier(0.4, 0, 0.2, 1), stroke-width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cemstwo-graph__node-group:hover .cemstwo-graph__node {
   stroke: var(--blueprint);
-  transform: scale(1.1);
 }
 
 .cemstwo-graph__node--active {

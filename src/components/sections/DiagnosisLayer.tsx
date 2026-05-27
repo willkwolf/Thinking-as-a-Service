@@ -32,7 +32,9 @@ export function DiagnosisLayer() {
         <Reveal delay={0.16}>
           <ul className="bullet-list bullet-list--critical" style={{ marginTop: '2.5rem' }}>
             {diagnosis.bullets.map((b) => (
-              <li key={b}>{b}</li>
+              <li key={b.text}>
+                <strong>{b.highlight}</strong> {b.text}
+              </li>
             ))}
           </ul>
         </Reveal>
