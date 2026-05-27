@@ -1,35 +1,33 @@
-/* Premium Solid Iceberg Graded Palette (Accessibility-First) */
+/* Premium Iceberg Gradient Transition Palette (Sunlight Dispersion Model) */
 .layer--surface {
-  background: #f4f7fb;
+  background: linear-gradient(180deg, #f4f7fb 0%, #EAE0CF 100%);
 }
 
 .layer--diagnosis {
-  background: #EAE0CF; /* User's warm glacier sand */
-  border-top: 1px solid var(--line);
+  background: linear-gradient(180deg, #EAE0CF 0%, #7288AE 100%);
 }
 
 .layer--evidence {
-  background: #7288AE; /* User's slate ice blue */
-  border-top: 1px solid var(--line);
+  background: linear-gradient(180deg, #7288AE 0%, #4B5694 100%);
+  /* Custom high-contrast ink weight for transitional light-blue depth */
+  --ink: #030c1e;
+  --muted: #1c2b45;
 }
 
 .layer--formula {
-  background: #4B5694; /* User's medium slate blue */
-  border-block: 1px solid var(--line);
+  background: linear-gradient(180deg, #4B5694 0%, #283163 100%);
 }
 
 .layer--cemstwo {
-  background: #283163; /* Deep slate-navy transition */
-  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, #283163 0%, #111844 100%);
 }
 
 .layer--signal {
-  background: #111844; /* User's deep navy blue */
+  background: linear-gradient(180deg, #111844 0%, #070b24 100%);
 }
 
 .layer--depth {
-  background: #070b24; /* Abyssal dark navy */
-  border-top: 1px solid var(--line);
+  background: linear-gradient(180deg, #070b24 0%, #02040c 100%);
 }
 
 /* Local CSS Scoping for Dark Background Layers (Light Mode) */
@@ -48,33 +46,33 @@
   --shadow: rgba(0, 0, 0, 0.35);
 }
 
-/* Premium Dark Mode (Rest) Override Solid Backgrounds */
+/* Premium Dark Mode (Rest) Override Gradient Transitions */
 :root[data-time-mode="rest"] .layer--surface {
-  background: #080d12;
+  background: linear-gradient(180deg, #080d12 0%, #111622 100%);
 }
 
 :root[data-time-mode="rest"] .layer--diagnosis {
-  background: #111622;
+  background: linear-gradient(180deg, #111622 0%, #182235 100%);
 }
 
 :root[data-time-mode="rest"] .layer--evidence {
-  background: #182235;
+  background: linear-gradient(180deg, #182235 0%, #121927 100%);
 }
 
 :root[data-time-mode="rest"] .layer--formula {
-  background: #121927;
+  background: linear-gradient(180deg, #121927 0%, #0d121f 100%);
 }
 
 :root[data-time-mode="rest"] .layer--cemstwo {
-  background: #0d121f;
+  background: linear-gradient(180deg, #0d121f 0%, #080c18 100%);
 }
 
 :root[data-time-mode="rest"] .layer--signal {
-  background: #080c18;
+  background: linear-gradient(180deg, #080c18 0%, #03050a 100%);
 }
 
 :root[data-time-mode="rest"] .layer--depth {
-  background: #03050a;
+  background: linear-gradient(180deg, #03050a 0%, #010204 100%);
 }
 
 .complexity-block {
