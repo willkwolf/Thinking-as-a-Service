@@ -79,15 +79,15 @@ export function HeroSurface() {
                 {/* High-Contrast Tufte-Inspired Annotations (Defensively Aligned) */}
                 {/* 01 / RUIDO (Centered at x=100) */}
                 <text x="100" y="152" textAnchor="middle" fontFamily="var(--font-display)" fontSize="10.5" fontWeight="700" fill="var(--danger)" letterSpacing="0.05em">01 / EL RUIDO</text>
-                <text x="100" y="165" textAnchor="middle" fontFamily="var(--font-body)" fontSize="8.5" fill="var(--muted)">Silos y caos no mapeado</text>
+                <text x="100" y="165" textAnchor="middle" fontFamily="var(--font-body)" fontSize="8.5" fill="var(--muted)">Complejidad sin mapa</text>
 
                 {/* UMBRAL (Centered at x=220) */}
                 <text x="220" y="152" textAnchor="middle" fontFamily="var(--font-display)" fontSize="10.5" fontWeight="700" fill="var(--blueprint)" letterSpacing="0.05em">UMBRAL (CEMSTWO)</text>
-                <text x="220" y="165" textAnchor="middle" fontFamily="var(--font-body)" fontSize="8.5" fill="var(--muted)">Filtro de claridad causal</text>
+                <text x="220" y="165" textAnchor="middle" fontFamily="var(--font-body)" fontSize="8.5" fill="var(--muted)">Descripción del sistema</text>
 
                 {/* 02 / SIMPLICIDAD (Centered at x=340) */}
                 <text x="340" y="152" textAnchor="middle" fontFamily="var(--font-display)" fontSize="10.5" fontWeight="700" fill="var(--signal)" letterSpacing="0.05em">02 / SIMPLICIDAD</text>
-                <text x="340" y="165" textAnchor="middle" fontFamily="var(--font-body)" fontSize="8.5" fill="var(--muted)">Procesos listos para IA</text>
+                <text x="340" y="165" textAnchor="middle" fontFamily="var(--font-body)" fontSize="8.5" fill="var(--muted)">Simplicidad operativa</text>
               </svg>
             </div>
           </Reveal>
