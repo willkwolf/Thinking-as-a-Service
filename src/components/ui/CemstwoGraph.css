@@ -135,7 +135,7 @@
   background: rgba(176, 141, 62, 0.08);
   border: 1.5px solid var(--blueprint);
   border-radius: 50%;
-  color: var(--line-strong);
+  color: var(--ink);
   font-family: var(--font-mono);
   font-size: 1.3rem;
   font-weight: 700;

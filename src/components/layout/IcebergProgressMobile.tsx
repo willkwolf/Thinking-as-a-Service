@@ -28,8 +28,10 @@ export function IcebergProgressMobile({ activeLayer }: IcebergProgressMobileProp
     }
   };
 
+  const isDarkLayer = ['formula', 'cemstwo', 'signal', 'depth'].includes(activeLayer);
+
   return (
-    <div className="iceberg-progress-mobile-container">
+    <div className={`iceberg-progress-mobile-container ${isDarkLayer ? 'iceberg-progress-mobile-container--dark-bg' : ''}`}>
       <nav className="iceberg-progress-mobile-header" aria-label="Capas del iceberg">
         <div className="iceberg-progress-mobile-header__main">
           <div className="iceberg-progress-mobile-header__current">

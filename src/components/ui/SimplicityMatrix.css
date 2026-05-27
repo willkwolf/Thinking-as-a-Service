@@ -73,7 +73,7 @@
 }
 
 .archetype-card__action strong {
-  color: var(--line-strong);
+  color: var(--ink);
   font-weight: 600;
 }
 

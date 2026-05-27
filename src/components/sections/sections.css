@@ -30,11 +30,14 @@
   background: linear-gradient(180deg, #070b24 0%, #02040c 100%);
 }
 
-/* Local CSS Scoping for Dark Background Layers (Light Mode) */
+/* Local CSS Scoping for Dark Background Layers & Footer (Light Mode) */
 .layer--formula,
 .layer--cemstwo,
 .layer--signal,
-.layer--depth {
+.layer--depth,
+.footer-layer {
+  --bg: #0c142b;
+  --bg-strong: #16223f;
   --ink: #ffffff;
   --muted: #d0def0;
   --line: rgba(255, 255, 255, 0.18);
@@ -44,6 +47,32 @@
   --blueprint: #8bbce6;
   --danger: #ff8a8a;
   --shadow: rgba(0, 0, 0, 0.35);
+  --amber: #f0b45f;
+  --circular: var(--blueprint);
+}
+
+/* High-Contrast Button Styling inside Dark Layers & Dark Mode */
+:root[data-time-mode="rest"] .btn-primary,
+.layer--formula .btn-primary,
+.layer--cemstwo .btn-primary,
+.layer--signal .btn-primary,
+.layer--depth .btn-primary,
+.footer-layer .btn-primary {
+  background: var(--blueprint);
+  border-color: var(--blueprint);
+  color: #0c142b !important;
+  font-weight: 700;
+}
+
+:root[data-time-mode="rest"] .btn-primary:hover,
+.layer--formula .btn-primary:hover,
+.layer--cemstwo .btn-primary:hover,
+.layer--signal .btn-primary:hover,
+.layer--depth .btn-primary:hover,
+.footer-layer .btn-primary:hover {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: #0c142b !important;
 }
 
 /* Premium Dark Mode (Rest) Override Gradient Transitions */

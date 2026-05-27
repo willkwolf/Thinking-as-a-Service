@@ -403,3 +403,45 @@
   transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ==========================================================================
+   Dark Scoped Variables for Sidebar & Mobile Nav Guide (Light & Dark Modes)
+   ========================================================================== */
+
+/* Left Sidebar Desktop Progress Nav in Dark layers & Dark Mode */
+:root[data-time-mode="rest"] .iceberg-progress,
+.iceberg-progress--dark-bg {
+  --panel: rgba(16, 26, 44, 0.85);
+  --panel-solid: #0c142b;
+  --ink: #ffffff;
+  --muted: #d0def0;
+  --line: rgba(255, 255, 255, 0.15);
+  --line-strong: rgba(255, 255, 255, 0.35);
+  --blueprint: #8bbce6;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile Sticky Progress Nav Header in Dark layers & Dark Mode */
+:root[data-time-mode="rest"] .iceberg-progress-mobile-header,
+.iceberg-progress-mobile-container--dark-bg .iceberg-progress-mobile-header {
+  background: rgba(16, 26, 44, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Mobile Dropdown Drawer Menu in Dark layers & Dark Mode */
+:root[data-time-mode="rest"] .iceberg-progress-mobile-drawer,
+.iceberg-progress-mobile-container--dark-bg .iceberg-progress-mobile-drawer {
+  background: rgba(16, 26, 44, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Scoped variables for all mobile progress elements in Dark layers & Dark Mode */
+:root[data-time-mode="rest"] .iceberg-progress-mobile-container,
+.iceberg-progress-mobile-container--dark-bg {
+  --ink: #ffffff;
+  --muted: #d0def0;
+  --line: rgba(255, 255, 255, 0.15);
+  --line-strong: rgba(255, 255, 255, 0.35);
+  --signal: #8bbce6;
+  --blueprint: #8bbce6;
+}
+

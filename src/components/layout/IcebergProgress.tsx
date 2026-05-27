@@ -16,8 +16,10 @@ export function IcebergProgress({ activeLayer }: IcebergProgressProps) {
     return depths[index] || '0m';
   };
 
+  const isDarkLayer = ['formula', 'cemstwo', 'signal', 'depth'].includes(activeLayer);
+
   return (
-    <nav className="iceberg-progress" aria-label="Profundidad del iceberg">
+    <nav className={`iceberg-progress ${isDarkLayer ? 'iceberg-progress--dark-bg' : ''}`} aria-label="Profundidad del iceberg">
       <div className="iceberg-progress__backdrop" />
       <div className="iceberg-progress__ruler" aria-hidden="true">
         {Array.from({ length: 31 }).map((_, i) => (
