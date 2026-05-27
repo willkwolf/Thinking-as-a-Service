@@ -98,9 +98,9 @@ export const siteContent = {
           text: 'Acoplamiento estrecho de procesos lineales, sobre-especificación de interfaces de decisión y proliferación de capas de gestión que canibalizan el margen operativo.',
         },
         bullets: [
-          { highlight: '1. El Costo en el Margen:', text: 'La complejidad interna opera silenciosamente, cobrándose en el margen de rentabilidad lo que el organigrama tradicional oculta.' },
-          { highlight: '2. El Caos de la Automatización:', text: 'Inyectar agentes de IA o bases de conocimiento en una estructura no mapeada acelera la entropía organizativa en lugar del retorno.' },
-          { highlight: '3. Descripción Causal Previa:', text: 'Antes de automatizar, describa el sistema: identifique las variables de entrada y los puntos de apalancamiento.' },
+          { highlight: '1. El Impuesto de la Complejidad:', text: 'La complejidad destructiva drena un promedio del 10.2% de la rentabilidad anual (EBITDA) antes de iniciar cualquier automatización. [GSI • Warwick & Simplicity Partnership, 2011]' },
+          { highlight: '2. El Espejismo de la IA:', text: 'Aunque el 88% de las empresas adopta IA, solo el 39% reporta un impacto real en su EBIT. Automatizar procesos complejos sin rediseñarlos solo acelera el caos. [McKinsey, 2024]' },
+          { highlight: '3. La Ley del Retorno (70-20-10):', text: 'El 74% de las empresas no logra capturar valor de la IA. El 70% del éxito radica en simplificar y adaptar los procesos y la estructura humana, no en la tecnología. [MIT Sloan & BCG, 2023]' },
         ],
       },
       formula: {
@@ -122,7 +122,7 @@ export const siteContent = {
           label: 'Complejidad mala y costosa',
           text: 'Añade costos desproporcionados al valor que genera, destruye margen y mata el negocio.',
         },
-        impact: 'Las empresas pierden, en promedio, un 10,2% de su valor para accionistas por complejidad que destruye valor.',
+        impact: 'Las empresas pierden, en promedio, un 10.2% de su rentabilidad anual (EBITDA) debido a complejidad organizativa que destruye valor. [GSI • Warwick Business School & Simplicity Partnership, 2011]',
       },
       matrixHeading: {
         eyebrow: 'Matriz de simplicidad',
@@ -390,9 +390,9 @@ export const siteContent = {
           text: 'Tight coupling of linear processes, over-specification of decision interfaces, and management layers that cannibalize operating margin.',
         },
         bullets: [
-          { highlight: '1. The Cost in Margin:', text: 'Internal complexity operates silently, eroding profit margin where the traditional org chart remains blind.' },
-          { highlight: '2. Automation Entropy:', text: 'Injecting AI agents or knowledge bases into an unmapped system accelerates organizational entropy rather than ROI.' },
-          { highlight: '3. Causal Mapping First:', text: 'Before automating, map the causal mechanism: identify entry variables and key leverage points.' },
+          { highlight: '1. The Complexity Tax:', text: 'Value-destroying complexity drains an average of 10.2% of annual profitability (EBITDA) before any technology is introduced. [GSI • Warwick & Simplicity Partnership, 2011]' },
+          { highlight: '2. The Automation Mirage:', text: 'While 88% of firms adopt AI, only 39% report a tangible EBIT impact. Automating complex processes without redesigning them only accelerates entropy. [McKinsey, 2024]' },
+          { highlight: '3. The 70-20-10 Success Rule:', text: '74% of enterprises fail to capture value from AI. Success requires a strict ratio: 70% of the effort must focus on simplifying organizational processes and people, and only 30% on tech. [MIT Sloan & BCG, 2023]' },
         ],
       },
       formula: {
@@ -414,7 +414,7 @@ export const siteContent = {
           label: 'Bad and costly complexity',
           text: 'It adds costs disproportionate to the value it creates, destroys margin and can kill the business.',
         },
-        impact: 'Companies lose, on average, 10.2% of shareholder value to complexity that destroys value.',
+        impact: 'Companies lose, on average, 10.2% of their annual profitability (EBITDA) to value-destroying organizational complexity. [GSI • Warwick Business School & Simplicity Partnership, 2011]',
       },
       matrixHeading: { eyebrow: 'Simplicity matrix', title: 'Where is your organization?' },
       simplicityMatrix: [
