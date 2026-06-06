@@ -167,7 +167,7 @@ export function DepthLayer() {
                 <p style={{ margin: 0 }}>
                   {locale === 'es'
                     ? 'Auditorías de realidad operativa y modelado de complejidad sistémica para corporaciones industriales y organizaciones complejas.'
-                    : 'Audits of operational reality and systems complexity modeling for industrial corporations and complex organizations.'}
+                    : 'Operational audits and systemic complexity modeling for industrial corporations and complex organizations.'}
                 </p>
                 <div className="privacy-seal" style={{ marginTop: '0.5rem' }}>
                   <span className="privacy-seal__badge">
@@ -176,7 +176,7 @@ export function DepthLayer() {
                   <p className="privacy-seal__text">
                     {locale === 'es'
                       ? 'Exploración 100% segura y confidencial.'
-                      : '100% secure and confidential exploration.'}
+                      : '100% secure and confidential browsing.'}
                   </p>
                 </div>
               </div>
@@ -197,7 +197,7 @@ export function DepthLayer() {
 
             <Reveal delay={0.2}>
               <div className="footer-col">
-                <h4>{locale === 'es' ? 'Marco Legal (GitHub)' : 'Legal Framework'}</h4>
+                <h4>{locale === 'es' ? 'Marco Legal (GitHub)' : 'Legal Framework (GitHub)'}</h4>
                 <ul className="footer-links">
                   <li>
                     <a href="https://github.com/willkwolf/Thinking-as-a-Service/blob/main/legal/README.md" target="_blank" rel="noopener noreferrer">
@@ -211,12 +211,12 @@ export function DepthLayer() {
                   </li>
                   <li>
                     <a href="https://github.com/willkwolf/Thinking-as-a-Service/blob/main/legal/exoneracion-responsabilidad.md" target="_blank" rel="noopener noreferrer">
-                      ⚠️ {locale === 'es' ? 'Exoneración Legal' : 'Liability Exoneration'}
+                      ⚠️ {locale === 'es' ? 'Exoneración Legal' : 'Liability Disclaimer'}
                     </a>
                   </li>
                   <li>
                     <a href="https://github.com/willkwolf/Thinking-as-a-Service/blob/main/legal/privacidad.md" target="_blank" rel="noopener noreferrer">
-                      🔒 {locale === 'es' ? 'Privacidad Absoluta' : 'Absolute Privacy'}
+                      🔒 {locale === 'es' ? 'Privacidad Absoluta' : 'Privacy Policy'}
                     </a>
                   </li>
                   <li>
