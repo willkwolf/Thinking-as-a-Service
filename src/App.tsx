@@ -4,7 +4,6 @@ import { useThemeMode } from './hooks/useThemeMode';
 import { useI18n } from './hooks/useI18n';
 import { IcebergProgress } from './components/layout/IcebergProgress';
 import { IcebergProgressMobile } from './components/layout/IcebergProgressMobile';
-import { ModeSwitch } from './components/layout/ModeSwitch';
 import { DiagnosisLayer } from './components/sections/DiagnosisLayer';
 import { FormulaLayer } from './components/sections/FormulaLayer';
 import { CemstwoLayer } from './components/sections/CemstwoLayer';
@@ -18,16 +17,12 @@ import './components/sections/DepthLayer.css';
 export default function App() {
   const { mode } = useThemeMode();
   const { activeLayer } = useIcebergDepth();
-  const { locale, setLocale } = useI18n();
+  useI18n();
   const d3Ref = useD3Background(mode);
 
   return (
     <>
       <div id="d3-canvas-container" ref={d3Ref} />
-      <ModeSwitch
-        locale={locale}
-        onLocaleChange={setLocale}
-      />
       <IcebergProgress activeLayer={activeLayer} />
       <IcebergProgressMobile activeLayer={activeLayer} />
       <main className="scroll-container">
