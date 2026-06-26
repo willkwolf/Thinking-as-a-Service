@@ -377,33 +377,69 @@ export const siteContent = {
       packages: [
         {
           id: 'exploration',
-          name: 'Exploración de Terreno',
           phase: '3 Meses (Mínimo)',
-          desc: 'Mapeo inicial de señales, hipótesis sistémicas falsables de red y descripción profunda de la estructura. Evaluamos la viabilidad y el retorno de inversión de la estrategia en procesos, personas y productos antes de cualquier despliegue.',
           partnerHours: 35,
           analystHours: 80,
           basePrice: 28500,
-          targetBuyer: 'Dirección Financiera (CFO) y de Operaciones buscando evitar desperdicio de capital.',
+          usa: {
+            name: 'Exploración de Terreno (EBITDA & ROI)',
+            desc: 'Mapeo inicial de señales de desperdicio de capital, formulación de hipótesis sistémicas de retorno sobre inversión (ROI) en IA y descripción de la estructura. Evaluamos la viabilidad financiera de simplificar procesos antes de cualquier desarrollo tecnológico.',
+            targetBuyer: 'Dirección Financiera (CFO) buscando detener fugas de capital y optimizar el EBITDA operativo.'
+          },
+          canada: {
+            name: 'Exploración de Terreno (Stakeholders)',
+            desc: 'Mapeo inicial de interfaces, gobernanza responsable e hipótesis de alineación de stakeholders. Evaluamos el impacto y viabilidad organizativa del cambio con métricas de adopción humana antes de iniciar despliegues.',
+            targetBuyer: 'Dirección de Operaciones (COO) y Comités de ESG enfocados en gobernanza transparente y valor compartido.'
+          },
+          latam: {
+            name: 'Exploración de Terreno (Salud de Red)',
+            desc: 'Mapeo inicial de dinámicas relacionales, silos informales e hipótesis de comunicación entre nodos. Evaluamos la salud de las relaciones operativas clave para destrabar cuellos de botella políticos y burocráticos.',
+            targetBuyer: 'Dirección de Capital Humano y Operaciones buscando sanar la confianza e interfaces departamentales.'
+          }
         },
         {
           id: 'modeling',
-          name: 'Modelado y Sondas Experimentales',
           phase: '6 Meses',
-          desc: 'Diseño y despliegue de sondas basadas en datos, tableros visuales descriptivos ad-hoc y modelado experimental. Enfocado en la optimización y simplificación de un ítem único: Procesos, Personas o Producto.',
           partnerHours: 60,
           analystHours: 250,
           basePrice: 68000,
-          targetBuyer: 'Dirección de Tecnología (CTO) y de Producto buscando efectividad y gobernanza de IA.',
+          usa: {
+            name: 'Modelado y Sondas (ROI de Procesos)',
+            desc: 'Diseño y despliegue de sondas de datos, tableros analíticos descriptivos ad-hoc y modelos experimentales para auditar retornos rápidos. Enfocado en auditar el margen de un proceso core único (Procesos, Personas o Producto).',
+            targetBuyer: 'Dirección de Tecnología (CTO) buscando optimizar costos de ingeniería y retornos de automatización.'
+          },
+          canada: {
+            name: 'Modelado y Sondas (Alineación)',
+            desc: 'Construcción y despliegue de sondas participativas y dashboards de retroalimentación para asegurar la adopción e inclusión del usuario final. Enfocado en la transición responsable de un pilar único.',
+            targetBuyer: 'Dirección de Transformación Digital liderando cambio ético y adopción de usuarios clave.'
+          },
+          latam: {
+            name: 'Modelado y Sondas (Salud Operativa)',
+            desc: 'Despliegue de sondas relacionales de datos y tableros de señales para restaurar la confianza operativa. Enfocado en la comunicación de interfaces críticas entre Procesos, Personas o Producto.',
+            targetBuyer: 'Gerencias de Operaciones e Innovación que necesitan reducir fricciones humanas y asegurar continuidad.'
+          }
         },
         {
           id: 'gestation',
-          name: 'Estrategia Simplicity',
           phase: '9 Meses',
-          desc: 'El ciclo completo de simplificación organizativa. Combina 3 meses de diagnóstico estructural profundo y modelado inicial de red, seguidos de 6 meses de implementación de sondas experimentales en los tres frentes clave (Procesos, Personas y Producto) para consolidar el margen y erradicar la complejidad destructiva.',
           partnerHours: 90,
           analystHours: 380,
           basePrice: 98000,
-          targetBuyer: 'Dirección Ejecutiva (CEO) liderando simplificación de complejidad y rentabilidad del margen.',
+          usa: {
+            name: 'Estrategia Simplicity (EBITDA Consolidado)',
+            desc: 'Ciclo completo de erradicación de complejidad destructiva para proteger el EBITDA. Combina 3 meses de auditoría estructural y modelado de ROI, seguidos de 6 meses de implementación de sondas sobre todos los frentes para estabilizar flujos financieros.',
+            targetBuyer: 'Dirección Ejecutiva (CEO) y Junta Directiva liderando la rentabilidad global del margen.'
+          },
+          canada: {
+            name: 'Estrategia Simplicity (Gobernanza Integral)',
+            desc: 'Ciclo integral de simplificación y gobernanza. Combina 3 meses de diagnóstico estructural del ecosistema humano, seguidos de 6 meses de despliegue de soluciones inclusivas y éticas que alinean los objetivos de todos los stakeholders.',
+            targetBuyer: 'Dirección General (CEO) y Relaciones Corporativas optimizando el valor a stakeholders y compliance.'
+          },
+          latam: {
+            name: 'Estrategia Simplicity (Salud Organizacional)',
+            desc: 'Ciclo completo de sanación del ecosistema organizativo. Combina 3 meses de diagnóstico profundo de salud relacional de red, seguidos de 6 meses de reconfiguración de nodos humanos y técnicos para consolidar confianza y eliminar burocracia.',
+            targetBuyer: 'Directores Generales (CEO) y VP de Personas comprometidos con la resiliencia estructural a largo plazo.'
+          }
         },
       ]
     },
@@ -736,33 +772,69 @@ export const siteContent = {
       packages: [
         {
           id: 'exploration',
-          name: 'Terrain Exploration',
           phase: '3 Months (Minimum)',
-          desc: 'Initial mapping of signals, falsifiable systemic network hypotheses, and in-depth description of the structure. We evaluate strategy feasibility and ROI across processes, people, and products before any deployment.',
           partnerHours: 35,
           analystHours: 80,
           basePrice: 28500,
-          targetBuyer: 'Finance (CFO) and Operations looking to avoid capital waste.',
+          usa: {
+            name: 'Terrain Exploration (EBITDA & ROI)',
+            desc: 'Initial mapping of capital waste signals, formulation of systemic AI return-on-investment (ROI) hypotheses, and structural diagnosis. We evaluate financial feasibility before any technology spending.',
+            targetBuyer: 'Finance Directors (CFO) looking to stop budget leaks and optimize operating EBITDA.'
+          },
+          canada: {
+            name: 'Terrain Exploration (Stakeholders)',
+            desc: 'Initial mapping of interfaces, responsible governance, and stakeholder alignment hypotheses. We evaluate the organizational impact of change using adoption metrics before any deployment.',
+            targetBuyer: 'Operations Directors (COO) and ESG Committees focused on transparency and shared value.'
+          },
+          latam: {
+            name: 'Terrain Exploration (Network Health)',
+            desc: 'Initial mapping of relational dynamics, informal communication silos, and node connection hypotheses. We evaluate the health of core operating relationships to unlock bureaucratic and political bottlenecks.',
+            targetBuyer: 'HR and Operations Directors looking to heal departmental trust and critical interfaces.'
+          }
         },
         {
           id: 'modeling',
-          name: 'Modeling & Experimental Probes',
           phase: '6 Months',
-          desc: 'Design and deployment of data-driven probes, ad-hoc descriptive visual dashboards, and experimental modeling. Focused on optimization and simplification of a single core item: Processes, People, or Product.',
           partnerHours: 60,
           analystHours: 250,
           basePrice: 68000,
-          targetBuyer: 'Technology (CTO) or Product Directors focused on effectiveness and AI governance.',
+          usa: {
+            name: 'Modeling & Probes (Process ROI)',
+            desc: 'Design and deployment of data-driven probes, ad-hoc descriptive dashboards, and experimental models. Focused on auditing and optimizing margins within a single core process (Processes, People, or Product).',
+            targetBuyer: 'Technology Directors (CTO) looking to optimize engineering costs and automation returns.'
+          },
+          canada: {
+            name: 'Modeling & Probes (Alignment)',
+            desc: 'Design and deployment of participatory probes and user feedback loops to secure final adoption and inclusion. Focused on the responsible transition of a single organizational pilar.',
+            targetBuyer: 'Digital Transformation Directors leading ethical transitions and user adoption.'
+          },
+          latam: {
+            name: 'Modeling & Probes (Operational Health)',
+            desc: 'Deployment of relational data probes and signal dashboards to restore operational trust. Focused on streamlining informal communication between Processes, People, or Product interfaces.',
+            targetBuyer: 'Operations and Innovation Managers needing to reduce human friction and ensure continuity.'
+          }
         },
         {
           id: 'gestation',
-          name: 'Simplicity Strategy',
           phase: '9 Months',
-          desc: 'The complete organizational simplification cycle. Combines 3 initial months of deep structural diagnosis and network modeling, followed by 6 months of experimental probe implementation across all three key fronts (Processes, People, and Product) to secure operating margins and eliminate bad complexity.',
           partnerHours: 90,
           analystHours: 380,
           basePrice: 98000,
-          targetBuyer: 'Executive Directors (CEO) leading complexity simplification and margin profitability.',
+          usa: {
+            name: 'Simplicity Strategy (Consolidated EBITDA)',
+            desc: 'Full cycle of bad complexity eradication to secure margins. Combines 3 initial months of structural diagnosis and ROI mapping, followed by 6 months of experimental probe deployment across all fronts to stabilize cash flows.',
+            targetBuyer: 'Executive Directors (CEO) and Board Members driving global margin profitability.'
+          },
+          canada: {
+            name: 'Simplicity Strategy (Stakeholder Governance)',
+            desc: 'Complete simplification and governance cycle. Combines 3 months of structural human ecosystem mapping, followed by 6 months of deployment of inclusive, ethical solutions that align stakeholder interests.',
+            targetBuyer: 'Managing Directors (CEO) and Corporate Affairs VPs optimizing stakeholder value and compliance.'
+          },
+          latam: {
+            name: 'Simplicity Strategy (Organizational Health)',
+            desc: 'Full cycle of organizational ecosystem healing. Combines 3 months of deep relationship health diagnosis, followed by 6 months of reconfiguring human and technical nodes to consolidate high trust and eliminate bureaucracy.',
+            targetBuyer: 'Managing Directors (CEO) and VP of Culture committed to long-term structural resilience.'
+          }
         },
       ]
     },

@@ -3,15 +3,21 @@ import { useI18n } from '../../hooks/useI18n';
 import { Reveal } from '../ui/Reveal';
 import './ProposalLayer.css';
 
+interface RegionalCopy {
+  readonly name: string;
+  readonly desc: string;
+  readonly targetBuyer: string;
+}
+
 interface PackageItem {
   readonly id: string;
-  readonly name: string;
   readonly phase: string;
-  readonly desc: string;
   readonly partnerHours: number;
   readonly analystHours: number;
   readonly basePrice: number;
-  readonly targetBuyer: string;
+  readonly usa: RegionalCopy;
+  readonly canada: RegionalCopy;
+  readonly latam: RegionalCopy;
 }
 
 export function ProposalLayer() {
@@ -46,7 +52,7 @@ export function ProposalLayer() {
 
   // Compile Proposal Text
   const getProposalText = () => {
-    const packageName = currentPack.name;
+    const packageName = currentPack[region].name;
     const regionName = activeRegion.name;
     const focusTitle = activeRegion.focusTitle;
 
@@ -127,6 +133,7 @@ I am interested in discussing the onboarding for this remote and strategic simpl
               <div className="package-options">
                 {packagesList.map((pack) => {
                   const isActive = selectedPack === pack.id;
+                  const packRegionCopy = pack[region];
                   return (
                     <button
                       key={pack.id}
@@ -135,12 +142,12 @@ I am interested in discussing the onboarding for this remote and strategic simpl
                       onClick={() => setSelectedPack(pack.id)}
                     >
                       <div className="pack-header">
-                        <h4>{pack.name}</h4>
+                        <h4>{packRegionCopy.name}</h4>
                         <span className="pack-phase">{pack.phase}</span>
                       </div>
-                      <p className="pack-desc">{pack.desc}</p>
+                      <p className="pack-desc">{packRegionCopy.desc}</p>
                       <div className="pack-footer">
-                        <span className="pack-buyer"><strong>{locale === 'es' ? 'Dirigido a:' : 'For:'}</strong> {pack.targetBuyer}</span>
+                        <span className="pack-buyer"><strong>{locale === 'es' ? 'Dirigido a:' : 'For:'}</strong> {packRegionCopy.targetBuyer}</span>
                         <span className="pack-price">
                           {formatCurrency(pack.basePrice)}
                         </span>
@@ -165,7 +172,7 @@ I am interested in discussing the onboarding for this remote and strategic simpl
                   </div>
                   <div className="summary-row">
                     <span>{locale === 'es' ? 'Paquete:' : 'Package:'}</span>
-                    <strong>{currentPack.name}</strong>
+                    <strong>{currentPack[region].name}</strong>
                   </div>
                   <div className="summary-row">
                     <span>{locale === 'es' ? 'Duración:' : 'Duration:'}</span>
