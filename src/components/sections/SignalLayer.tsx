@@ -21,7 +21,7 @@ export function SignalLayer() {
         <div className="strategy-grid" style={{ marginBlock: '2.5rem 4rem' }}>
           {simplicityStrategy.pillars.map((pillar, i) => (
             <Reveal key={pillar.title} delay={i * 0.08}>
-              <article className="strategy-card panel">
+              <article className="strategy-card clean-col">
                 <h3>{pillar.title}</h3>
                 <p>{pillar.text}</p>
               </article>

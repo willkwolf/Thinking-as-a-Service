@@ -293,6 +293,34 @@ p {
   gap: 1.5rem;
 }
 
+.clean-col {
+  border-top: 1px solid var(--line-strong);
+  padding: 1.25rem 0.25rem 0.25rem;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.clean-col h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+
+.clean-col p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+.clean-col--danger {
+  border-top-color: var(--danger);
+}
+
 .hero-grid {
   display: grid;
   gap: 1.5rem;
@@ -305,10 +333,15 @@ p {
   }
 
   .hero-grid,
-  .split-grid,
   .evidence-grid {
     grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
     align-items: center;
+    gap: 3rem;
+  }
+
+  .split-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+    align-items: stretch;
     gap: 3rem;
   }
 }

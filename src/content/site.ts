@@ -78,7 +78,7 @@ export const siteContent = {
       eyebrow: '',
       title: 'Deje de automatizar el caos. Automatice el margen.',
       subcopy:
-        'La mayoría de las empresas contratan bolsas de horas o ingenieros para implementar IA sobre procesos que ya están rotos. Nosotros no le vendemos código; le garantizamos que su inversión en tecnología se traduzca en EBITDA, no en más burocracia digital.',
+        'No vendemos software ni bolsas de horas de ingeniería. Asumimos la complejidad de su organización mediante un enfoque sistémico para activar la Simplicidad de la Estrategia en Procesos, Personas, Productos y Diseño Organizacional. Mapeamos la red real de nodos y sus dinámicas para que la tecnología corra sobre un sistema limpio.',
       ctaPrimary: { label: 'Ver Propuesta y Pricing', href: '#iceberg-proposal' },
       ctaSecondary: { label: 'Bajar a la complejidad', href: '#iceberg-diagnosis' },
     },
@@ -263,7 +263,7 @@ export const siteContent = {
     playbook: {
       eyebrow: 'Playbook de entrega',
       title: 'De la complejidad medida a la simplicidad operativa',
-      lead: 'Modelo de consultoría ejecutiva: diagnóstico riguroso y reducción estructurada del ruido que destruye margen.',
+      lead: 'Pensamiento sistémico aplicado al diseño organizacional: asuma la complejidad a través de la simplicidad de procesos, personas, productos y dinámicas de red.',
       whatsappBase: 'https://wa.me/573108437004',
       ctaMessage:
         'Hola Dr. Andrés López Astudillo. Vengo de su plataforma https://willkwolf.github.io/Thinking-as-a-Service/ y quiero explorar su consultoría y propuestas comerciales. Me interesa conocer más sobre cómo reducir el ruido organizativo y optimizar el margen. ¿Podemos agendar una llamada?',
@@ -445,7 +445,7 @@ export const siteContent = {
       eyebrow: '',
       title: 'Stop automating chaos. Automate margins.',
       subcopy:
-        'Most companies contract hourly pools or engineers to implement AI over processes that are already broken. We do not sell you code; we guarantee that your technology investment translates into EBITDA, not more digital bureaucracy.',
+        'We do not sell software or engineering hours. We address your organizational complexity using a systemic approach to activate Simplicity of Strategy across Processes, People, Products, and Organizational Design. We map the real network of nodes and dynamics so that technology runs on a clean system.',
       ctaPrimary: { label: 'View Proposal & Pricing', href: '#iceberg-proposal' },
       ctaSecondary: { label: 'Dive into Complexity', href: '#iceberg-diagnosis' },
     },
@@ -626,7 +626,7 @@ export const siteContent = {
     playbook: {
       eyebrow: 'Delivery Playbook',
       title: 'From Measured Complexity to Operational Simplicity',
-      lead: 'An executive consulting model delivering rigorous diagnosis and a structured reduction of the noise eroding your operating margins.',
+      lead: 'Systemic thinking applied to organizational design: address complexity through simplicity of processes, people, products, and network dynamics.',
       whatsappBase: 'https://wa.me/573108437004',
       ctaMessage:
         'Hello Dr. Andrés López Astudillo, I visited your platform (https://willkwolf.github.io/Thinking-as-a-Service/) and would like to explore your consulting and commercial proposals. I am interested in learning more about how to reduce organizational noise and optimize margins. Could we schedule a brief call?',

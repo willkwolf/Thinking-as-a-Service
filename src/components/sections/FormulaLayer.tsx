@@ -17,13 +17,13 @@ export function FormulaLayer() {
 
         <div className="split-grid complexity-blocks" style={{ marginBottom: '4rem' }}>
           <Reveal delay={0.12}>
-            <article className="complexity-block panel">
+            <article className="complexity-block clean-col">
               <h3>{formula.complicated.label}</h3>
               <p>{formula.complicated.example}</p>
             </article>
           </Reveal>
           <Reveal delay={0.16}>
-            <article className="complexity-block panel">
+            <article className="complexity-block clean-col">
               <h3>{formula.complex.label}</h3>
               <p>{formula.complex.example}</p>
             </article>
@@ -40,13 +40,13 @@ export function FormulaLayer() {
 
         <div className="split-grid complexity-blocks" style={{ marginTop: '2rem' }}>
           <Reveal delay={0.12}>
-            <article className="complexity-block panel">
+            <article className="complexity-block clean-col">
               <h3>{tippingPoint.good.label}</h3>
               <p>{tippingPoint.good.text}</p>
             </article>
           </Reveal>
           <Reveal delay={0.16}>
-            <article className="complexity-block panel complexity-block--critical">
+            <article className="complexity-block clean-col clean-col--danger">
               <h3>{tippingPoint.bad.label}</h3>
               <p>{tippingPoint.bad.text}</p>
             </article>
