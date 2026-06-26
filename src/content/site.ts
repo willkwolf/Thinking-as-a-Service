@@ -6,6 +6,7 @@ export type IcebergLayerId =
   | 'formula'
   | 'cemstwo'
   | 'signal'
+  | 'proposal'
   | 'depth';
 export type ArchetypeTone = 'neutral' | 'warning' | 'critical' | 'opportunity';
 
@@ -68,16 +69,17 @@ export const siteContent = {
       { id: 'formula', label: 'Métricas de Estructura', shortLabel: 'Métricas', depth: 3 },
       { id: 'cemstwo', label: 'Ciencia de Redes (CEMSTWO)', shortLabel: 'Redes', depth: 4 },
       { id: 'signal', label: 'Estrategia y Liderazgo', shortLabel: 'Estrategia', depth: 5 },
-      { id: 'depth', label: 'Casos de Estudio', shortLabel: 'Casos', depth: 6 },
+      { id: 'proposal', label: 'Propuesta y Pricing', shortLabel: 'Pricing', depth: 6 },
+      { id: 'depth', label: 'Casos de Estudio', shortLabel: 'Casos', depth: 7 },
     ] satisfies IcebergLayer[],
     hero: {
       macro: 'Diseño Organizacional',
       narrative: 'Ciencia de Redes & Simplificación',
       eyebrow: '',
-      title: 'El ruido de 2026 no es estrategia. Es complejidad sin mapa.',
+      title: 'Deje de automatizar el caos. Automatice el margen.',
       subcopy:
-        'Sobran marcos de entorno, agentes y promesas de automatización. Antes de tocar IA, describa el sistema que va a acelerar y filtre el ruido que destruye margen.',
-      ctaPrimary: { label: 'Ver el Playbook', href: '#iceberg-signal' },
+        'La mayoría de las empresas contratan bolsas de horas o ingenieros para implementar IA sobre procesos que ya están rotos. Nosotros no le vendemos código; le garantizamos que su inversión en tecnología se traduzca en EBITDA, no en más burocracia digital.',
+      ctaPrimary: { label: 'Ver Propuesta y Pricing', href: '#iceberg-proposal' },
       ctaSecondary: { label: 'Bajar a la complejidad', href: '#iceberg-diagnosis' },
     },
     complexity: {
@@ -264,36 +266,42 @@ export const siteContent = {
       lead: 'Modelo de consultoría ejecutiva: diagnóstico riguroso y reducción estructurada del ruido que destruye margen.',
       whatsappBase: 'https://wa.me/573108437004',
       ctaMessage:
-        'Hola Dr. Andrés López Astudillo. Vengo de su plataforma https://willkwolf.github.io/Thinking-as-a-Service/ y quiero explorar el Playbook de entrega: De la complejidad medida a la simplicidad operativa. Me interesa conocer más sobre el modelo de consultoría y cómo reducir el ruido organizativo. ¿Podemos agendar una llamada?',
+        'Hola Dr. Andrés López Astudillo. Vengo de su plataforma https://willkwolf.github.io/Thinking-as-a-Service/ y quiero explorar su consultoría y propuestas comerciales. Me interesa conocer más sobre cómo reducir el ruido organizativo y optimizar el margen. ¿Podemos agendar una llamada?',
       items: [
         {
-          id: 'diagnosis',
-          title: 'Diagnóstico de complejidad',
-          summary:
-            'Mapeo ejecutivo de componentes, relaciones y ritmo de cambio. Identifica complejidad buena vs. mala antes de cualquier iniciativa de IA.',
+          id: 'filter',
+          title: '1. El Filtro Anti-Desperdicio',
+          summary: 'El 70% de los proyectos de IA fracasan porque intentan automatizar un desorden humano. Si automatizas un proceso ineficiente, obtienes ineficiencia acelerada. No gaste un solo dólar en desarrollo de software hasta saber exactamente qué proceso le va a devolver esa inversión.'
         },
         {
-          id: 'reduction',
-          title: 'Estrategia de reducción de complejidad',
-          summary: 'Intervención en tres frentes de apalancamiento, sin recortes cosméticos.',
+          id: 'radiography',
+          title: '2. Radiografía de la Estructura Real',
+          summary: 'Los organigramas mienten. Las decisiones reales, los cuellos de botella y las pérdidas de información ocurren en interacciones informales del día a día. Verá con evidencia matemática, no con opiniones, en qué nodos se traban sus proyectos de transformación digital.'
+        },
+        {
+          id: 'simplification',
+          title: '3. El Playbook de Simplificación Operativa',
+          summary: 'Las empresas tradicionales solucionan los problemas creando más comités, reportes y reuniones, destruyendo el margen. Limpiamos la burocracia antes de meter tecnología para que, cuando implemente IA, corra sobre una pista eficiente.'
+        },
+        {
+          id: 'methodology',
+          title: 'Cierre Metodológico: Ejecución Ágil por Fases',
+          summary: 'Secuencia ágil de corto plazo para evitar consultorías eternas de 6 meses:',
           children: [
             {
-              title: 'Personas',
-              summary:
-                'Aborda comportamientos de liderazgo y gestión: reuniones, decisiones y capas que reintroducen ruido.',
+              title: 'Fase 1: Auditoría de Ruido (Semanas 1-2)',
+              summary: 'Mapeamos visualmente sus flujos críticos y detectamos en qué porcentaje de su estructura se está perdiendo el margen operativo.'
             },
             {
-              title: 'Proyectos mayores de simplificación',
-              summary:
-                'Ataca las mayores formas de complejidad dañina: portafolios, estructuras y procesos que drenan margen.',
+              title: 'Fase 2: Simplificación de Procesos (Semanas 3-4)',
+              summary: 'Eliminamos los cuellos de botella humanos, reportes innecesarios y burocracia que frenarían cualquier software.'
             },
             {
-              title: 'Complejidad cotidiana',
-              summary:
-                'Reportes, reuniones y toma de decisiones: el ruido que nadie ve en el P&L hasta que es tarde.',
-            },
-          ],
-        },
+              title: 'Fase 3: Diseño del Roadmap de IA (Semana 5+)',
+              summary: 'Le entregamos la arquitectura exacta de qué automatizar, con qué tecnología y cuál es el retorno financiero esperado.'
+            }
+          ]
+        }
       ] satisfies PlaybookItem[],
       ctaLabel: 'Solicitar el Playbook',
     },
@@ -335,6 +343,74 @@ export const siteContent = {
       ctaMessage:
         'Hola Dr. Andrés López Astudillo. He analizado la matriz de simplicidad en https://willkwolf.github.io/Thinking-as-a-Service/ y solicito un diagnóstico de complejidad para mi organización. Busco identificar cuellos de botella sistémicos y eliminar la complejidad dañina antes de automatizar con IA. ¿Cuáles son los siguientes pasos?',
     },
+    pricing: {
+      eyebrow: 'PROPUESTAS COMERCIALES',
+      title: 'Inversión basada en valor y horas reales del equipo',
+      lead: 'Estructura comercial remote-first y transparente. Sin bolsas de horas infinitas ni desperdicio tecnológico.',
+      regionLabel: 'Seleccione su región:',
+      packageLabel: 'Seleccione un paquete comercial:',
+      customTitle: 'Simulador de Equipo Personalizado',
+      customLead: 'Ajuste las horas estimadas para estructurar una propuesta a su medida.',
+      partnerLabel: 'Socio Principal / Reality Auditor ($300 USD / hr)',
+      analystLabel: 'Delivery Team / Network Analyst & Designer ($229 USD / hr)',
+      summaryTitle: 'Resumen de la Propuesta Comercial',
+      summaryTotal: 'Inversión Total Estimada:',
+      summaryNote: 'Tarifas calculadas sobre tarifas BATNA mínimas garantizadas.',
+      ctaSend: 'Generar Propuesta y Enviar por WhatsApp',
+      copySuccess: '¡Propuesta copiada al portapapeles!',
+      copyButton: 'Copiar Propuesta al Portapapeles',
+      regions: {
+        usa: {
+          name: 'USA',
+          focusTitle: 'Foco en Sostenibilidad Operativa y EBITDA',
+          focusText: 'Optimización de márgenes operativos y gobernanza de IA para empresas medianas ($10M-$100M USD/año). Mitigación del AI Mirage y eliminación de burnout.',
+        },
+        canada: {
+          name: 'Canadá',
+          focusTitle: 'Gobernanza de IA y Productividad Responsable',
+          focusText: 'Diseño de casos de uso de IA complementarios a infraestructura existente (data, cloud, R&D). Foco en change management y compliance ético.',
+        },
+        latam: {
+          name: 'LATAM',
+          focusTitle: 'Eficiencia Estructural y Cumplimiento ESG',
+          focusText: 'Reducción de burocracia informal, eliminación de cuellos de botella de decisión y optimización de flujos de cadena de suministro / circularidad.',
+        },
+      },
+      packages: [
+        {
+          id: 'sondeo',
+          name: 'Sondeo Anti-Desperdicio',
+          phase: 'Fases 1 y 2 (Semanas 1-2)',
+          desc: 'Auditoría express de ruido, micro-entrevistas remotas, 3 hipótesis de ROI en IA y Decision Memo (Go/Abort).',
+          partnerHours: 15,
+          analystHours: 25,
+          basePrice: 9800,
+          targetBuyer: 'CFOs que buscan evitar el gasto en software antes de validar procesos.',
+        },
+        {
+          id: 'standard',
+          name: 'Standard Remoto',
+          phase: 'Fases 1, 2 y 3 (Semanas 1-4)',
+          desc: 'Sondeo, mapa interactivo Kumu completo, 3 System Personas, Tablero de Decisiones Simples y Roadmap de 90 días.',
+          partnerHours: 30,
+          analystHours: 100,
+          basePrice: 29500,
+          targetBuyer: 'CEOs que necesitan visibilidad de la estructura real antes de adquirir tecnología.',
+        },
+        {
+          id: 'enterprise',
+          name: 'Enterprise Virtual',
+          phase: 'Standard + Soporte (3 Meses)',
+          desc: 'Todo el Standard Remoto + Transferencia de playbooks, licencia anual de gemelo digital y retainer de soporte por 3 meses (20 hrs/mes).',
+          partnerHours: 60,
+          analystHours: 160,
+          basePrice: 35000,
+          hasRetainer: true,
+          retainerPrice: 4500,
+          targetBuyer: 'CTOs liderando transformación y gobernanza de IA responsable.',
+        },
+      ]
+    },
   },
   en: {
     metadata: {
@@ -360,16 +436,17 @@ export const siteContent = {
       { id: 'formula', label: 'Structural Metrics', shortLabel: 'Metrics', depth: 3 },
       { id: 'cemstwo', label: 'Network Science (CEMSTWO)', shortLabel: 'Networks', depth: 4 },
       { id: 'signal', label: 'Strategy & Leadership', shortLabel: 'Strategy', depth: 5 },
-      { id: 'depth', label: 'Case Studies', shortLabel: 'Cases', depth: 6 },
+      { id: 'proposal', label: 'Proposal & Pricing', shortLabel: 'Pricing', depth: 6 },
+      { id: 'depth', label: 'Case Studies', shortLabel: 'Cases', depth: 7 },
     ] satisfies IcebergLayer[],
     hero: {
       macro: 'Organizational Design',
       narrative: 'Network Science & Simplification',
       eyebrow: '',
-      title: 'The noise of 2026 is not strategy. It is complexity without a roadmap.',
+      title: 'Stop automating chaos. Automate margins.',
       subcopy:
-        'We are flooded with environmental frameworks, autonomous agents, and automation promises. Before deploying AI, clearly define the system you intend to accelerate and filter out the noise eroding your operating margins.',
-      ctaPrimary: { label: 'View the Playbook', href: '#iceberg-signal' },
+        'Most companies contract hourly pools or engineers to implement AI over processes that are already broken. We do not sell you code; we guarantee that your technology investment translates into EBITDA, not more digital bureaucracy.',
+      ctaPrimary: { label: 'View Proposal & Pricing', href: '#iceberg-proposal' },
       ctaSecondary: { label: 'Dive into Complexity', href: '#iceberg-diagnosis' },
     },
     complexity: {
@@ -552,33 +629,42 @@ export const siteContent = {
       lead: 'An executive consulting model delivering rigorous diagnosis and a structured reduction of the noise eroding your operating margins.',
       whatsappBase: 'https://wa.me/573108437004',
       ctaMessage:
-        'Hello Dr. Andrés López Astudillo, I visited your platform (https://willkwolf.github.io/Thinking-as-a-Service/) and would like to explore your delivery Playbook: From Measured Complexity to Operational Simplicity. I am interested in learning more about your consulting model and how to reduce organizational noise. Could we schedule a brief call?',
+        'Hello Dr. Andrés López Astudillo, I visited your platform (https://willkwolf.github.io/Thinking-as-a-Service/) and would like to explore your consulting and commercial proposals. I am interested in learning more about how to reduce organizational noise and optimize margins. Could we schedule a brief call?',
       items: [
         {
-          id: 'diagnosis',
-          title: 'Complexity Diagnosis',
-          summary:
-            'Executive mapping of components, relationships, and the velocity of change. It identifies good vs. bad complexity prior to any AI initiative.',
+          id: 'filter',
+          title: '1. The Anti-Waste Filter',
+          summary: '70% of AI projects fail because they attempt to automate human disorder. Automating an inefficient process only yields accelerated inefficiency. Do not spend a single dollar on software development until you know exactly which process will return that investment.'
         },
         {
-          id: 'reduction',
-          title: 'Complexity Reduction Strategy',
-          summary: 'Strategic interventions across three key leverage points, avoiding cosmetic cost-cutting.',
+          id: 'radiography',
+          title: '2. Radiography of the Real Structure',
+          summary: 'Org charts lie. Real decisions, bottlenecks, and information loss occur in informal day-to-day interactions. You will see with mathematical evidence, not opinions, at which nodes your digital transformation projects get stuck.'
+        },
+        {
+          id: 'simplification',
+          title: '3. The Operational Simplification Playbook',
+          summary: 'Traditional companies solve problems by creating more committees, reports, and meetings, destroying margins. We clean up the bureaucracy before introducing technology so that when you deploy AI, it runs on an efficient runway.'
+        },
+        {
+          id: 'methodology',
+          title: 'Methodological Closure: Agile Phase Execution',
+          summary: 'A short-term agile sequence to avoid endless 6-month consulting engagements:',
           children: [
             {
-              title: 'People',
-              summary: 'Addresses leadership and managerial behaviors, targetting meeting overload, decision bottlenecks, and organizational layers that reintroduce noise.',
+              title: 'Phase 1: Noise Audit (Weeks 1-2)',
+              summary: 'We visually map your critical flows and detect where operating margins are being lost in your structure.'
             },
             {
-              title: 'Major Simplification Projects',
-              summary: 'Targets the most severe forms of harmful complexity, including bloated portfolios, redundant structures, and processes that erode operating margins.',
+              title: 'Phase 2: Process Simplification (Weeks 3-4)',
+              summary: 'We eliminate human bottlenecks, redundant reports, and bureaucracy that would slow down any software.'
             },
             {
-              title: 'Everyday Complexity',
-              summary: 'Reports, meetings, and daily decision-making: the hidden noise that erodes the P&L long before it becomes obvious.',
-            },
-          ],
-        },
+              title: 'Phase 3: AI Roadmap Design (Week 5+)',
+              summary: 'We deliver the exact architecture of what to automate, with what technology, and the expected financial return.'
+            }
+          ]
+        }
       ] satisfies PlaybookItem[],
       ctaLabel: 'Request the Playbook',
     },
@@ -619,6 +705,74 @@ export const siteContent = {
       ctaLabel: 'Request a Complexity Diagnosis',
       ctaMessage:
         'Hello Dr. Andrés López Astudillo, I have analyzed the simplicity matrix on https://willkwolf.github.io/Thinking-as-a-Service/ and would like to request a complexity diagnosis for my organization. I want to identify systemic bottlenecks and eliminate bad complexity before automating with AI. What are the next steps?',
+    },
+    pricing: {
+      eyebrow: 'COMMERCIAL PROPOSAL',
+      title: 'Value-based investment and real team hours',
+      lead: 'Transparent, remote-first commercial structure. No endless hourly pools, no tech waste.',
+      regionLabel: 'Select your region:',
+      packageLabel: 'Select a commercial package:',
+      customTitle: 'Custom Team Simulator',
+      customLead: 'Adjust estimated hours to structure a tailored proposal.',
+      partnerLabel: 'Senior Partner / Reality Auditor ($300 USD / hr)',
+      analystLabel: 'Delivery Team / Network Analyst & Designer ($229 USD / hr)',
+      summaryTitle: 'Commercial Proposal Summary',
+      summaryTotal: 'Estimated Total Investment:',
+      summaryNote: 'Rates based on guaranteed minimum BATNA.',
+      ctaSend: 'Generate & Send Proposal via WhatsApp',
+      copySuccess: 'Proposal copied to clipboard!',
+      copyButton: 'Copy Proposal to Clipboard',
+      regions: {
+        usa: {
+          name: 'USA',
+          focusTitle: 'Operational Sustainability & EBITDA Focus',
+          focusText: 'Operating margin optimization and AI governance for mid-sized enterprises ($10M-$100M USD/year). AI Mirage mitigation and burnout elimination.',
+        },
+        canada: {
+          name: 'Canada',
+          focusTitle: 'AI Governance & Responsible Productivity',
+          focusText: 'Design of AI use cases complementary to existing infrastructure (data, cloud, R&D). Focus on change management and ethical compliance.',
+        },
+        latam: {
+          name: 'LATAM',
+          focusTitle: 'Structural Efficiency & ESG Compliance',
+          focusText: 'Reduction of informal bureaucracy, elimination of decision bottlenecks, and optimization of supply chain flows / circularity.',
+        },
+      },
+      packages: [
+        {
+          id: 'sondeo',
+          name: 'Anti-Waste Survey',
+          phase: 'Phases 1 and 2 (Weeks 1-2)',
+          desc: 'Express noise audit, remote micro-interviews, 3 validated AI ROI hypotheses, and Decision Memo (Go/Abort).',
+          partnerHours: 15,
+          analystHours: 25,
+          basePrice: 9800,
+          targetBuyer: 'CFOs looking to stop software spending before processes are validated.',
+        },
+        {
+          id: 'standard',
+          name: 'Standard Remote',
+          phase: 'Phases 1, 2, and 3 (Weeks 1-4)',
+          desc: 'Survey, complete Kumu interactive map, 3 System Personas, Simple Decision Dashboard, and 90-day Roadmap.',
+          partnerHours: 30,
+          analystHours: 100,
+          basePrice: 29500,
+          targetBuyer: 'CEOs needing visibility of the real structure before purchasing technology.',
+        },
+        {
+          id: 'enterprise',
+          name: 'Enterprise Virtual',
+          phase: 'Standard + Support (3 Months)',
+          desc: 'All Standard Remote + playbook transfer, annual digital twin license, and 3-month support retainer (20 hrs/month).',
+          partnerHours: 60,
+          analystHours: 160,
+          basePrice: 35000,
+          hasRetainer: true,
+          retainerPrice: 4500,
+          targetBuyer: 'CTOs leading transformation and responsible AI governance.',
+        },
+      ]
     },
   },
 } as const;

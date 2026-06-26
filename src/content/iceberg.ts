@@ -5,6 +5,7 @@ export type IcebergLayerId =
   | 'formula'
   | 'cemstwo'
   | 'signal'
+  | 'proposal'
   | 'depth';
 
 export interface IcebergLayer {
@@ -21,7 +22,8 @@ export const icebergLayers: IcebergLayer[] = [
   { id: 'formula', label: 'Modelo de Complejidad', shortLabel: 'Complejidad', depth: 3 },
   { id: 'cemstwo', label: 'Resolución Sistémica', shortLabel: 'CEMSTWO', depth: 4 },
   { id: 'signal', label: 'Señal y Playbook', shortLabel: 'Playbook', depth: 5 },
-  { id: 'depth', label: 'Profundidad y Casos', shortLabel: 'Casos', depth: 6 },
+  { id: 'proposal', label: 'Propuesta y Pricing', shortLabel: 'Pricing', depth: 6 },
+  { id: 'depth', label: 'Profundidad y Casos', shortLabel: 'Casos', depth: 7 },
 ];
 
 export const hero = {

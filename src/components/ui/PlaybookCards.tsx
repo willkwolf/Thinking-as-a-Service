@@ -6,7 +6,7 @@ import './PlaybookCards.css';
 export function PlaybookCards() {
   const { content } = useI18n();
   const { playbook } = content;
-  const [expanded, setExpanded] = useState<string | null>('reduction');
+  const [expanded, setExpanded] = useState<string | null>('methodology');
   const ctaHref = `${playbook.whatsappBase}?text=${encodeURIComponent(playbook.ctaMessage)}`;
 
   return (

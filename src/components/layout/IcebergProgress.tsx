@@ -12,11 +12,11 @@ export function IcebergProgress({ activeLayer }: IcebergProgressProps) {
   const activeIndex = icebergLayers.findIndex((l) => l.id === activeLayer);
 
   const getMeters = (index: number) => {
-    const depths = ['0m', '150m', '300m', '450m', '600m', '800m', '1200m'];
+    const depths = ['0m', '150m', '300m', '450m', '600m', '800m', '1000m', '1200m'];
     return depths[index] || '0m';
   };
 
-  const isDarkLayer = ['formula', 'cemstwo', 'signal', 'depth'].includes(activeLayer);
+  const isDarkLayer = ['formula', 'cemstwo', 'signal', 'proposal', 'depth'].includes(activeLayer);
 
   return (
     <nav className={`iceberg-progress ${isDarkLayer ? 'iceberg-progress--dark-bg' : ''}`} aria-label="Profundidad del iceberg">

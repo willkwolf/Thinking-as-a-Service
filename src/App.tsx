@@ -11,6 +11,7 @@ import { DepthLayer } from './components/sections/DepthLayer';
 import { EvidenceLayer } from './components/sections/EvidenceLayer';
 import { HeroSurface } from './components/sections/HeroSurface';
 import { SignalLayer } from './components/sections/SignalLayer';
+import { ProposalLayer } from './components/sections/ProposalLayer';
 import './components/sections/sections.css';
 import './components/sections/DepthLayer.css';
 
@@ -32,6 +33,7 @@ export default function App() {
         <FormulaLayer />
         <CemstwoLayer />
         <SignalLayer />
+        <ProposalLayer />
         <DepthLayer />
       </main>
     </>

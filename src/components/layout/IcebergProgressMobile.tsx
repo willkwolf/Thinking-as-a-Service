@@ -28,7 +28,7 @@ export function IcebergProgressMobile({ activeLayer }: IcebergProgressMobileProp
     }
   };
 
-  const isDarkLayer = ['formula', 'cemstwo', 'signal', 'depth'].includes(activeLayer);
+  const isDarkLayer = ['formula', 'cemstwo', 'signal', 'proposal', 'depth'].includes(activeLayer);
 
   return (
     <div className={`iceberg-progress-mobile-container ${isDarkLayer ? 'iceberg-progress-mobile-container--dark-bg' : ''}`}>

@@ -26,8 +26,12 @@
   background: linear-gradient(180deg, #111844 0%, #070b24 100%);
 }
 
+.layer--proposal {
+  background: linear-gradient(180deg, #070b24 0%, #03050a 100%);
+}
+
 .layer--depth {
-  background: linear-gradient(180deg, #070b24 0%, #02040c 100%);
+  background: linear-gradient(180deg, #03050a 0%, #02040c 100%);
 }
 
 .footer-layer {
@@ -38,6 +42,7 @@
 .layer--formula,
 .layer--cemstwo,
 .layer--signal,
+.layer--proposal,
 .layer--depth,
 .footer-layer {
   --bg: #0c142b;
@@ -60,6 +65,7 @@
 .layer--formula .btn-primary,
 .layer--cemstwo .btn-primary,
 .layer--signal .btn-primary,
+.layer--proposal .btn-primary,
 .layer--depth .btn-primary,
 .footer-layer .btn-primary {
   background: var(--blueprint);
@@ -72,6 +78,7 @@
 .layer--formula .btn-primary:hover,
 .layer--cemstwo .btn-primary:hover,
 .layer--signal .btn-primary:hover,
+.layer--proposal .btn-primary:hover,
 .layer--depth .btn-primary:hover,
 .footer-layer .btn-primary:hover {
   background: var(--amber);
@@ -104,8 +111,12 @@
   background: linear-gradient(180deg, #080c18 0%, #03050a 100%);
 }
 
+:root[data-time-mode="rest"] .layer--proposal {
+  background: linear-gradient(180deg, #03050a 0%, #010307 100%);
+}
+
 :root[data-time-mode="rest"] .layer--depth {
-  background: linear-gradient(180deg, #03050a 0%, #010204 100%);
+  background: linear-gradient(180deg, #010307 0%, #010204 100%);
 }
 
 :root[data-time-mode="rest"] .footer-layer {
@@ -201,4 +212,60 @@
   color: var(--blueprint);
   font-size: 0.82rem;
   letter-spacing: 0.12em;
+}
+
+/* Responsive Executive Comparison Table */
+.comparison-table {
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+
+.comparison-header-row,
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.comparison-header-col-traditional {
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.comparison-header-col-impact {
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--blueprint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.comparison-col-traditional {
+  padding: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.comparison-col-impact {
+  padding: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+  font-weight: 500;
+  background: rgba(176, 141, 62, 0.02);
+}
+
+@media (min-width: 700px) {
+  .comparison-header-row,
+  .comparison-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .comparison-header-col-impact,
+  .comparison-col-impact {
+    border-left: 1px solid var(--line);
+  }
 }
