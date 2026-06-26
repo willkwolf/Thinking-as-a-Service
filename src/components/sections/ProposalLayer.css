@@ -145,102 +145,7 @@
   color: var(--muted);
 }
 
-/* Custom Hours Sliders */
-.custom-hours-sliders {
-  padding: 1.5rem;
-  background: var(--panel);
-}
 
-.custom-hours-sliders h4 {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 1.25rem;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 0.5rem;
-}
-
-.slider-group {
-  margin-bottom: 1.5rem;
-}
-
-.slider-group:last-child {
-  margin-bottom: 0;
-}
-
-.slider-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.5rem;
-}
-
-.slider-header label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--muted);
-}
-
-.hours-value {
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--blueprint);
-}
-
-.slider-control {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.btn-counter {
-  width: 2.2rem;
-  height: 2.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--panel-solid);
-  border: 1px solid var(--line-strong);
-  color: var(--ink);
-  border-radius: var(--radius);
-  font-family: var(--font-mono);
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.btn-counter:hover {
-  background: var(--blueprint);
-  border-color: var(--blueprint);
-  color: #0c142b;
-}
-
-.slider-control input[type='range'] {
-  flex: 1;
-  -webkit-appearance: none;
-  appearance: none;
-  background: var(--line-strong);
-  height: 4px;
-  border-radius: 2px;
-  outline: none;
-}
-
-.slider-control input[type='range']::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--amber);
-  cursor: pointer;
-  transition: transform 0.1s ease;
-}
-
-.slider-control input[type='range']::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-}
 
 /* Proposal Summary Card */
 .proposal-summary-card {
@@ -281,13 +186,7 @@
   color: var(--ink);
 }
 
-.retainer-row {
-  border-bottom: none;
-  padding: 0.5rem 0;
-  background: rgba(240, 180, 95, 0.05);
-  border-left: 2px solid var(--amber);
-  padding-left: 0.5rem;
-}
+
 
 .summary-pricing {
   display: flex;
