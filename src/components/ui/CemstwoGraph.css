@@ -175,11 +175,10 @@
 .cemstwo-detail__question {
   margin: 0;
   font-size: 0.95rem;
-  line-height: 1.45;
+  line-height: 1.5;
   color: var(--ink);
-  font-style: italic;
-  font-weight: 500;
-  font-family: var(--font-display);
+  font-weight: 600;
+  font-family: var(--font-body);
 }
 
 .cemstwo-detail__summary {
@@ -187,5 +186,5 @@
   font-size: 0.9rem;
   line-height: 1.6;
   color: var(--muted);
-  font-weight: 300;
+  font-weight: 400;
 }

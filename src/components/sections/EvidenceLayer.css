@@ -27,7 +27,7 @@
 }
 
 .video-module__duration {
-  color: var(--blueprint) !important;
+  color: var(--blueprint-text, #705315) !important;
 }
 
 .video-module video {

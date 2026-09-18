@@ -50,8 +50,9 @@
 .archetype-card h3 {
   margin: 0;
   font-size: var(--step-2);
-  font-weight: 400;
-  font-family: var(--font-display);
+  font-weight: 700;
+  font-family: var(--font-body);
+  letter-spacing: -0.01em;
 }
 
 .archetype-card__profile {
