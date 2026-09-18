@@ -346,7 +346,7 @@ export const siteContent = {
     pricing: {
       eyebrow: 'PROPUESTAS COMERCIALES',
       title: 'Inversión basada en valor y horas reales del equipo',
-      lead: 'Estructura comercial remote-first y transparente. Posicionamiento competitivo contra grandes consultoras tradicionales, desafiando con rigor científico y simplicidad matemática. No asumimos proyectos a ciegas ni entramos a "volcanes" sin hipótesis previas.',
+      lead: 'Estructura de consultoría técnica remote-first y transparente. Posicionamiento independiente con rigor científico y modelado de redes. Definimos hipótesis contrastables y arquitectura observable antes de comprometer horas o infraestructura tecnológica.',
       regionLabel: 'Seleccione su región:',
       packageLabel: 'Seleccione un paquete comercial:',
       partnerLabel: 'Socio Principal / Reality Auditor ($300 USD / hr)',
@@ -741,7 +741,7 @@ export const siteContent = {
     pricing: {
       eyebrow: 'COMMERCIAL PROPOSAL',
       title: 'Value-based investment and real team hours',
-      lead: 'Transparent, remote-first commercial structure. Competitively positioned against traditional global consultancies, challenging with scientific rigor and mathematical simplicity. We do not take projects blindly or dive into "volcanoes" without prior hypotheses.',
+      lead: 'Transparent, remote-first technical consulting structure. Independent positioning grounded in scientific rigor and network modeling. We establish testable hypotheses and observable architecture before committing engineering hours or technology infrastructure.',
       regionLabel: 'Select your region:',
       packageLabel: 'Select a commercial package:',
       partnerLabel: 'Senior Partner / Reality Auditor ($300 USD / hr)',

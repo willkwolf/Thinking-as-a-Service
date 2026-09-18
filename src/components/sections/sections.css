@@ -1,41 +1,40 @@
-/* Premium Iceberg Gradient Transition Palette (Sunlight Dispersion Model) */
+/* Architectural Iceberg Solid Tones */
 .layer--surface {
-  background: linear-gradient(180deg, #f4f7fb 0%, #EAE0CF 100%);
+  background: #f7f6f2;
 }
 
 .layer--diagnosis {
-  background: linear-gradient(180deg, #EAE0CF 0%, #7288AE 100%);
+  background: #efece6;
 }
 
 .layer--evidence {
-  background: linear-gradient(180deg, #7288AE 0%, #4B5694 100%);
-  /* Custom high-contrast ink weight for transitional light-blue depth */
-  --ink: #030c1e;
-  --muted: #1c2b45;
+  background: #e2e6ed;
+  --ink: #0c142b;
+  --muted: #3a4b68;
 }
 
 .layer--formula {
-  background: linear-gradient(180deg, #4B5694 0%, #283163 100%);
+  background: #1c2844;
 }
 
 .layer--cemstwo {
-  background: linear-gradient(180deg, #283163 0%, #111844 100%);
+  background: #141e34;
 }
 
 .layer--signal {
-  background: linear-gradient(180deg, #111844 0%, #070b24 100%);
+  background: #0e1626;
 }
 
 .layer--proposal {
-  background: linear-gradient(180deg, #070b24 0%, #03050a 100%);
+  background: #090e1a;
 }
 
 .layer--depth {
-  background: linear-gradient(180deg, #03050a 0%, #02040c 100%);
+  background: #050810;
 }
 
 .footer-layer {
-  background: #02040c;
+  background: #020408;
 }
 
 /* Local CSS Scoping for Dark Background Layers & Footer (Light Mode) */
@@ -54,7 +53,7 @@
   --panel: rgba(255, 255, 255, 0.05);
   --panel-solid: rgba(16, 26, 44, 0.95);
   --blueprint: #8bbce6;
-  --danger: #ff8a8a;
+  --danger: #ff6b55;
   --shadow: rgba(0, 0, 0, 0.35);
   --amber: #f0b45f;
   --circular: var(--blueprint);
@@ -86,37 +85,37 @@
   color: #0c142b !important;
 }
 
-/* Premium Dark Mode (Rest) Override Gradient Transitions */
+/* Architectural Dark Mode (Rest) Solid Backgrounds */
 :root[data-time-mode="rest"] .layer--surface {
-  background: linear-gradient(180deg, #080d12 0%, #111622 100%);
+  background: #0a0e17;
 }
 
 :root[data-time-mode="rest"] .layer--diagnosis {
-  background: linear-gradient(180deg, #111622 0%, #182235 100%);
+  background: #0d1320;
 }
 
 :root[data-time-mode="rest"] .layer--evidence {
-  background: linear-gradient(180deg, #182235 0%, #121927 100%);
+  background: #111828;
 }
 
 :root[data-time-mode="rest"] .layer--formula {
-  background: linear-gradient(180deg, #121927 0%, #0d121f 100%);
+  background: #0e1524;
 }
 
 :root[data-time-mode="rest"] .layer--cemstwo {
-  background: linear-gradient(180deg, #0d121f 0%, #080c18 100%);
+  background: #0b101c;
 }
 
 :root[data-time-mode="rest"] .layer--signal {
-  background: linear-gradient(180deg, #080c18 0%, #03050a 100%);
+  background: #080c16;
 }
 
 :root[data-time-mode="rest"] .layer--proposal {
-  background: linear-gradient(180deg, #03050a 0%, #010307 100%);
+  background: #050810;
 }
 
 :root[data-time-mode="rest"] .layer--depth {
-  background: linear-gradient(180deg, #010307 0%, #010204 100%);
+  background: #03050a;
 }
 
 :root[data-time-mode="rest"] .footer-layer {

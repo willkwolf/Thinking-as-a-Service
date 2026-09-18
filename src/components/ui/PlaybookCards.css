@@ -1,141 +1,280 @@
-.playbook-cards {
-  display: grid;
-  gap: 1.5rem;
-  margin-top: 3rem;
+.playbook-container {
+  margin-top: 2.5rem;
 }
 
-.playbook-card {
+/* Toolbar: Stepper & View Mode Switcher */
+.playbook-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2rem;
+}
+
+.playbook-stepper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.playbook-step-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.playbook-step-btn:hover {
+  border-color: var(--blueprint);
+  color: var(--ink);
+}
+
+.playbook-step-btn--active {
+  background: var(--panel-solid);
+  border-color: var(--blueprint);
+  color: var(--ink);
+  font-weight: 600;
+  box-shadow: 0 0 0 1px var(--blueprint);
+}
+
+.playbook-step-btn__num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--blueprint);
+  font-weight: 600;
+}
+
+.playbook-step-btn__label {
+  letter-spacing: 0.02em;
+}
+
+.playbook-view-toggle {
+  display: flex;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm, 4px);
   overflow: hidden;
+}
+
+.view-mode-btn {
+  padding: 0.4rem 0.75rem;
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-mode-btn:hover {
+  color: var(--ink);
+}
+
+.view-mode-btn--active {
+  background: var(--blueprint);
+  color: #0c142b;
+  font-weight: 700;
+}
+
+/* Base Card Styling (Zero Gradients) */
+.playbook-card {
   border: 1px solid var(--line);
   background: var(--panel-solid);
   border-radius: var(--radius);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 2rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .playbook-card:hover {
   border-color: var(--blueprint);
-  box-shadow: 0 1rem 3rem var(--shadow);
+  box-shadow: 0 8px 24px var(--shadow);
 }
 
-.playbook-card__toggle {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 1.5rem;
-  align-items: start;
-  width: 100%;
-  padding: 1.75rem;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  text-align: left;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.playbook-card__toggle:hover,
-.playbook-card--open .playbook-card__toggle {
-  background: rgba(176, 141, 62, 0.03);
-}
-
-.playbook-card__static {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.5rem;
-  align-items: start;
-  width: 100%;
-  padding: 1.75rem;
-  background: transparent;
-  color: inherit;
-  text-align: left;
+.playbook-card__header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .playbook-card__index {
-  color: var(--blueprint);
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
   font-size: 2.2rem;
-  font-weight: 300;
-  line-height: 0.95;
+  font-weight: 500;
+  color: var(--blueprint);
+  line-height: 1;
+  flex-shrink: 0;
 }
 
-.playbook-card__head h3 {
-  margin: 0 0 0.5rem;
+.playbook-card__badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--blueprint);
+  margin-bottom: 0.35rem;
+}
+
+.playbook-card__title-group h3 {
+  margin: 0;
   font-size: var(--step-2);
   font-family: var(--font-body);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink);
   letter-spacing: -0.01em;
+  line-height: 1.25;
 }
 
-.playbook-card__head p {
+.playbook-card__body {
+  margin-top: 0.75rem;
+}
+
+.playbook-card__lead {
   margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.6;
+  font-size: 0.94rem;
+  line-height: 1.65;
   color: var(--muted);
-  font-weight: 300;
 }
 
-.playbook-card__chevron {
-  width: 0.5rem;
-  height: 0.5rem;
-  margin-top: 0.65rem;
-  border-right: 1.5px solid var(--blueprint);
-  border-bottom: 1.5px solid var(--blueprint);
-  transform: rotate(45deg);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), margin-top 0.35s ease;
-}
-
-.playbook-card--open .playbook-card__chevron {
-  transform: rotate(-135deg);
-  margin-top: 0.9rem;
-}
-
-.playbook-card__children {
-  list-style: none;
-  margin: 0;
-  padding: 0 1.75rem 1.75rem;
+/* Nested Phases (Card 04) */
+.playbook-card__phases {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
   border-top: 1px dashed var(--line);
-  background: rgba(22, 60, 38, 0.01);
+  display: grid;
+  gap: 1.15rem;
 }
 
-.playbook-card__children li {
-  padding: 1.25rem 0;
+.playbook-card__phase-item {
+  padding-bottom: 1.15rem;
   border-bottom: 1px dashed var(--line);
 }
 
-.playbook-card__children li:last-child {
+.playbook-card__phase-item:last-child {
+  padding-bottom: 0;
   border-bottom: 0;
 }
 
-.playbook-card__children strong {
+.playbook-card__phase-item strong {
   display: block;
-  margin-bottom: 0.45rem;
-  color: var(--ink);
-  font-size: 0.98rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
   font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
 }
 
-.playbook-card__children p {
+.playbook-card__phase-item p {
   margin: 0;
   font-size: 0.88rem;
   line-height: 1.55;
   color: var(--muted);
-  font-weight: 300;
 }
 
-.playbook-cards__cta {
-  justify-self: start;
-  margin-top: 1rem;
+/* Carousel Slide Specifics */
+.playbook-card--carousel {
+  min-height: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@media (min-width: 980px) {
-  .playbook-cards {
+.playbook-carousel__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.playbook-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.playbook-nav-btn:hover {
+  background: var(--panel-solid);
+  border-color: var(--blueprint);
+}
+
+.playbook-nav-btn:focus-visible {
+  outline: 2px solid var(--blueprint);
+  outline-offset: 2px;
+}
+
+.playbook-carousel__dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.playbook-carousel__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--line);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.playbook-carousel__dot--active {
+  background: var(--blueprint);
+  transform: scale(1.3);
+}
+
+/* Grid View (2x2 matching reference image) */
+.playbook-grid-view {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .playbook-grid-view {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
   }
+}
 
-  .playbook-cards__cta {
-    grid-column: 1 / -1;
-  }
+.playbook-card--grid {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bottom CTA */
+.playbook-cards__cta-wrap {
+  margin-top: 2.5rem;
+}
+
+.playbook-cards__cta-wrap .btn-primary {
+  display: inline-block;
 }
