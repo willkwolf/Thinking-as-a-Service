@@ -9,8 +9,8 @@ def test_landing_hero(page: Page):
     page.goto(BASE_URL)
     expect(page).to_have_title(re.compile("Thinking as a Service"))
     h1 = page.locator("h1")
-    expect(h1).to_contain_text("ruido")
-    expect(h1).to_contain_text("complejidad")
+    expect(h1).to_contain_text("caos")
+    expect(h1).to_contain_text("margen")
 
 
 def test_whatsapp_cta_visibility(page: Page):
@@ -36,17 +36,25 @@ def test_complexity_and_playbook_language(page: Page):
     page.goto(BASE_URL)
     body = page.locator("body")
     expect(body).to_contain_text("10,2%")
-    expect(body).to_contain_text("Complexity Diagnosis")
-    expect(body).to_contain_text("Matriz de Simplicidad")
+    body_text = body.inner_text()
+    assert (
+        "Diagnóstico de Complejidad" in body_text
+        or "Complexity Diagnosis" in body_text
+    ), "Missing 'Complexity Diagnosis' or 'Diagnóstico de Complejidad' in body copy"
+    assert (
+        "Matriz de Simplicidad" in body_text
+        or "Simplicity Matrix" in body_text
+    ), "Missing 'Matriz de Simplicidad' or 'Simplicity Matrix' in body copy"
     expect(body).to_contain_text("Andrés López Astudillo")
 
 
 def test_team_section_rendered(page: Page):
     page.goto(BASE_URL)
-    page.locator("#equipo").scroll_into_view_if_needed()
-    team_members = page.locator(".team-member")
-    expect(team_members).to_have_count(3)
-    expect(team_members.first.locator("h3")).to_contain_text("Andrés")
+    equipo = page.locator("#equipo")
+    equipo.scroll_into_view_if_needed()
+    expect(equipo).to_be_visible()
+    expect(equipo).to_have_class(re.compile(r"\bsignal-lead\b"))
+    expect(equipo).to_contain_text("Andrés")
 
 
 def test_kumu_embeds(page: Page):

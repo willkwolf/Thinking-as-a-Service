@@ -8,11 +8,15 @@
     "dev": "npm run sync-assets && vite",
     "build": "npm run sync-assets && tsc -p tsconfig.app.json --noEmit && vite build",
     "preview": "vite preview",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "test": "npm run test:vibium",
+    "test:vibium": ".venv\\Scripts\\pytest.exe tests/e2e/test_landing_vibium.py",
+    "test:playwright": ".venv\\Scripts\\pytest.exe tests/e2e/test_landing_fallback.py",
+    "test:all": ".venv\\Scripts\\pytest.exe tests/e2e/",
+    "test:gate": "npm run lint && npm run build && npm run test"
   },
   "dependencies": {
     "d3": "^7.9.0",
-    "framer-motion": "^12.6.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
