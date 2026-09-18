@@ -104,7 +104,7 @@ The following files are **dead legacy code** with zero active imports in the bui
 ```
 c:\Dev\Kumu-Service\
 ├── src/                          # [READ/WRITE] Core application source code
-│   ├── components/layout/        # Layout elements (IcebergProgress, FloatingCta)
+│   ├── components/layout/        # Layout elements (IcebergProgressMobile, FloatingCta)
 │   ├── components/sections/      # 8 Iceberg layers (HeroSurface, DiagnosisLayer, etc.)
 │   ├── components/ui/            # UI components (CemstwoGraph, KumuEmbed, Reveal, etc.)
 │   ├── content/site.ts           # [READ/WRITE] Sole content store
@@ -141,7 +141,7 @@ c:\Dev\Kumu-Service\
    - Never allow React to reconcile inner DOM nodes created by D3, and never allow D3 to mutate React-managed DOM nodes.
 
 4. **Responsive Strategy & Embed Protection (768px Breakpoint)**:
-   - On screens `<= 768px`, desktop `IcebergProgress` ruler is hidden and `IcebergProgressMobile` activates.
+   - On screens `<= 768px`, `IcebergProgressMobile` activates for drawer wayfinding.
    - Heavy Kumu iframes are unmounted and replaced with `MobileKumuFallback` cards to prevent mobile browser memory exhaustion.
 
 5. **Color Mode Standard**:
@@ -189,7 +189,7 @@ Incoming agents can immediately understand repository structure using this quick
 | **Q5** | **¿Cómo fluyen los datos y cómo se sincroniza el estado en la aplicación?** | Flujo unidireccional React sin librerías externas. `useI18n` provee copys; `useIcebergDepth` coordina navegación por IntersectionObserver; `CemstwoGraph` maneja estado local de nodos. |
 | **Q6** | **¿Por qué existen directorios `css/`, `js/` y `legacy/index.static.html`?** | Residuos históricos de la versión estática v1 pre-migración a React 19. No están referenciados en ningún bundle y no deben modificarse. |
 | **Q7** | **¿Cómo interactúan React y D3 en los componentes interactivos?** | React gestiona el ciclo de vida del contenedor SVG (`ref`) y estado; D3 ejecuta cálculos geométricos e interpolaciones de forma imperativa en `useEffect`. No hay reconciliación VDOM en los nodos D3. |
-| **Q8** | **¿Cuál es la estrategia para responsive design y accesibilidad?** | Breakpoint en 768px. En pantallas pequeñas el menú móvil reemplaza la regla vertical, y los iframes de Kumu se reemplazan por `MobileKumuFallback` para evitar sobrecarga de memoria. Soporta `prefers-reduced-motion`. |
+| **Q8** | **¿Cuál es la estrategia para responsive design y accesibilidad?** | Breakpoint en 768px. En pantallas pequeñas el menú móvil `IcebergProgressMobile` permite navegar entre capas, y los iframes de Kumu se reemplazan por `MobileKumuFallback` para evitar sobrecarga de memoria. Soporta `prefers-reduced-motion`. |
 | **Q9** | **¿Cuál es la Definition of Done (DoD) y qué evidencia se requiere?** | Build limpio (`npm run build`), cero errores de tipos (`npm run lint`), suite de tests pasando (`npm test`), y evidencia verificable en handoff report. |
 | **Q10** | **¿Cómo y dónde se despliega la aplicación y qué restricciones existen?** | GitHub Pages mediante `.github/workflows/deploy-pages.yml` en la ruta `/Thinking-as-a-Service/`. Todos los assets deben utilizar rutas relativas o `import.meta.env.BASE_URL`. |
 

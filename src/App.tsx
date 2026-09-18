@@ -3,7 +3,6 @@ import { useD3Background } from './hooks/useD3Background';
 import { useIcebergDepth } from './hooks/useIcebergDepth';
 import { useThemeMode } from './hooks/useThemeMode';
 import { useI18n } from './hooks/useI18n';
-import { IcebergProgress } from './components/layout/IcebergProgress';
 import { IcebergProgressMobile } from './components/layout/IcebergProgressMobile';
 import { FloatingCta } from './components/layout/FloatingCta';
 import { DiagnosticIntakeModal } from './components/ui/DiagnosticIntakeModal';
@@ -31,7 +30,6 @@ export default function App() {
   return (
     <>
       <div id="d3-canvas-container" ref={d3Ref} />
-      <IcebergProgress activeLayer={activeLayer} />
       <IcebergProgressMobile activeLayer={activeLayer} />
       <FloatingCta />
       <DiagnosticIntakeModal isOpen={isIntakeOpen} onClose={handleCloseIntake} />
