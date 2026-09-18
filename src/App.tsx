@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useD3Background } from './hooks/useD3Background';
 import { useIcebergDepth } from './hooks/useIcebergDepth';
 import { useThemeMode } from './hooks/useThemeMode';
@@ -5,6 +6,7 @@ import { useI18n } from './hooks/useI18n';
 import { IcebergProgress } from './components/layout/IcebergProgress';
 import { IcebergProgressMobile } from './components/layout/IcebergProgressMobile';
 import { FloatingCta } from './components/layout/FloatingCta';
+import { DiagnosticIntakeModal } from './components/ui/DiagnosticIntakeModal';
 import { DiagnosisLayer } from './components/sections/DiagnosisLayer';
 import { FormulaLayer } from './components/sections/FormulaLayer';
 import { CemstwoLayer } from './components/sections/CemstwoLayer';
@@ -19,8 +21,12 @@ import './components/sections/DepthLayer.css';
 export default function App() {
   const { mode } = useThemeMode();
   const { activeLayer } = useIcebergDepth();
+  const [isIntakeOpen, setIsIntakeOpen] = useState(false);
   useI18n();
   const d3Ref = useD3Background(mode);
+
+  const handleOpenIntake = () => setIsIntakeOpen(true);
+  const handleCloseIntake = () => setIsIntakeOpen(false);
 
   return (
     <>
@@ -28,9 +34,10 @@ export default function App() {
       <IcebergProgress activeLayer={activeLayer} />
       <IcebergProgressMobile activeLayer={activeLayer} />
       <FloatingCta />
+      <DiagnosticIntakeModal isOpen={isIntakeOpen} onClose={handleCloseIntake} />
       <main className="scroll-container">
-        <HeroSurface />
-        <DiagnosisLayer />
+        <HeroSurface onOpenIntake={handleOpenIntake} />
+        <DiagnosisLayer onOpenIntake={handleOpenIntake} />
         <EvidenceLayer />
         <FormulaLayer />
         <CemstwoLayer />

@@ -121,6 +121,85 @@
   margin-bottom: 1rem;
 }
 
+.pack-deliverables {
+  margin-block: 0.75rem 1.25rem;
+  padding: 0.75rem 0.85rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: calc(var(--radius) * 0.75);
+  border: 1px solid var(--line);
+}
+
+.pack-deliverables-title {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--blueprint);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.pack-deliverables-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.pack-deliverables-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.pack-check-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex-shrink: 0;
+  color: var(--signal);
+  margin-top: 0.1rem;
+}
+
+.summary-deliverables {
+  margin-block: 1rem;
+  padding-block: 0.75rem;
+  border-top: 1px dashed var(--line);
+  border-bottom: 1px dashed var(--line);
+}
+
+.summary-deliverables-title {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--blueprint);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.summary-deliverables-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.summary-deliverables-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
 .pack-footer {
   display: flex;
   justify-content: space-between;
@@ -150,7 +229,20 @@
   color: var(--muted);
 }
 
+.pack-price-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
 
+.pack-procurement-ref {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--blueprint);
+  opacity: 0.88;
+  letter-spacing: 0.02em;
+}
 
 /* Proposal Summary Card */
 .proposal-summary-card {
@@ -191,7 +283,22 @@
   color: var(--ink);
 }
 
+.summary-row--procurement {
+  background: rgba(139, 188, 230, 0.03);
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+}
 
+.summary-row--procurement span {
+  color: var(--blueprint);
+  font-size: 0.82rem;
+}
+
+.summary-row--procurement strong.procurement-hours {
+  font-family: var(--font-mono);
+  color: var(--blueprint);
+  font-size: 0.85rem;
+}
 
 .summary-pricing {
   display: flex;
@@ -221,7 +328,22 @@
   font-size: 0.75rem;
   color: var(--muted);
   font-style: italic;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.procurement-asterisk-box {
+  margin-block: 0.25rem 1.25rem;
+  padding: 0.75rem 0.9rem;
+  background: rgba(139, 188, 230, 0.04);
+  border-left: 2px solid var(--blueprint);
+  border-radius: 3px;
+}
+
+.procurement-asterisk-note {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.45;
+  margin: 0;
 }
 
 .summary-actions {

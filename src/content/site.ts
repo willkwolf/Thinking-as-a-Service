@@ -75,12 +75,19 @@ export const siteContent = {
     hero: {
       macro: 'Diseño Organizacional',
       narrative: 'Ciencia de Redes & Simplificación',
+      category: 'Consultoría Estratégica Pre-IA & Gobernanza de Sistemas',
       eyebrow: '',
       title: 'Deje de automatizar el caos. Automatice el margen.',
       subcopy:
-        'No vendemos software ni bolsas de horas de ingeniería. Asumimos la complejidad de su organización mediante un enfoque sistémico para activar la Simplicidad de la Estrategia en Procesos, Personas, Productos y Diseño Organizacional. Mapeamos la red real de nodos y sus dinámicas para que la tecnología corra sobre un sistema limpio.',
+        'No vendemos software ni bolsas de horas de ingeniería. Entregamos artefactos de conocimiento estandarizados (ISO 30401) para mapear la red real de decisiones y desacoplar interfaces críticas. Asumimos la complejidad de su organización mediante un enfoque sistémico para que la dirección enfoque y movilice sus propios recursos, garantizando que la tecnología corra sobre un sistema limpio.',
+      proofPoints: [
+        { metric: '10.2%', label: 'Drenaje de EBITDA anual por complejidad no resuelta (Warwick/GSI)' },
+        { metric: '74%', label: 'Iniciativas de IA estancadas por fricción organizacional (MIT/BCG)' },
+        { metric: 'ISO 30401', label: 'Marco ontológico de sistemas de conocimiento y auditoría de decisiones' },
+      ],
       ctaPrimary: { label: 'Ver Propuesta y Pricing', href: '#iceberg-proposal' },
       ctaSecondary: { label: 'Bajar a la complejidad', href: '#iceberg-diagnosis' },
+      ctaIntake: { label: 'Solicitar Reality Audit' },
     },
     complexity: {
       macroNarrative: 'Diseño Organizacional',
@@ -104,6 +111,59 @@ export const siteContent = {
           { highlight: '2. El Espejismo de la IA:', text: 'Aunque el 88% de las empresas adopta IA, solo el 39% reporta un impacto real en su EBIT. Automatizar procesos complejos sin rediseñarlos solo acelera el caos. [McKinsey, 2024]' },
           { highlight: '3. La Ley del Retorno (70-20-10):', text: 'El 74% de las empresas no logra capturar valor de la IA. El 70% del éxito radica en simplificar y adaptar los procesos y la estructura humana, no en la tecnología. [MIT Sloan & BCG, 2023]' },
         ],
+      },
+      explorer: {
+        eyebrow: 'Explorador de Exposición Sistémica',
+        title: 'Calibre la vulnerabilidad de su organización ante la complejidad',
+        lead: 'Evalúe cómo la latencia en decisiones, los silos departamentales y las iniciativas de IA sin mapa amplifican la deuda estructural y el costo de inacción.',
+        scaleLabel: 'Escala de la Organización (Ingresos Anuales / Tamaño)',
+        scaleOptions: [
+          { label: 'Mid-Market ($10M - $50M USD / 100-500 personas)', value: 'mid' },
+          { label: 'Upper Mid-Market ($50M - $200M USD / 500-2,000 personas)', value: 'upper' },
+          { label: 'Enterprise ($200M+ USD / 2,000+ personas)', value: 'enterprise' },
+        ],
+        latencyLabel: 'Latencia Promedio en Decisiones Críticas Inter-área',
+        latencyOptions: [
+          { label: 'Baja: 1 a 2 semanas (flujo ágil)', value: 'low' },
+          { label: 'Moderada: 3 a 5 semanas (fricción recurrente)', value: 'medium' },
+          { label: 'Severa: 6 a 12+ semanas (parálisis por comités)', value: 'high' },
+        ],
+        silosLabel: 'Interfaces y Silos Organizacionales Aislados',
+        silosOptions: [
+          { label: '2 a 4 interfaces funcionales', value: 'few' },
+          { label: '5 a 8 áreas con burocracia informal', value: 'some' },
+          { label: '9+ feudos departamentales desconectados', value: 'many' },
+        ],
+        aiLabel: 'Iniciativas de IA / Automatización en Curso',
+        aiOptions: [
+          { label: '1 a 3 pilotos exploratorios aislados', value: 'pilot' },
+          { label: '4 a 8 proyectos sin mapa de flujos de conocimiento', value: 'scaling' },
+          { label: '9+ implementaciones aceleradas sobre procesos no mapeados', value: 'aggressive' },
+        ],
+        diagnosisTitle: 'Diagnóstico de Exposición Estructural',
+        exposureLevelLabel: 'Nivel de Exposición:',
+        latencyImpactLabel: 'Días de Inercia por Ciclo de Decisión:',
+        knowledgeDebtLabel: 'Deuda de Conocimiento y Vulnerabilidad SPOF (ISO 30401):',
+        costOfInactionLabel: 'Anclaje de Destrucción de Margen (EBITDA en Riesgo):',
+        costOfInactionNote: 'Basado en el impuesto del 10.2% de EBITDA por complejidad no resuelta [GSI/Warwick].',
+        levels: {
+          moderate: {
+            title: 'Exposición Moderada · Riesgo de Desaceleración',
+            description: 'Su organización aún conserva capacidad de respuesta, pero la falta de mapas de conocimiento tácito genera puntos únicos de falla (SPOF) que encarecen la coordinación.',
+            recommendation: 'Priorice un Reality Audit enfocado en delimitar interfaces críticas antes de autorizar nuevos presupuestos de software.',
+          },
+          severe: {
+            title: 'Exposición Severa · Drenaje Activo de Margen',
+            description: 'La latencia de decisión y la fricción interdepartamental están activando la destrucción del 10.2% de EBITDA. Desplegar herramientas de IA en este estado automatizará la incoherencia operacional.',
+            recommendation: 'Se requiere una intervención de desacoplamiento de interfaces y un mapa de flujos de decisión para blindar el margen.',
+          },
+          critical: {
+            title: 'Exposición Crítica · Ruptura Sistémica Inminente',
+            description: 'Múltiples silos operando con comités paralizantes y proyectos acelerados de IA sin gobernanza están canibalizando recursos y destruyendo la confianza de la red.',
+            recommendation: 'Detenga la inversión ciega en herramientas y active un rediseño urgente de arquitectura operativa.',
+          },
+        },
+        ctaButton: 'Auditar mi Organización con un Reality Audit',
       },
       formula: {
         eyebrow: 'La fórmula',
@@ -263,7 +323,7 @@ export const siteContent = {
     playbook: {
       eyebrow: 'Playbook de entrega',
       title: 'De la complejidad medida a la simplicidad operativa',
-      lead: 'Pensamiento sistémico aplicado al diseño organizacional: asuma la complejidad a través de la simplicidad de procesos, personas, productos y dinámicas de red.',
+      lead: 'Pensamiento sistémico aplicado al diseño organizacional: entregamos artefactos de conocimiento estandarizados (ISO 30401) y mapas de decisión objetivos para que la dirección enfoque y active sus propios recursos humanos y tecnológicos sin dependencias externas eternas.',
       whatsappBase: 'https://wa.me/573108437004',
       ctaMessage:
         'Hola Dr. Andrés López Astudillo. Vengo de su plataforma https://willkwolf.github.io/Thinking-as-a-Service/ y quiero explorar su consultoría y propuestas comerciales. Me interesa conocer más sobre cómo reducir el ruido organizativo y optimizar el margen. ¿Podemos agendar una llamada?',
@@ -298,7 +358,7 @@ export const siteContent = {
             },
             {
               title: 'Fase 3: Diseño del Roadmap de IA (Semana 5+)',
-              summary: 'Le entregamos la arquitectura exacta de qué automatizar, con qué tecnología y cuál es el retorno financiero esperado.'
+              summary: 'Le entregamos la arquitectura exacta de qué automatizar, qué interfaces desacoplar y transferimos los blueprints a sus equipos internos para que su dirección mantenga el control total de sus recursos.'
             }
           ]
         }
@@ -345,103 +405,175 @@ export const siteContent = {
     },
     pricing: {
       eyebrow: 'PROPUESTAS COMERCIALES',
-      title: 'Inversión basada en valor y horas reales del equipo',
-      lead: 'Estructura de consultoría técnica remote-first y transparente. Posicionamiento independiente con rigor científico y modelado de redes. Definimos hipótesis contrastables y arquitectura observable antes de comprometer horas o infraestructura tecnológica.',
+      title: 'Paquetes de Consultoría e Intervención Sistémica',
+      lead: 'Estructura de consultoría técnica de alcance cerrado y entregables verificables bajo estándar ISO 30401. Posicionamiento independiente con rigor científico y modelado de redes CEMSTWO. Definimos hipótesis contrastables y arquitectura observable antes de comprometer infraestructura tecnológica.',
       regionLabel: 'Seleccione su región:',
-      packageLabel: 'Seleccione un paquete comercial:',
-      partnerLabel: 'Socio Principal / Reality Auditor ($300 USD / hr)',
-      analystLabel: 'Delivery Team / Network Analyst & Designer ($229 USD / hr)',
+      packageLabel: 'Seleccione un paquete de intervención:',
+      deliverablesLabel: 'Entregables Clave Incluidos (ISO 30401):',
+      durationLabel: 'Duración Estimada del Ciclo:',
       summaryTitle: 'Resumen de la Propuesta Comercial',
       summaryTotal: 'Inversión Total Estimada:',
-      summaryNote: 'Tarifas calculadas sobre tarifas BATNA mínimas garantizadas.',
+      summaryNote: 'Tarifas de alcance cerrado con entregables ejecutivos garantizados.',
+      procurementBenchmarkLabel: 'Benchmark de Dedicación (*):',
+      procurementAsteriskNote:
+        '* Nota para Comités de Compras y Procurement: La facturación se rige 100% sobre artefactos de conocimiento y entregables verificables bajo estándar ISO 30401, sin bolsas de horas abiertas ni facturación por tiempo consumido. La estimación técnica de dedicación (~115h / ~310h / ~470h de equipo multidisciplinario) se provee exclusivamente como referencia métrica para procesos de homologación de proveedores y auditoría interna de compras.',
       ctaSend: 'Generar Propuesta y Enviar por WhatsApp',
       copySuccess: '¡Propuesta copiada al portapapeles!',
       copyButton: 'Copiar Propuesta al Portapapeles',
       regions: {
         usa: {
           name: 'USA',
-          focusTitle: 'Foco en Sostenibilidad Operativa y EBITDA',
-          focusText: 'Optimización de márgenes operativos y gobernanza de IA para empresas medianas ($10M-$100M USD/año). Mitigación del AI Mirage y eliminación de burnout.',
+          focusTitle: 'Foco en Sostenibilidad Operativa y Margen EBITDA',
+          focusText: 'Blindaje de márgenes operativos y gobernanza pre-IA para empresas ($10M-$100M+ USD/año). Prevención de desperdicio de capital y mitigación del espejismo de la IA.',
         },
         canada: {
           name: 'Canadá',
           focusTitle: 'Gobernanza de IA y Productividad Responsable',
-          focusText: 'Diseño de casos de uso de IA complementarios a infraestructura existente (data, cloud, R&D). Foco en change management y compliance ético.',
+          focusText: 'Alineación de interfaces y diseño de sistemas complementarios a infraestructura existente. Foco en adopción responsable, gestión del cambio y compliance ético.',
         },
         latam: {
           name: 'LATAM',
-          focusTitle: 'Eficiencia Estructural y Cumplimiento ESG',
-          focusText: 'Reducción de burocracia informal, eliminación de cuellos de botella de decisión y optimización de flujos de cadena de suministro / circularidad.',
+          focusTitle: 'Eficiencia Estructural y Salud de Red',
+          focusText: 'Reducción de burocracia informal, eliminación de feudos de decisión y desobstrucción de flujos operativos y de confianza entre áreas.',
         },
       },
       packages: [
         {
           id: 'exploration',
-          phase: '3 Meses (Mínimo)',
-          partnerHours: 35,
-          analystHours: 80,
+          phase: '4 Semanas',
           basePrice: 28500,
+          referenceHours: '~115 hrs',
+          procurementNote: '* Benchmark de homologación: ~115 hrs estimadas de equipo multidisciplinario.',
+          artifactsObjective: 'Generar conocimiento estructural, mapear decisiones y transferir datos clave a la dirección.',
+          deliverables: [
+            'Mapa de Flujo de Decisiones y Complejidad Sistémica (CEMSTWO)',
+            'Scorecard de Exposición y Deuda de Conocimiento (ISO 30401)',
+            'Matriz de Retención de Conocimiento y Vulnerabilidad de IA',
+            'Roadmap Estructural a 90 Días',
+            'Sesión de Lectura Ejecutiva a Junta Directiva y C-Suite',
+          ],
           usa: {
-            name: 'Exploración de Terreno (EBITDA & ROI)',
-            desc: 'Mapeo inicial de señales de desperdicio de capital, formulación de hipótesis sistémicas de retorno sobre inversión (ROI) en IA y descripción de la estructura. Evaluamos la viabilidad financiera de simplificar procesos antes de cualquier desarrollo tecnológico.',
-            targetBuyer: 'Dirección Financiera (CFO) buscando detener fugas de capital y optimizar el EBITDA operativo.'
+            name: 'Complexity Diagnostic (EBITDA & Margen)',
+            desc: 'Auditoría de realidad en 4 semanas para mapear señales de destrucción de margen, desacoplar interfaces de decisión y delimitar el sistema antes de cualquier desarrollo tecnológico.',
+            targetBuyer: 'Dirección Financiera (CFO) y Dirección de Operaciones (COO) buscando detener fugas de capital y blindar el margen operativo.'
           },
           canada: {
-            name: 'Exploración de Terreno (Stakeholders)',
-            desc: 'Mapeo inicial de interfaces, gobernanza responsable e hipótesis de alineación de stakeholders. Evaluamos el impacto y viabilidad organizativa del cambio con métricas de adopción humana antes de iniciar despliegues.',
-            targetBuyer: 'Dirección de Operaciones (COO) y Comités de ESG enfocados en gobernanza transparente y valor compartido.'
+            name: 'Complexity Diagnostic (Gobernanza de Sistemas)',
+            desc: 'Mapeo de interfaces, gobernanza de conocimiento y alineación de stakeholders. Evaluamos la madurez organizativa y ética antes de comprometer despliegues de IA.',
+            targetBuyer: 'Dirección de Operaciones (COO) y Comités de Gobernanza enfocados en transparencia institucional.'
           },
           latam: {
-            name: 'Exploración de Terreno (Salud de Red)',
-            desc: 'Mapeo inicial de dinámicas relacionales, silos informales e hipótesis de comunicación entre nodos. Evaluamos la salud de las relaciones operativas clave para destrabar cuellos de botella políticos y burocráticos.',
-            targetBuyer: 'Dirección de Capital Humano y Operaciones buscando sanar la confianza e interfaces departamentales.'
+            name: 'Complexity Diagnostic (Salud de Red)',
+            desc: 'Mapeo integral de dinámicas relacionales, silos informales y cuellos de botella de decisión. Auditamos la salud de interfaces críticas para destrabar la ejecución.',
+            targetBuyer: 'Dirección General (CEO) y Capital Humano buscando sanar la confianza e interfaces departamentales.'
           }
         },
         {
           id: 'modeling',
-          phase: '6 Meses',
-          partnerHours: 60,
-          analystHours: 250,
+          phase: '8 Semanas',
           basePrice: 68000,
+          referenceHours: '~310 hrs',
+          procurementNote: '* Benchmark de homologación: ~310 hrs estimadas de equipo multidisciplinario.',
+          artifactsObjective: 'Transferir blueprints, sondas de verificación y playbooks para que los equipos internos asuman la gobernanza.',
+          deliverables: [
+            'Arquitectura de Simplicidad en Procesos Core (P1-P4)',
+            'Protocolos de Desacoplamiento de Decisiones Críticas',
+            'Catálogo de Sondas de Verificación Operativa y Datos',
+            'Gobernanza de Flujos de Conocimiento (ISO 30401)',
+            'Playbook de Acompañamiento y Traspaso a Equipos Internos',
+          ],
           usa: {
-            name: 'Modelado y Sondas (ROI de Procesos)',
-            desc: 'Diseño y despliegue de sondas de datos, tableros analíticos descriptivos ad-hoc y modelos experimentales para auditar retornos rápidos. Enfocado en auditar el margen de un proceso core único (Procesos, Personas o Producto).',
-            targetBuyer: 'Dirección de Tecnología (CTO) buscando optimizar costos de ingeniería y retornos de automatización.'
+            name: 'Operating System Redesign (Margen Sostenible)',
+            desc: 'Diseño y despliegue de sondas de verificación, tableros descriptivos ad-hoc y modelos experimentales para auditar interfaces de procesos core, reduciendo fricción y canibalización de margen.',
+            targetBuyer: 'Dirección de Tecnología (CTO) y Transformación buscando optimizar costos de ingeniería y retornos de automatización.'
           },
           canada: {
-            name: 'Modelado y Sondas (Alineación)',
-            desc: 'Construcción y despliegue de sondas participativas y dashboards de retroalimentación para asegurar la adopción e inclusión del usuario final. Enfocado en la transición responsable de un pilar único.',
+            name: 'Operating System Redesign (Alineación de Procesos)',
+            desc: 'Construcción de sondas participativas y paneles de gobernanza para asegurar la adopción ética y la inclusión del usuario en los flujos de decisión organizacionales.',
             targetBuyer: 'Dirección de Transformación Digital liderando cambio ético y adopción de usuarios clave.'
           },
           latam: {
-            name: 'Modelado y Sondas (Salud Operativa)',
-            desc: 'Despliegue de sondas relacionales de datos y tableros de señales para restaurar la confianza operativa. Enfocado en la comunicación de interfaces críticas entre Procesos, Personas o Producto.',
+            name: 'Operating System Redesign (Salud Operativa)',
+            desc: 'Despliegue de sondas relacionales y tableros de señales para restaurar la fluidez operativa. Enfocado en la comunicación y desacoplamiento de interfaces críticas departamentales.',
             targetBuyer: 'Gerencias de Operaciones e Innovación que necesitan reducir fricciones humanas y asegurar continuidad.'
           }
         },
         {
           id: 'gestation',
-          phase: '9 Meses',
-          partnerHours: 90,
-          analystHours: 380,
+          phase: '12 Semanas (Trimestral)',
           basePrice: 98000,
+          referenceHours: '~470 hrs',
+          procurementNote: '* Benchmark de homologación: ~470 hrs estimadas de equipo multidisciplinario.',
+          artifactsObjective: 'Monitoreo continuo de señales, auditoría pre-IA y actas de inteligencia decisional para la dirección general.',
+          deliverables: [
+            'Comité Continuo de Inteligencia de Decisiones (Bi-semanal)',
+            'Monitoreo y Calibración Permanente de Sondas Sistémicas',
+            'Auditoría Preventiva de Nuevas Iniciativas Tecnológicas y de IA',
+            'Actualización Continua del Mapa de Red y Deuda de Conocimiento',
+            'Asesoría de Confianza para C-Suite en Decisiones Complejas',
+          ],
           usa: {
-            name: 'Estrategia Simplicity (EBITDA Consolidado)',
-            desc: 'Ciclo completo de erradicación de complejidad destructiva para proteger el EBITDA. Combina 3 meses de auditoría estructural y modelado de ROI, seguidos de 6 meses de implementación de sondas sobre todos los frentes para estabilizar flujos financieros.',
+            name: 'Continuous Systems Advisory (Blindaje de Margen)',
+            desc: 'Acompañamiento directivo continuo para blindar las decisiones de escala y tecnología contra la re-introducción de complejidad destructiva, protegiendo el EBITDA operativo.',
             targetBuyer: 'Dirección Ejecutiva (CEO) y Junta Directiva liderando la rentabilidad global del margen.'
           },
           canada: {
-            name: 'Estrategia Simplicity (Gobernanza Integral)',
-            desc: 'Ciclo integral de simplificación y gobernanza. Combina 3 meses de diagnóstico estructural del ecosistema humano, seguidos de 6 meses de despliegue de soluciones inclusivas y éticas que alinean los objetivos de todos los stakeholders.',
+            name: 'Continuous Systems Advisory (Gobernanza Integral)',
+            desc: 'Ciclo integral de simplificación y gobernanza continua. Mantiene la alineación de stakeholders, la transparencia algorítmica y el cumplimiento normativo en toda la escala corporativa.',
             targetBuyer: 'Dirección General (CEO) y Relaciones Corporativas optimizando el valor a stakeholders y compliance.'
           },
           latam: {
-            name: 'Estrategia Simplicity (Salud Organizacional)',
-            desc: 'Ciclo completo de sanación del ecosistema organizativo. Combina 3 meses de diagnóstico profundo de salud relacional de red, seguidos de 6 meses de reconfiguración de nodos humanos y técnicos para consolidar confianza y eliminar burocracia.',
+            name: 'Continuous Systems Advisory (Salud Organizacional)',
+            desc: 'Acompañamiento estratégico continuo para preservar la agilidad de la red, monitorear la salud relacional y guiar transiciones organizacionales críticas sin generar burocracia.',
             targetBuyer: 'Directores Generales (CEO) y VP de Personas comprometidos con la resiliencia estructural a largo plazo.'
           }
-        },
+        }
       ]
+    },
+    intakeModal: {
+      badge: 'ISO 30401 Reality Audit',
+      title: 'Solicitud de Diagnóstico de Complejidad',
+      subtitle: 'Evaluación ejecutiva confidencial para mapear cuellos de botella sistémicos, deuda de conocimiento y desacoplar interfaces antes de invertir en IA.',
+      steps: {
+        profile: '1. Perfil Corporativo',
+        friction: '2. Fricción Sistémica',
+        schedule: '3. Agendamiento Directo',
+      },
+      fields: {
+        companyName: 'Nombre de la Organización',
+        companyPlaceholder: 'Ej. Grupo Industrial / FinTech Corp',
+        industry: 'Sector / Industria',
+        industryOptions: [
+          'Servicios Financieros & FinTech',
+          'Salud, Farma & Biotecnología',
+          'Retail, E-commerce & Logística',
+          'Manufactura & Cadena de Suministro',
+          'Tecnología & SaaS Enterprise',
+          'Energía, Minería & Recursos',
+        ],
+        scale: 'Escala de la Organización',
+        scaleOptions: [
+          'Mid-Market ($10M - $50M USD / 100-500 personas)',
+          'Upper Mid-Market ($50M - $200M USD / 500-2,000 personas)',
+          'Enterprise ($200M+ USD / 2,000+ personas)',
+        ],
+        region: 'Región Operativa Principal',
+        primaryFriction: 'Principal Fricción Estructural (ISO 30401)',
+        frictionOptions: [
+          'Latencia excesiva en decisiones interdepartamentales (comités lentos)',
+          'Silos aislados y pérdida de conocimiento crítico tácito',
+          'Iniciativas de IA o software estancadas sin impacto en margen',
+          'Burocracia informal y proliferación de interfaces redundantes',
+        ],
+        executiveName: 'Nombre del Líder Ejecutivo',
+        executiveRole: 'Cargo / Rol (CEO, CFO, COO, VP)',
+        executiveEmail: 'Correo Corporativo',
+        whatsapp: 'WhatsApp Corporativo (opcional)',
+      },
+      submitWhatsApp: 'Enviar Solicitud Ejecutiva vía WhatsApp',
+      submitDirect: 'Confirmar Solicitud de Diagnóstico',
+      privacyNote: 'Información confidencial amparada bajo acuerdos de auditoría de realidad y gobernanza de sistemas.',
+      close: 'Cerrar',
     },
   },
   en: {
@@ -474,12 +606,19 @@ export const siteContent = {
     hero: {
       macro: 'Organizational Design',
       narrative: 'Network Science & Simplification',
+      category: 'Pre-AI Strategic Consulting & Systems Governance',
       eyebrow: '',
       title: 'Stop automating chaos. Automate margins.',
       subcopy:
-        'We do not sell software or engineering hours. We address your organizational complexity using a systemic approach to activate Simplicity of Strategy across Processes, People, Products, and Organizational Design. We map the real network of nodes and dynamics so that technology runs on a clean system.',
+        'We do not sell software or engineering hours. We deliver standardized knowledge artifacts (ISO 30401) to map the real decision network and decouple critical interfaces. We address organizational complexity through a systemic approach so leadership can focus and deploy their own resources, ensuring technology runs on a clean system.',
+      proofPoints: [
+        { metric: '10.2%', label: 'Annual EBITDA drained by unaddressed operational complexity (Warwick/GSI)' },
+        { metric: '74%', label: 'AI initiatives stalled by structural human interface friction (MIT/BCG)' },
+        { metric: 'ISO 30401', label: 'Knowledge management systems ontology & decision audit standard' },
+      ],
       ctaPrimary: { label: 'View Proposal & Pricing', href: '#iceberg-proposal' },
       ctaSecondary: { label: 'Dive into Complexity', href: '#iceberg-diagnosis' },
+      ctaIntake: { label: 'Request Reality Audit' },
     },
     complexity: {
       macroNarrative: 'Organizational Design',
@@ -503,6 +642,59 @@ export const siteContent = {
           { highlight: '2. The AI Mirage:', text: 'While 88% of organizations adopt AI, only 39% report a tangible impact on EBIT. Automating complex processes without redesigning them simply accelerates chaos. [McKinsey, 2024]' },
           { highlight: '3. The Law of Return (70-20-10):', text: '74% of enterprises fail to capture value from AI. 70% of success depends on simplifying and adapting processes and human structures, not just the technology. [MIT Sloan & BCG, 2023]' },
         ],
+      },
+      explorer: {
+        eyebrow: 'Systemic Exposure Explorer',
+        title: 'Calibrate your organization’s vulnerability to complexity',
+        lead: 'Assess how decision latency, silo fragmentation, and ungoverned AI initiatives amplify structural knowledge debt and the cost of inaction.',
+        scaleLabel: 'Organization Scale (Annual Revenue / Headcount)',
+        scaleOptions: [
+          { label: 'Mid-Market ($10M - $50M USD / 100-500 employees)', value: 'mid' },
+          { label: 'Upper Mid-Market ($50M - $200M USD / 500-2,000 employees)', value: 'upper' },
+          { label: 'Enterprise ($200M+ USD / 2,000+ employees)', value: 'enterprise' },
+        ],
+        latencyLabel: 'Average Latency in Cross-Functional Decisions',
+        latencyOptions: [
+          { label: 'Low: 1 to 2 weeks (agile flow)', value: 'low' },
+          { label: 'Moderate: 3 to 5 weeks (recurring friction)', value: 'medium' },
+          { label: 'Severe: 6 to 12+ weeks (committee paralysis)', value: 'high' },
+        ],
+        silosLabel: 'Isolated Organizational Silos & Interfaces',
+        silosOptions: [
+          { label: '2 to 4 functional interfaces', value: 'few' },
+          { label: '5 to 8 departments with informal bureaucracy', value: 'some' },
+          { label: '9+ disconnected departmental fiefdoms', value: 'many' },
+        ],
+        aiLabel: 'Active AI / Automation Initiatives in Flight',
+        aiOptions: [
+          { label: '1 to 3 isolated exploratory pilots', value: 'pilot' },
+          { label: '4 to 8 projects without knowledge flow architecture', value: 'scaling' },
+          { label: '9+ accelerated deployments over unmapped processes', value: 'aggressive' },
+        ],
+        diagnosisTitle: 'Systemic Exposure Diagnosis',
+        exposureLevelLabel: 'Exposure Level:',
+        latencyImpactLabel: 'Inertia Days per Decision Cycle:',
+        knowledgeDebtLabel: 'Knowledge Debt & SPOF Vulnerability (ISO 30401):',
+        costOfInactionLabel: 'Margin Destruction Baseline (EBITDA at Risk):',
+        costOfInactionNote: 'Anchored on the 10.2% annual EBITDA complexity drain [GSI/Warwick].',
+        levels: {
+          moderate: {
+            title: 'Moderate Exposure · Deceleration Risk',
+            description: 'Your organization retains operational response capability, but unmapped tacit knowledge flows create single points of failure (SPOF) that inflate coordination costs.',
+            recommendation: 'Prioritize a Reality Audit focused on interface boundaries before committing further software budgets.',
+          },
+          severe: {
+            title: 'Severe Exposure · Active Margin Drain',
+            description: 'Decision latency and interdepartmental friction are triggering the 10.2% EBITDA drain. Deploying AI tools in this state will automate operational incoherence.',
+            recommendation: 'Requires an interface decoupling intervention and a decision flow map to safeguard operating margins.',
+          },
+          critical: {
+            title: 'Critical Exposure · Imminent Systemic Breakdown',
+            description: 'Multiple silos operating with sluggish committees alongside ungoverned AI projects are cannibalizing resources and shattering organizational trust.',
+            recommendation: 'Halt blind tooling spend immediately and initiate an emergency operating architecture redesign.',
+          },
+        },
+        ctaButton: 'Audit My Organization with a Reality Audit',
       },
       formula: {
         eyebrow: 'The Formula',
@@ -658,7 +850,7 @@ export const siteContent = {
     playbook: {
       eyebrow: 'Delivery Playbook',
       title: 'From Measured Complexity to Operational Simplicity',
-      lead: 'Systemic thinking applied to organizational design: address complexity through simplicity of processes, people, products, and network dynamics.',
+      lead: 'Systemic thinking applied to organizational design: we deliver standardized knowledge artifacts (ISO 30401) and objective decision maps, empowering leadership to focus and mobilize internal talent and technology without endless external dependency.',
       whatsappBase: 'https://wa.me/573108437004',
       ctaMessage:
         'Hello Dr. Andrés López Astudillo, I visited your platform (https://willkwolf.github.io/Thinking-as-a-Service/) and would like to explore your consulting and commercial proposals. I am interested in learning more about how to reduce organizational noise and optimize margins. Could we schedule a brief call?',
@@ -693,7 +885,7 @@ export const siteContent = {
             },
             {
               title: 'Phase 3: AI Roadmap Design (Week 5+)',
-              summary: 'We deliver the exact architecture of what to automate, with what technology, and the expected financial return.'
+              summary: 'We deliver the exact architecture of what to automate, which interfaces to decouple, and transfer blueprints to your internal teams so your leadership maintains full control over resource allocation.'
             }
           ]
         }
@@ -739,104 +931,176 @@ export const siteContent = {
         'Hello Dr. Andrés López Astudillo, I have analyzed the simplicity matrix on https://willkwolf.github.io/Thinking-as-a-Service/ and would like to request a complexity diagnosis for my organization. I want to identify systemic bottlenecks and eliminate bad complexity before automating with AI. What are the next steps?',
     },
     pricing: {
-      eyebrow: 'COMMERCIAL PROPOSAL',
-      title: 'Value-based investment and real team hours',
-      lead: 'Transparent, remote-first technical consulting structure. Independent positioning grounded in scientific rigor and network modeling. We establish testable hypotheses and observable architecture before committing engineering hours or technology infrastructure.',
+      eyebrow: 'COMMERCIAL PROPOSALS',
+      title: 'Fixed-Scope Consulting Packages & Systems Intervention',
+      lead: 'Fixed-scope technical consulting structure with verifiable deliverables under ISO 30401 standards. Independent positioning driven by network science and CEMSTWO modeling. We establish testable hypotheses and observable architecture before committing tech infrastructure.',
       regionLabel: 'Select your region:',
-      packageLabel: 'Select a commercial package:',
-      partnerLabel: 'Senior Partner / Reality Auditor ($300 USD / hr)',
-      analystLabel: 'Delivery Team / Network Analyst & Designer ($229 USD / hr)',
+      packageLabel: 'Select an intervention package:',
+      deliverablesLabel: 'Key Verifiable Deliverables (ISO 30401):',
+      durationLabel: 'Estimated Cycle Duration:',
       summaryTitle: 'Commercial Proposal Summary',
       summaryTotal: 'Estimated Total Investment:',
-      summaryNote: 'Rates based on guaranteed minimum BATNA.',
+      summaryNote: 'Fixed-scope rates backed by guaranteed executive deliverables.',
+      procurementBenchmarkLabel: 'Technical Dedication Benchmark (*):',
+      procurementAsteriskNote:
+        '* Note for Purchasing & Procurement Committees: Invoicing is 100% fixed-scope based on knowledge artifacts and verifiable deliverables under ISO 30401, with zero open-ended hourly billing or time-and-materials consumption. Multidisciplinary effort estimates (~115h / ~310h / ~470h) are provided solely as an internal benchmark for enterprise procurement homologation checklists.',
       ctaSend: 'Generate & Send Proposal via WhatsApp',
       copySuccess: 'Proposal copied to clipboard!',
       copyButton: 'Copy Proposal to Clipboard',
       regions: {
         usa: {
           name: 'USA',
-          focusTitle: 'Operational Sustainability & EBITDA Focus',
-          focusText: 'Operating margin optimization and AI governance for mid-sized enterprises ($10M-$100M USD/year). AI Mirage mitigation and burnout elimination.',
+          focusTitle: 'Operational Sustainability & EBITDA Margin Focus',
+          focusText: 'Operating margin preservation and pre-AI systems governance for mid-market to enterprise organizations ($10M-$100M+ USD/year). Capital waste prevention and AI mirage mitigation.',
         },
         canada: {
           name: 'Canada',
           focusTitle: 'AI Governance & Responsible Productivity',
-          focusText: 'Design of AI use cases complementary to existing infrastructure (data, cloud, R&D). Focus on change management and ethical compliance.',
+          focusText: 'Systemic interface design complementary to existing infrastructure. Focus on responsible adoption, change management, and ethical compliance.',
         },
         latam: {
           name: 'LATAM',
-          focusTitle: 'Structural Efficiency & ESG Compliance',
-          focusText: 'Reduction of informal bureaucracy, elimination of decision bottlenecks, and optimization of supply chain flows / circularity.',
+          focusTitle: 'Structural Efficiency & Network Health',
+          focusText: 'Reduction of informal bureaucracy, elimination of decision bottlenecks, and restoration of operational trust and communication across siloed departments.',
         },
       },
       packages: [
         {
           id: 'exploration',
-          phase: '3 Months (Minimum)',
-          partnerHours: 35,
-          analystHours: 80,
+          phase: '4 Weeks',
           basePrice: 28500,
+          referenceHours: '~115 hrs',
+          procurementNote: '* Homologation benchmark: ~115 hrs estimated multidisciplinary team dedication.',
+          artifactsObjective: 'Generate structural knowledge, map decision interfaces, and transfer data assets to executive leadership.',
+          deliverables: [
+            'Complexity & Decision Flow Map (CEMSTWO)',
+            'Exposure & Knowledge Debt Scorecard (ISO 30401)',
+            'Knowledge Retention & AI Vulnerability Matrix',
+            '90-Day Structural Roadmap',
+            'Executive Board / C-Suite Readout Session',
+          ],
           usa: {
-            name: 'Terrain Exploration (EBITDA & ROI)',
-            desc: 'Initial mapping of capital waste signals, formulation of systemic AI return-on-investment (ROI) hypotheses, and structural diagnosis. We evaluate financial feasibility before any technology spending.',
-            targetBuyer: 'Finance Directors (CFO) looking to stop budget leaks and optimize operating EBITDA.'
+            name: 'Complexity Diagnostic (EBITDA & Margin)',
+            desc: 'A 4-week reality audit mapping margin destruction signals, decoupling decision interfaces, and bounding the system before any technology commitments.',
+            targetBuyer: 'Chief Financial Officers (CFO) and Chief Operating Officers (COO) seeking to halt capital leaks and protect operating margins.'
           },
           canada: {
-            name: 'Terrain Exploration (Stakeholders)',
-            desc: 'Initial mapping of interfaces, responsible governance, and stakeholder alignment hypotheses. We evaluate the organizational impact of change using adoption metrics before any deployment.',
-            targetBuyer: 'Operations Directors (COO) and ESG Committees focused on transparency and shared value.'
+            name: 'Complexity Diagnostic (Systems Governance)',
+            desc: 'Interface mapping, knowledge governance, and stakeholder alignment hypotheses. We evaluate organizational maturity and ethical readiness before launching AI deployments.',
+            targetBuyer: 'Chief Operating Officers (COO) and Governance Committees focused on institutional transparency and shared value.'
           },
           latam: {
-            name: 'Terrain Exploration (Network Health)',
-            desc: 'Initial mapping of relational dynamics, informal communication silos, and node connection hypotheses. We evaluate the health of core operating relationships to unlock bureaucratic and political bottlenecks.',
-            targetBuyer: 'HR and Operations Directors looking to heal departmental trust and critical interfaces.'
+            name: 'Complexity Diagnostic (Network Health)',
+            desc: 'Comprehensive mapping of relational dynamics, informal silos, and decision bottlenecks. We audit critical interface health to unblock operational execution.',
+            targetBuyer: 'Managing Directors (CEO) and Chief People Officers seeking to rebuild departmental trust and communication.'
           }
         },
         {
           id: 'modeling',
-          phase: '6 Months',
-          partnerHours: 60,
-          analystHours: 250,
+          phase: '8 Weeks',
           basePrice: 68000,
+          referenceHours: '~310 hrs',
+          procurementNote: '* Homologation benchmark: ~310 hrs estimated multidisciplinary team dedication.',
+          artifactsObjective: 'Transfer architecture blueprints, verification probes, and playbooks for internal team empowerment.',
+          deliverables: [
+            'Simplicity Architecture for Core Processes (P1-P4)',
+            'Critical Decision Decoupling Protocols',
+            'Operational Verification Probes & Metrics Catalog',
+            'Knowledge Flow Governance (ISO 30401)',
+            'Implementation Playbook & Internal Team Transfer',
+          ],
           usa: {
-            name: 'Modeling & Probes (Process ROI)',
-            desc: 'Design and deployment of data-driven probes, ad-hoc descriptive dashboards, and experimental models. Focused on auditing and optimizing margins within a single core process (Processes, People, or Product).',
-            targetBuyer: 'Technology Directors (CTO) looking to optimize engineering costs and automation returns.'
+            name: 'Operating System Redesign (Sustainable Margin)',
+            desc: 'Design and deployment of verification probes, ad-hoc descriptive dashboards, and experimental models to audit core process interfaces, reducing friction and margin erosion.',
+            targetBuyer: 'Chief Technology Officers (CTO) and Transformation VPs looking to optimize engineering costs and automation returns.'
           },
           canada: {
-            name: 'Modeling & Probes (Alignment)',
-            desc: 'Design and deployment of participatory probes and user feedback loops to secure final adoption and inclusion. Focused on the responsible transition of a single organizational pilar.',
+            name: 'Operating System Redesign (Process Alignment)',
+            desc: 'Design and deployment of participatory probes and governance dashboards to ensure ethical adoption and stakeholder inclusion across core decision flows.',
             targetBuyer: 'Digital Transformation Directors leading ethical transitions and user adoption.'
           },
           latam: {
-            name: 'Modeling & Probes (Operational Health)',
-            desc: 'Deployment of relational data probes and signal dashboards to restore operational trust. Focused on streamlining informal communication between Processes, People, or Product interfaces.',
-            targetBuyer: 'Operations and Innovation Managers needing to reduce human friction and ensure continuity.'
+            name: 'Operating System Redesign (Operational Health)',
+            desc: 'Deployment of relational probes and signal dashboards to restore operational fluency. Focused on streamlining informal communication between departmental interfaces.',
+            targetBuyer: 'Operations and Innovation Managers needing to reduce human friction and ensure organizational continuity.'
           }
         },
         {
           id: 'gestation',
-          phase: '9 Months',
-          partnerHours: 90,
-          analystHours: 380,
+          phase: '12 Weeks (Quarterly Retainer)',
           basePrice: 98000,
+          referenceHours: '~470 hrs',
+          procurementNote: '* Homologation benchmark: ~470 hrs estimated multidisciplinary team dedication.',
+          artifactsObjective: 'Continuous signal calibration, pre-AI preventative audits, and decision intelligence readouts for C-Suite.',
+          deliverables: [
+            'Bi-Weekly Decision Intelligence Committee',
+            'Continuous Monitoring & Calibration of Systemic Probes',
+            'Preemptive Audit of New AI & Technology Initiatives',
+            'Ongoing Network Map & Knowledge Debt Updates',
+            'Executive Advisory for C-Suite on High-Stakes Decisions',
+          ],
           usa: {
-            name: 'Simplicity Strategy (Consolidated EBITDA)',
-            desc: 'Full cycle of bad complexity eradication to secure margins. Combines 3 initial months of structural diagnosis and ROI mapping, followed by 6 months of experimental probe deployment across all fronts to stabilize cash flows.',
-            targetBuyer: 'Executive Directors (CEO) and Board Members driving global margin profitability.'
+            name: 'Continuous Systems Advisory (Margin Shield)',
+            desc: 'Ongoing executive advisory to shield scaling and technology decisions against re-accumulating destructive complexity, safeguarding operating EBITDA.',
+            targetBuyer: 'Chief Executive Officers (CEO) and Board Members safeguarding overall company margin profitability.'
           },
           canada: {
-            name: 'Simplicity Strategy (Stakeholder Governance)',
-            desc: 'Complete simplification and governance cycle. Combines 3 months of structural human ecosystem mapping, followed by 6 months of deployment of inclusive, ethical solutions that align stakeholder interests.',
+            name: 'Continuous Systems Advisory (Comprehensive Governance)',
+            desc: 'End-to-end simplification and continuous governance cycle. Maintains stakeholder alignment, algorithmic transparency, and compliance across enterprise scaling.',
             targetBuyer: 'Managing Directors (CEO) and Corporate Affairs VPs optimizing stakeholder value and compliance.'
           },
           latam: {
-            name: 'Simplicity Strategy (Organizational Health)',
-            desc: 'Full cycle of organizational ecosystem healing. Combines 3 months of deep relationship health diagnosis, followed by 6 months of reconfiguring human and technical nodes to consolidate high trust and eliminate bureaucracy.',
-            targetBuyer: 'Managing Directors (CEO) and VP of Culture committed to long-term structural resilience.'
+            name: 'Continuous Systems Advisory (Organizational Health)',
+            desc: 'Continuous strategic advisory to sustain network agility, monitor relational health, and steer critical organizational transitions without generating bureaucracy.',
+            targetBuyer: 'Managing Directors (CEO) and Chief People Officers committed to long-term structural resilience.'
           }
-        },
+        }
       ]
+    },
+    intakeModal: {
+      badge: 'ISO 30401 Reality Audit',
+      title: 'Complexity Diagnostic Request',
+      subtitle: 'Confidential executive evaluation to map systemic bottlenecks, assess knowledge debt, and decouple interfaces before investing in AI.',
+      steps: {
+        profile: '1. Corporate Profile',
+        friction: '2. Systemic Friction',
+        schedule: '3. Direct Scheduling',
+      },
+      fields: {
+        companyName: 'Organization Name',
+        companyPlaceholder: 'e.g. Global Industrial Corp / FinTech Group',
+        industry: 'Industry / Sector',
+        industryOptions: [
+          'Financial Services & FinTech',
+          'Healthcare, Pharma & Biotech',
+          'Retail, E-commerce & Logistics',
+          'Manufacturing & Supply Chain',
+          'Enterprise Tech & B2B SaaS',
+          'Energy, Mining & Resources',
+        ],
+        scale: 'Organization Scale',
+        scaleOptions: [
+          'Mid-Market ($10M - $50M USD / 100-500 employees)',
+          'Upper Mid-Market ($50M - $200M USD / 500-2,000 employees)',
+          'Enterprise ($200M+ USD / 2,000+ employees)',
+        ],
+        region: 'Primary Operating Region',
+        primaryFriction: 'Primary Structural Friction (ISO 30401)',
+        frictionOptions: [
+          'Excessive cross-functional decision latency (sluggish committees)',
+          'Isolated silos and loss of critical tacit knowledge',
+          'Stalled AI or software pilots without measurable margin return',
+          'Informal bureaucracy and proliferation of redundant interfaces',
+        ],
+        executiveName: 'Executive Leader Name',
+        executiveRole: 'Title / Role (CEO, CFO, COO, VP)',
+        executiveEmail: 'Corporate Email',
+        whatsapp: 'Corporate WhatsApp (Optional)',
+      },
+      submitWhatsApp: 'Send Executive Brief via WhatsApp',
+      submitDirect: 'Confirm Diagnostic Request',
+      privacyNote: 'Strictly confidential under reality audit and systems governance frameworks.',
+      close: 'Close',
     },
   },
 } as const;

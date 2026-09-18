@@ -213,6 +213,65 @@
   letter-spacing: 0.12em;
 }
 
+.hero-category-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--blueprint);
+  background: rgba(139, 188, 230, 0.12);
+  border: 1px solid var(--blueprint);
+  padding: 0.3rem 0.65rem;
+  border-radius: calc(var(--radius) * 0.5);
+  margin-left: 0.75rem;
+  vertical-align: middle;
+}
+
+.hero-proof-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  max-width: 40rem;
+}
+
+.hero-proof-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.hero-proof-metric {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--amber);
+  line-height: 1.2;
+}
+
+.hero-proof-label {
+  font-size: 0.76rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.btn-hero-intake {
+  background: var(--ink) !important;
+  color: var(--bg) !important;
+  border-color: var(--ink) !important;
+}
+
+.btn-hero-intake:hover {
+  background: var(--bg-strong) !important;
+  color: var(--ink) !important;
+}
+
+
 /* Responsive Executive Comparison Table */
 .comparison-table {
   margin-top: 1.5rem;

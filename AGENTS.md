@@ -12,6 +12,25 @@ This document establishes the mandatory architectural governance framework for *
 
 Every agent operating within this repository must adhere to the rules, boundaries, and verification protocols defined herein. **Zero implicit knowledge is assumed**: any behavior not explicitly documented here or in `ARCHITECTURE.md` is considered non-canonical.
 
+<!-- OPENWIKI:START -->
+
+## OpenWiki (Internal Knowledge Base)
+
+This workspace contains an internal `openwiki/` evidence index for local agents and contributors (untracked in public git). It provides just-in-time context for domain methodology, architectural decisions, and product execution horizons:
+
+- Architecture & Lifecycles: `openwiki/architecture.md`
+- Design Tokens & Anti-Slop: `openwiki/frontend-design-system.md`
+- Content SSOT & i18n: `openwiki/content-and-i18n.md`
+- Systems Methodology & CEMSTWO: `openwiki/methodology-cemstwo.md`
+- Strategic Audit & Defensibility: `openwiki/strategic-audit.md`
+- 2026 Market Benchmarks: `openwiki/market-evidence-2026.md`
+- Execution Horizon & Productization: `openwiki/execution-horizon-aligned.md`
+- Deterministic Testing & Quality Gate: `openwiki/testing-and-qa.md`
+
+Treat source code and tests as authoritative. The `openwiki/` directory is maintained locally for internal consultation.
+
+<!-- OPENWIKI:END -->
+
 ---
 
 ## 2. REPOSITORY BASELINE MATRIX

@@ -28,3 +28,12 @@ CEMSTWO.md
 .agents/
 ORIGINAL_REQUEST.md
 
+# Base de Conocimiento Interna (Confidencial / No pública)
+docs/internal/
+docs/deepseek_*.md
+openwiki/
+.github/workflows/openwiki-update.yml
+
+
+
+

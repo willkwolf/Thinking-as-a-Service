@@ -2,7 +2,11 @@ import { useI18n } from '../../hooks/useI18n';
 import { RiskPanel } from '../ui/RiskPanel';
 import { Reveal } from '../ui/Reveal';
 
-export function HeroSurface() {
+interface HeroSurfaceProps {
+  onOpenIntake?: () => void;
+}
+
+export function HeroSurface({ onOpenIntake }: HeroSurfaceProps) {
   const { content, locale } = useI18n();
   const { hero } = content;
 
@@ -11,9 +15,23 @@ export function HeroSurface() {
       <div className="content-wrapper hero-grid">
         <div className="hero-copy">
           <Reveal>
-            <span className="eyebrow eyebrow--hero">{hero.macro}</span>
+            <div className="hero-header-line">
+              <span className="eyebrow eyebrow--hero">{hero.macro}</span>
+              {hero.category && <span className="hero-category-tag">{hero.category}</span>}
+            </div>
             <h1 id="hero-title">{hero.title}</h1>
             <p className="subcopy">{hero.subcopy}</p>
+
+            {hero.proofPoints && (
+              <div className="hero-proof-strip">
+                {hero.proofPoints.map((pp) => (
+                  <div key={pp.metric} className="hero-proof-item">
+                    <span className="hero-proof-metric">{pp.metric}</span>
+                    <span className="hero-proof-label">{pp.label}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </Reveal>
           
           {/* Hand-crafted C-Suite Vector: The Hero's Journey (Caos to Simplificación) */}
@@ -106,7 +124,16 @@ export function HeroSurface() {
 
           <Reveal delay={0.12}>
             <div className="cta-row">
-              <a href={hero.ctaPrimary.href} className="btn-primary">
+              {onOpenIntake && (
+                <button
+                  type="button"
+                  className="btn-primary btn-hero-intake"
+                  onClick={onOpenIntake}
+                >
+                  {hero.ctaIntake?.label || (locale === 'es' ? 'Solicitar Reality Audit' : 'Request Reality Audit')}
+                </button>
+              )}
+              <a href={hero.ctaPrimary.href} className="btn-secondary">
                 {hero.ctaPrimary.label}
               </a>
               <a href={hero.ctaSecondary.href} className="btn-secondary">

@@ -1,7 +1,12 @@
 import { useI18n } from '../../hooks/useI18n';
 import { Reveal } from '../ui/Reveal';
+import { ComplexityExposureExplorer } from '../ui/ComplexityExposureExplorer';
 
-export function DiagnosisLayer() {
+interface DiagnosisLayerProps {
+  onOpenIntake?: () => void;
+}
+
+export function DiagnosisLayer({ onOpenIntake }: DiagnosisLayerProps) {
   const { content } = useI18n();
   const { diagnosis } = content.complexity;
 
@@ -37,6 +42,12 @@ export function DiagnosisLayer() {
               </li>
             ))}
           </ul>
+        </Reveal>
+      </div>
+
+      <div className="content-wrapper" style={{ marginTop: '3rem' }}>
+        <Reveal delay={0.2}>
+          <ComplexityExposureExplorer onOpenIntake={onOpenIntake} />
         </Reveal>
       </div>
     </section>

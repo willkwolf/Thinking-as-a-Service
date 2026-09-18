@@ -75,8 +75,26 @@ def test_landing_hero(vibe, base_url):
     )
 
     # 4. Editorial Branding / Eyebrow
-    assert "Diseño Organizacional" in hero_text or "Ciencia de Redes" in hero_text, (
-        f"Hero section missing editorial branding: '{hero_text}'"
+    hero_text_lower = hero_text.lower()
+    assert (
+        "diseño organizacional" in hero_text_lower
+        or "diseno organizacional" in hero_text_lower
+        or "ciencia de redes" in hero_text_lower
+    ), f"Hero section missing editorial branding: '{hero_text}'"
+
+    # 5. Pre-AI Strategic Category & Proof Points
+    category_elem = vibe.find(".hero-category-tag")
+    assert category_elem is not None, "Hero category tag (.hero-category-tag) not found"
+    cat_text = category_elem.text().strip()
+    assert "pre-ia" in cat_text.lower() or "pre-ai" in cat_text.lower(), (
+        f"Hero category tag missing Pre-IA positioning: '{cat_text}'"
+    )
+
+    proof_strip = vibe.find(".hero-proof-strip")
+    assert proof_strip is not None, "Hero proof strip (.hero-proof-strip) not found"
+    strip_text = proof_strip.text()
+    assert "10.2%" in strip_text and "74%" in strip_text, (
+        f"Hero proof strip missing empirical benchmark metrics (10.2%, 74%): '{strip_text}'"
     )
 
 
@@ -347,6 +365,28 @@ def test_pricing_and_methodology_copy_integrity(vibe, base_url):
     assert "Propuesta" in proposal_text or "Pricing" in proposal_text, (
         f"Proposal section missing pricing/proposal copy: '{proposal_text[:200]}'"
     )
+    # Anti-hourly billing check: verify hourly rates have been purged
+    assert "@$300/hr" not in proposal_text, "Found prohibited hourly billing rate '@$300/hr' in proposal"
+    assert "@$229/hr" not in proposal_text, "Found prohibited hourly billing rate '@$229/hr' in proposal"
+    # ISO 30401 deliverable ontology check
+    assert "ISO 30401" in proposal_text, "Proposal section missing ISO 30401 governance deliverables"
+    # Procurement benchmark asterisk and Knowledge Artifacts check
+    assert "procurement" in proposal_text.lower() or "compras" in proposal_text.lower(), (
+        "Proposal section missing procurement benchmark asterisk note"
+    )
+    assert "~115 hrs" in proposal_text or "~115h" in proposal_text, (
+        "Proposal section missing reference hours benchmark for procurement"
+    )
+    assert (
+        "artefactos de conocimiento" in proposal_text.lower()
+        or "knowledge artifacts" in proposal_text.lower()
+    ), "Proposal section missing Knowledge Artifacts scope/modality descriptor"
+
+    # Complexity Exposure Explorer in diagnosis layer
+    explorer = vibe.find(".complexity-explorer")
+    assert explorer is not None, "Complexity Exposure Explorer (.complexity-explorer) not found in DOM"
+    explorer_text = explorer.text()
+    assert "EBITDA" in explorer_text, "Complexity Explorer missing EBITDA cost of inaction anchor"
 
     # Methodology note in evidence layer
     evidence_section = vibe.find("#iceberg-evidence")

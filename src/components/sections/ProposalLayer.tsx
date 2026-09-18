@@ -12,9 +12,11 @@ interface RegionalCopy {
 interface PackageItem {
   readonly id: string;
   readonly phase: string;
-  readonly partnerHours: number;
-  readonly analystHours: number;
   readonly basePrice: number;
+  readonly referenceHours: string;
+  readonly procurementNote?: string;
+  readonly artifactsObjective?: string;
+  readonly deliverables: readonly string[];
   readonly usa: RegionalCopy;
   readonly canada: RegionalCopy;
   readonly latam: RegionalCopy;
@@ -37,9 +39,8 @@ export function ProposalLayer() {
   const packagesList = pricing.packages as unknown as PackageItem[];
   const currentPack = packagesList.find((p) => p.id === selectedPack) || packagesList[0];
 
-  const partnerHours = currentPack.partnerHours;
-  const analystHours = currentPack.analystHours;
   const totalPrice = currentPack.basePrice;
+  const deliverables = currentPack.deliverables || [];
 
   // Format price
   const formatCurrency = (val: number) => {
@@ -55,29 +56,40 @@ export function ProposalLayer() {
     const packageName = currentPack[region].name;
     const regionName = activeRegion.name;
     const focusTitle = activeRegion.focusTitle;
+    const deliverablesText = deliverables.map((d, i) => `  ${i + 1}. ${d}`).join('\n');
 
     if (locale === 'es') {
       return `Hola Dr. Andrés López Astudillo,
 He estructurado una propuesta comercial en su plataforma para la región: ${regionName}.
 
 Paquete Seleccionado: ${packageName} (${currentPack.phase})
-- Socio Principal / Reality Auditor: ${partnerHours} horas (@$300 USD/hr)
-- Delivery Team / Analista de Redes: ${analystHours} horas (@$229 USD/hr)
-Inversión Total Estimada: ${formatCurrency(totalPrice)} USD
-Foco estratégico: ${focusTitle}
+Inversión Total de Alcance Cerrado: ${formatCurrency(totalPrice)} USD
+Modalidad: Entrega de Artefactos de Conocimiento (ISO 30401)
+Foco Estratégico: ${focusTitle}
 
-Me interesa discutir el onboarding de esta exploración remota y de simplicidad estratégica. ¿Cuáles son los siguientes pasos?`;
+Entregables Verificables (ISO 30401):
+${deliverablesText}
+
+* Benchmark Técnico para Compras / Procurement: ${currentPack.referenceHours} estimadas de dedicación multidisciplinaria.
+Nota: Facturación 100% de alcance cerrado basada en resultados observables y artefactos, sin bolsas de horas abiertas.
+
+Me interesa discutir el onboarding de esta exploración de simplicidad y gobernanza de sistemas. ¿Cuáles son los siguientes pasos?`;
     } else {
       return `Hello Dr. Andrés López Astudillo,
 I have structured a commercial proposal on your platform for the region: ${regionName}.
 
 Selected Package: ${packageName} (${currentPack.phase})
-- Senior Partner / Reality Auditor: ${partnerHours} hours (@$300 USD/hr)
-- Delivery Team / Network Analyst: ${analystHours} hours (@$229 USD/hr)
-Estimated Total Investment: ${formatCurrency(totalPrice)} USD
+Fixed-Scope Investment: ${formatCurrency(totalPrice)} USD
+Engagement Model: Knowledge Artifacts Delivery (ISO 30401)
 Strategic Focus: ${focusTitle}
 
-I am interested in discussing the onboarding for this remote and strategic simplicity exploration. What are the next steps?`;
+Verifiable Deliverables (ISO 30401):
+${deliverablesText}
+
+* Technical Benchmark for Procurement: ${currentPack.referenceHours} multidisciplinary effort estimate.
+Note: Invoicing is 100% fixed-scope based on observable deliverables and artifacts, with zero open-ended hourly billing.
+
+I am interested in discussing the onboarding for this strategic simplicity and systems governance engagement. What are the next steps?`;
     }
   };
 
@@ -146,11 +158,33 @@ I am interested in discussing the onboarding for this remote and strategic simpl
                         <span className="pack-phase">{pack.phase}</span>
                       </div>
                       <p className="pack-desc">{packRegionCopy.desc}</p>
+
+                      <div className="pack-deliverables">
+                        <span className="pack-deliverables-title">
+                          {locale === 'es' ? 'Entregables Clave (ISO 30401):' : 'Key Deliverables (ISO 30401):'}
+                        </span>
+                        <ul className="pack-deliverables-list">
+                          {pack.deliverables.map((d) => (
+                            <li key={d}>
+                              <svg className="pack-check-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                <path d="M13.3 4.3L6.5 11.1 2.7 7.3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                              </svg>
+                              <span>{d}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
                       <div className="pack-footer">
                         <span className="pack-buyer"><strong>{locale === 'es' ? 'Dirigido a:' : 'For:'}</strong> {packRegionCopy.targetBuyer}</span>
-                        <span className="pack-price">
-                          {formatCurrency(pack.basePrice)}
-                        </span>
+                        <div className="pack-price-wrapper">
+                          <span className="pack-price">
+                            {formatCurrency(pack.basePrice)}
+                          </span>
+                          <span className="pack-procurement-ref" title={pack.procurementNote}>
+                            * {pack.referenceHours} ({locale === 'es' ? 'ref. compras' : 'procurement ref.'})
+                          </span>
+                        </div>
                       </div>
                     </button>
                   );
@@ -179,13 +213,33 @@ I am interested in discussing the onboarding for this remote and strategic simpl
                     <strong>{currentPack.phase}</strong>
                   </div>
                   <div className="summary-row">
-                    <span>{locale === 'es' ? 'Socio Principal:' : 'Senior Partner:'}</span>
-                    <strong>{partnerHours} hrs <small>(@$300/hr)</small></strong>
+                    <span>{locale === 'es' ? 'Alcance / Modalidad:' : 'Scope / Model:'}</span>
+                    <strong>{locale === 'es' ? 'Artefactos de Conocimiento (ISO 30401)' : 'Knowledge Artifacts (ISO 30401)'}</strong>
+                  </div>
+                  <div className="summary-row summary-row--procurement">
+                    <span>{pricing.procurementBenchmarkLabel || (locale === 'es' ? 'Benchmark Procurement (*):' : 'Procurement Benchmark (*):')}</span>
+                    <strong className="procurement-hours">{currentPack.referenceHours}</strong>
                   </div>
                   <div className="summary-row">
-                    <span>{locale === 'es' ? 'Delivery Team:' : 'Delivery Team:'}</span>
-                    <strong>{analystHours} hrs <small>(@$229/hr)</small></strong>
+                    <span>{locale === 'es' ? 'Marco Normativo:' : 'Framework:'}</span>
+                    <strong>ISO 30401 & CEMSTWO</strong>
                   </div>
+                </div>
+
+                <div className="summary-deliverables">
+                  <span className="summary-deliverables-title">
+                    {locale === 'es' ? 'Entregables Verificables Incluidos:' : 'Included Verifiable Deliverables:'}
+                  </span>
+                  <ul className="summary-deliverables-list">
+                    {deliverables.map((d, idx) => (
+                      <li key={idx}>
+                        <svg className="pack-check-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                          <path d="M13.3 4.3L6.5 11.1 2.7 7.3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        <span>{d}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 <div className="summary-pricing">
@@ -194,6 +248,12 @@ I am interested in discussing the onboarding for this remote and strategic simpl
                 </div>
 
                 <p className="pricing-note">{pricing.summaryNote}</p>
+
+                {pricing.procurementAsteriskNote && (
+                  <div className="procurement-asterisk-box">
+                    <p className="procurement-asterisk-note">{pricing.procurementAsteriskNote}</p>
+                  </div>
+                )}
 
                 <div className="summary-actions">
                   <a
