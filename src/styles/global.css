@@ -10,10 +10,15 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
   min-width: 320px;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
   background: var(--bg);
   color: var(--ink);
@@ -73,9 +78,13 @@ video:focus-visible {
   display: block;
 }
 
+#root,
 .scroll-container {
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .layer {
@@ -86,11 +95,15 @@ video:focus-visible {
   justify-content: center;
   padding: var(--layer-pad);
   scroll-margin-top: 4rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .content-wrapper {
   width: min(100%, 68rem);
   margin-inline: auto;
+  box-sizing: border-box;
 }
 
 .narrow {
@@ -386,6 +399,29 @@ p {
     grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
     align-items: stretch;
     gap: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.76rem;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .cta-row > * {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
