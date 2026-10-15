@@ -513,3 +513,37 @@ def test_regional_currency_pricing_toggle(vibe, base_url):
         f"WhatsApp link did not dynamically capture selected package/region payload: '{cta_href}'"
     )
 
+
+def test_desktop_navbar_wayfinding(vibe, base_url):
+    """
+    Scenario 8: Desktop Navbar Wayfinding & Editorial Navigation
+    Verifies desktop header presence, 8 depth navigation links, depth telemetry,
+    and Reality Audit intake action button.
+    """
+    url = base_url or DEFAULT_BASE_URL
+    vibe.go(url)
+
+    navbar = wait_for_condition(
+        lambda: vibe.find(".desktop-navbar"),
+        timeout=10.0,
+        failure_message="Could not find .desktop-navbar element after hydration",
+    )
+    assert navbar is not None, "Desktop navbar (.desktop-navbar) must be present in DOM"
+
+    # Verify 8 depth links
+    links = vibe.findAll(".desktop-navbar__link")
+    assert len(links) == 8, f"Expected 8 depth layer links in desktop navbar, found {len(links)}"
+
+    # Verify brand logo
+    brand = vibe.find(".desktop-navbar__logo-text")
+    assert brand is not None and "Thinking as a Service" in brand.text()
+
+    # Verify telemetry
+    telemetry = vibe.find(".desktop-navbar__depth-telemetry")
+    assert telemetry is not None and "DEP_" in telemetry.text()
+
+    # Verify Reality Audit button
+    intake_btn = vibe.find(".desktop-navbar__intake-btn")
+    assert intake_btn is not None and "reality audit" in intake_btn.text().lower()
+
+

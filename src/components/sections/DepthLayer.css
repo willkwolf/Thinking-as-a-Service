@@ -128,3 +128,57 @@
   color: var(--muted);
   opacity: 0.6;
 }
+
+/* Kumu Diagnostic Triad */
+.kumu-diagnostic-triad {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-block: 1.5rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .kumu-diagnostic-triad {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.kumu-triad-card {
+  padding: 1.25rem 1.4rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.kumu-triad-card:hover {
+  border-color: var(--blueprint);
+  transform: translateY(-2px);
+}
+
+.kumu-triad-card__step {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--blueprint);
+}
+
+.kumu-triad-card h4 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+}
+
+.kumu-triad-card p {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+}

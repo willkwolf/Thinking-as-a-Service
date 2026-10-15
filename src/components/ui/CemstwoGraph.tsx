@@ -32,7 +32,7 @@ const EDGES: [string, string][] = [
 ];
 
 export function CemstwoGraph() {
-  const { content } = useI18n();
+  const { content, locale } = useI18n();
   const { cemstwo } = content.complexity;
   const { ui } = content;
   const [selectedId, setSelectedId] = useState<'C' | 'E' | 'M' | 'S' | 'T' | 'W' | 'O'>('T');
@@ -174,6 +174,30 @@ export function CemstwoGraph() {
               className="cemstwo-graph__svg"
               preserveAspectRatio="xMidYMid meet"
             />
+            <div className="cemstwo-graph__presets" role="toolbar" aria-label="Escenarios de diagnóstico de red">
+              <span className="cemstwo-presets__label">
+                {locale === 'es' ? 'DIMENSIONES SISTÉMICAS:' : 'SYSTEMIC DIMENSIONS:'}
+              </span>
+              <div className="cemstwo-presets__chips">
+                {cemstwo.nodes.map((node) => {
+                  const isNodeActive = node.id === selectedId;
+                  return (
+                    <button
+                      key={node.id}
+                      type="button"
+                      className={`cemstwo-preset-chip ${isNodeActive ? 'cemstwo-preset-chip--active' : ''}`}
+                      onClick={() => setSelectedId(node.id)}
+                      aria-pressed={isNodeActive}
+                      title={`${node.id}: ${node.label}`}
+                    >
+                      <span className="cemstwo-preset-chip__letter">{node.id}</span>
+                      <span className="cemstwo-preset-chip__name">{node.shortLabel || node.label.split(' ')[0]}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
             <p className="cemstwo-graph__instruction">
               {ui.graphInstruction}
             </p>
@@ -191,9 +215,23 @@ export function CemstwoGraph() {
 
             <div className="cemstwo-detail__body">
               <div className="cemstwo-detail__question-box">
+                <span className="cemstwo-detail__tag">
+                  {locale === 'es' ? 'PREGUNTA RECTORA' : 'GUIDING QUESTION'}
+                </span>
                 <p className="cemstwo-detail__question">{activeNode.question}</p>
               </div>
               <p className="cemstwo-detail__summary">{activeNode.summary}</p>
+
+              <div className="cemstwo-detail__takeaway">
+                <span className="cemstwo-takeaway__badge">
+                  {locale === 'es' ? 'VALOR EN LA RADIOGRAFÍA (14 DÍAS)' : 'SNAPSHOT VALUE (14 DAYS)'}
+                </span>
+                <p className="cemstwo-takeaway__text">
+                  {locale === 'es'
+                    ? 'Identificación de dependencias invisibles y cuellos de botella que congestionan esta dimensión antes de inyectar automatización con IA.'
+                    : 'Mapping invisible dependencies and bottlenecks congesting this dimension before deploying AI automation.'}
+                </p>
+              </div>
             </div>
           </div>
         </div>

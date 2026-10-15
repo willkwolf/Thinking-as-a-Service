@@ -32,11 +32,37 @@ export function HeroSurface({ onOpenIntake }: HeroSurfaceProps) {
                 ))}
               </div>
             )}
+
+            <div className="cta-row hero-cta-row">
+              {onOpenIntake && (
+                <button
+                  type="button"
+                  className="btn-primary btn-hero-intake"
+                  onClick={onOpenIntake}
+                >
+                  {hero.ctaIntake?.label || (locale === 'es' ? 'Solicitar Reality Audit' : 'Request Reality Audit')}
+                </button>
+              )}
+              <a href={hero.ctaPrimary.href} className="btn-secondary">
+                {hero.ctaPrimary.label}
+              </a>
+              <a href={hero.ctaSecondary.href} className="btn-secondary">
+                {hero.ctaSecondary.label}
+              </a>
+            </div>
           </Reveal>
-          
+        </div>
+
+        <div className="hero-visual-column">
           {/* Hand-crafted C-Suite Vector: The Hero's Journey (Caos to Simplificación) */}
-          <Reveal delay={0.05}>
+          <Reveal delay={0.08}>
             <div className="hero-journey-panel">
+              <div className="hero-journey-panel__header">
+                <span className="hero-journey-panel__badge">
+                  {locale === 'es' ? 'CARTOGRAFÍA DE VALOR' : 'VALUE TOPOLOGY'}
+                </span>
+                <span className="hero-journey-panel__telemetry">ORCHESTRATED_FLOW</span>
+              </div>
               <svg viewBox="0 0 440 180" className="hero-journey-svg" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Diagrama del Viaje del Héroe: del Caos a la Simplicidad">
                 {/* Left: Scattered nodes / Entangled network (Noise/Chaos) */}
                 <g opacity="0.8">
@@ -122,27 +148,8 @@ export function HeroSurface({ onOpenIntake }: HeroSurfaceProps) {
             </div>
           </Reveal>
 
-          <Reveal delay={0.12}>
-            <div className="cta-row">
-              {onOpenIntake && (
-                <button
-                  type="button"
-                  className="btn-primary btn-hero-intake"
-                  onClick={onOpenIntake}
-                >
-                  {hero.ctaIntake?.label || (locale === 'es' ? 'Solicitar Reality Audit' : 'Request Reality Audit')}
-                </button>
-              )}
-              <a href={hero.ctaPrimary.href} className="btn-secondary">
-                {hero.ctaPrimary.label}
-              </a>
-              <a href={hero.ctaSecondary.href} className="btn-secondary">
-                {hero.ctaSecondary.label}
-              </a>
-            </div>
-          </Reveal>
+          <RiskPanel />
         </div>
-        <RiskPanel />
       </div>
     </section>
   );

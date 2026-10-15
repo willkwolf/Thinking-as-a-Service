@@ -191,14 +191,48 @@
   }
 }
 
+.hero-visual-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .hero-journey-panel {
-  margin-block: 1.75rem;
-  padding: 1.5rem;
+  padding: 1.25rem 1.5rem;
   background: color-mix(in srgb, var(--blueprint) 4%, var(--panel));
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  max-width: 38rem;
   box-shadow: 0 0.5rem 1.5rem var(--shadow);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-journey-panel:hover {
+  border-color: rgba(176, 141, 62, 0.3);
+  box-shadow: 0 1rem 2.5rem rgba(18, 22, 20, 0.08);
+}
+
+.hero-journey-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-journey-panel__badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--blueprint-text, var(--blueprint));
+}
+
+.hero-journey-panel__telemetry {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
 }
 
 .hero-journey-svg {
@@ -244,6 +278,10 @@
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+}
+
+.hero-cta-row {
+  margin-top: 1.75rem;
 }
 
 .hero-proof-metric {

@@ -112,6 +112,36 @@ export function DepthLayer() {
             <h2 id="megatrends-title">{megatrends.title}</h2>
             <p className="lead">{megatrends.lead}</p>
           </Reveal>
+          <div className="kumu-diagnostic-triad">
+            <div className="kumu-triad-card">
+              <span className="kumu-triad-card__step">01 / WICKED PROBLEM</span>
+              <h4>{locale === 'es' ? 'Complejidad Oculta' : 'Hidden Complexity'}</h4>
+              <p>
+                {locale === 'es'
+                  ? 'Silos y dependencias cruzadas invisibles en organigramas y reportes PDF.'
+                  : 'Silos and dependencies invisible in static org charts and standard PDF reports.'}
+              </p>
+            </div>
+            <div className="kumu-triad-card">
+              <span className="kumu-triad-card__step">02 / TOPOLOGÍA REVELADA</span>
+              <h4>{locale === 'es' ? 'Inteligencia de Redes' : 'Network Intelligence'}</h4>
+              <p>
+                {locale === 'es'
+                  ? 'Cartografía visual de actores, flujos y cuellos de botella reales.'
+                  : 'Interactive visual mapping of actual decision flows, nodes, and bottleneck hubs.'}
+              </p>
+            </div>
+            <div className="kumu-triad-card">
+              <span className="kumu-triad-card__step">03 / DECISIÓN ESTRATÉGICA</span>
+              <h4>{locale === 'es' ? 'Intervención Acompañada' : 'Strategic Action'}</h4>
+              <p>
+                {locale === 'es'
+                  ? 'Playbook de poda operativa para proteger EBITDA antes de automatizar con IA.'
+                  : 'Simplicity Playbook to prune waste and protect EBITDA before deploying AI.'}
+              </p>
+            </div>
+          </div>
+
           {isMobile ? (
             <MobileKumuFallback
               title={megatrends.embedTitle}

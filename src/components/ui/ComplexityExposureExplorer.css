@@ -62,15 +62,21 @@
 }
 
 .explorer-chip-group {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 0.5rem;
+}
+
+@media (min-width: 580px) {
+  .explorer-chip-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .explorer-chip {
   text-align: left;
-  padding: 0.7rem 1rem;
-  font-size: 0.85rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.8rem;
   font-family: var(--font-body);
   color: var(--ink);
   background: var(--panel);
@@ -78,7 +84,7 @@
   border-radius: calc(var(--radius) * 0.75);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
 .explorer-chip:hover {
@@ -86,8 +92,13 @@
   background: rgba(139, 188, 230, 0.05);
 }
 
+.explorer-chip:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
 .explorer-chip--active {
-  background: rgba(139, 188, 230, 0.12) !important;
+  background: rgba(139, 188, 230, 0.14) !important;
   border-color: var(--blueprint) !important;
   color: var(--ink) !important;
   font-weight: 600;

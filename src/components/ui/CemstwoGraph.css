@@ -188,3 +188,104 @@
   color: var(--muted);
   font-weight: 400;
 }
+
+/* Presets bar */
+.cemstwo-graph__presets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.cemstwo-presets__label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.cemstwo-presets__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.cemstwo-preset-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  background: rgba(22, 60, 38, 0.04);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--muted);
+  transition: all 0.2s ease;
+}
+
+.cemstwo-preset-chip:hover {
+  background: rgba(22, 60, 38, 0.08);
+  color: var(--ink);
+  border-color: var(--blueprint);
+}
+
+.cemstwo-preset-chip:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.cemstwo-preset-chip--active {
+  background: var(--blueprint) !important;
+  color: #0c142b !important;
+  font-weight: 700;
+  border-color: var(--blueprint) !important;
+  box-shadow: 0 2px 8px rgba(176, 141, 62, 0.25);
+}
+
+.cemstwo-preset-chip__letter {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.68rem;
+}
+
+.cemstwo-detail__tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--blueprint);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.cemstwo-detail__takeaway {
+  margin-top: 1.25rem;
+  padding: 0.85rem 1rem;
+  background: rgba(176, 141, 62, 0.05);
+  border: 1px solid rgba(176, 141, 62, 0.18);
+  border-radius: var(--radius);
+}
+
+.cemstwo-takeaway__badge {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--blueprint);
+  margin-bottom: 0.25rem;
+}
+
+.cemstwo-takeaway__text {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--ink);
+  font-weight: 400;
+}
