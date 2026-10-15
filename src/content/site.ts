@@ -79,7 +79,7 @@ export const siteContent = {
       eyebrow: '',
       title: 'Deje de automatizar el caos. Automatice el margen.',
       subcopy:
-        'No vendemos software ni bolsas de horas de ingeniería. Entregamos artefactos de conocimiento estandarizados (ISO 30401) para mapear la red real de decisiones y desacoplar interfaces críticas. Asumimos la complejidad de su organización mediante un enfoque sistémico para que la dirección enfoque y movilice sus propios recursos, garantizando que la tecnología corra sobre un sistema limpio.',
+        'No vendemos software ni bolsas de horas de ingeniería. Entregamos artefactos de conocimiento estandarizados (ISO 30401) mediante una Radiografía de Complejidad en 14 días para mapear la red real de decisiones, erradicar silos operacionales y detener la destrucción de EBITDA. Asumimos la complejidad de su organización mediante un enfoque sistémico para que la dirección elimine cuellos de botella antes de automatizar con IA, garantizando que la tecnología corra sobre un margen protegido y un sistema limpio.',
       proofPoints: [
         { metric: '10.2%', label: 'Drenaje de EBITDA anual por complejidad no resuelta (Warwick/GSI)' },
         { metric: '74%', label: 'Iniciativas de IA estancadas por fricción organizacional (MIT/BCG)' },
@@ -97,14 +97,14 @@ export const siteContent = {
       diagnosis: {
         eyebrow: 'El diagnóstico',
         title: 'Falla Estructural: El Costo Invisible',
-        lead: 'La complejidad no es un estado; es una dinámica destructiva de valor en organizaciones globales.',
+        lead: 'La complejidad no es un estado teórico; es una dinámica que destruye directamente el EBITDA y paraliza la velocidad de ejecución en organizaciones medianas y grandes.',
         external: {
           label: 'Complejidad Externa (Entorno E)',
-          text: 'Dinámicas regulatorias cambiantes, fluctuaciones del mercado global y flujos de información asimétricos.',
+          text: 'Mercados volátiles, fluctuaciones regulatorias y demandas asimétricas que presionan continuamente la rentabilidad operativa.',
         },
         internal: {
           label: 'Complejidad Interna: La Falla Estructural (S)',
-          text: 'Acoplamiento estrecho de procesos lineales, sobre-especificación de interfaces de decisión y proliferación de capas de gestión que canibalizan el margen operativo.',
+          text: 'Silos operacionales herméticos, proliferación de comités improductivos y burocracia informal que canibalizan el margen y retrasan decisiones críticas.',
         },
         bullets: [
           { highlight: '1. El Impuesto de la Complejidad:', text: 'La complejidad destructiva drena un promedio del 10.2% de la rentabilidad anual (EBITDA) antes de iniciar cualquier automatización. [GSI • Warwick & Simplicity Partnership, 2011]' },
@@ -115,7 +115,7 @@ export const siteContent = {
       explorer: {
         eyebrow: 'Explorador de Exposición Sistémica',
         title: 'Calibre la vulnerabilidad de su organización ante la complejidad',
-        lead: 'Evalúe cómo la latencia en decisiones, los silos departamentales y las iniciativas de IA sin mapa amplifican la deuda estructural y el costo de inacción.',
+        lead: 'Evalúe cómo la latencia en decisiones, los silos departamentales y las iniciativas de IA sin mapa destruyen EBITDA y multiplican el costo de inacción.',
         scaleLabel: 'Escala de la Organización (Ingresos Anuales / Tamaño)',
         scaleOptions: [
           { label: 'Mid-Market ($10M - $50M USD / 100-500 personas)', value: 'mid' },
@@ -150,27 +150,27 @@ export const siteContent = {
           moderate: {
             title: 'Exposición Moderada · Riesgo de Desaceleración',
             description: 'Su organización aún conserva capacidad de respuesta, pero la falta de mapas de conocimiento tácito genera puntos únicos de falla (SPOF) que encarecen la coordinación.',
-            recommendation: 'Priorice un Reality Audit enfocado en delimitar interfaces críticas antes de autorizar nuevos presupuestos de software.',
+            recommendation: 'Priorice un Executive Complexity X-Ray en 14 días para mapear la red real de decisiones y podar interfaces críticas antes de autorizar nuevos presupuestos de software o agentes IA.',
           },
           severe: {
             title: 'Exposición Severa · Drenaje Activo de Margen',
             description: 'La latencia de decisión y la fricción interdepartamental están activando la destrucción del 10.2% de EBITDA. Desplegar herramientas de IA en este estado automatizará la incoherencia operacional.',
-            recommendation: 'Se requiere una intervención de desacoplamiento de interfaces y un mapa de flujos de decisión para blindar el margen.',
+            recommendation: 'Se requiere un Executive Complexity X-Ray en 14 días para desacoplar silos operacionales, identificar iniciativas zombis y blindar el EBITDA antes de cualquier despliegue de IA.',
           },
           critical: {
             title: 'Exposición Crítica · Ruptura Sistémica Inminente',
             description: 'Múltiples silos operando con comités paralizantes y proyectos acelerados de IA sin gobernanza están canibalizando recursos y destruyendo la confianza de la red.',
-            recommendation: 'Detenga la inversión ciega en herramientas y active un rediseño urgente de arquitectura operativa.',
+            recommendation: 'Detenga la inversión ciega en herramientas; active de inmediato una Radiografía de Complejidad en 14 días para cortar cuellos de botella y restaurar el margen operativo.',
           },
         },
-        ctaButton: 'Auditar mi Organización con un Reality Audit',
+        ctaButton: 'Solicitar Executive Complexity X-Ray (14 Días)',
       },
       formula: {
         eyebrow: 'La fórmula',
         title: 'Para asumirla, primero hay que definirla',
         expression: 'Complejidad = componentes + variedad de relaciones + ritmo de cambio',
-        complicated: { label: 'Sistemas complicados', example: 'Un avión: predecible, diseñable.' },
-        complex: { label: 'Sistemas complejos', example: 'Factor humano: ambiguo, adaptativo e impredecible.' },
+        complicated: { label: 'Sistemas complicados', example: 'Proceso lineal de manufactura o pipeline tecnológico: predecible y parametrizable.' },
+        complex: { label: 'Sistemas complejos', example: 'Red informal de personas, silos y decisiones: adaptativa, con cuellos de botella no mapeados.' },
       },
       tippingPoint: {
         eyebrow: 'Punto de inflexión',
@@ -178,11 +178,11 @@ export const siteContent = {
         lead: 'El éxito no consiste en eliminar toda la complejidad, sino en encontrar el punto de inflexión.',
         good: {
           label: 'Complejidad buena',
-          text: 'Iniciativas estratégicas que añaden valor: nuevos mercados o productos que el cliente valora.',
+          text: 'Iniciativas estratégicas con retorno directo: productos y canales de distribución que el cliente remunera con margen positivo.',
         },
         bad: {
           label: 'Complejidad mala y costosa',
-          text: 'Añade costos desproporcionados al valor que genera, destruye margen y mata el negocio.',
+          text: 'Silos, comités redundantes e iniciativas zombis que consumen recursos, destruyen margen y canibalizan el EBITDA operativo.',
         },
         impact: 'Las empresas pierden, en promedio, un 10.2% de su rentabilidad anual (EBITDA) debido a complejidad organizativa que destruye valor. [GSI • Warwick Business School & Simplicity Partnership, 2011]',
       },
@@ -227,56 +227,56 @@ export const siteContent = {
       cemstwo: {
         eyebrow: 'Ciencia de redes',
         title: 'Del organigrama al grafo CEMSTWO',
-        lead: 'CEMSTWO completa CATWOE para contextos donde lo material importa tanto como lo interpretativo: primero describe qué hay y cómo opera; luego evalúa propósito, cosmovisión y poder.',
+        lead: 'CEMSTWO diagnostica la realidad operacional donde los organigramas fallan: primero mapea qué actores e interfaces ejecutan el trabajo; luego revela dónde los silos, el poder informal y los supuestos de liderazgo frenan el margen.',
         nodes: [
           {
             id: 'C',
             label: 'Composición',
             shortLabel: 'Partes',
-            summary: 'Actores humanos, artefactos técnicos, recursos naturales y capacidades que componen el sistema.',
-            question: '¿De qué está hecho el sistema y qué partes faltan para entender su comportamiento?',
+            summary: 'Líderes clave, equipos operativos, sistemas legados y capacidades reales que componen la organización.',
+            question: '¿Qué partes y áreas componen realmente la operación y cuáles faltan en el mapa formal?',
           },
           {
             id: 'E',
             label: 'Entorno activo',
-            shortLabel: 'Co-productores',
-            summary: 'Sistemas externos que interactúan con el sistema y también lo transforman.',
-            question: '¿Qué actores, reglas, mercados o condiciones biofísicas co-producen el problema?',
+            shortLabel: 'Mercado',
+            summary: 'Presiones comerciales, clientes clave, competidores y regulaciones que impactan el margen operativo.',
+            question: '¿Qué presiones de mercado y entorno están forzando cuellos de botella en la operación?',
           },
           {
             id: 'M',
             label: 'Mecanismo',
-            shortLabel: 'Cómo funciona',
-            summary: 'Procesos concretos que generan la transformación: físicos, decisionales, de aprendizaje o de control.',
-            question: '¿Qué proceso generativo explica lo que ocurre y qué evidencia lo valida?',
+            shortLabel: 'Flujo',
+            summary: 'Procesos reales de decisión, flujos de trabajo e interfaces donde se genera retrabajo y fricción.',
+            question: '¿Dónde se produce el retrabajo y qué procesos informales explican la pérdida recurrente de margen?',
           },
           {
             id: 'S',
             label: 'Estructura',
-            shortLabel: 'Vínculos',
-            summary: 'Relaciones internas y externas: jerarquías, flujos, exclusiones, dependencias y acoplamientos.',
-            question: '¿Cómo se relacionan las partes y dónde la estructura bloquea aprendizaje o acción?',
+            shortLabel: 'Silos & Vínculos',
+            summary: 'Topología real de dependencias, silos operacionales y puntos únicos de falla (SPOF) que traban la ejecución.',
+            question: '¿Dónde se concentran los silos y cómo la estructura informal retrasa las decisiones críticas?',
           },
           {
             id: 'T',
             label: 'Transformación',
-            shortLabel: 'Cambio central',
-            summary: 'Paso de insumo a resultado que define el propósito operativo del sistema.',
-            question: '¿Qué cambia exactamente, desde qué estado inicial hacia qué resultado deseado?',
+            shortLabel: 'Retorno',
+            summary: 'Flujo de valor que convierte insumos y esfuerzo en EBITDA y resultados comerciales medibles.',
+            question: '¿Qué transformación concreta genera valor y en qué interfaces se diluye el margen operativo?',
           },
           {
             id: 'W',
             label: 'Weltanschauung',
-            shortLabel: 'Cosmovisión',
-            summary: 'Marco de sentido que hace deseable la transformación y revela ontologías en conflicto.',
-            question: '¿Qué visión del mundo vuelve legítima esta transformación y qué visión alternativa la cuestiona?',
+            shortLabel: 'Supuestos',
+            summary: 'Supuestos de liderazgo y cultura de gestión que justifican la burocracia o bloquean la simplificación.',
+            question: '¿Qué creencias de gestión sostienen iniciativas zombis o comités improductivos?',
           },
           {
             id: 'O',
             label: 'Ownership',
-            shortLabel: 'Poder',
-            summary: 'Quiénes pueden detener, autorizar o reconfigurar C-E-M-S-T.',
-            question: '¿Quién tiene poder real para cambiar el sistema y quién queda fuera de esa decisión?',
+            shortLabel: 'Poder de Veto',
+            summary: 'Quiénes concentran la autoridad real para autorizar presupuestos, vetar cambios o reconfigurar la red.',
+            question: '¿Quién tiene poder real para podar procesos y quién bloquea la toma de decisiones?',
           },
         ] satisfies CemstwoNode[],
       },
@@ -323,7 +323,7 @@ export const siteContent = {
     playbook: {
       eyebrow: 'Playbook de entrega',
       title: 'De la complejidad medida a la simplicidad operativa',
-      lead: 'Pensamiento sistémico aplicado al diseño organizacional: entregamos artefactos de conocimiento estandarizados (ISO 30401) y mapas de decisión objetivos para que la dirección enfoque y active sus propios recursos humanos y tecnológicos sin dependencias externas eternas.',
+      lead: 'Pensamiento sistémico aplicado al diseño organizacional: entregamos artefactos de conocimiento estandarizados (ISO 30401) y mapas de decisión objetivos para que la dirección elimine silos, proteja el EBITDA y active sus propios recursos humanos y tecnológicos sin dependencias externas eternas.',
       whatsappBase: 'https://wa.me/573108437004',
       ctaMessage:
         'Hola Dr. Andrés López Astudillo. Vengo de su plataforma https://willkwolf.github.io/Thinking-as-a-Service/ y quiero explorar su consultoría y propuestas comerciales. Me interesa conocer más sobre cómo reducir el ruido organizativo y optimizar el margen. ¿Podemos agendar una llamada?',
@@ -331,34 +331,34 @@ export const siteContent = {
         {
           id: 'filter',
           title: '1. El Filtro Anti-Desperdicio',
-          summary: 'El 70% de los proyectos de IA fracasan porque intentan automatizar un desorden humano. Si automatizas un proceso ineficiente, obtienes ineficiencia acelerada. No gaste un solo dólar en desarrollo de software hasta saber exactamente qué proceso le va a devolver esa inversión.'
+          summary: 'El 74% de las iniciativas de IA fracasan porque automatizan el desorden humano y silos desconectados. Si automatiza un proceso ineficiente, solo acelera la fuga de EBITDA. No gaste un solo dólar en licencias o desarrollo hasta auditar la red real de decisiones que debe devolver esa inversión.'
         },
         {
           id: 'radiography',
           title: '2. Radiografía de la Estructura Real',
-          summary: 'Los organigramas mienten. Las decisiones reales, los cuellos de botella y las pérdidas de información ocurren en interacciones informales del día a día. Verá con evidencia matemática, no con opiniones, en qué nodos se traban sus proyectos de transformación digital.'
+          summary: 'Los organigramas en PDF mienten. Las decisiones críticas, los cuellos de botella y las fugas de margen ocurren en la red informal del día a día. Revelamos con topología matemática en qué nodos se traban sus proyectos y dónde se destruye valor.'
         },
         {
           id: 'simplification',
-          title: '3. El Playbook de Simplificación Operativa',
-          summary: 'Las empresas tradicionales solucionan los problemas creando más comités, reportes y reuniones, destruyendo el margen. Limpiamos la burocracia antes de meter tecnología para que, cuando implemente IA, corra sobre una pista eficiente.'
+          title: '3. El Playbook de Poda y Simplificación Operativa',
+          summary: 'Las empresas tradicionales intentan resolver la fricción creando comités redundantes y más capas burocráticas, quemando capital. Entregamos un plan matemático de poda: qué interfaces eliminar, qué procesos descongestionar y qué iniciativas zombis detener.'
         },
         {
           id: 'methodology',
-          title: 'Cierre Metodológico: Ejecución Ágil por Fases',
-          summary: 'Secuencia ágil de corto plazo para evitar consultorías eternas de 6 meses:',
+          title: 'Cierre Metodológico: Modelo Land & Expand',
+          summary: 'Arquitectura comercial de dos fases para garantizar resultados inmediatos sin fricción de compras ni consultorías eternas:',
           children: [
             {
-              title: 'Fase 1: Auditoría de Ruido (Semanas 1-2)',
-              summary: 'Mapeamos visualmente sus flujos críticos y detectamos en qué porcentaje de su estructura se está perdiendo el margen operativo.'
+              title: 'Fase 1: Executive Complexity X-Ray (14 Días / Precio Fijo)',
+              summary: 'Sprint cerrado de 14 días con cero fricción de TI. Entregamos el Grafo Snapshot Interactivo Privado y el Playbook de Poda para erradicar silos, iniciativas zombis y cuellos de botella que destruyen EBITDA.'
             },
             {
-              title: 'Fase 2: Simplificación de Procesos (Semanas 3-4)',
-              summary: 'Eliminamos los cuellos de botella humanos, reportes innecesarios y burocracia que frenarían cualquier software.'
+              title: 'Fase 2: Forward Deployed Simplification & Live Ontology (Retainer FDE)',
+              summary: 'Suscripción mensual/trimestral con ingenieros asignados (Forward Deployed Engineers) acotados estrictamente a los nodos críticos de Fase 1, manteniendo el grafo vivo y auditando nuevas contrataciones de software o agentes IA.'
             },
             {
-              title: 'Fase 3: Diseño del Roadmap de IA (Semana 5+)',
-              summary: 'Le entregamos la arquitectura exacta de qué automatizar, qué interfaces desacoplar y transferimos los blueprints a sus equipos internos para que su dirección mantenga el control total de sus recursos.'
+              title: 'Fase 3: Autonomía Operativa y Blindaje de Margen (ISO 30401)',
+              summary: 'Transferencia de capacidades, sondas de verificación y protocolos de gobernanza para que la dirección mantenga el control total de su margen sin dependencias externas eternas.'
             }
           ]
         }
@@ -405,8 +405,8 @@ export const siteContent = {
     },
     pricing: {
       eyebrow: 'PROPUESTAS COMERCIALES',
-      title: 'Paquetes de Consultoría e Intervención Sistémica',
-      lead: 'Estructura de consultoría técnica de alcance cerrado y entregables verificables bajo estándar ISO 30401. Posicionamiento independiente con rigor científico y modelado de redes CEMSTWO. Definimos hipótesis contrastables y arquitectura observable antes de comprometer infraestructura tecnológica.',
+      title: 'Propuestas Comerciales: Modelo Land & Expand',
+      lead: 'Estructura de consultoría técnica de alcance cerrado y entregables verificables bajo estándar ISO 30401. Implementamos un modelo Land & Expand: comience con un Executive Complexity X-Ray en 14 días a precio cerrado y escale a Retainer FDE continuo sobre los nodos críticos identificados.',
       regionLabel: 'Seleccione su región:',
       packageLabel: 'Seleccione un paquete de intervención:',
       deliverablesLabel: 'Entregables Clave Incluidos (ISO 30401):',
@@ -440,100 +440,100 @@ export const siteContent = {
       packages: [
         {
           id: 'exploration',
-          phase: '4 Semanas',
+          phase: 'Fase 1 · 14 Días (Sprint de Entrada)',
           basePrice: 28500,
           referenceHours: '~115 hrs',
           procurementNote: '* Benchmark de homologación: ~115 hrs estimadas de equipo multidisciplinario.',
-          artifactsObjective: 'Generar conocimiento estructural, mapear decisiones y transferir datos clave a la dirección.',
+          artifactsObjective: 'Identificar iniciativas zombis, silos operacionales y cuellos de botella que destruyen EBITDA en 14 días con cero fricción de TI.',
           deliverables: [
-            'Mapa de Flujo de Decisiones y Complejidad Sistémica (CEMSTWO)',
-            'Scorecard de Exposición y Deuda de Conocimiento (ISO 30401)',
-            'Matriz de Retención de Conocimiento y Vulnerabilidad de IA',
-            'Roadmap Estructural a 90 Días',
-            'Sesión de Lectura Ejecutiva a Junta Directiva y C-Suite',
+            'Grafo Snapshot Interactivo Privado (Topología real de decisiones y silos)',
+            'Playbook de Poda y Simplificación Operativa (Ranking matemático de qué eliminar)',
+            'Scorecard de Exposición y Deuda Estructural (ISO 30401)',
+            'Matriz de Vulnerabilidad Pre-IA y Fugas de Margen',
+            'Sesión de Lectura Ejecutiva C-Suite (90 min con Sponsor Ejecutivo)',
           ],
           usa: {
-            name: 'Complexity Diagnostic (EBITDA & Margen)',
-            desc: 'Auditoría de realidad en 4 semanas para mapear señales de destrucción de margen, desacoplar interfaces de decisión y delimitar el sistema antes de cualquier desarrollo tecnológico.',
-            targetBuyer: 'Dirección Financiera (CFO) y Dirección de Operaciones (COO) buscando detener fugas de capital y blindar el margen operativo.'
+            name: 'Fase 1: Executive Complexity X-Ray (14 Días / Fixed Scope)',
+            desc: 'Sprint de 14 días a precio cerrado: radiografía matemática de la red real de decisiones para detectar iniciativas zombis y cuellos de botella que destruyen EBITDA antes de gastar en software o IA.',
+            targetBuyer: 'Dirección de Operaciones (COO), Finanzas (CFO) y CEO buscando frenar la destrucción de EBITDA y acotar riesgos.'
           },
           canada: {
-            name: 'Complexity Diagnostic (Gobernanza de Sistemas)',
-            desc: 'Mapeo de interfaces, gobernanza de conocimiento y alineación de stakeholders. Evaluamos la madurez organizativa y ética antes de comprometer despliegues de IA.',
-            targetBuyer: 'Dirección de Operaciones (COO) y Comités de Gobernanza enfocados en transparencia institucional.'
+            name: 'Phase 1: Executive Complexity X-Ray (14-Day Reality Audit)',
+            desc: 'Sprint de 14 días para mapear la red real de flujos de conocimiento, dependencias ocultas y gobernanza pre-IA, eliminando silos sin requerir accesos profundos de TI.',
+            targetBuyer: 'Dirección de Operaciones (COO) y Comités de Transformación enfocados en eficiencia y compliance responsable.'
           },
           latam: {
-            name: 'Complexity Diagnostic (Salud de Red)',
-            desc: 'Mapeo integral de dinámicas relacionales, silos informales y cuellos de botella de decisión. Auditamos la salud de interfaces críticas para destrabar la ejecución.',
-            targetBuyer: 'Dirección General (CEO) y Capital Humano buscando sanar la confianza e interfaces departamentales.'
+            name: 'Fase 1: Radiografía de Complejidad Organizacional (14 Días)',
+            desc: 'Diagnóstico ejecutivo en 14 días para visibilizar cuellos de botella informales, desarticular silos y detener el drenaje de margen operativo antes de implementar tecnología.',
+            targetBuyer: 'Dirección General (CEO) y Gerencia de Operaciones comprometidas con desburocratizar la ejecución.'
           }
         },
         {
           id: 'modeling',
-          phase: '8 Semanas',
+          phase: 'Fase 2 · 8 Semanas (Retainer Mensual FDE)',
           basePrice: 68000,
           referenceHours: '~310 hrs',
           procurementNote: '* Benchmark de homologación: ~310 hrs estimadas de equipo multidisciplinario.',
-          artifactsObjective: 'Transferir blueprints, sondas de verificación y playbooks para que los equipos internos asuman la gobernanza.',
+          artifactsObjective: 'Ejecutar el Playbook de Poda y mantener la Ontología Viva sobre los nodos críticos identificados en Fase 1.',
           deliverables: [
-            'Arquitectura de Simplicidad en Procesos Core (P1-P4)',
-            'Protocolos de Desacoplamiento de Decisiones Críticas',
-            'Catálogo de Sondas de Verificación Operativa y Datos',
-            'Gobernanza de Flujos de Conocimiento (ISO 30401)',
-            'Playbook de Acompañamiento y Traspaso a Equipos Internos',
+            'Asignación Técnica de Forward Deployed Engineer (FDE) en Nodos Críticos',
+            'Ontología Viva y Mantenimiento Continuo del Grafo de Decisiones',
+            'Protocolos de Poda Operativa y Desacoplamiento de Interfaces',
+            'Vetting Técnico y Auditoría Pre-IA de Nuevas Herramientas / Agentes',
+            'Monitoreo Continuo de Latencia Decisional y Blindaje de Margen (ISO 30401)',
           ],
           usa: {
-            name: 'Operating System Redesign (Margen Sostenible)',
-            desc: 'Diseño y despliegue de sondas de verificación, tableros descriptivos ad-hoc y modelos experimentales para auditar interfaces de procesos core, reduciendo fricción y canibalización de margen.',
-            targetBuyer: 'Dirección de Tecnología (CTO) y Transformación buscando optimizar costos de ingeniería y retornos de automatización.'
+            name: 'Fase 2: Forward Deployed Simplification & Live Ontology (Retainer FDE)',
+            desc: 'Suscripción mensual de ingeniería desplegada (FDE) para ejecutar el Playbook de Poda, mantener la ontología viva del negocio y blindar el margen en los nodos críticos diagnosticados.',
+            targetBuyer: 'Sponsor ejecutivo (COO / CTO) que requiere ejecución técnica continua sin contratar burocracia externa.'
           },
           canada: {
-            name: 'Operating System Redesign (Alineación de Procesos)',
-            desc: 'Construcción de sondas participativas y paneles de gobernanza para asegurar la adopción ética y la inclusión del usuario en los flujos de decisión organizacionales.',
-            targetBuyer: 'Dirección de Transformación Digital liderando cambio ético y adopción de usuarios clave.'
+            name: 'Phase 2: Forward Deployed Simplification & Live Ontology',
+            desc: 'Suscripción FDE enfocada en la gobernanza viva de interfaces, verificación de flujos de decisión y aseguramiento de adopción responsable sobre la arquitectura simplificada.',
+            targetBuyer: 'Dirección de Transformación Digital y Operaciones liderando la gobernanza de sistemas vivos.'
           },
           latam: {
-            name: 'Operating System Redesign (Salud Operativa)',
-            desc: 'Despliegue de sondas relacionales y tableros de señales para restaurar la fluidez operativa. Enfocado en la comunicación y desacoplamiento de interfaces críticas departamentales.',
-            targetBuyer: 'Gerencias de Operaciones e Innovación que necesitan reducir fricciones humanas y asegurar continuidad.'
+            name: 'Fase 2: Simplificación Desplegada y Ontología Viva (Retainer FDE)',
+            desc: 'Capacidad técnica asignada para erradicar silos, disolver comités redundantes y mantener actualizado el mapa de red operativo sin dilatar la ejecución.',
+            targetBuyer: 'Gerencias de Operaciones y Transformación que necesitan acompañamiento directo en la poda operativa.'
           }
         },
         {
           id: 'gestation',
-          phase: '12 Semanas (Trimestral)',
+          phase: 'Fase 2 · 12 Semanas (Retainer Trimestral Enterprise)',
           basePrice: 98000,
           referenceHours: '~470 hrs',
           procurementNote: '* Benchmark de homologación: ~470 hrs estimadas de equipo multidisciplinario.',
-          artifactsObjective: 'Monitoreo continuo de señales, auditoría pre-IA y actas de inteligencia decisional para la dirección general.',
+          artifactsObjective: 'Gobernanza ontológica integral de escala, comité de decisiones críticas y blindaje pre-IA multi-dominio.',
           deliverables: [
-            'Comité Continuo de Inteligencia de Decisiones (Bi-semanal)',
-            'Monitoreo y Calibración Permanente de Sondas Sistémicas',
-            'Auditoría Preventiva de Nuevas Iniciativas Tecnológicas y de IA',
-            'Actualización Continua del Mapa de Red y Deuda de Conocimiento',
-            'Asesoría de Confianza para C-Suite en Decisiones Complejas',
+            'Célula FDE Dedicada para Rediseño Sistémico Continuo',
+            'Gobernanza y Sincronización Multi-Grafo de la Red Organizacional',
+            'Auditoría Pre-Adquisición de Software, Copilotos y Agentes de IA',
+            'Comité Quincenal de Inteligencia Decisional con la Junta Directiva',
+            'Protección Continua del EBITDA Operativo frente a la Re-acumulación de Complejidad',
           ],
           usa: {
-            name: 'Continuous Systems Advisory (Blindaje de Margen)',
-            desc: 'Acompañamiento directivo continuo para blindar las decisiones de escala y tecnología contra la re-introducción de complejidad destructiva, protegiendo el EBITDA operativo.',
-            targetBuyer: 'Dirección Ejecutiva (CEO) y Junta Directiva liderando la rentabilidad global del margen.'
+            name: 'Fase 2: Forward Deployed Enterprise Shield (Quarterly FDE Retainer)',
+            desc: 'Acompañamiento directivo y capacidad técnica FDE de escala trimestral para blindar decisiones de capital, tecnología y expansión contra la re-introducción de complejidad destructiva.',
+            targetBuyer: 'CEO y Junta Directiva liderando la protección global del margen EBITDA y la disciplina pre-IA.'
           },
           canada: {
-            name: 'Continuous Systems Advisory (Gobernanza Integral)',
-            desc: 'Ciclo integral de simplificación y gobernanza continua. Mantiene la alineación de stakeholders, la transparencia algorítmica y el cumplimiento normativo en toda la escala corporativa.',
-            targetBuyer: 'Dirección General (CEO) y Relaciones Corporativas optimizando el valor a stakeholders y compliance.'
+            name: 'Phase 2: Enterprise Systems Governance & Live Ontology (Quarterly Retainer)',
+            desc: 'Gobernanza integral de ontologías vivas y arquitectura de decisiones a nivel corporativo, asegurando transparencia, cumplimiento normativo y preservación de valor.',
+            targetBuyer: 'Dirección General (CEO) y Comités Ejecutivos optimizando el valor corporativo a largo plazo.'
           },
           latam: {
-            name: 'Continuous Systems Advisory (Salud Organizacional)',
-            desc: 'Acompañamiento estratégico continuo para preservar la agilidad de la red, monitorear la salud relacional y guiar transiciones organizacionales críticas sin generar burocracia.',
-            targetBuyer: 'Directores Generales (CEO) y VP de Personas comprometidos con la resiliencia estructural a largo plazo.'
+            name: 'Fase 2: Blindaje Sistémico Enterprise (Retainer Trimestral FDE)',
+            desc: 'Retainer estratégico y operativo continuo para mantener la red organizacional ágil, prevenir la proliferación de feudos y garantizar retornos reales de automatización.',
+            targetBuyer: 'Dirección General (CEO) y VP de Operaciones comprometidos con la resiliencia estructural.'
           }
         }
       ]
     },
     intakeModal: {
-      badge: 'ISO 30401 Reality Audit',
-      title: 'Solicitud de Diagnóstico de Complejidad',
-      subtitle: 'Evaluación ejecutiva confidencial para mapear cuellos de botella sistémicos, deuda de conocimiento y desacoplar interfaces antes de invertir en IA.',
+      badge: 'Fase 1: Executive Complexity X-Ray',
+      title: 'Solicitud de Radiografía de Complejidad Organizacional (14 Días)',
+      subtitle: 'Evaluación ejecutiva confidencial a precio cerrado para mapear la red real de decisiones, erradicar silos operacionales y blindar su EBITDA antes de gastar en IA.',
       steps: {
         profile: '1. Perfil Corporativo',
         friction: '2. Fricción Sistémica',
@@ -610,7 +610,7 @@ export const siteContent = {
       eyebrow: '',
       title: 'Stop automating chaos. Automate margins.',
       subcopy:
-        'We do not sell software or engineering hours. We deliver standardized knowledge artifacts (ISO 30401) to map the real decision network and decouple critical interfaces. We address organizational complexity through a systemic approach so leadership can focus and deploy their own resources, ensuring technology runs on a clean system.',
+        'We do not sell software or open-ended engineering hours. We deliver standardized knowledge artifacts (ISO 30401) through a 14-day Executive Complexity X-Ray to map real decision networks, dismantle operational silos, and stop EBITDA destruction. We tackle organizational complexity through a systemic approach so leadership can eliminate bottlenecks before automating with AI, ensuring technology runs on protected margins and a clean system.',
       proofPoints: [
         { metric: '10.2%', label: 'Annual EBITDA drained by unaddressed operational complexity (Warwick/GSI)' },
         { metric: '74%', label: 'AI initiatives stalled by structural human interface friction (MIT/BCG)' },
@@ -628,14 +628,14 @@ export const siteContent = {
       diagnosis: {
         eyebrow: 'The Diagnosis',
         title: 'Structural Failure: The Invisible Cost',
-        lead: 'Complexity is not a static state; it is a dynamic force that actively destroys value in global organizations.',
+        lead: 'Complexity is not an abstract concept; it is an active force that directly destroys EBITDA and paralyzes execution across mid-market and enterprise organizations.',
         external: {
           label: 'External Complexity (Environment E)',
-          text: 'Shifting regulatory demands, global market volatility, and asymmetric information flows.',
+          text: 'Volatile markets, shifting regulatory pressures, and asymmetric demands exerting continuous pressure on operating margins.',
         },
         internal: {
           label: 'Internal Complexity: Structural Failure (S)',
-          text: 'Tight coupling of linear processes, over-specification of decision interfaces, and a proliferation of management layers that cannibalize operating margins.',
+          text: 'Hermetic operational silos, proliferation of unproductive committees, and informal bureaucracy that delay critical decisions and cannibalize operating EBITDA.',
         },
         bullets: [
           { highlight: '1. The Complexity Tax:', text: 'Value-destroying complexity erodes an average of 10.2% of annual EBITDA before any automation is introduced. [GSI • Warwick & Simplicity Partnership, 2011]' },
@@ -646,7 +646,7 @@ export const siteContent = {
       explorer: {
         eyebrow: 'Systemic Exposure Explorer',
         title: 'Calibrate your organization’s vulnerability to complexity',
-        lead: 'Assess how decision latency, silo fragmentation, and ungoverned AI initiatives amplify structural knowledge debt and the cost of inaction.',
+        lead: 'Assess how decision latency, operational silos, and unmapped AI initiatives destroy EBITDA and amplify the cost of inaction.',
         scaleLabel: 'Organization Scale (Annual Revenue / Headcount)',
         scaleOptions: [
           { label: 'Mid-Market ($10M - $50M USD / 100-500 employees)', value: 'mid' },
@@ -681,27 +681,27 @@ export const siteContent = {
           moderate: {
             title: 'Moderate Exposure · Deceleration Risk',
             description: 'Your organization retains operational response capability, but unmapped tacit knowledge flows create single points of failure (SPOF) that inflate coordination costs.',
-            recommendation: 'Prioritize a Reality Audit focused on interface boundaries before committing further software budgets.',
+            recommendation: 'Prioritize a 14-day Executive Complexity X-Ray to map real decision networks and prune critical interfaces before committing further software or AI budgets.',
           },
           severe: {
             title: 'Severe Exposure · Active Margin Drain',
             description: 'Decision latency and interdepartmental friction are triggering the 10.2% EBITDA drain. Deploying AI tools in this state will automate operational incoherence.',
-            recommendation: 'Requires an interface decoupling intervention and a decision flow map to safeguard operating margins.',
+            recommendation: 'A 14-day Executive Complexity X-Ray is required to decouple operational silos, identify zombie initiatives, and protect EBITDA before any AI deployment.',
           },
           critical: {
             title: 'Critical Exposure · Imminent Systemic Breakdown',
             description: 'Multiple silos operating with sluggish committees alongside ungoverned AI projects are cannibalizing resources and shattering organizational trust.',
-            recommendation: 'Halt blind tooling spend immediately and initiate an emergency operating architecture redesign.',
+            recommendation: 'Halt blind tooling spend immediately; deploy a 14-day Executive Complexity X-Ray to cut bottlenecks and restore operating margins.',
           },
         },
-        ctaButton: 'Audit My Organization with a Reality Audit',
+        ctaButton: 'Request Executive Complexity X-Ray (14 Days)',
       },
       formula: {
         eyebrow: 'The Formula',
         title: 'To address it, you must first define it',
         expression: 'Complexity = Components + Diversity of Relationships + Velocity of Change',
-        complicated: { label: 'Complicated Systems', example: 'An aircraft: predictable, engineerable, and linear.' },
-        complex: { label: 'Complex Systems', example: 'The human factor: ambiguous, adaptive, and unpredictable.' },
+        complicated: { label: 'Complicated Systems', example: 'Linear manufacturing or IT pipeline: predictable, measurable, and programmable.' },
+        complex: { label: 'Complex Systems', example: 'Informal network of people, silos, and decisions: adaptive, with unmapped bottlenecks.' },
       },
       tippingPoint: {
         eyebrow: 'Tipping Point',
@@ -709,11 +709,11 @@ export const siteContent = {
         lead: 'Success lies not in eliminating all complexity, but in identifying the inflection point.',
         good: {
           label: 'Good Complexity',
-          text: 'Strategic initiatives that add value, such as entering new markets or launching products that customers value.',
+          text: 'Strategic initiatives generating direct return: products and commercial channels customers pay for with positive margin.',
         },
         bad: {
           label: 'Bad and Costly Complexity',
-          text: 'It adds costs disproportionate to the value generated, erodes margins, and threatens business viability.',
+          text: 'Silos, redundant committees, and zombie initiatives consuming resources, destroying margin, and cannibalizing operating EBITDA.',
         },
         impact: 'Organizations lose, on average, 10.2% of their annual profitability (EBITDA) due to value-destroying organizational complexity. [GSI • Warwick Business School & Simplicity Partnership, 2011]',
       },
@@ -755,56 +755,56 @@ export const siteContent = {
       cemstwo: {
         eyebrow: 'Network Science',
         title: 'From Org Chart to the CEMSTWO Graph',
-        lead: 'CEMSTWO extends the CATWOE framework for environments where material realities matter as much as interpretations: first describing what exists and how it operates, then evaluating purpose, worldview, and power dynamics.',
+        lead: 'CEMSTWO diagnoses operational reality where traditional org charts fail: first mapping which actors and interfaces execute work; then revealing where silos, informal power, and leadership assumptions erode EBITDA.',
         nodes: [
           {
             id: 'C',
             label: 'Composition',
             shortLabel: 'Components',
-            summary: 'Human actors, technical artifacts, natural resources, and capabilities that comprise the system.',
-            question: 'What is the system composed of, and which components are missing from the diagnosis?',
+            summary: 'Key leaders, operating teams, legacy systems, and actual capabilities comprising the organization.',
+            question: 'Which teams and components genuinely execute operations, and which are omitted from the formal chart?',
           },
           {
             id: 'E',
             label: 'Active Environment',
-            shortLabel: 'Co-producers',
-            summary: 'External systems that interact with and transform the target system.',
-            question: 'Which actors, rules, markets, or biophysical conditions co-produce the problem?',
+            shortLabel: 'Market',
+            summary: 'Commercial pressures, key customers, competitors, and regulatory shifts impacting operating margins.',
+            question: 'Which external market forces and customer pressures are driving internal operational bottlenecks?',
           },
           {
             id: 'M',
             label: 'Mechanism',
-            shortLabel: 'How It Works',
-            summary: 'Concrete processes that drive transformation, including physical, decision-making, learning, and control mechanisms.',
-            question: 'Which generative process explains what is occurring, and what evidence validates it?',
+            shortLabel: 'Workflow',
+            summary: 'Real decision processes, workflows, and interfaces where rework, latency, and friction are generated.',
+            question: 'Where does operational rework occur, and which informal handoffs explain recurrent margin loss?',
           },
           {
             id: 'S',
             label: 'Structure',
-            shortLabel: 'Links',
-            summary: 'Internal and external relationships: hierarchies, flows, exclusions, dependencies, and couplings.',
-            question: 'How are the components related, and where does the structure block learning or action?',
+            shortLabel: 'Silos & Links',
+            summary: 'Actual topology of cross-departmental dependencies, operational silos, and single points of failure (SPOF).',
+            question: 'Where are operational silos concentrated, and how does informal network structure delay critical decisions?',
           },
           {
             id: 'T',
             label: 'Transformation',
-            shortLabel: 'Core Change',
-            summary: 'The input-to-output transition that defines the system\'s operational purpose.',
-            question: 'What exactly changes, transitioning from what initial state to which desired outcome?',
+            shortLabel: 'Value Flow',
+            summary: 'Value-creation stream converting labor and capital into operating EBITDA and measurable market outcomes.',
+            question: 'What core transformation delivers real margin, and at which interfaces is economic value leaking?',
           },
           {
             id: 'W',
             label: 'Weltanschauung',
-            shortLabel: 'Worldview',
-            summary: 'The sense-making framework that makes the transformation desirable and reveals conflicting ontologies.',
-            question: 'Which worldview legitimizes this transformation, and what alternative view challenges it?',
+            shortLabel: 'Assumptions',
+            summary: 'Shared leadership assumptions and management orthodoxies legitimizing bureaucracy or stalling simplification.',
+            question: 'Which management beliefs sustain zombie initiatives or preserve unproductive committees?',
           },
           {
             id: 'O',
             label: 'Ownership',
-            shortLabel: 'Power',
-            summary: 'The actors who can halt, authorize, or reconfigure the C-E-M-S-T components.',
-            question: 'Who holds the real power to change the system, and who is excluded from that decision?',
+            shortLabel: 'Veto Power',
+            summary: 'The executive stakeholders holding real authority to approve spend, veto changes, or unblock the network.',
+            question: 'Who holds genuine veto power to prune processes, and who blocks critical decision velocity?',
           },
         ] satisfies CemstwoNode[],
       },
@@ -850,7 +850,7 @@ export const siteContent = {
     playbook: {
       eyebrow: 'Delivery Playbook',
       title: 'From Measured Complexity to Operational Simplicity',
-      lead: 'Systemic thinking applied to organizational design: we deliver standardized knowledge artifacts (ISO 30401) and objective decision maps, empowering leadership to focus and mobilize internal talent and technology without endless external dependency.',
+      lead: 'Systemic thinking applied to organizational design: we deliver standardized knowledge artifacts (ISO 30401) and objective decision maps, empowering leadership to eliminate silos, protect EBITDA, and mobilize internal talent and technology without endless external dependency.',
       whatsappBase: 'https://wa.me/573108437004',
       ctaMessage:
         'Hello Dr. Andrés López Astudillo, I visited your platform (https://willkwolf.github.io/Thinking-as-a-Service/) and would like to explore your consulting and commercial proposals. I am interested in learning more about how to reduce organizational noise and optimize margins. Could we schedule a brief call?',
@@ -858,34 +858,34 @@ export const siteContent = {
         {
           id: 'filter',
           title: '1. The Anti-Waste Filter',
-          summary: '70% of AI projects fail because they attempt to automate human disorder. Automating an inefficient process only yields accelerated inefficiency. Do not spend a single dollar on software development until you know exactly which process will return that investment.'
+          summary: '74% of AI initiatives fail because they attempt to automate human disorder and disconnected silos. Automating an inefficient process only accelerates EBITDA loss. Do not spend a single dollar on software or licenses until you map the real decision network that must return that investment.'
         },
         {
           id: 'radiography',
           title: '2. Radiography of the Real Structure',
-          summary: 'Org charts lie. Real decisions, bottlenecks, and information loss occur in informal day-to-day interactions. You will see with mathematical evidence, not opinions, at which nodes your digital transformation projects get stuck.'
+          summary: 'Org charts in PDF lie. Real decisions, bottlenecks, and margin leaks occur across informal day-to-day interactions. We reveal through mathematical network topology where your transformation projects stall and where economic value is destroyed.'
         },
         {
           id: 'simplification',
-          title: '3. The Operational Simplification Playbook',
-          summary: 'Traditional companies solve problems by creating more committees, reports, and meetings, destroying margins. We clean up the bureaucracy before introducing technology so that when you deploy AI, it runs on an efficient runway.'
+          title: '3. The Operational Simplification & Pruning Playbook',
+          summary: 'Traditional enterprises attempt to address friction by creating redundant committees and bureaucratic overhead, burning capital. We deliver a mathematical pruning plan: which interfaces to eliminate, which handoffs to streamline, and which zombie initiatives to kill.'
         },
         {
           id: 'methodology',
-          title: 'Methodological Closure: Agile Phase Execution',
-          summary: 'A short-term agile sequence to avoid endless 6-month consulting engagements:',
+          title: 'Methodological Closure: Land & Expand Model',
+          summary: 'Two-phase commercial architecture delivering immediate results without procurement drag or endless 6-month consulting bloat:',
           children: [
             {
-              title: 'Phase 1: Noise Audit (Weeks 1-2)',
-              summary: 'We visually map your critical flows and detect where operating margins are being lost in your structure.'
+              title: 'Phase 1: Executive Complexity X-Ray (14 Days / Fixed Scope)',
+              summary: '14-day fixed-price sprint with zero IT friction. We deliver the Private Interactive Snapshot Graph and Pruning Playbook to eliminate silos, zombie initiatives, and bottlenecks destroying EBITDA.'
             },
             {
-              title: 'Phase 2: Process Simplification (Weeks 3-4)',
-              summary: 'We eliminate human bottlenecks, redundant reports, and bureaucracy that would slow down any software.'
+              title: 'Phase 2: Forward Deployed Simplification & Live Ontology (FDE Retainer)',
+              summary: 'Monthly/quarterly Forward Deployed Engineering subscription strictly scoped to Phase 1 critical nodes, maintaining the live ontology and vetting new software or AI deployments.'
             },
             {
-              title: 'Phase 3: AI Roadmap Design (Week 5+)',
-              summary: 'We deliver the exact architecture of what to automate, which interfaces to decouple, and transfer blueprints to your internal teams so your leadership maintains full control over resource allocation.'
+              title: 'Phase 3: Operational Autonomy & Margin Shield (ISO 30401)',
+              summary: 'Capability transfer, verification probes, and governance protocols enabling leadership to maintain permanent margin control without perpetual external dependency.'
             }
           ]
         }
@@ -932,8 +932,8 @@ export const siteContent = {
     },
     pricing: {
       eyebrow: 'COMMERCIAL PROPOSALS',
-      title: 'Fixed-Scope Consulting Packages & Systems Intervention',
-      lead: 'Fixed-scope technical consulting structure with verifiable deliverables under ISO 30401 standards. Independent positioning driven by network science and CEMSTWO modeling. We establish testable hypotheses and observable architecture before committing tech infrastructure.',
+      title: 'Commercial Proposals: Land & Expand Model',
+      lead: 'Fixed-scope technical consulting structure with verifiable deliverables under ISO 30401 standards. We operate a Land & Expand model: start with a 14-day fixed-price Executive Complexity X-Ray and expand strictly into an ongoing FDE Retainer on diagnosed critical nodes.',
       regionLabel: 'Select your region:',
       packageLabel: 'Select an intervention package:',
       deliverablesLabel: 'Key Verifiable Deliverables (ISO 30401):',
@@ -967,100 +967,100 @@ export const siteContent = {
       packages: [
         {
           id: 'exploration',
-          phase: '4 Weeks',
+          phase: 'Phase 1 · 14 Days (Entry Sprint)',
           basePrice: 28500,
           referenceHours: '~115 hrs',
           procurementNote: '* Homologation benchmark: ~115 hrs estimated multidisciplinary team dedication.',
-          artifactsObjective: 'Generate structural knowledge, map decision interfaces, and transfer data assets to executive leadership.',
+          artifactsObjective: 'Identify zombie initiatives, operational silos, and bottlenecks destroying EBITDA in 14 days with zero IT friction.',
           deliverables: [
-            'Complexity & Decision Flow Map (CEMSTWO)',
-            'Exposure & Knowledge Debt Scorecard (ISO 30401)',
-            'Knowledge Retention & AI Vulnerability Matrix',
-            '90-Day Structural Roadmap',
-            'Executive Board / C-Suite Readout Session',
+            'Private Interactive Snapshot Graph (Real decision topology & silo mapping)',
+            'Pruning & Operational Simplification Playbook (Mathematical ranking of what to eliminate)',
+            'Structural Exposure & Knowledge Debt Scorecard (ISO 30401)',
+            'Pre-AI Vulnerability & Margin Drain Matrix',
+            'C-Suite Executive Readout Session (90-min briefing with Executive Sponsor)',
           ],
           usa: {
-            name: 'Complexity Diagnostic (EBITDA & Margin)',
-            desc: 'A 4-week reality audit mapping margin destruction signals, decoupling decision interfaces, and bounding the system before any technology commitments.',
-            targetBuyer: 'Chief Financial Officers (CFO) and Chief Operating Officers (COO) seeking to halt capital leaks and protect operating margins.'
+            name: 'Phase 1: Executive Complexity X-Ray (14 Days / Fixed Scope)',
+            desc: '14-day fixed-price sprint: mathematical x-ray of real decision networks detecting zombie initiatives and bottlenecks destroying EBITDA before committing software or AI capital.',
+            targetBuyer: 'Chief Operating Officers (COO), Chief Financial Officers (CFO), and CEOs seeking to halt EBITDA destruction.'
           },
           canada: {
-            name: 'Complexity Diagnostic (Systems Governance)',
-            desc: 'Interface mapping, knowledge governance, and stakeholder alignment hypotheses. We evaluate organizational maturity and ethical readiness before launching AI deployments.',
-            targetBuyer: 'Chief Operating Officers (COO) and Governance Committees focused on institutional transparency and shared value.'
+            name: 'Phase 1: Executive Complexity X-Ray (14-Day Reality Audit)',
+            desc: '14-day sprint mapping real knowledge flows, hidden dependencies, and pre-AI governance, eliminating silos without demanding deep IT integrations.',
+            targetBuyer: 'Chief Operating Officers (COO) and Governance Committees focused on responsible efficiency.'
           },
           latam: {
-            name: 'Complexity Diagnostic (Network Health)',
-            desc: 'Comprehensive mapping of relational dynamics, informal silos, and decision bottlenecks. We audit critical interface health to unblock operational execution.',
-            targetBuyer: 'Managing Directors (CEO) and Chief People Officers seeking to rebuild departmental trust and communication.'
+            name: 'Phase 1: Organizational Complexity X-Ray (14 Days)',
+            desc: '14-day executive diagnostic mapping informal bottlenecks, breaking down silos, and halting operating margin drain before deploying technology.',
+            targetBuyer: 'Managing Directors (CEO) and Operations Heads committed to cutting bureaucratic friction.'
           }
         },
         {
           id: 'modeling',
-          phase: '8 Weeks',
+          phase: 'Phase 2 · 8 Weeks (Monthly FDE Retainer)',
           basePrice: 68000,
           referenceHours: '~310 hrs',
           procurementNote: '* Homologation benchmark: ~310 hrs estimated multidisciplinary team dedication.',
-          artifactsObjective: 'Transfer architecture blueprints, verification probes, and playbooks for internal team empowerment.',
+          artifactsObjective: 'Execute the Pruning Playbook and maintain the Live Ontology across critical nodes identified in Phase 1.',
           deliverables: [
-            'Simplicity Architecture for Core Processes (P1-P4)',
-            'Critical Decision Decoupling Protocols',
-            'Operational Verification Probes & Metrics Catalog',
-            'Knowledge Flow Governance (ISO 30401)',
-            'Implementation Playbook & Internal Team Transfer',
+            'Forward Deployed Engineer (FDE) Capacity Assigned to Critical Nodes',
+            'Live Ontology & Continuous Decision Graph Maintenance',
+            'Operational Pruning Protocols & Interface Decoupling',
+            'Technical Vetting & Pre-AI Audit of New Software / Agents',
+            'Continuous Decision Latency Monitoring & Margin Safeguarding (ISO 30401)',
           ],
           usa: {
-            name: 'Operating System Redesign (Sustainable Margin)',
-            desc: 'Design and deployment of verification probes, ad-hoc descriptive dashboards, and experimental models to audit core process interfaces, reducing friction and margin erosion.',
-            targetBuyer: 'Chief Technology Officers (CTO) and Transformation VPs looking to optimize engineering costs and automation returns.'
+            name: 'Phase 2: Forward Deployed Simplification & Live Ontology (FDE Retainer)',
+            desc: 'Monthly Forward Deployed Engineering subscription to execute the Pruning Playbook, maintain the live ontology, and safeguard margins across diagnosed critical nodes.',
+            targetBuyer: 'Executive Sponsors (COO / CTO) requiring technical execution without hiring external bureaucracy.'
           },
           canada: {
-            name: 'Operating System Redesign (Process Alignment)',
-            desc: 'Design and deployment of participatory probes and governance dashboards to ensure ethical adoption and stakeholder inclusion across core decision flows.',
-            targetBuyer: 'Digital Transformation Directors leading ethical transitions and user adoption.'
+            name: 'Phase 2: Forward Deployed Simplification & Live Ontology',
+            desc: 'Monthly FDE subscription focused on live interface governance, decision flow verification, and responsible adoption over the simplified architecture.',
+            targetBuyer: 'Transformation and Operations Directors leading live systems governance.'
           },
           latam: {
-            name: 'Operating System Redesign (Operational Health)',
-            desc: 'Deployment of relational probes and signal dashboards to restore operational fluency. Focused on streamlining informal communication between departmental interfaces.',
-            targetBuyer: 'Operations and Innovation Managers needing to reduce human friction and ensure organizational continuity.'
+            name: 'Phase 2: Forward Deployed Simplification & Live Ontology (FDE Retainer)',
+            desc: 'Assigned engineering capacity to eradicate silos, dissolve redundant committees, and keep operational network maps continuously calibrated.',
+            targetBuyer: 'Operations and Transformation Heads requiring hands-on operational pruning execution.'
           }
         },
         {
           id: 'gestation',
-          phase: '12 Weeks (Quarterly Retainer)',
+          phase: 'Phase 2 · 12 Weeks (Enterprise Quarterly Retainer)',
           basePrice: 98000,
           referenceHours: '~470 hrs',
           procurementNote: '* Homologation benchmark: ~470 hrs estimated multidisciplinary team dedication.',
-          artifactsObjective: 'Continuous signal calibration, pre-AI preventative audits, and decision intelligence readouts for C-Suite.',
+          artifactsObjective: 'Comprehensive enterprise ontological governance, critical decision council, and multi-domain pre-AI shielding.',
           deliverables: [
-            'Bi-Weekly Decision Intelligence Committee',
-            'Continuous Monitoring & Calibration of Systemic Probes',
-            'Preemptive Audit of New AI & Technology Initiatives',
-            'Ongoing Network Map & Knowledge Debt Updates',
-            'Executive Advisory for C-Suite on High-Stakes Decisions',
+            'Dedicated FDE Pod for Continuous Systems Redesign',
+            'Multi-Graph Synchronization & Enterprise Organizational Mapping',
+            'Pre-Acquisition Audit of Software, Copilots, and AI Agents',
+            'Bi-Weekly Decision Intelligence Briefings with C-Suite & Board',
+            'Continuous Operating EBITDA Protection Against Complexity Re-Accumulation',
           ],
           usa: {
-            name: 'Continuous Systems Advisory (Margin Shield)',
-            desc: 'Ongoing executive advisory to shield scaling and technology decisions against re-accumulating destructive complexity, safeguarding operating EBITDA.',
-            targetBuyer: 'Chief Executive Officers (CEO) and Board Members safeguarding overall company margin profitability.'
+            name: 'Phase 2: Forward Deployed Enterprise Shield (Quarterly FDE Retainer)',
+            desc: 'Executive advisory and dedicated FDE capacity over a quarterly horizon to shield capital, technology, and expansion decisions against the re-accumulation of destructive complexity.',
+            targetBuyer: 'CEOs and Board Members safeguarding total operating EBITDA and enforcing pre-AI discipline.'
           },
           canada: {
-            name: 'Continuous Systems Advisory (Comprehensive Governance)',
-            desc: 'End-to-end simplification and continuous governance cycle. Maintains stakeholder alignment, algorithmic transparency, and compliance across enterprise scaling.',
-            targetBuyer: 'Managing Directors (CEO) and Corporate Affairs VPs optimizing stakeholder value and compliance.'
+            name: 'Phase 2: Enterprise Systems Governance & Live Ontology (Quarterly Retainer)',
+            desc: 'End-to-end live ontology governance and decision architecture across enterprise operations, ensuring transparency, compliance, and long-term value preservation.',
+            targetBuyer: 'Managing Directors (CEO) and Executive Committees optimizing enterprise resilience.'
           },
           latam: {
-            name: 'Continuous Systems Advisory (Organizational Health)',
-            desc: 'Continuous strategic advisory to sustain network agility, monitor relational health, and steer critical organizational transitions without generating bureaucracy.',
-            targetBuyer: 'Managing Directors (CEO) and Chief People Officers committed to long-term structural resilience.'
+            name: 'Phase 2: Enterprise Systems Shield (Quarterly FDE Retainer)',
+            desc: 'Continuous strategic and operational retainer to maintain network agility, prevent silo proliferation, and guarantee measurable automation returns.',
+            targetBuyer: 'Managing Directors (CEO) and Operations VPs committed to enterprise operational health.'
           }
         }
       ]
     },
     intakeModal: {
-      badge: 'ISO 30401 Reality Audit',
-      title: 'Complexity Diagnostic Request',
-      subtitle: 'Confidential executive evaluation to map systemic bottlenecks, assess knowledge debt, and decouple interfaces before investing in AI.',
+      badge: 'Phase 1: Executive Complexity X-Ray',
+      title: 'Executive Complexity X-Ray Request (14 Days)',
+      subtitle: 'Confidential fixed-price executive assessment to map real decision networks, eradicate operational silos, and protect EBITDA before investing in AI.',
       steps: {
         profile: '1. Corporate Profile',
         friction: '2. Systemic Friction',

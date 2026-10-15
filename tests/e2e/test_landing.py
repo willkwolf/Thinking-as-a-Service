@@ -35,15 +35,16 @@ def test_video_module_rendered(page: Page):
 def test_complexity_and_playbook_language(page: Page):
     page.goto(BASE_URL)
     body = page.locator("body")
-    expect(body).to_contain_text("10,2%")
-    body_text = body.inner_text()
+    expect(body).to_contain_text(re.compile(r"10[.,]2%"))
+    body_text = body.inner_text().lower()
     assert (
-        "Diagnóstico de Complejidad" in body_text
-        or "Complexity Diagnosis" in body_text
+        "diagnóstico de complejidad" in body_text
+        or "diagnostico de complejidad" in body_text
+        or "complexity diagnosis" in body_text
     ), "Missing 'Complexity Diagnosis' or 'Diagnóstico de Complejidad' in body copy"
     assert (
-        "Matriz de Simplicidad" in body_text
-        or "Simplicity Matrix" in body_text
+        "matriz de simplicidad" in body_text
+        or "simplicity matrix" in body_text
     ), "Missing 'Matriz de Simplicidad' or 'Simplicity Matrix' in body copy"
     expect(body).to_contain_text("Andrés López Astudillo")
 
@@ -68,18 +69,21 @@ def test_cemstwo_graph_hover(page: Page):
     # Ensure graph is rendered
     graph_svg = page.locator(".cemstwo-graph__svg")
     expect(graph_svg).to_be_visible()
+    graph_svg.scroll_into_view_if_needed()
 
-    # Find the node group for E, C, and T
-    node_t = page.locator(".cemstwo-graph__node-group", has_text="T")
-    node_e = page.locator(".cemstwo-graph__node-group", has_text="E")
-    node_c = page.locator(".cemstwo-graph__node-group", has_text="C")
+    # Find the node group for E, C, and T using semantic aria-label
+    node_t = page.locator(".cemstwo-graph__node-group[aria-label^='T:']")
+    node_e = page.locator(".cemstwo-graph__node-group[aria-label^='E:']")
+    node_c = page.locator(".cemstwo-graph__node-group[aria-label^='C:']")
 
     # The default selected node should be T (active class applied)
     expect(node_t).to_have_class(re.compile(r"\bcemstwo-graph__node-group--active\b"))
 
-    # Hover over 'E' node group
-    node_e.hover()
-    page.wait_for_timeout(300)  # Wait for transition duration (0.25s) to complete
+    # Hover over 'E' node group via bounding box
+    box_e = node_e.bounding_box()
+    assert box_e is not None, "Failed to compute bounding box for node E"
+    page.mouse.move(box_e["x"] + box_e["width"] / 2, box_e["y"] + box_e["height"] / 2)
+    page.wait_for_timeout(350)  # Wait for transition duration (0.25s) to complete
 
     # 'E' should now be active, and 'T' should lose active class
     expect(node_e).to_have_class(re.compile(r"\bcemstwo-graph__node-group--active\b"))
@@ -88,9 +92,11 @@ def test_cemstwo_graph_hover(page: Page):
     # Verify detail panel displays E details
     expect(page.locator(".cemstwo-detail__letter")).to_have_text("E")
 
-    # Hover over 'C' node group
-    node_c.hover()
-    page.wait_for_timeout(300)
+    # Hover over 'C' node group via bounding box
+    box_c = node_c.bounding_box()
+    assert box_c is not None, "Failed to compute bounding box for node C"
+    page.mouse.move(box_c["x"] + box_c["width"] / 2, box_c["y"] + box_c["height"] / 2)
+    page.wait_for_timeout(350)
 
     # 'C' should now be active, 'E' inactive
     expect(node_c).to_have_class(re.compile(r"\bcemstwo-graph__node-group--active\b"))
@@ -98,4 +104,5 @@ def test_cemstwo_graph_hover(page: Page):
 
     # Verify detail panel displays C details
     expect(page.locator(".cemstwo-detail__letter")).to_have_text("C")
+
 

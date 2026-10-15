@@ -99,12 +99,19 @@ def browser_context_args(browser_context_args):
     }
 
 
+class _NoOpPw:
+    def stop(self) -> None:
+        pass
+
+
 @pytest.fixture
-def vibe() -> Generator:
+def vibe(request) -> Generator:
     """
     Primary Vibium browser automation session fixture.
     Connects via W3C WebDriver BiDi protocol using Chrome for Testing.
     Headless mode is enabled by default, controllable via HEADLESS env var.
+    Seamlessly reuses the session Playwright instance if pytest-playwright is loaded
+    to prevent Sync API event-loop collisions in multi-runner test execution.
     """
     try:
         from vibium import browser_sync as browser
@@ -117,11 +124,21 @@ def vibe() -> Generator:
     headless_env = os.environ.get("HEADLESS", "true").strip().lower()
     is_headless = headless_env not in ("0", "false", "no")
 
-    session = browser.launch(headless=is_headless)
+    session = None
+    try:
+        pw = request.getfixturevalue("playwright")
+        b = pw.chromium.launch(headless=is_headless)
+        context = b.new_context(viewport={"width": 1280, "height": 800})
+        page = context.new_page()
+        session = browser.VibiumSession(_NoOpPw(), b, context, page)
+    except Exception:
+        session = browser.launch(headless=is_headless)
+
     try:
         yield session
     finally:
-        try:
-            session.quit()
-        except Exception:
-            pass
+        if session:
+            try:
+                session.quit()
+            except Exception:
+                pass

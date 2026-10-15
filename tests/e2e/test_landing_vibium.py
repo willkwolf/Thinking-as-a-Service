@@ -395,3 +395,121 @@ def test_pricing_and_methodology_copy_integrity(vibe, base_url):
     assert "METODOLÓGICA" in evidence_text or "METHODOLOGY" in evidence_text, (
         "Evidence layer missing methodology note marker"
     )
+
+
+def test_regional_currency_pricing_toggle(vibe, base_url):
+    """
+    Scenario 8: Regional Currency & Pricing Tier Interactive Toggle
+    Verifies that toggling region chips ('usa', 'canada', 'latam') dynamically updates
+    the value proposition focus title, the summary region descriptor, and the pricing package.
+    Also validates that switching package cards updates total fixed-scope investment
+    ($28,500, $68,000, $98,000 USD) and WhatsApp proposal link payload.
+    """
+    url = base_url or DEFAULT_BASE_URL
+    vibe.go(url)
+
+    proposal_section = wait_for_condition(
+        lambda: vibe.find("#iceberg-proposal"),
+        timeout=10.0,
+        failure_message="Could not find #iceberg-proposal section after hydration",
+    )
+    assert proposal_section is not None, "Could not find #iceberg-proposal section"
+    proposal_section.scrollIntoView()
+
+    # 1. Verify default region is USA
+    focus_panel = wait_for_condition(
+        lambda: vibe.find(".region-focus-panel h4"),
+        timeout=5.0,
+        failure_message="Could not find .region-focus-panel h4 after hydration",
+    )
+    assert "Margen EBITDA" in focus_panel.text(), f"Default USA focus text mismatch: '{focus_panel.text()}'"
+
+    # 2. Find region buttons
+    chips = vibe.findAll(".region-selector-wrapper button.chip")
+    assert len(chips) == 3, f"Expected exactly 3 region chips, found {len(chips)}"
+
+    chip_usa = chips[0]
+    chip_canada = chips[1]
+    chip_latam = chips[2]
+
+    # Verify initial active class on USA
+    assert "chip--active" in (chip_usa.getAttribute("class") or ""), "USA chip should initially be active"
+
+    # 3. Click Canada chip
+    chip_canada.click()
+
+    def canada_is_active():
+        panel_h4 = vibe.find(".region-focus-panel h4")
+        return (
+            "chip--active" in (chip_canada.getAttribute("class") or "")
+            and panel_h4 is not None
+            and "Gobernanza de IA" in panel_h4.text()
+        )
+
+    wait_for_condition(
+        canada_is_active,
+        timeout=3.5,
+        failure_message="Canada chip click failed to activate or update focus text",
+    )
+
+    # 4. Click LATAM chip
+    chip_latam.click()
+
+    def latam_is_active():
+        panel_h4 = vibe.find(".region-focus-panel h4")
+        return (
+            "chip--active" in (chip_latam.getAttribute("class") or "")
+            and panel_h4 is not None
+            and "Eficiencia Estructural" in panel_h4.text()
+        )
+
+    wait_for_condition(
+        latam_is_active,
+        timeout=3.5,
+        failure_message="LATAM chip click failed to activate or update focus text",
+    )
+
+    # 5. Switch package tiers and verify price updates
+    packages = vibe.findAll(".package-option-card")
+    assert len(packages) >= 3, f"Expected at least 3 package options, found {len(packages)}"
+
+    total_amount_elem = vibe.find(".total-amount")
+    assert total_amount_elem is not None, "Could not find .total-amount element"
+
+    # Initial package is exploration ($28,500)
+    assert "$28,500" in total_amount_elem.text(), f"Expected $28,500 USD, got: '{total_amount_elem.text()}'"
+
+    # Click second package (modeling -> $68,000)
+    packages[1].click()
+
+    def is_modeling_price():
+        elem = vibe.find(".total-amount")
+        return elem is not None and "$68,000" in elem.text()
+
+    wait_for_condition(
+        is_modeling_price,
+        timeout=3.5,
+        failure_message=f"Selecting second package failed to update price to $68,000: '{total_amount_elem.text()}'",
+    )
+
+    # Click third package (gestation -> $98,000)
+    packages[2].click()
+
+    def is_gestation_price():
+        elem = vibe.find(".total-amount")
+        return elem is not None and "$98,000" in elem.text()
+
+    wait_for_condition(
+        is_gestation_price,
+        timeout=3.5,
+        failure_message=f"Selecting third package failed to update price to $98,000: '{total_amount_elem.text()}'",
+    )
+
+    # 6. Verify WhatsApp proposal CTA contains dynamic parameters
+    whatsapp_cta = vibe.find(".summary-actions a[href*='wa.me']")
+    assert whatsapp_cta is not None, "Could not find WhatsApp proposal CTA link"
+    cta_href = whatsapp_cta.getAttribute("href") or ""
+    assert "98%2C000" in cta_href or "98,000" in cta_href or "LATAM" in cta_href, (
+        f"WhatsApp link did not dynamically capture selected package/region payload: '{cta_href}'"
+    )
+
