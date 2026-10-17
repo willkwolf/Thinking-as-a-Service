@@ -24,6 +24,17 @@
   max-width: calc(100vw - 2rem);
 }
 
+.floating-cta__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 8px #4ade80;
+  margin-right: 0.55rem;
+  animation: pulse-dot 2s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
 .floating-cta.visible {
   bottom: 1.25rem;
 }

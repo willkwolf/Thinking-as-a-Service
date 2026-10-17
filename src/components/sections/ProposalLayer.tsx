@@ -137,6 +137,17 @@ I am interested in discussing the onboarding for this strategic simplicity and s
           </div>
         </Reveal>
 
+        {/* CRO Satisfaction & Risk Reversal Ribbon */}
+        {pricing.guaranteeRibbon && (
+          <Reveal delay={0.14}>
+            <div className="proposal-guarantee-ribbon">
+              <span className="proposal-guarantee-badge">{pricing.guaranteeRibbon.badge}</span>
+              <h4 className="proposal-guarantee-title">{pricing.guaranteeRibbon.title}</h4>
+              <p className="proposal-guarantee-text">{pricing.guaranteeRibbon.text}</p>
+            </div>
+          </Reveal>
+        )}
+
         <div className="proposal-grid">
           {/* Left Column: Selector */}
           <div className="proposal-configurator">
@@ -145,14 +156,20 @@ I am interested in discussing the onboarding for this strategic simplicity and s
               <div className="package-options">
                 {packagesList.map((pack) => {
                   const isActive = selectedPack === pack.id;
+                  const isFlagship = pack.id === 'exploration';
                   const packRegionCopy = pack[region];
                   return (
                     <button
                       key={pack.id}
                       type="button"
-                      className={`package-option-card panel ${isActive ? 'package-option-card--active' : ''}`}
+                      className={`package-option-card panel ${isActive ? 'package-option-card--active' : ''} ${isFlagship ? 'package-option-card--flagship' : ''}`}
                       onClick={() => setSelectedPack(pack.id)}
                     >
+                      {isFlagship && (
+                        <span className="pack-recommended-tag">
+                          {locale === 'es' ? '★ PUNTO DE ENTRADA RECOMENDADO' : '★ RECOMMENDED ENTRY POINT'}
+                        </span>
+                      )}
                       <div className="pack-header">
                         <h4>{packRegionCopy.name}</h4>
                         <span className="pack-phase">{pack.phase}</span>

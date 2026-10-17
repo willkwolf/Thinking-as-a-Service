@@ -12,6 +12,10 @@ import { FormulaLayer } from './components/sections/FormulaLayer';
 import { CemstwoLayer } from './components/sections/CemstwoLayer';
 import { DepthLayer } from './components/sections/DepthLayer';
 import { EvidenceLayer } from './components/sections/EvidenceLayer';
+import { AuthorityBar } from './components/ui/AuthorityBar';
+import { AudienceFilter } from './components/ui/AudienceFilter';
+import { FaqAccordion } from './components/ui/FaqAccordion';
+import { FinalCtaBanner } from './components/ui/FinalCtaBanner';
 import { HeroSurface } from './components/sections/HeroSurface';
 import { SignalLayer } from './components/sections/SignalLayer';
 import { ProposalLayer } from './components/sections/ProposalLayer';
@@ -40,12 +44,16 @@ export default function App() {
       <DiagnosticIntakeModal isOpen={isIntakeOpen} onClose={handleCloseIntake} />
       <main className="scroll-container">
         <HeroSurface onOpenIntake={handleOpenIntake} />
+        <AuthorityBar />
         <DiagnosisLayer onOpenIntake={handleOpenIntake} />
+        <AudienceFilter />
         <EvidenceLayer />
         <FormulaLayer />
         <CemstwoLayer />
         <SignalLayer />
         <ProposalLayer />
+        <FaqAccordion />
+        <FinalCtaBanner onOpenIntake={handleOpenIntake} />
         <DepthLayer />
       </main>
     </>
