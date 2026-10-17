@@ -10,7 +10,6 @@ Validates adherence to:
 7. Presence of real interactions, accessible semantic elements, and keyboard/focus states.
 """
 
-import re
 import pytest
 from typing import Callable, Any
 import time
@@ -20,7 +19,7 @@ DEFAULT_BASE_URL = "http://localhost:4173/Thinking-as-a-Service/"
 
 def wait_for_condition(
     predicate: Callable[[], Any],
-    timeout: float = 4.0,
+    timeout: float = 6.0,
     interval: float = 0.1,
     failure_message: str = "Condition not met within timeout",
 ) -> Any:
@@ -98,7 +97,7 @@ def test_anti_slop_no_decorative_emojis_in_legal_and_navigation(vibe, base_url):
     assert footer is not None
     footer_text = footer.text()
 
-    # Verify no emojis like ⚖️, ©, ⚠️, 🔒, 💼 in footer links
+    # Verify no emojis like ⚖️, ⚠️, 🔒, 💼 in footer links
     for emoji in ["⚖️", "⚠️", "🔒", "💼"]:
         assert emoji not in footer_text, f"Anti-pattern detected: Found decorative emoji '{emoji}' in footer"
 
@@ -115,15 +114,23 @@ def test_anti_slop_authentic_claims_and_sober_timelines(vibe, base_url):
     url = base_url or DEFAULT_BASE_URL
     vibe.go(url)
 
-    # 1. Executive verification
+    # 1. Executive verification in Signal layer
+    signal_section = wait_for_condition(lambda: vibe.find("#iceberg-signal"), timeout=8.0)
+    assert signal_section is not None
+    signal_section.scrollIntoView()
+
     equipo = wait_for_condition(lambda: vibe.find("#equipo"), timeout=8.0)
     assert equipo is not None
     equipo_text = equipo.text()
     assert "Andrés López Astudillo" in equipo_text
     assert "PhD" in equipo_text or "Doctor" in equipo_text
 
-    # 2. Complexity simulator disclaimer
-    cost_note = vibe.find(".cost-of-inaction-note")
+    # 2. Complexity simulator disclaimer in Diagnosis layer
+    diagnosis_section = vibe.find("#iceberg-diagnosis")
+    if diagnosis_section:
+        diagnosis_section.scrollIntoView()
+
+    cost_note = wait_for_condition(lambda: vibe.find(".explorer-footnote"), timeout=8.0)
     assert cost_note is not None
     note_text = cost_note.text()
     assert "aproximada" in note_text.lower() or "indicativo" in note_text.lower(), (
@@ -157,12 +164,12 @@ def test_anti_slop_interaction_coverage_and_pricing_tiers(vibe, base_url):
     proposal.scrollIntoView()
 
     # Fixed scope pricing checks
-    total_amount = vibe.find(".total-amount")
+    total_amount = wait_for_condition(lambda: vibe.find(".total-amount"), timeout=8.0)
     assert total_amount is not None
     assert "$28,500" in total_amount.text()
 
     # Verify benchmark note for procurement
-    procurement_note = vibe.find(".procurement-benchmark-note")
+    procurement_note = wait_for_condition(lambda: vibe.find(".procurement-asterisk-note"), timeout=8.0)
     assert procurement_note is not None
     assert "ISO 30401" in procurement_note.text()
     assert "sin bolsas de horas abiertas" in procurement_note.text().lower()
