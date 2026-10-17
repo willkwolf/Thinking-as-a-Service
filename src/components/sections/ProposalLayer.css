@@ -221,6 +221,7 @@
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--amber);
+  font-variant-numeric: tabular-nums;
 }
 
 .pack-price small {
@@ -242,6 +243,7 @@
   color: var(--blueprint);
   opacity: 0.88;
   letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
 }
 
 /* Proposal Summary Card */
@@ -298,6 +300,7 @@
   font-family: var(--font-mono);
   color: var(--blueprint);
   font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .summary-pricing {
@@ -322,6 +325,7 @@
   color: var(--amber);
   line-height: 1.1;
   margin-top: 0.25rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .pricing-note {

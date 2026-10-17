@@ -18,8 +18,8 @@
   --good: #1a5634;
   --shadow: rgba(18, 22, 20, 0.05);
   --grid-line: rgba(22, 60, 38, 0.04);
-  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Jakarta-Fallback', system-ui, -apple-system, sans-serif;
+  --font-display: 'Fraunces', 'Fraunces-Fallback', Georgia, serif;
   --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
   --step-0: 1.0625rem;
   --step-1: 1.22rem;
