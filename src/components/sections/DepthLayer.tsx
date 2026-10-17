@@ -231,27 +231,27 @@ export function DepthLayer() {
                 <ul className="footer-links">
                   <li>
                     <a href="https://github.com/willkwolf/Thinking-as-a-Service/blob/main/legal/README.md" target="_blank" rel="noopener noreferrer">
-                      ⚖️ {locale === 'es' ? 'Índice Legal' : 'Legal Index'}
+                      {locale === 'es' ? 'Índice Legal' : 'Legal Index'}
                     </a>
                   </li>
                   <li>
                     <a href="https://github.com/willkwolf/Thinking-as-a-Service/blob/main/legal/derechos-de-autor.md" target="_blank" rel="noopener noreferrer">
-                      © {locale === 'es' ? 'Derechos de Autor' : 'Copyright Notice'}
+                      {locale === 'es' ? 'Derechos de Autor' : 'Copyright Notice'}
                     </a>
                   </li>
                   <li>
                     <a href="https://github.com/willkwolf/Thinking-as-a-Service/blob/main/legal/exoneracion-responsabilidad.md" target="_blank" rel="noopener noreferrer">
-                      ⚠️ {locale === 'es' ? 'Exoneración Legal' : 'Liability Disclaimer'}
+                      {locale === 'es' ? 'Exoneración Legal' : 'Liability Disclaimer'}
                     </a>
                   </li>
                   <li>
                     <a href="https://github.com/willkwolf/Thinking-as-a-Service/blob/main/legal/privacidad.md" target="_blank" rel="noopener noreferrer">
-                      🔒 {locale === 'es' ? 'Privacidad Absoluta' : 'Privacy Policy'}
+                      {locale === 'es' ? 'Privacidad' : 'Privacy Policy'}
                     </a>
                   </li>
                   <li>
                     <a href="https://github.com/willkwolf/Thinking-as-a-Service/blob/main/legal/terminos.md" target="_blank" rel="noopener noreferrer">
-                      💼 {locale === 'es' ? 'Términos de Servicio' : 'Terms of Service'}
+                      {locale === 'es' ? 'Términos de Servicio' : 'Terms of Service'}
                     </a>
                   </li>
                 </ul>
