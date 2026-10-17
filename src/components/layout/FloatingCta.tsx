@@ -23,8 +23,7 @@ export function FloatingCta() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span className="floating-cta__dot" aria-hidden="true" />
-      <span>{ui.floatingCta}</span>
+      {ui.floatingCta}
     </a>
   );
 }

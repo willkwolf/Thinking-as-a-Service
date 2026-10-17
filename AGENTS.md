@@ -195,51 +195,35 @@ Incoming agents can immediately understand repository structure using this quick
 
 ---
 
-## 8. SENIOR CRO CONVERSION GOVERNANCE: HEURÍSTICAS, ARQUITECTURA Y DO'S & DON'TS
+## 8. GOBERNANZA DE POSICIONAMIENTO EJECUTIVO Y HIGH-TICKET (C-SUITE & BOARD ADVISORY)
 
-Para toda iteración, componente o ajuste en la interfaz de conversión de `Thinking-as-a-Service`, los agentes y desarrolladores deben aplicar obligatoriamente los siguientes estándares metodológicos de optimización de tasa de conversión (CRO):
+Para toda iteración, componente o ajuste en la interfaz de `Thinking-as-a-Service`, los agentes y desarrolladores deben aplicar obligatoriamente los siguientes estándares de discreción, rigor conceptual y posicionamiento High-Ticket:
 
-### 8.1 Heurística de Conversión MECLABS
-Toda pantalla y flujo decisional se optimiza bajo la ecuación matemática de probabilidad de conversión:
-$$C = 4m + 3v + 2(i - f) - 2a$$
-- **m (Motivación):** Conexión inmediata con la intención del visitante ejecutivo en el Hero mediante indicadores de disponibilidad en tiempo real (`hero.liveStatus`).
-- **v (Claridad de Propuesta de Valor):** Comunicación de qué hace el servicio, en qué plazo y sin qué dolor en < 3 segundos con titulares balanceados y viñetas atómicas.
-- **i (Incentivo):** Precios transparentes de alcance cerrado ($28,500 – $98,000 USD), benchmark de procurement y Cinta de Garantía de Calidad Ontológica ISO 30401.
-- **f (Fricción):** Erradicación de muros de texto, inclusión de Filtro de Audiencia Cualificada y Acordeón interactivo de FAQs para auto-resolver objeciones.
-- **a (Ansiedad):** Desactivación explícita del riesgo mediante garantías de retracto legal, cero ingestión de credenciales de TI, y confidencialidad amparada bajo NDA bilateral.
+### 8.1 Principios de Sobriedad y Discreción
+- **Naturaleza del Servicio:** Consultoría estratégica C-Suite de alto impacto ($28,500 – $98,000+ USD). No es un producto transaccional de bajo ticket ni un software SaaS de auto-servicio.
+- **Cero Tácticas Direct-Response / Low-Ticket:** Prohibido el uso de tácticas agresivas de venta directa (chips de "En activo · Q4 2026", falsas alertas de escasez o plazas limitadas, cintas de garantía de retracto de tipo infoproducto, o banners de cierre de urgencia).
+- **Tratamiento del Tiempo (~14 días):** Los 14 días se presentan con sobriedad como un sprint estructurado indicativo (~14 días) para una Radiografía de Complejidad, sin sobrepromesas ni afirmaciones hiperbólicas de erradicación instantánea.
+- **Simulador de Exposición como Modelo Aproximado:** El explorador/simulador de complejidad es una referencia indicativa basada en modelos de literatura [GSI/Warwick], nunca un compromiso o garantía contractual.
+- **Reserva y Rigor Conceptual:** Todo texto debe mantener el tono analítico, editorial y mesurado propio de una firma de asesoría a directores generales, juntas directivas y comités de inversión.
 
-### 8.2 Los 7 Pilares de Conversion-Centered Design (CCD)
-1. **Atención:** Proporción de enlaces a objetivos estrictamente 1:1 en los bloques de decisión clave.
-2. **Contexto:** Mensajería adaptada al dolor operativo del comprador corporativo (drenaje de EBITDA, latencia en comités).
-3. **Claridad:** Uso de viñetas de 1 línea, micro-tarjetas y chips semánticos sobre párrafos extensos.
-4. **Congruencia:** Cada elemento gráfico (vector del héroe, grafos D3) y textual empuja hacia una única acción de valor.
-5. **Credibilidad:** Métricas atómicas (10.2%, 74%), stack metodológico real (ISO 30401, CEMSTWO), y liderazgo doctoral (Dr. Andrés López Astudillo, PhD).
-6. **Cierre:** Botones de contraste alto con micro-elevación (`translateY(-2px)`) y parámetros precargados en WhatsApp.
-7. **Continuidad:** Cero callejones sin salida; experiencia fluida hacia el canal directo de intake o WhatsApp.
+### 8.2 Arquitectura Canónica de las 8 Capas del Iceberg
+La narrativa del sitio fluye exclusivamente a través de las 8 capas canónicas del Iceberg:
+1. **Superficie (`HeroSurface`):** Visión ejecutiva, contraste de ruido vs. margen, prueba sintética sin artificios de urgencia.
+2. **Diagnóstico (`DiagnosisLayer`):** Falla estructural externa/interna y explorador indicativo de exposición sistémica.
+3. **Evidencia (`EvidenceLayer`):** Video documental (07:36) y mapeo de realidades.
+4. **Fórmula (`FormulaLayer`):** Definición matemática de complejidad y matriz de simplicidad operativa.
+5. **Redes (`CemstwoLayer`):** Ciencia de redes CEMSTWO con grafo interactivo D3.js de 7 dimensiones.
+6. **Estrategia (`SignalLayer`):** Liderazgo doctoral (Dr. Andrés López Astudillo, PhD) y Playbook de simplificación.
+7. **Propuesta (`ProposalLayer`):** Estructura comercial Land & Expand, paquetes de alcance cerrado ISO 30401 y benchmark de procurement.
+8. **Profundidad (`DepthLayer`):** Casos de estudio en Kumu, marco de gobernanza y cierre reflexivo.
 
-### 8.3 Arquitectura Canónica de Componentes (Orden Estricto)
-1. **Header:** `DesktopNavbar` con identidad de marca, 8 capas del iceberg y CTA de `Reality Audit`.
-2. **Hero Section (Above-the-Fold):** `HeroSurface` con indicador animado (`hero-status-pill`), título de valor, subcopy conciso, CTA dual y Matriz de 4 Badges de Confianza atómicos (Duración, Enfoque, Exclusividad, Entregable).
-3. **Isla de Autoridad / Tech Stack:** `AuthorityBar` con 5 pilares metodológicos e ingenieriles (ISO 30401, CEMSTWO, Kumu & D3.js, PhD Research, W3C BiDi Protocol).
-4. **Filtro de Audiencia Cualificada:** `AudienceFilter` con tarjetas comparativas ("✔ Para usted si:" vs "✕ NO es para usted si:").
-5. **Diagnóstico & Solución Tangible:** `DiagnosisLayer` (con `ComplexityExposureExplorer`), `EvidenceLayer` (video 07:36), `FormulaLayer` (Matriz de Simplicidad), `CemstwoLayer` (Grafo interactivo D3) y `SignalLayer` (Ficha directiva Dr. Andrés López Astudillo + Playbook).
-6. **Matriz de Inversión y Precios:** `ProposalLayer` con selector regional, paquetes de alcance cerrado, benchmark de horas (*), insignia recomendada y Cinta de Garantía de Certeza Ontológica.
-7. **Preguntas Frecuentes Interactivas:** `FaqAccordion` con acordeón suave derribando objeciones de compras, NDA y retorno.
-8. **Banner de Cierre de Alta Urgencia:** `FinalCtaBanner` entre FAQs y Footer para cauterizar el embudo y evitar el rebote frío.
-9. **Footer & Gobernanza Legal:** `DepthLayer` con mapas de red Kumu, marco legal completo en GitHub y sello de Cero Cookies / Cero Rastreo.
-10. **Floating / Sticky Conversion Pill:** `FloatingCta` permanente (`#floating-cta`) con punto de estado activo (`● En línea`), activación en scroll > 45% y optimización móvil.
-
-### 8.4 Mandatos de Gobernanza: Do's y Don'ts
-- **DO: Claridad en 3 Segundos:** Titulares balanceados que eliminan toda ambigüedad del entregable.
-- **DO: Escaneabilidad Extrema:** Estructurar contenidos en chips, badges y listas de máximo 3-4 viñetas breves.
-- **DO: Micro-animaciones CSS Nativas:** Elevación en hover (`translateY(-2px)`), pulso en puntos de estado y soporte para `prefers-reduced-motion`.
-- **DO: Omnipresencia en Mobile:** El canal de conversión debe estar accesible a un solo tap en todo momento.
-- **DO: Cero Rastreo Invasivo y Core Web Vitals < 1s:** Código limpio, CSS nativo, cero dependencias pesadas de terceros.
-- **DON'T: Muros de Texto (Walls of Text):** Prohibido insertar párrafos densos de más de 3 líneas en secciones de escaneo.
-- **DON'T: Ocultar CTAs en Mobile:** Jamás usar `display: none` en llamadas a la acción en vistas responsive.
-- **DON'T: Caída Fría al Footer:** Nunca terminar el flujo tras las FAQs en un footer gris sin un banner resolutivo de cierre (`FinalCtaBanner`).
-- **DON'T: Dark Patterns o Falsa Escasez:** Prohibidos contadores artificiales falsos o alertas engañosas de compra.
-- **DON'T: Precios Ocultos:** Tarifas y condiciones deben ser visibles, auditables y transparentes.
+### 8.3 Mandatos de Calidad: Do's y Don'ts
+- **DO: Tono Editorial de Lujo Industrial:** Tipografía cuidada, paleta Crema Editorial, espacios generosos y micro-interacciones suaves.
+- **DO: Claridad Conceptual y Respaldo:** Métricas referenciadas (Warwick/GSI, MIT/BCG), estándar ontológico ISO 30401.
+- **DO: Transparencia en Precios:** Inversión de alcance cerrado claramente visible y justificada por artefactos de conocimiento.
+- **DON'T: Módulos de Conversión Agresiva:** Prohibido reintroducir filtros de audiencia tipo infoproducto, banners de urgencia o FAQs de objeciones comerciales masivas.
+- **DON'T: Sobrepromesas:** Prohibido garantizar resultados mágicos, cero fricción instantánea o declaraciones comerciales desmedidas.
+- **DON'T: Suciedad en la Gobernanza:** Mantener la documentación y el código sincronizados con el modelo canónico del Iceberg.
 
 ---
 

@@ -79,18 +79,11 @@ export const siteContent = {
       eyebrow: '',
       title: 'Deje de automatizar el caos. Automatice el margen.',
       subcopy:
-        'No vendemos software ni bolsas de horas de ingeniería. Entregamos artefactos de conocimiento estandarizados (ISO 30401) mediante una Radiografía de Complejidad en 14 días para mapear la red real de decisiones, erradicar silos operacionales y detener la destrucción de EBITDA. Asumimos la complejidad de su organización mediante un enfoque sistémico para que la dirección elimine cuellos de botella antes de automatizar con IA, garantizando que la tecnología corra sobre un margen protegido y un sistema limpio.',
+        'No vendemos software ni bolsas de horas de ingeniería. Entregamos artefactos de conocimiento estandarizados (ISO 30401) mediante una Radiografía de Complejidad estructurada en ~14 días para mapear la red real de decisiones, desarticular silos operacionales y contener la destrucción de EBITDA. Diagnosticamos la arquitectura relacional de su organización mediante un enfoque sistémico para que la dirección identifique cuellos de botella antes de automatizar con IA, asegurando que la tecnología corra sobre un sistema modelado y un margen protegido.',
       proofPoints: [
         { metric: '10.2%', label: 'Drenaje de EBITDA anual por complejidad no resuelta (Warwick/GSI)' },
         { metric: '74%', label: 'Iniciativas de IA estancadas por fricción organizacional (MIT/BCG)' },
         { metric: 'ISO 30401', label: 'Marco ontológico de sistemas de conocimiento y auditoría de decisiones' },
-      ],
-      liveStatus: 'En Activo · Q4 2026 · Cohorte Abierta a 4 Clientes/Mes',
-      trustBadges: [
-        { label: '14 Días', title: 'Duración', desc: 'Sprint cerrado de Radiografía' },
-        { label: 'Pre-IA & EBITDA', title: 'Enfoque', desc: 'Poda de complejidad antes de automatizar' },
-        { label: 'C-Suite Directo', title: 'Exclusividad', desc: 'Conducido por Dr. Andrés López Astudillo' },
-        { label: 'ISO 30401', title: 'Entregable', desc: 'Artefactos de conocimiento verificables' },
       ],
       ctaPrimary: { label: 'Ver Propuesta y Pricing', href: '#iceberg-proposal' },
       ctaSecondary: { label: 'Bajar a la complejidad', href: '#iceberg-diagnosis' },
@@ -152,25 +145,25 @@ export const siteContent = {
         latencyImpactLabel: 'Días de Inercia por Ciclo de Decisión:',
         knowledgeDebtLabel: 'Deuda de Conocimiento y Vulnerabilidad SPOF (ISO 30401):',
         costOfInactionLabel: 'Anclaje de Destrucción de Margen (EBITDA en Riesgo):',
-        costOfInactionNote: 'Basado en el impuesto del 10.2% de EBITDA por complejidad no resuelta [GSI/Warwick].',
+        costOfInactionNote: 'Modelo indicativo de referencia aproximada basado en el impuesto del 10.2% de EBITDA por complejidad no resuelta [GSI/Warwick]. No constituye garantía contractual.',
         levels: {
           moderate: {
             title: 'Exposición Moderada · Riesgo de Desaceleración',
             description: 'Su organización aún conserva capacidad de respuesta, pero la falta de mapas de conocimiento tácito genera puntos únicos de falla (SPOF) que encarecen la coordinación.',
-            recommendation: 'Priorice un Executive Complexity X-Ray en 14 días para mapear la red real de decisiones y podar interfaces críticas antes de autorizar nuevos presupuestos de software o agentes IA.',
+            recommendation: 'Priorice una Radiografía de Complejidad en ~14 días para mapear la red real de decisiones y podar interfaces críticas antes de autorizar nuevos presupuestos de software o agentes IA.',
           },
           severe: {
             title: 'Exposición Severa · Drenaje Activo de Margen',
             description: 'La latencia de decisión y la fricción interdepartamental están activando la destrucción del 10.2% de EBITDA. Desplegar herramientas de IA en este estado automatizará la incoherencia operacional.',
-            recommendation: 'Se requiere un Executive Complexity X-Ray en 14 días para desacoplar silos operacionales, identificar iniciativas zombis y blindar el EBITDA antes de cualquier despliegue de IA.',
+            recommendation: 'Se sugiere una Radiografía de Complejidad en ~14 días para desacoplar silos operacionales, identificar iniciativas zombis y estabilizar el EBITDA antes de cualquier despliegue de IA.',
           },
           critical: {
             title: 'Exposición Crítica · Ruptura Sistémica Inminente',
-            description: 'Múltiples silos operando con comités paralizantes y proyectos acelerados de IA sin gobernanza están canibalizando recursos y destruyendo la confianza de la red.',
-            recommendation: 'Detenga la inversión ciega en herramientas; active de inmediato una Radiografía de Complejidad en 14 días para cortar cuellos de botella y restaurar el margen operativo.',
+            description: 'Múltiples silos operando con comités paralizantes y proyectos acelerados de IA sin gobernanza están canibalizando recursos y tensionando la red.',
+            recommendation: 'Detenga la inversión en herramientas adicionales; active una Radiografía de Complejidad estructurada en ~14 días para identificar cuellos de botella y recomponer el margen operativo.',
           },
         },
-        ctaButton: 'Solicitar Executive Complexity X-Ray (14 Días)',
+        ctaButton: 'Solicitar Radiografía de Complejidad (~14 Días)',
       },
       formula: {
         eyebrow: 'La fórmula',
@@ -356,8 +349,8 @@ export const siteContent = {
           summary: 'Arquitectura comercial de dos fases para garantizar resultados inmediatos sin fricción de compras ni consultorías eternas:',
           children: [
             {
-              title: 'Fase 1: Executive Complexity X-Ray (14 Días / Precio Fijo)',
-              summary: 'Sprint cerrado de 14 días con cero fricción de TI. Entregamos el Grafo Snapshot Interactivo Privado y el Playbook de Poda para erradicar silos, iniciativas zombis y cuellos de botella que destruyen EBITDA.'
+              title: 'Fase 1: Radiografía de Complejidad Organizacional (~14 Días / Alcance Cerrado)',
+              summary: 'Sprint estructurado de ~14 días sin requerir accesos profundos de TI. Entregamos el Grafo Snapshot Interactivo Privado y el Playbook de Poda para identificar silos, iniciativas zombis y cuellos de botella que impactan el EBITDA.'
             },
             {
               title: 'Fase 2: Forward Deployed Simplification & Live Ontology (Retainer FDE)',
@@ -427,11 +420,6 @@ export const siteContent = {
       ctaSend: 'Generar Propuesta y Enviar por WhatsApp',
       copySuccess: '¡Propuesta copiada al portapapeles!',
       copyButton: 'Copiar Propuesta al Portapapeles',
-      guaranteeRibbon: {
-        badge: 'GARANTÍA DE CERTEZA ONTOLÓGICA & DERECHO DE RETRACTO',
-        title: 'Cero Riesgo de Consultoría: Alcance 100% Cerrado (ISO 30401)',
-        text: 'Si en los primeros 7 días del sprint de Radiografía su comité ejecutivo no identifica con claridad matemática al menos 3 fuentes críticas de fricción o fugas de EBITDA en su red, cancelamos la intervención sin penalización. No vendemos bolsas de horas abiertas.',
-      },
       regions: {
         usa: {
           name: 'USA',
@@ -452,31 +440,31 @@ export const siteContent = {
       packages: [
         {
           id: 'exploration',
-          phase: 'Fase 1 · 14 Días (Sprint de Entrada)',
+          phase: 'Fase 1 · ~14 Días (Sprint de Entrada)',
           basePrice: 28500,
           referenceHours: '~115 hrs',
           procurementNote: '* Benchmark de homologación: ~115 hrs estimadas de equipo multidisciplinario.',
-          artifactsObjective: 'Identificar iniciativas zombis, silos operacionales y cuellos de botella que destruyen EBITDA en 14 días con cero fricción de TI.',
+          artifactsObjective: 'Identificar iniciativas zombis, silos operacionales y cuellos de botella que tensionan el EBITDA en un sprint estructurado de ~14 días.',
           deliverables: [
             'Grafo Snapshot Interactivo Privado (Topología real de decisiones y silos)',
-            'Playbook de Poda y Simplificación Operativa (Ranking matemático de qué eliminar)',
+            'Playbook de Poda y Simplificación Operativa (Ranking analítico de qué eliminar)',
             'Scorecard de Exposición y Deuda Estructural (ISO 30401)',
             'Matriz de Vulnerabilidad Pre-IA y Fugas de Margen',
             'Sesión de Lectura Ejecutiva C-Suite (90 min con Sponsor Ejecutivo)',
           ],
           usa: {
-            name: 'Fase 1: Executive Complexity X-Ray (14 Días / Fixed Scope)',
-            desc: 'Sprint de 14 días a precio cerrado: radiografía matemática de la red real de decisiones para detectar iniciativas zombis y cuellos de botella que destruyen EBITDA antes de gastar en software o IA.',
+            name: 'Fase 1: Executive Complexity X-Ray (~14 Días / Fixed Scope)',
+            desc: 'Sprint estructurado de ~14 días a alcance cerrado: radiografía analítica de la red real de decisiones para detectar cuellos de botella e interfaces críticas antes de autorizar inversión en software o IA.',
             targetBuyer: 'Dirección de Operaciones (COO), Finanzas (CFO) y CEO buscando frenar la destrucción de EBITDA y acotar riesgos.'
           },
           canada: {
-            name: 'Phase 1: Executive Complexity X-Ray (14-Day Reality Audit)',
-            desc: 'Sprint de 14 días para mapear la red real de flujos de conocimiento, dependencias ocultas y gobernanza pre-IA, eliminando silos sin requerir accesos profundos de TI.',
+            name: 'Phase 1: Executive Complexity X-Ray (~14-Day Reality Audit)',
+            desc: 'Sprint de ~14 días para mapear la red real de flujos de conocimiento, dependencias no documentadas y gobernanza pre-IA, sin requerir accesos profundos de TI.',
             targetBuyer: 'Dirección de Operaciones (COO) y Comités de Transformación enfocados en eficiencia y compliance responsable.'
           },
           latam: {
-            name: 'Fase 1: Radiografía de Complejidad Organizacional (14 Días)',
-            desc: 'Diagnóstico ejecutivo en 14 días para visibilizar cuellos de botella informales, desarticular silos y detener el drenaje de margen operativo antes de implementar tecnología.',
+            name: 'Fase 1: Radiografía de Complejidad Organizacional (~14 Días)',
+            desc: 'Diagnóstico ejecutivo en ~14 días para visibilizar cuellos de botella informales, desarticular silos y estabilizar el margen operativo antes de implementar tecnología.',
             targetBuyer: 'Dirección General (CEO) y Gerencia de Operaciones comprometidas con desburocratizar la ejecución.'
           }
         },
@@ -587,82 +575,6 @@ export const siteContent = {
       privacyNote: 'Información confidencial amparada bajo acuerdos de auditoría de realidad y gobernanza de sistemas.',
       close: 'Cerrar',
     },
-    authority: {
-      eyebrow: 'ISLA DE AUTORIDAD Y RIGOR TÉCNICO',
-      title: 'Ciencia de Redes, Estándar Global y Gobernanza C-Suite',
-      lead: 'Un marco interdisciplinario que sustituye la especulación por modelos matemáticos y auditoría ontológica.',
-      pillars: [
-        { tag: 'ESTÁNDAR GLOBAL', name: 'ISO 30401', desc: 'Sistemas de Gestión de Conocimiento & Auditoría Ontológica' },
-        { tag: 'FRAMEWORK', name: 'CEMSTWO', desc: 'Modelado Sistémico de 7 Dimensiones Operativas' },
-        { tag: 'CIENCIA DE REDES', name: 'Kumu & D3.js', desc: 'Topología Dinámica de Grafos y Detección de Silos' },
-        { tag: 'RIGOR ACADÉMICO', name: 'Doctorado PhD', desc: 'Investigación Avanzada en Complejidad Organizacional' },
-        { tag: 'INGENIERÍA', name: 'W3C BiDi Protocol', desc: 'Verificación Determinística y Cero Alucinación' },
-      ],
-    },
-    audience: {
-      eyebrow: 'FILTRO DE AUDIENCIA CUALIFICADA',
-      title: '¿Es este servicio adecuado para su organización?',
-      lead: 'Trabajamos con comités ejecutivos y juntas directivas que enfrentan fricción estructural real. No atendemos requerimientos cosméticos.',
-      forYou: {
-        title: 'Para usted si:',
-        items: [
-          { highlight: 'Comité de Dirección (CEO, COO, CFO, VP):', text: 'Lidera una corporación de >$10M USD con múltiples áreas operativas y silos departamentales.' },
-          { highlight: 'Iniciativas de IA o Software Estancadas:', text: 'Ha adquirido tecnología o copilotos pero la productividad no se refleja en el EBITDA real.' },
-          { highlight: 'Mandato de Poda Operativa:', text: 'Está dispuesto a desarticular comités redundantes e iniciativas zombis antes de automatizar.' },
-          { highlight: 'Exigencia de Alcance Cerrado:', text: 'Requiere entregables tangibles en 14 días bajo estándar ISO 30401 sin comprar bolsas de horas.' },
-        ],
-      },
-      notForYou: {
-        title: 'NO es para usted si:',
-        items: [
-          { highlight: 'Búsqueda de Herramientas SaaS Rápidas:', text: 'Busca una solución mágica o un chatbot genérico sin intervenir la red de decisiones.' },
-          { highlight: 'Startups en Fase Temprana:', text: 'Equipos de <30 personas cuya complejidad aún se resuelve mediante comunicación directa.' },
-          { highlight: 'Proyectos sin Sponsor Ejecutivo:', text: 'Iniciativas sin el respaldo directo de la alta dirección para implementar la poda operativa.' },
-          { highlight: 'Apego a la Burocracia Informal:', text: 'Resistencia a visibilizar cuellos de botella y dependencias ocultas por confort político.' },
-        ],
-      },
-    },
-    faqs: {
-      eyebrow: 'PREGUNTAS FRECUENTES (CRO DE ALTA CONVERSIÓN)',
-      title: 'Claridad Total: Derribando Objeciones de Alta Dirección',
-      lead: 'Respuestas directas a las preguntas críticas de directores generales, comités de compras y juntas de gobierno.',
-      items: [
-        {
-          question: '¿Por qué realizar un diagnóstico sistémico antes de implementar IA o contratar más software?',
-          answer: 'Automatizar un proceso caótico solo produce caos a mayor velocidad y con mayor costo de licencias. El 74% de las iniciativas de IA en empresas se estancan por fricción de interfaces, silos de conocimiento y dependencias informales no mapeadas. Nuestra radiografía en 14 días aísla los cuellos de botella reales y elimina procesos redundantes, asegurando que la tecnología corra sobre un sistema limpio y un margen operativo blindado.',
-          tag: 'ESTRATEGIA PRE-IA',
-        },
-        {
-          question: '¿Qué entregables específicos y verificables recibe nuestra dirección al finalizar los 14 días?',
-          answer: 'Entregamos 5 artefactos bajo estándar ISO 30401: (1) Grafo Snapshot Interactivo Privado con la topología real de decisiones y silos; (2) Playbook de Poda y Simplificación Operativa con ranking de qué eliminar; (3) Scorecard de Exposición y Deuda Estructural; (4) Matriz de Vulnerabilidad Pre-IA y Fugas de Margen; y (5) Sesión de Lectura Ejecutiva C-Suite de 90 minutos con el Dr. Andrés López Astudillo.',
-          tag: 'ENTREGABLES TANGIBLES',
-        },
-        {
-          question: '¿Cómo se maneja la confidencialidad y el acceso a los datos de nuestra empresa?',
-          answer: 'Operamos bajo un estricto Acuerdo de Confidencialidad Bilateral (NDA) firmado antes de iniciar cualquier conversación. Nuestro método no requiere ingestión de bases de datos de clientes, ni contraseñas, ni acceso a datos financieros sensibles de TI; trabajamos sobre la arquitectura de decisiones, interfaces humanas e intercambios de conocimiento.',
-          tag: 'SEGURIDAD & NDA',
-        },
-        {
-          question: '¿Cuánto tiempo y esfuerzo exige este proceso a nuestro equipo de liderazgo?',
-          answer: 'Cero fricción operativa. El Sprint de 14 días está diseñado para ejecutarse sin interrumpir las operaciones del negocio. Solo requerimos 3 a 4 entrevistas estructuradas de 45 minutos con los sponsors clave y una sesión final de alineación ejecutiva de 90 minutos. El trabajo analítico, modelado topológico y formulación del playbook corre 100% por cuenta de nuestro equipo multidisciplinario.',
-          tag: 'TIEMPO REQUERIDO',
-        },
-        {
-          question: '¿Cómo garantizan el valor de la inversión frente a una consultora tradicional?',
-          answer: 'A diferencia de las grandes consultoras que cobran costosas bolsas de horas abiertas por meses sin entregables tangibles, trabajamos exclusivamente a precio cerrado con alcance garantizado. Además, incorporamos garantía de calidad ontológica ISO 30401: si la radiografía no demuestra con evidencia matemática los focos de destrucción de EBITDA en su red, no avanzamos a la fase de retainer.',
-          tag: 'GARANTÍA & RETORNO',
-        },
-      ],
-    },
-    finalCta: {
-      badge: 'DISPONIBILIDAD Q4 2026 · AUDITORÍAS LIMITADAS A 4 CLIENTES/MES',
-      title: 'Detenga la destrucción de margen. Conozca la red real de su empresa.',
-      lead: 'Inicie con un sprint de Radiografía en 14 días a precio cerrado o agende una sesión preliminar de 30 minutos con el Dr. Andrés López Astudillo.',
-      primaryBtn: 'Solicitar Reality Audit (14 Días)',
-      secondaryBtn: 'Consultar por WhatsApp Directo',
-      guarantee: 'Garantía de Retracto Legal y Calidad Ontológica ISO 30401 · Cero Horas Abiertas',
-      pills: ['NDA Bilateral Inmediato', 'Sin Acceso a Credenciales de TI', 'Precio 100% Cerrado'],
-    },
   },
   en: {
     metadata: {
@@ -698,18 +610,11 @@ export const siteContent = {
       eyebrow: '',
       title: 'Stop automating chaos. Automate margins.',
       subcopy:
-        'We do not sell software or open-ended engineering hours. We deliver standardized knowledge artifacts (ISO 30401) through a 14-day Executive Complexity X-Ray to map real decision networks, dismantle operational silos, and stop EBITDA destruction. We tackle organizational complexity through a systemic approach so leadership can eliminate bottlenecks before automating with AI, ensuring technology runs on protected margins and a clean system.',
+        'We do not sell software or open-ended engineering hours. We deliver standardized knowledge artifacts (ISO 30401) through a structured ~14-day Complexity X-Ray to map real decision networks, decouple operational silos, and contain EBITDA erosion. We diagnose your organization’s relational architecture through a systemic approach so leadership can identify bottlenecks before automating with AI, ensuring technology runs on a modeled system and protected margins.',
       proofPoints: [
         { metric: '10.2%', label: 'Annual EBITDA drained by unaddressed operational complexity (Warwick/GSI)' },
         { metric: '74%', label: 'AI initiatives stalled by structural human interface friction (MIT/BCG)' },
         { metric: 'ISO 30401', label: 'Knowledge management systems ontology & decision audit standard' },
-      ],
-      liveStatus: 'Active · Q4 2026 · Audit Cohorts Open (4 Clients/Month)',
-      trustBadges: [
-        { label: '14 Days', title: 'Duration', desc: 'Fixed-Scope X-Ray Sprint' },
-        { label: 'Pre-AI & EBITDA', title: 'Focus', desc: 'Pruning complexity before automation' },
-        { label: 'C-Suite Direct', title: 'Exclusivity', desc: 'Led by Dr. Andrés López Astudillo' },
-        { label: 'ISO 30401', title: 'Deliverable', desc: 'Verifiable Knowledge Artifacts' },
       ],
       ctaPrimary: { label: 'View Proposal & Pricing', href: '#iceberg-proposal' },
       ctaSecondary: { label: 'Dive into Complexity', href: '#iceberg-diagnosis' },
@@ -771,25 +676,25 @@ export const siteContent = {
         latencyImpactLabel: 'Inertia Days per Decision Cycle:',
         knowledgeDebtLabel: 'Knowledge Debt & SPOF Vulnerability (ISO 30401):',
         costOfInactionLabel: 'Margin Destruction Baseline (EBITDA at Risk):',
-        costOfInactionNote: 'Anchored on the 10.2% annual EBITDA complexity drain [GSI/Warwick].',
+        costOfInactionNote: 'Indicative approximation baseline modeled on the 10.2% annual EBITDA complexity drain [GSI/Warwick]. Not a contractual guarantee.',
         levels: {
           moderate: {
             title: 'Moderate Exposure · Deceleration Risk',
             description: 'Your organization retains operational response capability, but unmapped tacit knowledge flows create single points of failure (SPOF) that inflate coordination costs.',
-            recommendation: 'Prioritize a 14-day Executive Complexity X-Ray to map real decision networks and prune critical interfaces before committing further software or AI budgets.',
+            recommendation: 'Prioritize a structured ~14-day Complexity X-Ray to map real decision networks and prune critical interfaces before committing further software or AI budgets.',
           },
           severe: {
             title: 'Severe Exposure · Active Margin Drain',
             description: 'Decision latency and interdepartmental friction are triggering the 10.2% EBITDA drain. Deploying AI tools in this state will automate operational incoherence.',
-            recommendation: 'A 14-day Executive Complexity X-Ray is required to decouple operational silos, identify zombie initiatives, and protect EBITDA before any AI deployment.',
+            recommendation: 'A structured ~14-day Complexity X-Ray is recommended to decouple operational silos, identify zombie initiatives, and stabilize EBITDA before any AI deployment.',
           },
           critical: {
             title: 'Critical Exposure · Imminent Systemic Breakdown',
-            description: 'Multiple silos operating with sluggish committees alongside ungoverned AI projects are cannibalizing resources and shattering organizational trust.',
-            recommendation: 'Halt blind tooling spend immediately; deploy a 14-day Executive Complexity X-Ray to cut bottlenecks and restore operating margins.',
+            description: 'Multiple silos operating with sluggish committees alongside ungoverned AI projects are cannibalizing resources and straining organizational trust.',
+            recommendation: 'Halt additional tooling spend; deploy a structured ~14-day Complexity X-Ray to pinpoint bottlenecks and recover operating margins.',
           },
         },
-        ctaButton: 'Request Executive Complexity X-Ray (14 Days)',
+        ctaButton: 'Request Complexity X-Ray (~14 Days)',
       },
       formula: {
         eyebrow: 'The Formula',
@@ -971,8 +876,8 @@ export const siteContent = {
           summary: 'Two-phase commercial architecture delivering immediate results without procurement drag or endless 6-month consulting bloat:',
           children: [
             {
-              title: 'Phase 1: Executive Complexity X-Ray (14 Days / Fixed Scope)',
-              summary: '14-day fixed-price sprint with zero IT friction. We deliver the Private Interactive Snapshot Graph and Pruning Playbook to eliminate silos, zombie initiatives, and bottlenecks destroying EBITDA.'
+              title: 'Phase 1: Organizational Complexity X-Ray (~14 Days / Fixed Scope)',
+              summary: 'Structured ~14-day sprint without deep IT access requirements. We deliver the Private Interactive Snapshot Graph and Pruning Playbook to identify silos, zombie initiatives, and bottlenecks affecting EBITDA.'
             },
             {
               title: 'Phase 2: Forward Deployed Simplification & Live Ontology (FDE Retainer)',
@@ -1042,11 +947,6 @@ export const siteContent = {
       ctaSend: 'Generate & Send Proposal via WhatsApp',
       copySuccess: 'Proposal copied to clipboard!',
       copyButton: 'Copy Proposal to Clipboard',
-      guaranteeRibbon: {
-        badge: 'ONTOLOGICAL CERTAINTY GUARANTEE & STATUTORY COOLING-OFF',
-        title: 'Zero Consulting Risk: 100% Fixed-Scope Delivery (ISO 30401)',
-        text: 'If within the first 7 days of the X-Ray sprint your executive committee does not mathematically identify at least 3 critical friction points or EBITDA leaks in your network, you may terminate with no penalty. We never sell open-ended hourly bags.',
-      },
       regions: {
         usa: {
           name: 'USA',
@@ -1067,31 +967,31 @@ export const siteContent = {
       packages: [
         {
           id: 'exploration',
-          phase: 'Phase 1 · 14 Days (Entry Sprint)',
+          phase: 'Phase 1 · ~14 Days (Entry Sprint)',
           basePrice: 28500,
           referenceHours: '~115 hrs',
           procurementNote: '* Homologation benchmark: ~115 hrs estimated multidisciplinary team dedication.',
-          artifactsObjective: 'Identify zombie initiatives, operational silos, and bottlenecks destroying EBITDA in 14 days with zero IT friction.',
+          artifactsObjective: 'Identify zombie initiatives, operational silos, and bottlenecks impacting EBITDA in a structured ~14-day sprint.',
           deliverables: [
             'Private Interactive Snapshot Graph (Real decision topology & silo mapping)',
-            'Pruning & Operational Simplification Playbook (Mathematical ranking of what to eliminate)',
+            'Pruning & Operational Simplification Playbook (Analytical ranking of what to eliminate)',
             'Structural Exposure & Knowledge Debt Scorecard (ISO 30401)',
             'Pre-AI Vulnerability & Margin Drain Matrix',
             'C-Suite Executive Readout Session (90-min briefing with Executive Sponsor)',
           ],
           usa: {
-            name: 'Phase 1: Executive Complexity X-Ray (14 Days / Fixed Scope)',
-            desc: '14-day fixed-price sprint: mathematical x-ray of real decision networks detecting zombie initiatives and bottlenecks destroying EBITDA before committing software or AI capital.',
+            name: 'Phase 1: Executive Complexity X-Ray (~14 Days / Fixed Scope)',
+            desc: 'Structured ~14-day sprint under fixed scope: analytical x-ray of real decision networks detecting bottlenecks and critical interfaces before committing software or AI capital.',
             targetBuyer: 'Chief Operating Officers (COO), Chief Financial Officers (CFO), and CEOs seeking to halt EBITDA destruction.'
           },
           canada: {
-            name: 'Phase 1: Executive Complexity X-Ray (14-Day Reality Audit)',
-            desc: '14-day sprint mapping real knowledge flows, hidden dependencies, and pre-AI governance, eliminating silos without demanding deep IT integrations.',
+            name: 'Phase 1: Executive Complexity X-Ray (~14-Day Reality Audit)',
+            desc: 'Structured ~14-day sprint mapping real knowledge flows, undocumented dependencies, and pre-AI governance, without demanding deep IT integrations.',
             targetBuyer: 'Chief Operating Officers (COO) and Governance Committees focused on responsible efficiency.'
           },
           latam: {
-            name: 'Phase 1: Organizational Complexity X-Ray (14 Days)',
-            desc: '14-day executive diagnostic mapping informal bottlenecks, breaking down silos, and halting operating margin drain before deploying technology.',
+            name: 'Phase 1: Organizational Complexity X-Ray (~14 Days)',
+            desc: 'Structured ~14-day executive diagnostic mapping informal bottlenecks, breaking down silos, and stabilizing operating margins before deploying technology.',
             targetBuyer: 'Managing Directors (CEO) and Operations Heads committed to cutting bureaucratic friction.'
           }
         },
@@ -1198,85 +1098,9 @@ export const siteContent = {
         whatsapp: 'Corporate WhatsApp (Optional)',
       },
       submitWhatsApp: 'Send Executive Brief via WhatsApp',
-      submitDirect: 'Confirm Diagnostic Request',
+      submitDirect: 'Confirmar Solicitud de Diagnóstico',
       privacyNote: 'Strictly confidential under reality audit and systems governance frameworks.',
       close: 'Close',
-    },
-    authority: {
-      eyebrow: 'AUTHORITY ISLAND & TECHNICAL STACK',
-      title: 'Network Science, Global Standards & C-Suite Governance',
-      lead: 'An interdisciplinary framework replacing speculation with mathematical models and ontological auditing.',
-      pillars: [
-        { tag: 'GLOBAL STANDARD', name: 'ISO 30401', desc: 'Knowledge Management Systems & Decision Auditing' },
-        { tag: 'METHODOLOGY', name: 'CEMSTWO', desc: 'Systemic Modeling across 7 Operational Dimensions' },
-        { tag: 'NETWORK SCIENCE', name: 'Kumu & D3.js', desc: 'Dynamic Graph Topology & Silo Detection' },
-        { tag: 'ACADEMIA', name: 'PhD Research', desc: 'Advanced Research in Organizational Complexity' },
-        { tag: 'DETERMINISM', name: 'W3C BiDi Protocol', desc: 'Deterministic Quality & Zero Technical Hallucination' },
-      ],
-    },
-    audience: {
-      eyebrow: 'QUALIFIED AUDIENCE FILTER',
-      title: 'Is this strategic engagement right for your enterprise?',
-      lead: 'We work with executive leadership facing real structural friction. We do not service cosmetic software inquiries.',
-      forYou: {
-        title: 'For you if:',
-        items: [
-          { highlight: 'Executive Leadership (CEO, COO, CFO, VP):', text: 'Leading an enterprise (>$10M USD) with cross-functional silos and operational latency.' },
-          { highlight: 'Stalled AI or Software Initiatives:', text: 'Invested in technology or copilots but operational productivity is not flowing to EBITDA.' },
-          { highlight: 'Mandate for Operational Pruning:', text: 'Willing to eliminate zombie processes and redundant committees before automating.' },
-          { highlight: 'Fixed-Scope Delivery Standards:', text: 'Demanding verifiable deliverables within 14 days under ISO 30401 with zero open hours.' },
-        ],
-      },
-      notForYou: {
-        title: 'NOT for you if:',
-        items: [
-          { highlight: 'Seeking Quick SaaS or Chatbots:', text: 'Looking for a magic tool or generic bot without restructuring decision networks.' },
-          { highlight: 'Early-Stage Small Startups:', text: 'Teams of <30 people where coordination can still be resolved through direct conversation.' },
-          { highlight: 'Projects Lacking Executive Sponsorship:', text: 'Delegated tasks without CEO/COO authority to implement structural simplification.' },
-          { highlight: 'Attachment to Informal Politics:', text: 'Resistance to making invisible bottlenecks and feudal dependencies fully visible.' },
-        ],
-      },
-    },
-    faqs: {
-      eyebrow: 'FREQUENTLY ASKED QUESTIONS (CRO)',
-      title: 'Total Clarity: Resolving Executive Objections',
-      lead: 'Straightforward answers for Managing Directors, Procurement Committees, and Governance Boards.',
-      items: [
-        {
-          question: 'Why perform a systemic diagnosis before deploying AI or purchasing more software?',
-          answer: 'Automating a chaotic process only yields chaos faster and inflates SaaS overhead. 74% of enterprise AI initiatives stall due to unmapped interface friction, knowledge silos, and informal dependencies. Our 14-day X-Ray isolates genuine bottlenecks and prunes redundant processes, ensuring technology operates on clean workflows and a protected EBITDA margin.',
-          tag: 'PRE-AI STRATEGY',
-        },
-        {
-          question: 'What specific, verifiable deliverables does our leadership receive after 14 days?',
-          answer: 'We deliver 5 standardized artifacts under ISO 30401: (1) Private Interactive Snapshot Graph of decision flows and silos; (2) Operational Pruning & Simplification Playbook ranking what to eliminate; (3) Structural Exposure & Technical Debt Scorecard; (4) Pre-AI Vulnerability Matrix; and (5) 90-minute Executive C-Suite Readout Session with Dr. Andrés López Astudillo.',
-          tag: 'TANGIBLE ARTIFACTS',
-        },
-        {
-          question: 'How do you safeguard confidentiality and corporate data security?',
-          answer: 'We operate under a binding Bilateral Non-Disclosure Agreement (NDA) executed before onboarding. Our methodology never requires access to customer databases, passwords, or sensitive IT data. We audit decision architecture, governance interfaces, and knowledge flows without infrastructure exposure.',
-          tag: 'SECURITY & NDA',
-        },
-        {
-          question: 'How much time and cognitive overhead does this require from our executive team?',
-          answer: 'Zero operational disruption. The 14-day sprint is engineered to run in parallel with core business operations. We only require 3 to 4 structured 45-minute interviews with key sponsors and one 90-minute final alignment session. All synthesis, topological mapping, and playbook engineering are executed by our multidisciplinary team.',
-          tag: 'TIME COMMITMENT',
-        },
-        {
-          question: 'How do you guarantee return on investment compared to traditional consultancies?',
-          answer: 'Unlike legacy consultancies billing open-ended monthly hours without guaranteed deliverables, we operate exclusively under fixed-scope pricing. Furthermore, we include an ISO 30401 ontological certainty guarantee: if our diagnosis fails to mathematically demonstrate critical EBITDA bottlenecks, you do not proceed to the retainer phase.',
-          tag: 'WARRANTY & ROI',
-        },
-      ],
-    },
-    finalCta: {
-      badge: 'Q4 2026 AVAILABILITY · AUDITS CAPPED AT 4 CLIENTES/MONTH',
-      title: 'Stop EBITDA erosion. Uncover your true decision topology.',
-      lead: 'Initiate a 14-day fixed-price X-Ray sprint or schedule a preliminary 30-minute consultation with Dr. Andrés López Astudillo.',
-      primaryBtn: 'Request Reality Audit (14 Days)',
-      secondaryBtn: 'Consult via Direct WhatsApp',
-      guarantee: 'Statutory Cooling-Off & ISO 30401 Ontological Quality Guarantee · Zero Open Hours',
-      pills: ['Immediate Bilateral NDA', 'Zero IT Credential Ingestion', '100% Fixed-Price Scope'],
     },
   },
 } as const;

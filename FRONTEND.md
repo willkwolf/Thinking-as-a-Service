@@ -39,31 +39,25 @@
 - `src/content/playbook.ts`: Archivo legado con 0 importaciones en la aplicación. No modificar.
 - `src/content/iceberg.ts`: Mantenido parcialmente como referencia de tipos/capas para `useIcebergDepth.ts`.
 
-## Arquitectura de Componentes CRO (Conversion Rate Optimization)
+## Arquitectura Canónica de Componentes (Iceberg de 8 Capas)
 
-Para maximizar la conversión ejecutiva y eliminar la fricción técnica y cognitiva, los componentes se articulan en el siguiente orden canónico:
+Para preservar la sobriedad ejecutiva, el rigor conceptual y el posicionamiento High-Ticket, los componentes se articulan en el siguiente orden canónico:
 
 1. **Header de Navegación** (`DesktopNavbar.tsx`): Telemetría de capa + Acceso directo a Reality Audit.
 2. **Superficie / Hero** (`HeroSurface.tsx`):
-   - Pill de disponibilidad en tiempo real (`.hero-status-pill` con animación `pulse-dot`).
    - Título de valor: "Deje de automatizar el caos. Automatice el margen."
-   - Matriz de 4 Badges de Confianza (`.hero-trust-matrix`: Duración, Enfoque, Exclusividad, Entregable).
+   - Subcopy mesurado de posicionamiento C-Suite.
    - Franja de pruebas empíricas (`.hero-proof-strip`: 10.2%, 74%, ISO 30401).
    - Vector del héroe (Ruido vs Simplicidad) + `RiskPanel`.
-3. **Isla de Autoridad y Stack Técnico** (`AuthorityBar.tsx`): 5 tarjetas de rigor (ISO 30401, CEMSTWO, Kumu & D3.js, PhD Research, W3C BiDi Protocol).
-4. **Filtro de Audiencia Cualificada** (`AudienceFilter.tsx`): Tarjetas comparativas ("✔ Para usted si:" vs "✕ NO es para usted si:").
-5. **Diagnóstico** (`DiagnosisLayer.tsx` con `ComplexityExposureExplorer.tsx`).
-6. **Evidencia Visual** (`EvidenceLayer.tsx` con video 07:36).
-7. **Métricas de Estructura** (`FormulaLayer.tsx` con `SimplicityMatrix.tsx`).
-8. **Ciencia de Redes CEMSTWO** (`CemstwoLayer.tsx` con grafo SVG/D3 interactivo).
-9. **Estrategia y Ficha Directiva** (`SignalLayer.tsx` con Dr. Andrés López Astudillo, PhD y `PlaybookCards.tsx`).
-10. **Propuesta y Pricing** (`ProposalLayer.tsx`):
-    - Selector regional interactivo (USA / Canadá / LATAM).
-    - Cinta de Garantía de Certeza Ontológica y Derecho de Retracto (`.proposal-guarantee-ribbon`).
-    - Distintivo de entrada recomendada (`.pack-recommended-tag`) en Fase 1.
-    - Generación dinámica de brief para WhatsApp y portapapeles.
-11. **Preguntas Frecuentes Interactivas** (`FaqAccordion.tsx`): Acordeón accesible derribando objeciones de compras, NDA y retorno.
-12. **Banner de Cierre de Alta Urgencia** (`FinalCtaBanner.tsx`): Cauterización de embudo con doble CTA y garantía ISO 30401.
-13. **Casos de Estudio y Gobernanza Legal** (`DepthLayer.tsx`): Kumu embeds responsive + footer institucional completo.
-14. **Pill de Conversión Flotante** (`FloatingCta.tsx`): `#floating-cta` permanente con punto verde de estado activo (`.floating-cta__dot`).
+3. **Diagnóstico** (`DiagnosisLayer.tsx` con `ComplexityExposureExplorer.tsx` como simulador indicativo aproximado).
+4. **Evidencia Visual** (`EvidenceLayer.tsx` con video 07:36).
+5. **Métricas de Estructura** (`FormulaLayer.tsx` con `SimplicityMatrix.tsx`).
+6. **Ciencia de Redes CEMSTWO** (`CemstwoLayer.tsx` con grafo SVG/D3 interactivo).
+7. **Estrategia y Ficha Directiva** (`SignalLayer.tsx` con Dr. Andrés López Astudillo, PhD y `PlaybookCards.tsx`).
+8. **Propuesta y Pricing** (`ProposalLayer.tsx`):
+   - Selector regional interactivo (USA / Canadá / LATAM).
+   - Paquetes de alcance cerrado y benchmark de homologación técnica para procurement.
+   - Generación dinámica de brief para WhatsApp y portapapeles.
+9. **Casos de Estudio y Gobernanza Legal** (`DepthLayer.tsx`): Kumu embeds responsive + footer institucional completo.
+10. **Pill de Conversión Flotante** (`FloatingCta.tsx`): `#floating-cta` sobrio con activación dinámica en scroll > 45%.
 

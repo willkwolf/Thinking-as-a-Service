@@ -19,26 +19,8 @@ export function HeroSurface({ onOpenIntake }: HeroSurfaceProps) {
               <span className="eyebrow eyebrow--hero">{hero.macro}</span>
               {hero.category && <span className="hero-category-tag">{hero.category}</span>}
             </div>
-            {hero.liveStatus && (
-              <div className="hero-status-pill">
-                <span className="hero-status-dot" aria-hidden="true" />
-                <span>{hero.liveStatus}</span>
-              </div>
-            )}
             <h1 id="hero-title">{hero.title}</h1>
             <p className="subcopy">{hero.subcopy}</p>
-
-            {hero.trustBadges && (
-              <div className="hero-trust-matrix">
-                {hero.trustBadges.map((tb) => (
-                  <div key={tb.title} className="hero-trust-badge">
-                    <span className="hero-trust-badge__tag">{tb.title}</span>
-                    <strong className="hero-trust-badge__label">{tb.label}</strong>
-                    <span className="hero-trust-badge__desc">{tb.desc}</span>
-                  </div>
-                ))}
-              </div>
-            )}
 
             {hero.proofPoints && (
               <div className="hero-proof-strip">
